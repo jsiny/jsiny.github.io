@@ -38,6 +38,8 @@ paginate_path: '/blog/page:num'
 
 sidebar_home_link: true
 sidebar_blog_link: '/blog'
+enable_disqus: false
+
 
 version: 1.0
 # Exclude from processing.
