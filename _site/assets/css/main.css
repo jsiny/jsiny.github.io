@@ -275,7 +275,7 @@ pre { max-width: 100%; overflow-x: auto; }
  body > #sidebar > header (primary sidebar content -- i.e. title) > h1 (home page only, otherwise div or span) > secondary nav content we may want to hide on certain pages > .container > h1 (non-home page) > .content
  Basic approach is to color in body, make sidebar background transparent, and then fill in the .container or .content elements depending on how far we want the sidebar or header to stretch.
 */
-body { color: rgba(255, 255, 255, 0.75); background-color: #202020; background-image: linear-gradient(to bottom, #323232, #0e0e0e); display: flex; flex-direction: column; min-width: 100vw; min-height: 100vh; }
+body { color: rgba(255, 255, 255, 0.75); background-color: #11778f; background-image: linear-gradient(to bottom, #1592af, #0d5c6f); display: flex; flex-direction: column; min-width: 100vw; min-height: 100vh; }
 
 #sidebar { flex: 0 0 auto; padding: 2rem; }
 #sidebar .site-title { font-family: "Abril Fatface", serif; font-weight: normal; font-size: 1.25rem; margin-top: 0; margin-bottom: 0.5rem; }
