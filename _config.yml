@@ -31,6 +31,7 @@ plugins:
   - jekyll-paginate
   - jekyll-remote-theme
   - github-pages
+  - jemoji
 
 # Posts per page:
 paginate: 5

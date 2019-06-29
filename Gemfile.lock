@@ -258,6 +258,7 @@ DEPENDENCIES
   jekyll-feed (~> 0.6)
   jekyll-paginate
   jekyll-theme-hydeout
+  jemoji
   tzinfo-data
 
 BUNDLED WITH
