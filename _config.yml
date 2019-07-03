@@ -35,10 +35,10 @@ plugins:
 
 # Posts per page:
 paginate: 5
-paginate_path: '/blog/page:num'
+paginate_path: '/page/:num'
 
 sidebar_home_link: true
-sidebar_blog_link: '/blog'
+# sidebar_blog_link: '/blog'
 enable_disqus: false
 
 
