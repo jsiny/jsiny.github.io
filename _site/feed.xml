@@ -1,2 +1,64 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:8080/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:8080/" rel="alternate" type="text/html" /><updated>2019-07-03T07:45:42+00:00</updated><id>http://localhost:8080/feed.xml</id><title type="html">Juliette Sinibardy</title><subtitle>Aspiring Programmer</subtitle><entry><title type="html">hello world</title><link href="http://localhost:8080/misc/2019/06/29/hello-world.html" rel="alternate" type="text/html" title="hello world" /><published>2019-06-29T03:23:08+00:00</published><updated>2019-06-29T03:23:08+00:00</updated><id>http://localhost:8080/misc/2019/06/29/hello-world</id><content type="html" xml:base="http://localhost:8080/misc/2019/06/29/hello-world.html">&lt;p&gt;Hello world
-Nice to meet you&lt;/p&gt;</content><author><name></name></author><category term="First article" /><category term="Blogging" /><category term="Food" /><category term="Cats" /><summary type="html">Hello world Nice to meet you</summary></entry></feed>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:8080/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:8080/" rel="alternate" type="text/html" /><updated>2019-07-03T10:32:15+00:00</updated><id>http://localhost:8080/feed.xml</id><title type="html">Juliette Sinibardy</title><subtitle>Aspiring Programmer</subtitle><entry><title type="html">Hello World</title><link href="http://localhost:8080/hello-world" rel="alternate" type="text/html" title="Hello World" /><published>2019-07-03T08:28:08+00:00</published><updated>2019-07-03T08:28:08+00:00</updated><id>http://localhost:8080/hello-world</id><content type="html" xml:base="http://localhost:8080/hello-world">&lt;blockquote&gt;
+  &lt;p&gt;It’s alive!&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;After a sleepless night, several gallons of tears and dozens of hours spent 
+browsing stackoverflow, my new blog is now live 🌈&lt;/p&gt;
+
+&lt;p&gt;I’m not exactly new to blogging, but this is the first time I’m wandering away
+from Wordpress. Oh boy, that was &lt;em&gt;difficult&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;why-would-i-do-that&quot;&gt;Why would I do that?&lt;/h2&gt;
+
+&lt;p&gt;It all came down to one of my dearest colleague ranting about Medium.
+I had just wrote &lt;a href=&quot;https://medium.com/@juju.siny/my-study-habits-ae5c778b5a14&quot;&gt;my first Medium post&lt;/a&gt;
+(and was pretty pleased with myself), when he told me:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;I like your post, but why would anyone pay to read blog posts that could be 
+found somewhere else, without any added value to the reading experience?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Admittedly, he’s a grumpy old man, but as I’m not too fond of the new 
+Medium paywall either, I thought he had a point.&lt;/p&gt;
+
+&lt;p&gt;Anyway, I had wanted to create a “professional” blog for ages, and thought that
+my 3 months of consecutive programming might be enough to create a “real”
+blog, away from traditional CMS.&lt;/p&gt;
+
+&lt;p&gt;Looking back, I &lt;em&gt;may&lt;/em&gt; have bitten more than I could chew. No regrets though, 
+the learning experience was well worth it.&lt;/p&gt;
+
+&lt;h2 id=&quot;how-i-did-it&quot;&gt;How I did it&lt;/h2&gt;
+
+&lt;p&gt;Initially, I tried to set up a blog through &lt;a href=&quot;https://gohugo.io/&quot;&gt;Hugo&lt;/a&gt;,
+because I had read somewhere that their loading time was exceptionally fast,
+and (let’s be honest) because their templates were stunning.&lt;/p&gt;
+
+&lt;p&gt;However, I failed miserably. It seemed that whatever I did, my Cloud9
+environment refused to accept &lt;code class=&quot;highlighter-rouge&quot;&gt;Homebrew&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;My ego a little bruised, I looked up alternatives and found another
+static-site generator: &lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt;.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Good news: it’s in Ruby! I can finally grasp what’s happening 
+under the hood 🙌 Hugo, on the other hand, is written in Go and therefore
+looks like gibberish to the beginner that I am.&lt;/li&gt;
+  &lt;li&gt;Bad news: Jekyll seems a bit ouf of fashion, and most resources about
+it are somewhat dated. Most templates or blog posts are based on earlier
+versions of Jekyll, therefore I encountered a couple of version issues.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The biggest difficulty arose when I tried escaping the dry 
+&lt;a href=&quot;https://jekyll.github.io/minima/&quot;&gt;Minima&lt;/a&gt; default Jekyll template.
+Apparently, there are some layout naming issues between templates
+and Github pages that made transitions difficult.&lt;/p&gt;
+
+&lt;p&gt;A bit lost, I tweaked my &lt;code class=&quot;highlighter-rouge&quot;&gt;_layout&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;_includes&lt;/code&gt; a lot, heavily drawing
+inspiration from &lt;a href=&quot;https://github.com/d0n601/ryankozak.com&quot;&gt;Ryan Kozak&lt;/a&gt;
+and &lt;a href=&quot;https://github.com/ltebben/ltebben.github.io&quot;&gt;Laura Tebben&lt;/a&gt;’s 
+public repositories (thank god for public repositories), and finally
+managed to install the &lt;a href=&quot;https://github.com/fongandrew/hydeout&quot;&gt;Hydeout&lt;/a&gt; theme 🍾&lt;/p&gt;
+
+&lt;p&gt;My next challenge will be to buy and set up my first domain (bye bye ugly
+&lt;code class=&quot;highlighter-rouge&quot;&gt;github.io&lt;/code&gt; domain name, you will be missed) …but this is for another day.&lt;/p&gt;</content><author><name></name></author><category term="Blogging" /><category term="Jekyll" /><category term="Medium" /><summary type="html">It’s alive!</summary></entry></feed>

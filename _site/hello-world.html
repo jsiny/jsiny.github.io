@@ -11,7 +11,7 @@
 
   <title>
     
-      hello world &middot; Juliette Sinibardy
+      Hello World &middot; Juliette Sinibardy
     
   </title>
 
@@ -240,11 +240,11 @@
 
     <main class="container">
       <header>
-  <h1 class="post-title">hello world</h1>
+  <h1 class="post-title">Hello World</h1>
 </header>
 <div class="content">
   <div class="post-meta">
-  <span class="post-date">29 Jun 2019</span>
+  <span class="post-date">03 Jul 2019</span>
   <span class="post-categories">
     
       &bull;
@@ -254,7 +254,7 @@
       
 
       
-        Misc
+        Life
       
     
   </span>
@@ -262,25 +262,76 @@
 
 
   <div class="post-body">
-    <p>Hello world
-Nice to meet you</p>
+    <blockquote>
+  <p>It’s alive!</p>
+</blockquote>
+
+<p>After a sleepless night, several gallons of tears and dozens of hours spent 
+browsing stackoverflow, my new blog is now live 🌈</p>
+
+<p>I’m not exactly new to blogging, but this is the first time I’m wandering away
+from Wordpress. Oh boy, that was <em>difficult</em>.</p>
+
+<h2 id="why-would-i-do-that">Why would I do that?</h2>
+
+<p>It all came down to one of my dearest colleague ranting about Medium.
+I had just wrote <a href="https://medium.com/@juju.siny/my-study-habits-ae5c778b5a14">my first Medium post</a>
+(and was pretty pleased with myself), when he told me:</p>
+
+<blockquote>
+  <p>I like your post, but why would anyone pay to read blog posts that could be 
+found somewhere else, without any added value to the reading experience?</p>
+</blockquote>
+
+<p>Admittedly, he’s a grumpy old man, but as I’m not too fond of the new 
+Medium paywall either, I thought he had a point.</p>
+
+<p>Anyway, I had wanted to create a “professional” blog for ages, and thought that
+my 3 months of consecutive programming might be enough to create a “real”
+blog, away from traditional CMS.</p>
+
+<p>Looking back, I <em>may</em> have bitten more than I could chew. No regrets though, 
+the learning experience was well worth it.</p>
+
+<h2 id="how-i-did-it">How I did it</h2>
+
+<p>Initially, I tried to set up a blog through <a href="https://gohugo.io/">Hugo</a>,
+because I had read somewhere that their loading time was exceptionally fast,
+and (let’s be honest) because their templates were stunning.</p>
+
+<p>However, I failed miserably. It seemed that whatever I did, my Cloud9
+environment refused to accept <code class="highlighter-rouge">Homebrew</code>.</p>
+
+<p>My ego a little bruised, I looked up alternatives and found another
+static-site generator: <a href="https://jekyllrb.com/">Jekyll</a>.</p>
+<ul>
+  <li>Good news: it’s in Ruby! I can finally grasp what’s happening 
+under the hood 🙌 Hugo, on the other hand, is written in Go and therefore
+looks like gibberish to the beginner that I am.</li>
+  <li>Bad news: Jekyll seems a bit ouf of fashion, and most resources about
+it are somewhat dated. Most templates or blog posts are based on earlier
+versions of Jekyll, therefore I encountered a couple of version issues.</li>
+</ul>
+
+<p>The biggest difficulty arose when I tried escaping the dry 
+<a href="https://jekyll.github.io/minima/">Minima</a> default Jekyll template.
+Apparently, there are some layout naming issues between templates
+and Github pages that made transitions difficult.</p>
+
+<p>A bit lost, I tweaked my <code class="highlighter-rouge">_layout</code> and <code class="highlighter-rouge">_includes</code> a lot, heavily drawing
+inspiration from <a href="https://github.com/d0n601/ryankozak.com">Ryan Kozak</a>
+and <a href="https://github.com/ltebben/ltebben.github.io">Laura Tebben</a>’s 
+public repositories (thank god for public repositories), and finally
+managed to install the <a href="https://github.com/fongandrew/hydeout">Hydeout</a> theme 🍾</p>
+
+<p>My next challenge will be to buy and set up my first domain (bye bye ugly
+<code class="highlighter-rouge">github.io</code> domain name, you will be missed) …but this is for another day.</p>
 
     
 
 
 
 <div class="post-tags">
-  
-    
-    <a href="/tags/#first-article">
-    
-      <span class="icon">
-        <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-    <path d="M0 0h24v24H0z" fill="none"/>
-    <path d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z"/>
-</svg>
-      </span>&nbsp;<span class="tag-name">First article</span>
-    </a>
   
     
     <a href="/tags/#blogging">
@@ -294,25 +345,25 @@ Nice to meet you</p>
     </a>
   
     
-    <a href="/tags/#food">
+    <a href="/tags/#jekyll">
     
       <span class="icon">
         <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
     <path d="M0 0h24v24H0z" fill="none"/>
     <path d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z"/>
 </svg>
-      </span>&nbsp;<span class="tag-name">Food</span>
+      </span>&nbsp;<span class="tag-name">Jekyll</span>
     </a>
   
     
-    <a href="/tags/#cats">
+    <a href="/tags/#medium">
     
       <span class="icon">
         <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
     <path d="M0 0h24v24H0z" fill="none"/>
     <path d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z"/>
 </svg>
-      </span>&nbsp;<span class="tag-name">Cats</span>
+      </span>&nbsp;<span class="tag-name">Medium</span>
     </a>
   
 </div>
