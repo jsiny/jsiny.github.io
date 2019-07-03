@@ -417,3 +417,19 @@ button.disqus-load { margin-top: 1em; }
   to { opacity: 1; } }
 .posts-for-tag { display: none; }
 .posts-for-tag:target { display: block; animation: posts-for-tag-fade-in 0.6s ease-in-out; }
+
+@media (min-width: 49rem) { body { flex-direction: row; height: 100vh; overflow-y: auto; -webkit-overflow-scrolling: touch; }
+  body > * { max-height: 100vh; overflow-y: auto; -webkit-overflow-scrolling: touch; }
+  /* Undo mobile CSS */
+  #sidebar, .home #sidebar { width: 19rem; text-align: left; }
+  #sidebar > *:last-child, .home #sidebar > *:last-child { margin-bottom: 0; }
+  #sidebar .site-title { font-size: 3.25rem; }
+  #sidebar .site-title .back-arrow { display: none; }
+  #sidebar p.lead, #sidebar header ~ * { display: block; }
+  #sidebar header ~ nav { display: flex; }
+  .index #sidebar { margin-bottom: 0; }
+  .container { background: #fff; color: #515151; padding: 4rem 4rem 0; height: 100vh; }
+  .container > header { color: #313131; margin: 0; }
+  .container > header h1, .container > header h2 { color: inherit; }
+  .container > header h1:last-child, .container > header h2:last-child { margin-bottom: 0.5rem; }
+  .container > * { max-width: 38rem; padding: 0; } }

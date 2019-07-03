@@ -8,5 +8,11 @@ img {
 }
 @import "hydeout";
 
+@media (min-width: 49rem) { body { flex-direction: row; height: 100vh; overflow-y: auto; -webkit-overflow-scrolling: touch; }
+  body > * { max-height: 100vh; overflow-y: auto; -webkit-overflow-scrolling: touch; }
+  /* Undo mobile CSS */
+  #sidebar, .home #sidebar { width: 19rem; text-align: left; }
+
+
 
 
