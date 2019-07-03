@@ -8,6 +8,8 @@ categories:
 tags:
   - First article
   - Blogging
+  - Food
+  - Cats
 ---
 
 Hello world
