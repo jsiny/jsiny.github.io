@@ -11,7 +11,7 @@
 
   <title>
     
-      About Me &middot; Juliette Sinibardy
+      Tags &middot; Juliette Sinibardy
     
   </title>
 
@@ -37,7 +37,7 @@
 </head>
 
 
-  <body class="page">
+  <body class="tags">
 
     <div id="sidebar">
   <header>
@@ -70,7 +70,7 @@
 
   
     
-      <a class="page-link  active"
+      <a class="page-link "
           href="/about/">About Me</a>
     
   
@@ -240,58 +240,73 @@
 
     <main class="container">
       <header>
-  <h1 class="page-title">About Me</h1>
+  <h1 class="page-title">Tags</h1>
 </header>
 <div class="content">
-  <h2 id="hello-internet-">Hello internet 👋</h2>
+  <!-- See https://blog.lanyonm.org/articles/2013/11/21/alphabetize-jekyll-page-tags-pure-liquid.html -->
+<!-- With added pipe to handle lack of sort_natural -->
 
-<h3 id="a-few-words-about-me">A few words about me</h3>
+<!-- site_tags: first article|First article,blogging|Blogging -->
 
-<p>I’m a 25 year old aspiring web programmer. My name is <strong>Juliette Sinibardy</strong>, or 
-Juliette Siny for short. I’m very fond of my final <code class="highlighter-rouge">y</code> so please don’t 
-leave it out.</p>
+<!-- tag_words: blogging|Bloggingfirst article|First article -->
 
-<p>Apart from my <code class="highlighter-rouge">y</code>, I like: photography, desserts and my cat.</p>
+<div id="tags-page">
+  <div class="tags-list">
+    
+    
+    <a href="#blogging" class="tag-link">
+      <span class="tag-name">Blogging</span>
+      <span class="tag-count">1</span>
+    </a>
+    
+    
+    <a href="#first-article" class="tag-link">
+      <span class="tag-name">First article</span>
+      <span class="tag-count">1</span>
+    </a>
+    
+  </div>
 
-<h3 id="isnt-25-a-bit-old-to-learn-programming">Isn’t 25 a bit old to learn programming?</h3>
+  <hr/>
 
-<p>First, this side comment is a tad ageist, and second… Maybe? But then: 
-who cares? There will always be a genius 12 year old somewhere to make me
-question my inner worth.</p>
-
-<h3 id="if-youre-a-late-bloomer-what-have-you-done-before">If you’re a late bloomer, what have you done before?</h3>
-
-<p>Before my first “Hello World” website, I graduated with a Master’s degree in
-Economics and worked for 4 years in a French startup called 
-<a href="selectra.info">Selectra</a> (more on that <a href="/work">here</a>).</p>
-
-<p>I entered as the intern of a 200 people startup and 
-left as the General manager of a 1000 employee company. Most people told me I 
-was crazy to leave such a promising career  (they were probably right) 
-…but here I am.</p>
-
-<h3 id="so-are-you-learning-programming-by-yourself">So… Are you learning programming by yourself?</h3>
-
-<p>Not really! After browsing through free programming courses, I found
-<a href="launchschool.com">Launch School</a> and enrolled in their program. This is a 
-self-paced online school, so I’m somewhat learning by myself, but
-through a logically ordered course.</p>
-
-<p>I am currently working on the Ruby courses (which may sound dumb as 
-<a href="https://medium.com/constructorlabs/ruby-vs-javascript-as-a-first-programming-language-2f2c944629fe">the current trendy language is JavaScript</a>)
-and enjoying my life on the plateau.</p>
-
-<h3 id="cool-and-what-will-you-post-here">Cool, and what will you post here?</h3>
-
-<p>In my blog, you’ll find articles about my daily struggles, how-to guides and
-my portfolio of creations.</p>
-
-<p>Even though I’m a native French speaker (currently living in France), most
-(if not all) of my articles will be written in English, as English is the 
-<em>lingua franca</em> of the tech world.</p>
-
-<p><strong>Happy browsing!</strong> 🙌</p>
-
+  <div class="posts-by-tag">
+    
+    
+    <div id="blogging" class="posts-for-tag">
+      <h2>Blogging</h2>
+      <ul class="posts-list">
+        
+          <li>
+            <h3>
+              <a href="/misc/2019/06/29/hello-world.html">
+                hello world
+                <small>29 Jun 2019</small>
+              </a>
+            </h3>
+          </li>
+        
+      </ul>
+    </div>
+    
+    
+    <div id="first-article" class="posts-for-tag">
+      <h2>First article</h2>
+      <ul class="posts-list">
+        
+          <li>
+            <h3>
+              <a href="/misc/2019/06/29/hello-world.html">
+                hello world
+                <small>29 Jun 2019</small>
+              </a>
+            </h3>
+          </li>
+        
+      </ul>
+    </div>
+    
+  </div>
+</div>
 </div>
 
     </main>
