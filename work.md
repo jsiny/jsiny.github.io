@@ -57,9 +57,9 @@ curriculum focuses on Ruby (back) and JavaScript (front).
 ### 2011 - 2017: Sciences Po, Paris (France)
 
 Right after high school, I got into the Paris Institute of Political
-Sciences, or "[Sciences Po](https://sciencespo.fr)" for short. I was mostly interested
-by their prestigious programs in Social sciences, and enrolled into a Bachelor
-in Economics (2011 - 2014) and into their Master in **Economics and 
+Studies, or "[Sciences Po](https://sciencespo.fr)" for short. I was mostly
+interested by their prestigious programs in Social sciences, and enrolled into
+a Bachelor in Economics (2011 - 2014) and into their Master in **Economics and 
 Business** (2014 - 2017), which I graduated *Summa cum laude*.
 
 ### 2013 - 2014: Copenhagen Business School, Copenhagen (Denmark)
