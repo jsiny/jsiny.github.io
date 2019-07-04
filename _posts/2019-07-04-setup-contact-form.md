@@ -66,11 +66,11 @@ it `contact.html`.
 
 {% gist 838f4658b87635fca91333972b91f066 %}
 
-You'll notice that this layout is (probably) pretty similar to your default
-`page.html` template:
+You'll notice that this layout is based on the default `page.html` template,
+and this allows us to do the following: 
 
-* This template automatically uses the title attribute to create a `<h1>`
-* You can type your content and it will appear before the contact form
+* Automatically use the title attribute to create a `<h1>`
+* Type your content and it will appear before the contact form
 
 *Note*: I'm using the Hydeout Jekyll template, which may have different layout
 names than your own.
