@@ -26,7 +26,7 @@ question my inner worth.
 
 Before my first "Hello World" website, I graduated with a Master's degree in
 Economics and worked for 4 years in a French startup called 
-[Selectra](selectra.info) (more on that [here](/work)).
+[Selectra](https://selectra.info) (more on that [here](/work)).
 
 I entered as the intern of a 200 people startup and 
 left as the General manager of a 1000 employee company. Most people told me I 
@@ -36,7 +36,7 @@ was crazy to leave such a promising career  (they were probably right)
 ### So... Are you learning programming by yourself?
 
 Not really! After browsing through free programming courses, I found
-[Launch School](launchschool.com) and enrolled in their program. This is a 
+[Launch School](https://launchschool.com) and enrolled in their program. This is a 
 self-paced online school, so I'm somewhat learning by myself, but
 through a logically ordered course.
 
