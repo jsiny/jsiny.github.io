@@ -3,6 +3,7 @@ layout: post
 title: "Hello World"
 date:   2019-07-03 10:28:08 +0200
 permalink: hello-world
+excerpt_separator: <!--more-->
 categories:
   - Life
 
@@ -16,6 +17,8 @@ tags:
 
 After a sleepless night, several gallons of tears and dozens of hours spent 
 browsing stackoverflow, my new blog is now live 🌈
+
+<!--more-->
 
 I'm not exactly new to blogging, but this is the first time I'm wandering away
 from Wordpress. Oh boy, that was *difficult*.

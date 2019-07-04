@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:8080/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:8080/" rel="alternate" type="text/html" /><updated>2019-07-04T09:26:31+00:00</updated><id>http://localhost:8080/feed.xml</id><title type="html">Juliette Sinibardy</title><subtitle>Pending Programmer ████░░░░░░░░░ 30%</subtitle><entry><title type="html">How to Set Up a Contact Form on Jekyll</title><link href="http://localhost:8080/setup-contact-form-jekyll" rel="alternate" type="text/html" title="How to Set Up a Contact Form on Jekyll" /><published>2019-07-04T04:22:08+00:00</published><updated>2019-07-04T04:22:08+00:00</updated><id>http://localhost:8080/setup-contact-form</id><content type="html" xml:base="http://localhost:8080/setup-contact-form-jekyll">&lt;p&gt;I thought it would be cool to give the opportunity to the random internet
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:8080/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:8080/" rel="alternate" type="text/html" /><updated>2019-07-04T09:29:27+00:00</updated><id>http://localhost:8080/feed.xml</id><title type="html">Juliette Sinibardy</title><subtitle>Pending Programmer ████░░░░░░░░░ 30%</subtitle><entry><title type="html">How to Set Up a Contact Form on Jekyll</title><link href="http://localhost:8080/setup-contact-form-jekyll" rel="alternate" type="text/html" title="How to Set Up a Contact Form on Jekyll" /><published>2019-07-04T04:22:08+00:00</published><updated>2019-07-04T04:22:08+00:00</updated><id>http://localhost:8080/setup-contact-form</id><content type="html" xml:base="http://localhost:8080/setup-contact-form-jekyll">&lt;p&gt;I thought it would be cool to give the opportunity to the random internet
 user to &lt;a href=&quot;/contact&quot;&gt;contact me&lt;/a&gt; if they so wanted. Turns out it’s pretty easy,
 so here’s a tutorial on how to set up a contact form on Jekyll using
 &lt;a href=&quot;https://formspree.io/&quot;&gt;Formspree&lt;/a&gt;.&lt;/p&gt;
@@ -99,6 +99,8 @@ to have a coherent style.&lt;/p&gt;
 &lt;p&gt;After a sleepless night, several gallons of tears and dozens of hours spent 
 browsing stackoverflow, my new blog is now live 🌈&lt;/p&gt;
 
+&lt;!--more--&gt;
+
 &lt;p&gt;I’m not exactly new to blogging, but this is the first time I’m wandering away
 from Wordpress. Oh boy, that was &lt;em&gt;difficult&lt;/em&gt;.&lt;/p&gt;
 
@@ -155,4 +157,4 @@ public repositories (thank god for public repositories), and finally
 managed to install the &lt;a href=&quot;https://github.com/fongandrew/hydeout&quot;&gt;Hydeout&lt;/a&gt; theme 🍾&lt;/p&gt;
 
 &lt;p&gt;My next challenge will be to buy and set up my first domain (bye bye ugly
-&lt;code class=&quot;highlighter-rouge&quot;&gt;github.io&lt;/code&gt; domain name, you will be missed) …but this is for another day.&lt;/p&gt;</content><author><name></name></author><category term="Blogging" /><category term="Jekyll" /><category term="Medium" /><summary type="html">It’s alive!</summary></entry></feed>
+&lt;code class=&quot;highlighter-rouge&quot;&gt;github.io&lt;/code&gt; domain name, you will be missed) …but this is for another day.&lt;/p&gt;</content><author><name></name></author><category term="Blogging" /><category term="Jekyll" /><category term="Medium" /><summary type="html">It’s alive! After a sleepless night, several gallons of tears and dozens of hours spent browsing stackoverflow, my new blog is now live 🌈</summary></entry></feed>
