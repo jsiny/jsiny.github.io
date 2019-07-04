@@ -2,7 +2,6 @@
 layout: post
 title: "Hello World"
 date:   2019-07-03 10:28:08 +0200
-comments: false
 permalink: hello-world
 categories:
   - Life
