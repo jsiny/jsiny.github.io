@@ -38,10 +38,9 @@ where you can tweak your HTML before including it on your website.
 You simply have to include your contact email on line 1 
 (`<YOUR_EMAIL_HERE>`), and the form works! 
 
-<figure>
-  <img src="/assets/images/formspree-test-form.png" alt="Test your contact form"/>
-  <figcaption>You can test the form directly in Formspree's environment</figcaption>
-</figure>
+{% include images.html file="formspree-test-form.png" 
+  caption="You can test the form directly in Formspree's environment" 
+  alt="Test your contact form" %}
 
 *Note:* You'll have to first activate each domain you set up
 your contact form on (through an activation link sent to the email address
@@ -102,9 +101,5 @@ text area. Bear in mind that all these changes are pretty specific to the
 Hydeout template so you'll probably have to tweak your own CSS in order
 to have a coherent style.
 
-<div style="text-align: center">
-<figure>
-<img src="/assets/images/contact-form.png" alt="Example of contact form"/>
-<figcaption>Here you go!</figcaption>
-</figure>
-</div>
+{% include images.html file="contact-form.png"
+  caption="Example of contact form" alt="Here you go!" %}
