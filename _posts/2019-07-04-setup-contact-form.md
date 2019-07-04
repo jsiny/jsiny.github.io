@@ -102,7 +102,9 @@ text area. Bear in mind that all these changes are pretty specific to the
 Hydeout template so you'll probably have to tweak your own CSS in order
 to have a coherent style.
 
-<!--<figure>-->
-<!--  <img src="/assets/images/contact-form.png" alt="Example of contact form" class="center"/>-->
-<!--  <figcaption>Here you go!</figcaption>-->
-<!--</figure>-->
+<div style="text-align: center">
+<figure>
+<img src="/assets/images/contact-form.png" alt="Example of contact form"/>
+<figcaption>Here you go!</figcaption>
+</figure>
+</div>
