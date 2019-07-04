@@ -11,6 +11,8 @@ description: >-
   ████░░░░░░░░░ 30%
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
+author: Juliette Sinibardy
+lang: en_US
 
 linkedin: juliette-sinibardy
 github_username: jsiny
@@ -24,6 +26,7 @@ plugins:
   - jekyll-remote-theme
   - github-pages
   - jemoji
+  - jekyll-seo-tag
 
 paginate: 5
 paginate_path: '/page/:num'

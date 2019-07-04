@@ -2,6 +2,7 @@
 layout: contact
 title: "Contact"
 permalink: /contact/
+description: You want to contact Juliette Sinibardy? Great, here's my contact form.
 sidebar_link: true
 ---
 

@@ -157,7 +157,7 @@ GEM
     jekyll-theme-hacker (0.1.1)
       jekyll (~> 3.5)
       jekyll-seo-tag (~> 2.0)
-    jekyll-theme-hydeout (4.0.0)
+    jekyll-theme-hydeout (4.0.2)
       jekyll (~> 3.4)
       jekyll-feed (~> 0.6)
       jekyll-gist (~> 1.4)
@@ -245,7 +245,7 @@ GEM
       ethon (>= 0.9.0)
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
-    tzinfo-data (1.2019.1)
+    tzinfo-data (1.2019.2)
       tzinfo (>= 1.0.0)
     unicode-display_width (1.6.0)
 

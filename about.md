@@ -3,6 +3,7 @@ layout: page
 title: About Me
 permalink: /about/
 sidebar_link: true
+description: Hi, I'm Juliette, an aspiring web developer in Paris, France.
 ---
 
 ## Hello internet 👋

@@ -3,6 +3,7 @@ layout: post
 title: "How to Set Up a Contact Form on Jekyll"
 date:   2019-07-04 06:22:08 +0200
 permalink: setup-contact-form-jekyll
+description: Detailed tutorial on how to set up a free contact form on static websites like Jekyll
 categories:
   - How-To
 
@@ -65,7 +66,7 @@ it `contact.html`.
 
 {% gist 838f4658b87635fca91333972b91f066 %}
 
-You'll notice that this layout is based on the default `page.html` template,
+You'll notice that this layout is based on the default `page.html` layout,
 and this allows us to do the following: 
 
 * Automatically use the title attribute to create a `<h1>`

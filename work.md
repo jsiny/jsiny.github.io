@@ -3,6 +3,7 @@ layout: page
 title: Work History
 permalink: /work/
 sidebar_link: true
+description: Juliette Sinibardy's previous work experience and education
 ---
 
 ## 💼 Professional Experiences
