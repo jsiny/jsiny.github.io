@@ -247,7 +247,99 @@
 
 
   <div class="post-body">
-    <p>hey there</p>
+    <p>I thought it would be cool to give the opportunity to the random internet
+user to <a href="/contact">contact me</a> if they so wanted. Turns out it’s pretty easy,
+so here’s a tutorial on how to set up a contact form on Jekyll using
+<a href="https://formspree.io/">Formspree</a>.</p>
+
+<h2 id="whats-formspree">What’s Formspree?</h2>
+
+<p>It’s a HTML form generator, that transfers the form’s answers to your
+email address. Plus it’s free and no registration is required.</p>
+
+<p>There is also a paid plan for additional features, but until 50 messages
+a month, I guess the free plan is enough for most uses.</p>
+
+<h2 id="basic-setup">Basic setup</h2>
+
+<p>Formspree provides a <a href="https://test.formspree.io/">test environment</a>
+where you can tweak your HTML before including it on your website.</p>
+
+<script src="https://gist.github.com/88f79858df1ecd4845f2673f10f1cea1.js"> </script>
+
+<p>You simply have to include your contact email on line 1 
+(<code class="highlighter-rouge">&lt;YOUR_EMAIL_HERE&gt;</code>), and the form works!</p>
+
+<figure>
+  <img src="/assets/images/formspree-test-form.png" alt="Test your contact form" />
+  <figcaption>You can test the form directly in Formspree's environment</figcaption>
+</figure>
+
+<p><em>Note:</em> You’ll have to first activate each domain you set up
+your contact form on (through an activation link sent to the email address
+provided), so it’s no use adding your friend’s email for a prank 😉</p>
+
+<p>You can also customize the <code class="highlighter-rouge">placeholder</code> of your
+input questions, or add any other question, like:</p>
+
+<script src="https://gist.github.com/5d1cb705efedb97a6e628cef94b1e2aa.js"> </script>
+
+<h2 id="integration-with-jekyll">Integration with Jekyll</h2>
+
+<p>You could now copy/paste the HTML code and include it any <code class="highlighter-rouge">.html</code> file of your
+blog.</p>
+
+<p>However, the best way to do that would be to insert this code into an
+<code class="highlighter-rouge">_includes</code> file, and create a dedicated <code class="highlighter-rouge">_layouts</code>. This way, you’ll be able
+to edit the page with the contact form using a nice and clean Markdown! 💙</p>
+
+<p>First, let’s create a new layout in your <code class="highlighter-rouge">root/_layouts</code> folder and name 
+it <code class="highlighter-rouge">contact.html</code>.</p>
+
+<script src="https://gist.github.com/838f4658b87635fca91333972b91f066.js"> </script>
+
+<p>You’ll notice that this layout is (probably) pretty similar to your default
+<code class="highlighter-rouge">page.html</code> template:</p>
+
+<ul>
+  <li>This template automatically uses the title attribute to create a <code class="highlighter-rouge">&lt;h1&gt;</code></li>
+  <li>You can type your content and it will appear before the contact form</li>
+</ul>
+
+<p><em>Note</em>: I’m using the Hydeout Jekyll template, which may have different layout
+names than your own.</p>
+
+<p>Then, we’ll create the <code class="highlighter-rouge">contact-form.html</code> mentioned in the previous code 
+excerpt. Place it in the <code class="highlighter-rouge">root/_includes</code> folder. This file will host the
+HTML you generated through Formspree, which in this case, is:</p>
+
+<script src="https://gist.github.com/88f79858df1ecd4845f2673f10f1cea1.js"> </script>
+
+<p>You now have a working <code class="highlighter-rouge">contact</code> layout! 🌈</p>
+
+<p>To use it, create a new post, and insert <code class="highlighter-rouge">layout: contact</code> in the YAML front
+matter. You can now type any Markdown content you want, and your text will be
+displayed before your contact form!</p>
+
+<h2 id="final-adjustments">Final Adjustments</h2>
+
+<p>However, in my case, the <code class="highlighter-rouge">Your Message</code> (<code class="highlighter-rouge">textarea</code>) part was displayed poorly,
+because the Hydeout template did not have any CSS for <code class="highlighter-rouge">textarea</code>.</p>
+
+<p>I therefore had to create some styling in order to homogenize the form. I’ve
+included the following SCSS in my <code class="highlighter-rouge">assets/css/main.scss</code>:</p>
+
+<script src="https://gist.github.com/9e31b3994bcb02b0480b6ac193a72b84.js"> </script>
+
+<p>I’ve also added <code class="highlighter-rouge">rows="3"</code> in the <code class="highlighter-rouge">contact-form.html</code> in order to widen the 
+text area. Bear in mind that all these changes are pretty specific to the
+Hydeout template so you’ll probably have to tweak your own CSS in order
+to have a coherent style.</p>
+
+<!--<figure>-->
+<!--  <img src="/assets/images/contact-form.png" alt="Example of contact form" class="center"/>-->
+<!--  <figcaption>Here you go!</figcaption>-->
+<!--</figure>-->
 
     
 
@@ -297,6 +389,28 @@
     <path d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z"/>
 </svg>
       </span>&nbsp;<span class="tag-name">How-To</span>
+    </a>
+  
+    
+    <a href="/tags/#html">
+    
+      <span class="icon">
+        <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z"/>
+</svg>
+      </span>&nbsp;<span class="tag-name">HTML</span>
+    </a>
+  
+    
+    <a href="/tags/#css">
+    
+      <span class="icon">
+        <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z"/>
+</svg>
+      </span>&nbsp;<span class="tag-name">CSS</span>
     </a>
   
 </div>
