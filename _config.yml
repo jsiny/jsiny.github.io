@@ -27,6 +27,7 @@ plugins:
   - github-pages
   - jemoji
   - jekyll-seo-tag
+  - jekyll-sitemap
 
 paginate: 5
 paginate_path: '/page/:num'
