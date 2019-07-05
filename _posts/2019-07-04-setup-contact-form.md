@@ -3,7 +3,7 @@ layout: post
 title: "How to Set Up a Contact Form on Jekyll"
 date:   2019-07-04 06:22:08 +0200
 permalink: setup-contact-form-jekyll
-description: Detailed tutorial on how to set up a free contact form on static websites like Jekyll
+description: Here's a detailed tutorial on how to set up a free contact form on static websites like Jekyll
 categories:
   - How-To
 
