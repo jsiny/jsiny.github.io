@@ -34,7 +34,15 @@ a month, I guess the free plan is enough for most uses.
 Formspree provides a [test environment](https://test.formspree.io/)
 where you can tweak your HTML before including it on your website.
 
-{% gist 88f79858df1ecd4845f2673f10f1cea1 %}
+```html
+<form method="POST" action="https://formspree.io/<YOUR_EMAIL_HERE>">
+  <input type="email" name="email" placeholder="Your email">
+  <input type="text" name="name" placeholder="Your name">
+  <textarea name="message" placeholder="Your message" rows="3">
+  </textarea>
+  <button type="submit">Send Message</button>
+</form>
+```
 
 You simply have to include your contact email on line 1 
 (`<YOUR_EMAIL_HERE>`), and the form works! 
@@ -50,7 +58,9 @@ provided), so it's no use adding your friend's email for a prank 😉
 You can also customize the `placeholder` of your
 input questions, or add any other question, like:
 
-{% gist 5d1cb705efedb97a6e628cef94b1e2aa %}
+```html
+<input type="text" name="subject" placeholder="Message's subject">
+```
 
 ## Integration with Jekyll
 
@@ -79,7 +89,15 @@ Then, we'll create the `contact-form.html` mentioned in the previous code
 excerpt. Place it in the `root/_includes` folder. This file will host the
 HTML you generated through Formspree, which in this case, is:
 
-{% gist 88f79858df1ecd4845f2673f10f1cea1 %}
+```html
+<form method="POST" action="https://formspree.io/<YOUR_EMAIL_HERE>">
+  <input type="email" name="email" placeholder="Your email">
+  <input type="text" name="name" placeholder="Your name">
+  <textarea name="message" placeholder="Your message" rows="3">
+  </textarea>
+  <button type="submit">Send Message</button>
+</form>
+```
 
 You now have a working `contact` layout! 🌈
 
@@ -95,7 +113,21 @@ because the Hydeout template did not have any CSS for `textarea`.
 I therefore had to create some styling in order to homogenize the form. I've
 included the following SCSS in my `assets/css/main.scss`:
 
-{% gist 9e31b3994bcb02b0480b6ac193a72b84 %}
+```scss
+input[type="text"], input[type="email"], input[type="search"], 
+input[type="submit"], button, textarea { 
+  padding: 1em 1.5em; 
+  border: 1px solid #e5e5e5; 
+  border-radius: 300px; 
+  margin-bottom: 1em; 
+  font-family:  -apple-system, BlinkMacSystemFont, "Segoe UI", 
+                "Roboto", "Oxygen", "Ubuntu", "Cantarell", 
+                "Fira Sans", "Droid Sans", "Helvetica Neue", 
+                Arial, sans-serif; 
+}
+
+textarea { width: 73%;  resize: none; }
+```
 
 I've also added `rows="3"` in the `contact-form.html` in order to widen the 
 text area. Bear in mind that all these changes are pretty specific to the

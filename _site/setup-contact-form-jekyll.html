@@ -291,7 +291,14 @@ a month, I guess the free plan is enough for most uses.</p>
 <p>Formspree provides a <a rel="nofollow" target="_blank" href="https://test.formspree.io/">test environment</a>
 where you can tweak your HTML before including it on your website.</p>
 
-<script src="https://gist.github.com/88f79858df1ecd4845f2673f10f1cea1.js"> </script>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;form</span> <span class="na">method=</span><span class="s">"POST"</span> <span class="na">action=</span><span class="s">"https://formspree.io/&lt;YOUR_EMAIL_HERE&gt;"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"email"</span> <span class="na">name=</span><span class="s">"email"</span> <span class="na">placeholder=</span><span class="s">"Your email"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">placeholder=</span><span class="s">"Your name"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;textarea</span> <span class="na">name=</span><span class="s">"message"</span> <span class="na">placeholder=</span><span class="s">"Your message"</span> <span class="na">rows=</span><span class="s">"3"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/textarea&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"submit"</span><span class="nt">&gt;</span>Send Message<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;/form&gt;</span>
+</code></pre></div></div>
 
 <p>You simply have to include your contact email on line 1 
 (<code class="highlighter-rouge">&lt;YOUR_EMAIL_HERE&gt;</code>), and the form works!</p>
@@ -312,7 +319,8 @@ provided), so it’s no use adding your friend’s email for a prank 😉</p>
 <p>You can also customize the <code class="highlighter-rouge">placeholder</code> of your
 input questions, or add any other question, like:</p>
 
-<script src="https://gist.github.com/5d1cb705efedb97a6e628cef94b1e2aa.js"> </script>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"subject"</span> <span class="na">placeholder=</span><span class="s">"Message's subject"</span><span class="nt">&gt;</span>
+</code></pre></div></div>
 
 <h2 id="integration-with-jekyll">Integration with Jekyll</h2>
 
@@ -343,7 +351,14 @@ names than your own.</p>
 excerpt. Place it in the <code class="highlighter-rouge">root/_includes</code> folder. This file will host the
 HTML you generated through Formspree, which in this case, is:</p>
 
-<script src="https://gist.github.com/88f79858df1ecd4845f2673f10f1cea1.js"> </script>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;form</span> <span class="na">method=</span><span class="s">"POST"</span> <span class="na">action=</span><span class="s">"https://formspree.io/&lt;YOUR_EMAIL_HERE&gt;"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"email"</span> <span class="na">name=</span><span class="s">"email"</span> <span class="na">placeholder=</span><span class="s">"Your email"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">placeholder=</span><span class="s">"Your name"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;textarea</span> <span class="na">name=</span><span class="s">"message"</span> <span class="na">placeholder=</span><span class="s">"Your message"</span> <span class="na">rows=</span><span class="s">"3"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/textarea&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"submit"</span><span class="nt">&gt;</span>Send Message<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;/form&gt;</span>
+</code></pre></div></div>
 
 <p>You now have a working <code class="highlighter-rouge">contact</code> layout! 🌈</p>
 
@@ -359,7 +374,20 @@ because the Hydeout template did not have any CSS for <code class="highlighter-r
 <p>I therefore had to create some styling in order to homogenize the form. I’ve
 included the following SCSS in my <code class="highlighter-rouge">assets/css/main.scss</code>:</p>
 
-<script src="https://gist.github.com/9e31b3994bcb02b0480b6ac193a72b84.js"> </script>
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s2">"text"</span><span class="o">],</span> <span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s2">"email"</span><span class="o">],</span> <span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s2">"search"</span><span class="o">],</span> 
+<span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s2">"submit"</span><span class="o">],</span> <span class="nt">button</span><span class="o">,</span> <span class="nt">textarea</span> <span class="p">{</span> 
+  <span class="nl">padding</span><span class="p">:</span> <span class="m">1em</span> <span class="m">1</span><span class="mi">.5em</span><span class="p">;</span> 
+  <span class="nl">border</span><span class="p">:</span> <span class="m">1px</span> <span class="nb">solid</span> <span class="mh">#e5e5e5</span><span class="p">;</span> 
+  <span class="nl">border-radius</span><span class="p">:</span> <span class="m">300px</span><span class="p">;</span> 
+  <span class="nl">margin-bottom</span><span class="p">:</span> <span class="m">1em</span><span class="p">;</span> 
+  <span class="nl">font-family</span><span class="p">:</span>  <span class="o">-</span><span class="n">apple-system</span><span class="o">,</span> <span class="n">BlinkMacSystemFont</span><span class="o">,</span> <span class="s2">"Segoe UI"</span><span class="o">,</span> 
+                <span class="s2">"Roboto"</span><span class="o">,</span> <span class="s2">"Oxygen"</span><span class="o">,</span> <span class="s2">"Ubuntu"</span><span class="o">,</span> <span class="s2">"Cantarell"</span><span class="o">,</span> 
+                <span class="s2">"Fira Sans"</span><span class="o">,</span> <span class="s2">"Droid Sans"</span><span class="o">,</span> <span class="s2">"Helvetica Neue"</span><span class="o">,</span> 
+                <span class="n">Arial</span><span class="o">,</span> <span class="nb">sans-serif</span><span class="p">;</span> 
+<span class="p">}</span>
+
+<span class="nt">textarea</span> <span class="p">{</span> <span class="nl">width</span><span class="p">:</span> <span class="m">73%</span><span class="p">;</span>  <span class="nl">resize</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span> <span class="p">}</span>
+</code></pre></div></div>
 
 <p>I’ve also added <code class="highlighter-rouge">rows="3"</code> in the <code class="highlighter-rouge">contact-form.html</code> in order to widen the 
 text area. Bear in mind that all these changes are pretty specific to the
