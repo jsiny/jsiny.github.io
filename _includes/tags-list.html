@@ -22,7 +22,7 @@
     {% for tag_pair in tag_words %}
     {% assign tag = tag_pair | split:'|' | last %}
     <div id="{{ tag | slugify }}" class="posts-for-tag">
-      <h2>{{ tag }}</h2>
+      <h2>Articles about {{ tag }}:</h2>
       <ul class="posts-list">
         {% for post in site.tags[tag] %}
           <li>
