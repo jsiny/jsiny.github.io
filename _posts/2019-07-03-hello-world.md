@@ -2,6 +2,7 @@
 layout: post
 title: "Hello World"
 date:   2019-07-03 10:28:08 +0200
+last_modified_at: 2019-07-07 11:55:00 +0200
 permalink: hello-world
 description: First blog article, about my decision to start a Jekyll static blog
 excerpt_separator: <!--more-->

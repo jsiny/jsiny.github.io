@@ -28,6 +28,7 @@ plugins:
   - jemoji
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-last-modified-at
 
 paginate: 5
 paginate_path: '/page/:num'

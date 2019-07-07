@@ -1,0 +1,26 @@
+<div class="post-dates">
+  <!--<span class="post-date">Created: {{ include.post.date | date_to_string }}</span>-->
+  <!--  &bull;-->
+  
+  <span class="post-date">Last Modified: {{ page.last_modified_at | date_to_string }}</span>
+ 
+ <!-- <span class="post-categories">-->
+ <!--   {% for category in include.post.categories %}-->
+ <!--     &bull;-->
+ <!--     {% assign category_page = false %}-->
+ <!--     {% for node in site.pages %}-->
+ <!--       {% if node.category == category or node.title == category %}-->
+ <!--         {% assign category_page = node %}-->
+ <!--       {% endif %}-->
+ <!--     {% endfor %}-->
+
+ <!--     {% if category_page %}-->
+ <!--       <a href="{{ site.baseurl }}{{ category_page.url }}">-->
+ <!--         {{ category_page.title | default: category_page.category }}-->
+ <!--       </a>-->
+ <!--     {% else %}-->
+ <!--       {{ category }}-->
+ <!--     {% endif %}-->
+ <!--{% endfor %}-->
+ <!--</span>-->
+</div>

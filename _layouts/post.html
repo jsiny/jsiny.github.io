@@ -1,0 +1,22 @@
+---
+layout: default
+---
+
+<header>
+  <h1 class="post-title">{{ page.title }}</h1>
+</header>
+<div class="content">
+  {% include post-meta.html post=page %}
+
+  <div class="post-body">
+    {{ content }}
+    {% include post-tags.html post=page %}
+    {% include dates.html post=page %}
+  </div>
+  
+    {% if site.enable_disqus %}
+      {% include comments.html %}
+    {% endif %}
+
+    {% include related_posts.html %}
+</div>
