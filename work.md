@@ -1,9 +1,10 @@
 ---
 layout: page
 title: Work History
-permalink: /work/
+permalink: /work
 sidebar_link: true
 description: Juliette Sinibardy's previous work experience and education
+last_modified_at: 2019-07-05 12:13:00 +0200
 ---
 
 ## 💼 Professional Experiences
