@@ -4,7 +4,7 @@ title: About Me
 permalink: /about
 sidebar_link: true
 description: Hi, I'm Juliette, an aspiring web developer in Paris, France. Here's my story! 😊
-last_modified_at: 2019-07-05 12:45:00 +0200
+last_modified_at: 2019-07-08 23:26:00 +0200
 ---
 
 ## Hello internet 👋
@@ -27,7 +27,7 @@ question my inner worth.
 
 Before my first "Hello World" website, I graduated with a Master's degree in
 Economics and worked for 4 years in a French startup called 
-[Selectra](https://selectra.info) (more on that [here](/work)).
+[Selectra](https://selectra.info) ([more on my work experience](/work)).
 
 I entered as the intern of a 200 people startup and left as the General 
 manager of a 1000 employee company. It was an humbling experience, but I'm 
