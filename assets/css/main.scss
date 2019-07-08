@@ -11,7 +11,7 @@ img {
 @media (min-width: 49rem) { body { flex-direction: row; height: 100vh; overflow-y: auto; -webkit-overflow-scrolling: touch; }
   body > * { max-height: 100vh; overflow-y: auto; -webkit-overflow-scrolling: touch; }
   /* Undo mobile CSS */
-  #sidebar, .home #sidebar { width: 19rem; text-align: left; }
+  #sidebar, .home #sidebar { width: 17rem; text-align: left; }
 }
 
 .copyright {
@@ -30,3 +30,5 @@ button:hover, input[type="submit"]:hover { background: #268bd2; border-color: #2
 figcaption { font-size: .75em; text-align: center} 
 
 .post-dates { margin-top: 0rem; margin-bottom: -0.5rem; color: #767676; font-size: 0.8em}
+
+#sidebar .site-title { font-family: "Cantarell", serif; font-weight: normal; font-size: 1.25rem; margin-top: 0; margin-bottom: 0.5rem; }

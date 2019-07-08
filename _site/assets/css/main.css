@@ -421,7 +421,7 @@ button.disqus-load { margin-top: 1em; }
 @media (min-width: 49rem) { body { flex-direction: row; height: 100vh; overflow-y: auto; -webkit-overflow-scrolling: touch; }
   body > * { max-height: 100vh; overflow-y: auto; -webkit-overflow-scrolling: touch; }
   /* Undo mobile CSS */
-  #sidebar, .home #sidebar { width: 19rem; text-align: left; } }
+  #sidebar, .home #sidebar { width: 17rem; text-align: left; } }
 .copyright { font-size: .75em; }
 
 input[type="text"], input[type="email"], input[type="search"], input[type="submit"], button, textarea { padding: 1em 1.5em; border: 1px solid #e5e5e5; border-radius: 300px; margin-bottom: 1em; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif; }
@@ -435,3 +435,5 @@ button:hover, input[type="submit"]:hover { background: #268bd2; border-color: #2
 figcaption { font-size: .75em; text-align: center; }
 
 .post-dates { margin-top: 0rem; margin-bottom: -0.5rem; color: #767676; font-size: 0.8em; }
+
+#sidebar .site-title { font-family: "Cantarell", serif; font-weight: normal; font-size: 1.25rem; margin-top: 0; margin-bottom: 0.5rem; }
