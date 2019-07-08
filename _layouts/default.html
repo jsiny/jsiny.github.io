@@ -8,7 +8,7 @@
     {% include sidebar.html %}
 
     <main class="container">
-        {{ content | replace: '<a href="http', '<a rel="nofollow" target="_blank" href="http' }}
+        {{ content | replace: '<a href="http', '<a rel="nofollow noopener" target="_blank" href="http' }}
     </main>
 
     {% include custom-foot.html %}

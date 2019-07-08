@@ -278,6 +278,7 @@ pre { max-width: 100%; overflow-x: auto; }
 body { color: rgba(255, 255, 255, 0.75); background-color: #11778f; background-image: linear-gradient(to bottom, #1592af, #0d5c6f); display: flex; flex-direction: column; min-width: 100vw; min-height: 100vh; }
 
 #sidebar { flex: 0 0 auto; padding: 2rem; }
+#sidebar .site-title { font-family: "Abril Fatface", serif; font-weight: normal; font-size: 1.25rem; margin-top: 0; margin-bottom: 0.5rem; }
 #sidebar .site-title .back-arrow { margin-right: 0.5rem; }
 
 .container { flex: 1 1 auto; display: flex; flex-direction: column; }
