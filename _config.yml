@@ -10,7 +10,7 @@ description: >-
   Pending Programmer<br>
   ███░░░░░░░ 30%
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://jsinibardy.com" # the base hostname & protocol for your site, e.g. http://example.com
 author: Juliette Sinibardy
 lang: en_US
 
