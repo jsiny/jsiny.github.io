@@ -2,7 +2,7 @@
 layout: post
 title: "A Beginner's Guide to SEO optimization in a Jekyll static website"
 date: 2019-07-09 09:16 +0200
-last_modified_at: 2019-07-09 14:03 +0200
+last_modified_at: 2019-07-09 23:06 +0200
 permalink: optimize-seo-jekyll
 description: Optimizing Jekyll for SEO is easy! 🚀 Here are a few plugins and best practices you can use.
 image: 
@@ -205,6 +205,10 @@ This simple action will save you dozens of ms of loading time.
 Whenever possible, use Markdown code snippets instead of Github gist. As 
 pretty as they are, they also take up some precious loading time (about
 **300 ms** for my blog).
+
+{% include images.html file="sloth.jpg" 
+  caption="Accurate picture of a Github asset being loaded" 
+  alt="Cute sloth" %}
 
 ### Remove useless fonts
 
