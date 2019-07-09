@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en_US"><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:8080/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:8080/" rel="alternate" type="text/html" hreflang="en_US" /><updated>2019-07-09T13:45:05+02:00</updated><id>http://localhost:8080/feed.xml</id><title type="html">Juliette Sinibardy</title><subtitle>Pending Programmer&lt;br&gt; ███░░░░░░░ 30%</subtitle><author><name>Juliette Sinibardy</name></author><entry><title type="html">A Beginner’s Guide to SEO optimization in a Jekyll static website</title><link href="http://localhost:8080/optimize-seo-jekyll" rel="alternate" type="text/html" title="A Beginner's Guide to SEO optimization in a Jekyll static website" /><published>2019-07-09T09:16:00+02:00</published><updated>2019-07-09T13:21:00+02:00</updated><id>http://localhost:8080/optimize-jekyll-seo</id><content type="html" xml:base="http://localhost:8080/optimize-seo-jekyll">&lt;blockquote&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en_US"><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:8080/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:8080/" rel="alternate" type="text/html" hreflang="en_US" /><updated>2019-07-09T14:02:18+02:00</updated><id>http://localhost:8080/feed.xml</id><title type="html">Juliette Sinibardy</title><subtitle>Pending Programmer&lt;br&gt; ███░░░░░░░ 30%</subtitle><author><name>Juliette Sinibardy</name></author><entry><title type="html">A Beginner’s Guide to SEO optimization in a Jekyll static website</title><link href="http://localhost:8080/optimize-seo-jekyll" rel="alternate" type="text/html" title="A Beginner's Guide to SEO optimization in a Jekyll static website" /><published>2019-07-09T09:16:00+02:00</published><updated>2019-07-09T14:03:00+02:00</updated><id>http://localhost:8080/optimize-jekyll-seo</id><content type="html" xml:base="http://localhost:8080/optimize-seo-jekyll">&lt;blockquote&gt;
   &lt;p&gt;What? There’s no sitemap here?
 &lt;em&gt;- Me when I discovered my new Jekyll blog&lt;/em&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -236,7 +236,7 @@ the SEO Best practices throughout your website.&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Use &lt;strong&gt;HTTPS&lt;/strong&gt; (plus it’s so easy to enforce HTTPS with Github Pages!)&lt;/li&gt;
   &lt;li&gt;Declare the &lt;strong&gt;HTML doctype&lt;/strong&gt; at the beginning of the page, along as the
-**&lt;lang&gt;** attribute&lt;/lang&gt;&lt;/li&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;lang&amp;gt;&lt;/code&gt; attribute&lt;/li&gt;
   &lt;li&gt;Have a valid &lt;strong&gt;robots.txt&lt;/strong&gt; file&lt;/li&gt;
   &lt;li&gt;Use &lt;strong&gt;consistent URLs&lt;/strong&gt; (either &lt;code class=&quot;highlighter-rouge&quot;&gt;/my_link&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;/my_link/&lt;/code&gt; but not a mix 
 of both)&lt;/li&gt;
@@ -251,7 +251,35 @@ Internet user’s journey&lt;/li&gt;
 
 &lt;p&gt;Your best bet is to frequently run
 &lt;a href=&quot;https://developers.google.com/web/tools/lighthouse/&quot;&gt;Lighthouse audits&lt;/a&gt;
-on your pages and fix every problematic item.&lt;/p&gt;</content><author><name>Juliette Sinibardy</name></author><category term="Jekyll" /><category term="SEO" /><category term="Google" /><category term="How-To" /><category term="Lighthouse" /><category term="Jekyll plugin" /><category term="HTML" /><category term="CSS" /><summary type="html">What? There’s no sitemap here? - Me when I discovered my new Jekyll blog Although Jekyll comes a little “naked” in terms of necessary SEO tools (especially in comparison to traditional CMS), it’s pretty easy to remedy this situation. Here are a couple of easy steps to follow, in order to improve your SEO ranking and your Lighthouse score.</summary></entry><entry><title type="html">How to Set Up a Contact Form on Jekyll</title><link href="http://localhost:8080/setup-contact-form-jekyll" rel="alternate" type="text/html" title="How to Set Up a Contact Form on Jekyll" /><published>2019-07-04T06:22:08+02:00</published><updated>2019-07-04T06:22:08+02:00</updated><id>http://localhost:8080/setup-contact-form</id><content type="html" xml:base="http://localhost:8080/setup-contact-form-jekyll">&lt;p&gt;I thought it would be cool to give the opportunity to the random internet
+on your pages and fix every problematic item.&lt;/p&gt;
+
+&lt;p&gt;Here’s the Lighthouse audit for this page:&lt;/p&gt;
+
+&lt;div style=&quot;text-align: center&quot;&gt;
+    &lt;figure&gt;
+        &lt;a href=&quot;/assets/images/lighthouse-audit.png&quot;&gt;
+            &lt;img src=&quot;/assets/images/lighthouse-audit.png&quot; alt=&quot;Lighthouse audit's results on this web page&quot; /&gt;  
+        &lt;/a&gt;
+        &lt;figcaption&gt;All green! 💚&lt;/figcaption&gt;
+    &lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;em&gt;Note&lt;/em&gt;: My performance score here is somewhat lowered because of the inclusion of
+Github gists, that significantly increases the loading time. The First 
+Meaningful Paint is therefore at 2.5 seconds.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/&quot;&gt;My blog’s homepage&lt;/a&gt; has a much better overall performance, with a 
+First Meaningful Paint at 0.8 second. This is mostly explained by the lack
+of external resources loaded on the front page (no Github gist, no images).&lt;/p&gt;
+
+&lt;div style=&quot;text-align: center&quot;&gt;
+    &lt;figure&gt;
+        &lt;a href=&quot;/assets/images/lighthouse-homepage.png&quot;&gt;
+            &lt;img src=&quot;/assets/images/lighthouse-homepage.png&quot; alt=&quot;Lighthouse audit's results for the homepage&quot; /&gt;  
+        &lt;/a&gt;
+        &lt;figcaption&gt;Static websites are incredibly fast 😍&lt;/figcaption&gt;
+    &lt;/figure&gt;
+&lt;/div&gt;</content><author><name>Juliette Sinibardy</name></author><category term="Jekyll" /><category term="SEO" /><category term="Google" /><category term="How-To" /><category term="Lighthouse" /><category term="Jekyll plugin" /><category term="HTML" /><category term="CSS" /><summary type="html">What? There’s no sitemap here? - Me when I discovered my new Jekyll blog Although Jekyll comes a little “naked” in terms of necessary SEO tools (especially in comparison to traditional CMS), it’s pretty easy to remedy this situation. Here are a couple of easy steps to follow, in order to improve your SEO ranking and your Lighthouse score.</summary></entry><entry><title type="html">How to Set Up a Contact Form on Jekyll</title><link href="http://localhost:8080/setup-contact-form-jekyll" rel="alternate" type="text/html" title="How to Set Up a Contact Form on Jekyll" /><published>2019-07-04T06:22:08+02:00</published><updated>2019-07-04T06:22:08+02:00</updated><id>http://localhost:8080/setup-contact-form</id><content type="html" xml:base="http://localhost:8080/setup-contact-form-jekyll">&lt;p&gt;I thought it would be cool to give the opportunity to the random internet
 user to &lt;a href=&quot;/contact&quot;&gt;contact me&lt;/a&gt; if they so wanted. Turns out it’s pretty easy,
 so here’s a tutorial on how to set up a contact form on Jekyll using
 &lt;a href=&quot;https://formspree.io/&quot;&gt;Formspree&lt;/a&gt;.&lt;/p&gt;

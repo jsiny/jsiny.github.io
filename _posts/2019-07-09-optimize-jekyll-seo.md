@@ -2,9 +2,9 @@
 layout: post
 title: "A Beginner's Guide to SEO optimization in a Jekyll static website"
 date: 2019-07-09 09:16 +0200
-last_modified_at: 2019-07-09 13:21 +0200
+last_modified_at: 2019-07-09 14:03 +0200
 permalink: optimize-seo-jekyll
-description: Optimizing Jekyll for SEO is easy! Here are a few plugins and best practices you can use.
+description: Optimizing Jekyll for SEO is easy! 🚀 Here are a few plugins and best practices you can use.
 image: 
 published: true
 sitemap: true
@@ -246,7 +246,7 @@ the SEO Best practices throughout your website.
 Here are a few of them:
 * Use **HTTPS** (plus it's so easy to enforce HTTPS with Github Pages!)
 * Declare the **HTML doctype** at the beginning of the page, along as the
-**<lang>** attribute
+`<lang>` attribute
 * Have a valid **robots.txt** file
 * Use **consistent URLs** (either `/my_link` or `/my_link/` but not a mix 
 of both)
@@ -261,3 +261,21 @@ Internet user's journey
 Your best bet is to frequently run
 [Lighthouse audits](https://developers.google.com/web/tools/lighthouse/)
 on your pages and fix every problematic item.
+
+Here's the Lighthouse audit for this page:
+
+{% include images.html file="lighthouse-audit.png" 
+  caption="All green! 💚" 
+  alt="Lighthouse audit's results on this web page" %}
+
+*Note*: My performance score here is somewhat lowered because of the inclusion of
+Github gists, that significantly increases the loading time. The First 
+Meaningful Paint is therefore at 2.5 seconds.
+
+[My blog's homepage](/) has a much better overall performance, with a 
+First Meaningful Paint at 0.8 second. This is mostly explained by the lack
+of external resources loaded on the front page (no Github gist, no images).
+
+{% include images.html file="lighthouse-homepage.png" 
+  caption="Static websites are incredibly fast 😍" 
+  alt="Lighthouse audit's results for the homepage" %}

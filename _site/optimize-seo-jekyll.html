@@ -38,15 +38,15 @@
 <meta property="og:title" content="A Beginner’s Guide to SEO optimization in a Jekyll static website" />
 <meta name="author" content="Juliette Sinibardy" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Optimizing Jekyll for SEO is easy! Here are a few plugins and best practices you can use." />
-<meta property="og:description" content="Optimizing Jekyll for SEO is easy! Here are a few plugins and best practices you can use." />
+<meta name="description" content="Optimizing Jekyll for SEO is easy! 🚀 Here are a few plugins and best practices you can use." />
+<meta property="og:description" content="Optimizing Jekyll for SEO is easy! 🚀 Here are a few plugins and best practices you can use." />
 <link rel="canonical" href="http://localhost:8080/optimize-seo-jekyll" />
 <meta property="og:url" content="http://localhost:8080/optimize-seo-jekyll" />
 <meta property="og:site_name" content="Juliette Sinibardy" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2019-07-09T09:16:00+02:00" />
 <script type="application/ld+json">
-{"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:8080/optimize-seo-jekyll"},"description":"Optimizing Jekyll for SEO is easy! Here are a few plugins and best practices you can use.","@type":"BlogPosting","url":"http://localhost:8080/optimize-seo-jekyll","headline":"A Beginner’s Guide to SEO optimization in a Jekyll static website","dateModified":"2019-07-09T13:21:00+02:00","datePublished":"2019-07-09T09:16:00+02:00","author":{"@type":"Person","name":"Juliette Sinibardy"},"@context":"http://schema.org"}</script>
+{"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:8080/optimize-seo-jekyll"},"description":"Optimizing Jekyll for SEO is easy! 🚀 Here are a few plugins and best practices you can use.","@type":"BlogPosting","url":"http://localhost:8080/optimize-seo-jekyll","headline":"A Beginner’s Guide to SEO optimization in a Jekyll static website","dateModified":"2019-07-09T14:03:00+02:00","datePublished":"2019-07-09T09:16:00+02:00","author":{"@type":"Person","name":"Juliette Sinibardy"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -507,7 +507,7 @@ the SEO Best practices throughout your website.</p>
 <ul>
   <li>Use <strong>HTTPS</strong> (plus it’s so easy to enforce HTTPS with Github Pages!)</li>
   <li>Declare the <strong>HTML doctype</strong> at the beginning of the page, along as the
-**<lang>** attribute</lang></li>
+<code class="highlighter-rouge">&lt;lang&gt;</code> attribute</li>
   <li>Have a valid <strong>robots.txt</strong> file</li>
   <li>Use <strong>consistent URLs</strong> (either <code class="highlighter-rouge">/my_link</code> or <code class="highlighter-rouge">/my_link/</code> but not a mix 
 of both)</li>
@@ -523,6 +523,34 @@ Internet user’s journey</li>
 <p>Your best bet is to frequently run
 <a rel="nofollow noopener" target="_blank" href="https://developers.google.com/web/tools/lighthouse/">Lighthouse audits</a>
 on your pages and fix every problematic item.</p>
+
+<p>Here’s the Lighthouse audit for this page:</p>
+
+<div style="text-align: center">
+    <figure>
+        <a href="/assets/images/lighthouse-audit.png">
+            <img src="/assets/images/lighthouse-audit.png" alt="Lighthouse audit's results on this web page" />  
+        </a>
+        <figcaption>All green! 💚</figcaption>
+    </figure>
+</div>
+
+<p><em>Note</em>: My performance score here is somewhat lowered because of the inclusion of
+Github gists, that significantly increases the loading time. The First 
+Meaningful Paint is therefore at 2.5 seconds.</p>
+
+<p><a href="/">My blog’s homepage</a> has a much better overall performance, with a 
+First Meaningful Paint at 0.8 second. This is mostly explained by the lack
+of external resources loaded on the front page (no Github gist, no images).</p>
+
+<div style="text-align: center">
+    <figure>
+        <a href="/assets/images/lighthouse-homepage.png">
+            <img src="/assets/images/lighthouse-homepage.png" alt="Lighthouse audit's results for the homepage" />  
+        </a>
+        <figcaption>Static websites are incredibly fast 😍</figcaption>
+    </figure>
+</div>
 
     
 
