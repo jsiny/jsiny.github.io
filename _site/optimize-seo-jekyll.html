@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+
+  <title>
+    
+      A Beginner's Guide to SEO optimization in a Jekyll static website &middot; Juliette Sinibardy
+    
+  </title>
+
+  
+
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/assets/css/main.css" />
+
+  <!-- Icons -->
+  <link rel="icon" type="image/png" href="/favicon.png" />
+
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml" />
+
+  <!-- Google Analytics tracking ID -->
+
+
+<!-- SEO tags -->
+<!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>A Beginner’s Guide to SEO optimization in a Jekyll static website | Juliette Sinibardy</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="A Beginner’s Guide to SEO optimization in a Jekyll static website" />
+<meta name="author" content="Juliette Sinibardy" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Optimizing Jekyll for SEO is easy! Here are a few plugins and best practices you can use." />
+<meta property="og:description" content="Optimizing Jekyll for SEO is easy! Here are a few plugins and best practices you can use." />
+<link rel="canonical" href="http://localhost:8080/optimize-seo-jekyll" />
+<meta property="og:url" content="http://localhost:8080/optimize-seo-jekyll" />
+<meta property="og:site_name" content="Juliette Sinibardy" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-07-09T09:16:00+02:00" />
+<script type="application/ld+json">
+{"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:8080/optimize-seo-jekyll"},"description":"Optimizing Jekyll for SEO is easy! Here are a few plugins and best practices you can use.","@type":"BlogPosting","url":"http://localhost:8080/optimize-seo-jekyll","headline":"A Beginner’s Guide to SEO optimization in a Jekyll static website","dateModified":"2019-07-09T13:21:00+02:00","datePublished":"2019-07-09T09:16:00+02:00","author":{"@type":"Person","name":"Juliette Sinibardy"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+
+  <body class="post">
+
+    <div id="sidebar">
+  <header>
+    <div class="site-title">
+      <a href="/">
+        
+          <span class="back-arrow icon"><svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+  <path d="M0 0h24v24H0z" fill="none"/>
+  <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+</svg></span>
+        
+        Juliette Sinibardy
+      </a>
+    </div>
+    <p class="lead">Pending Programmer<br> ███░░░░░░░ 30%</p>
+  </header>
+  <nav id="sidebar-nav-links">
+  
+    <a class="home-link "
+        href="/">Home</a>
+  
+  
+
+  
+
+  
+
+
+  
+
+  
+    
+      <a class="page-link "
+          href="/about">About Me</a>
+    
+  
+
+  
+    
+      <a class="page-link "
+          href="/contact">Contact</a>
+    
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+      <a class="page-link "
+          href="/work">Work History</a>
+    
+  
+
+  
+
+  
+
+  
+
+
+  
+
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+
+  <!-- Optional additional links to insert in sidebar nav -->
+</nav>
+
+
+  
+
+  <nav id="sidebar-icon-links">
+  
+
+  
+  
+  
+  
+
+  
+<a id="github-link"
+    class="icon" title="Github" aria-label="Github"
+    href="https://github.com/jsiny">
+  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 28" width="24" height="24">
+    <path d="M12 2c6.625 0 12 5.375 12 12 0 5.297-3.437 9.797-8.203 11.391-0.609 0.109-0.828-0.266-0.828-0.578 0-0.391 0.016-1.687 0.016-3.297 0-1.125-0.375-1.844-0.812-2.219 2.672-0.297 5.484-1.313 5.484-5.922 0-1.313-0.469-2.375-1.234-3.219 0.125-0.313 0.531-1.531-0.125-3.187-1-0.313-3.297 1.234-3.297 1.234-0.953-0.266-1.984-0.406-3-0.406s-2.047 0.141-3 0.406c0 0-2.297-1.547-3.297-1.234-0.656 1.656-0.25 2.875-0.125 3.187-0.766 0.844-1.234 1.906-1.234 3.219 0 4.594 2.797 5.625 5.469 5.922-0.344 0.313-0.656 0.844-0.766 1.609-0.688 0.313-2.438 0.844-3.484-1-0.656-1.141-1.844-1.234-1.844-1.234-1.172-0.016-0.078 0.734-0.078 0.734 0.781 0.359 1.328 1.75 1.328 1.75 0.703 2.141 4.047 1.422 4.047 1.422 0 1 0.016 1.937 0.016 2.234 0 0.313-0.219 0.688-0.828 0.578-4.766-1.594-8.203-6.094-8.203-11.391 0-6.625 5.375-12 12-12zM4.547 19.234c0.031-0.063-0.016-0.141-0.109-0.187-0.094-0.031-0.172-0.016-0.203 0.031-0.031 0.063 0.016 0.141 0.109 0.187 0.078 0.047 0.172 0.031 0.203-0.031zM5.031 19.766c0.063-0.047 0.047-0.156-0.031-0.25-0.078-0.078-0.187-0.109-0.25-0.047-0.063 0.047-0.047 0.156 0.031 0.25 0.078 0.078 0.187 0.109 0.25 0.047zM5.5 20.469c0.078-0.063 0.078-0.187 0-0.297-0.063-0.109-0.187-0.156-0.266-0.094-0.078 0.047-0.078 0.172 0 0.281s0.203 0.156 0.266 0.109zM6.156 21.125c0.063-0.063 0.031-0.203-0.063-0.297-0.109-0.109-0.25-0.125-0.313-0.047-0.078 0.063-0.047 0.203 0.063 0.297 0.109 0.109 0.25 0.125 0.313 0.047zM7.047 21.516c0.031-0.094-0.063-0.203-0.203-0.25-0.125-0.031-0.266 0.016-0.297 0.109s0.063 0.203 0.203 0.234c0.125 0.047 0.266 0 0.297-0.094zM8.031 21.594c0-0.109-0.125-0.187-0.266-0.172-0.141 0-0.25 0.078-0.25 0.172 0 0.109 0.109 0.187 0.266 0.172 0.141 0 0.25-0.078 0.25-0.172zM8.937 21.438c-0.016-0.094-0.141-0.156-0.281-0.141-0.141 0.031-0.234 0.125-0.219 0.234 0.016 0.094 0.141 0.156 0.281 0.125s0.234-0.125 0.219-0.219z"></path>
+</svg>
+
+</a>
+
+<a id="medium-link"
+    class="icon" title="Medium" aria-label="Medium"
+    href="https://medium.com/@juju.siny">
+  <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 24 24">
+    <path d="M12 0c-6.626 0-12 5.372-12 12 0 6.627 5.374 12 12 12 6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12zm6.974 17.557v-.235l-1.092-1.072c-.096-.073-.144-.194-.124-.313v-7.874c-.02-.119.028-.24.124-.313l1.118-1.072v-.235h-3.869l-2.758 6.88-3.138-6.88h-4.059v.235l1.308 1.575c.128.115.194.285.176.457v6.188c.038.223-.032.451-.189.614l-1.471 1.784v.235h4.17v-.235l-1.471-1.784c-.158-.163-.233-.389-.202-.614v-5.352l3.66 7.985h.425l3.143-7.985v6.365c0 .17 0 .202-.111.313l-1.13 1.098v.235h5.49z"/>
+</svg>
+</a>
+
+<a id="linkedin-link"
+    class="icon" title="LinkedIn" aria-label="LinkedIn"
+    href="https://linkedin.com/in/juliette-sinibardy">
+  <?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="24" height="24" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 490.732 490.732" style="enable-background:new 0 0 490.732 490.732;"
+	 xml:space="preserve">
+<g>
+	<g>
+		<path d="M472.366,0.003H18.36C8.219,0.003,0,8.222,0,18.363v454.005c0,10.143,8.219,18.361,18.36,18.361h454.012
+			c10.142,0,18.36-8.219,18.36-18.361V18.363C490.727,8.222,482.507,0.003,472.366,0.003z M130.375,403.808
+			c0,6.762-5.478,12.238-12.24,12.238H69.132c-6.756,0-12.24-5.477-12.24-12.238V189.625c0-6.763,5.484-12.24,12.24-12.24h49.003
+			c6.762,0,12.24,5.477,12.24,12.24V403.808z M130.375,127.482c0,6.763-5.478,12.24-12.24,12.24H69.132
+			c-6.756,0-12.24-5.478-12.24-12.24V83.969c0-6.763,5.484-12.24,12.24-12.24h49.003c6.762,0,12.24,5.477,12.24,12.24V127.482z
+			 M433.835,403.808c0,6.762-5.483,12.238-12.24,12.238h-49.003c-6.763,0-12.24-5.477-12.24-12.238v-90.436
+			c0-29.988-1.566-49.383-4.712-58.189c-3.14-8.807-8.237-15.649-15.3-20.526c-7.062-4.884-15.558-7.32-25.496-7.32
+			c-12.729,0-24.149,3.488-34.26,10.459c-10.11,6.977-17.038,16.211-20.79,27.717c-3.745,11.506-5.618,32.779-5.618,63.807v74.488
+			c0,6.762-5.483,12.238-12.24,12.238h-49.003c-6.756,0-12.24-5.477-12.24-12.238V189.625c0-6.763,5.483-12.24,12.24-12.24h43.771
+			c6.763,0,12.24,5.477,12.24,12.24v16.316c0,6.763,3.312,7.852,7.858,2.852c22.864-25.123,50.753-37.687,83.673-37.687
+			c16.212,0,31.028,2.919,44.455,8.758c13.422,5.838,23.58,13.292,30.466,22.356c6.885,9.063,11.683,19.351,14.382,30.857
+			c2.699,11.505,4.058,27.98,4.058,49.426V403.808L433.835,403.808z"/>
+	</g>
+</g>
+</svg>
+
+</a>
+  
+    <a id="subscribe-link"
+     class="icon" title="Subscribe" aria-label="Subscribe"
+     href="/feed.xml">
+    <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <circle cx="6.18" cy="17.82" r="2.18"/>
+    <path d="M4 4.44v2.83c7.03 0 12.73 5.7 12.73 12.73h2.83c0-8.59-6.97-15.56-15.56-15.56zm0 5.66v2.83c3.9 0 7.07 3.17 7.07 7.07h2.83c0-5.47-4.43-9.9-9.9-9.9z"/>
+</svg>
+  </a>
+  
+  
+    <a id="tags-link"
+       class="icon"
+       title="Tags" aria-label="Tags"
+       href="/tags">
+      <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z"/>
+</svg>
+    </a>
+  
+
+  
+
+</nav>
+  <p class="copyright">
+  &copy; 2019 - Juliette Sinibardy
+</p>
+</div>
+
+    <main class="container">
+        <header>
+  <h1 class="post-title">A Beginner's Guide to SEO optimization in a Jekyll static website</h1>
+</header>
+<div class="content">
+  <div class="post-meta">
+  <span class="post-date">09 Jul 2019</span>
+  <span class="post-categories">
+    
+      &bull;
+
+      
+      
+      
+
+      
+        How-To
+      
+    
+  </span>
+</div>
+
+  <div class="post-body">
+    <blockquote>
+  <p>What? There’s no sitemap here?
+<em>- Me when I discovered my new Jekyll blog</em></p>
+</blockquote>
+
+<p>Although Jekyll comes a little “naked” in terms of necessary SEO tools
+(especially in comparison to traditional CMS), it’s pretty easy to remedy this
+situation. Here are a couple of easy steps to follow, in order to improve your
+SEO ranking and 
+<a rel="nofollow noopener" target="_blank" href="https://developers.google.com/web/tools/lighthouse/">your Lighthouse score</a>.</p>
+
+<!--more-->
+
+<ul id="markdown-toc">
+  <li><a href="#install-jekyll-seo-tag" id="markdown-toc-install-jekyll-seo-tag">Install jekyll-seo-tag</a></li>
+  <li><a href="#install-jekyll-sitemap-and-optimize-date-management" id="markdown-toc-install-jekyll-sitemap-and-optimize-date-management">Install jekyll-sitemap and optimize date management</a></li>
+  <li><a href="#add-a-google-analytics-tracking-id" id="markdown-toc-add-a-google-analytics-tracking-id">Add a Google Analytics tracking ID</a></li>
+  <li><a href="#performance-optimizations" id="markdown-toc-performance-optimizations">Performance optimizations</a>    <ul>
+      <li><a href="#google-analytics-tracking" id="markdown-toc-google-analytics-tracking">Google Analytics tracking</a></li>
+      <li><a href="#reduce-image-size" id="markdown-toc-reduce-image-size">Reduce image size</a></li>
+      <li><a href="#replace-github-gist-by-code-snippets" id="markdown-toc-replace-github-gist-by-code-snippets">Replace Github gist by code snippets</a></li>
+      <li><a href="#remove-useless-fonts" id="markdown-toc-remove-useless-fonts">Remove useless fonts</a></li>
+    </ul>
+  </li>
+  <li><a href="#accessibility" id="markdown-toc-accessibility">Accessibility</a></li>
+  <li><a href="#seo-101" id="markdown-toc-seo-101">SEO 101</a></li>
+</ul>
+<hr />
+
+<h2 id="install-jekyll-seo-tag">Install jekyll-seo-tag</h2>
+
+<p>The first thing you want to do is install the 
+<a rel="nofollow noopener" target="_blank" href="https://github.com/jekyll/jekyll-seo-tag">jekyll-seo-tag plugin</a>.</p>
+
+<p>This plugin will automatically generate the following meta tags:</p>
+<ul>
+  <li>Page title and description</li>
+  <li>Canonical URL</li>
+  <li>Open Graph title, description (useful for Facebook or Linkedin)</li>
+  <li>Twitter Summary Card metadata</li>
+  <li>and other stuff</li>
+</ul>
+
+<p>Once the plugin is added to your <code class="highlighter-rouge">_config.yml</code> file, you’ll need to add a simple
+line to the <code class="highlighter-rouge">head</code> of every page. To do that, I created a 
+<code class="highlighter-rouge">custom-head.html</code> file in the <code class="highlighter-rouge">_includes</code> folder and added the following 
+SEO tag:</p>
+
+<script src="https://gist.github.com/17b76ed8bf8dc7d892dd2e19ca9a59d4.js"> </script>
+
+<p>Now, all you have to do is to update your title, metadescriptions and permalink
+on every article or page ✨</p>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">title</span><span class="pi">:</span> <span class="s2">"</span><span class="s">How</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">Set</span><span class="nv"> </span><span class="s">Up</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">Contact</span><span class="nv"> </span><span class="s">Form</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">Jekyll"</span>
+<span class="na">permalink</span><span class="pi">:</span> <span class="s">setup-contact-form-jekyll</span>
+<span class="na">description</span><span class="pi">:</span> <span class="s">Here's a detailed tutorial on how to set up a</span> 
+             <span class="s">free contact form on static websites like Jekyll</span>
+</code></pre></div></div>
+
+<h2 id="install-jekyll-sitemap-and-optimize-date-management">Install jekyll-sitemap and optimize date management</h2>
+
+<p>The next thing you’ll need is have a good sitemap, to help web crawlers
+do their job.</p>
+
+<div style="text-align: center">
+    <figure>
+        <a href="/assets/images/happy-index-robot.jpg">
+            <img src="/assets/images/happy-index-robot.jpg" alt="Busy robot from Wall-E" />  
+        </a>
+        <figcaption>🤖 Must... index... everything... 🤖</figcaption>
+    </figure>
+</div>
+
+<p>Fortunately, there’s a plugin for that: 
+<a rel="nofollow noopener" target="_blank" href="https://github.com/jekyll/jekyll-sitemap">jekyll-sitemap</a>! And its use is
+pretty straightforward.</p>
+
+<p>The only subtlety is the date and time management. The sitemap plugin will
+automatically use your <strong>Created date</strong> to fill the <code class="highlighter-rouge">&lt;lastmod&gt;</code> tag.</p>
+
+<p>However, you probably want to have your <strong>Last modified date</strong> instead. 
+To do that, you could use
+<a rel="nofollow noopener" target="_blank" href="https://github.com/gjtorikian/jekyll-last-modified-at">the jekyll-last-modified-at plugin</a>.</p>
+
+<p>However the plugin isn’t compatible with Github Pages, because of Github’s 
+automatic builds. Instead, you can add add the parameter <code class="highlighter-rouge">last_modified_at</code>
+inside your front matter directly, and the sitemap will automatically use
+this date as the Last modified date.</p>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">date</span><span class="pi">:</span>               <span class="s">2019-07-03 10:28:08 +0200</span>
+<span class="na">last_modified_at</span><span class="pi">:</span>   <span class="s">2019-07-07 11:55:00 +0200</span>
+</code></pre></div></div>
+
+<p>To simplify your use of timestamps, I recommend using the 
+<a rel="nofollow noopener" target="_blank" href="https://github.com/jekyll/jekyll-compose">jekyll-compose plugin</a>. It will
+automatically create your posts with the perfect timestamp and your custom
+front matter.</p>
+
+<p>All you need to do is correctly set up your <code class="highlighter-rouge">_config.yml</code> file and then
+type <code class="highlighter-rouge">bundle exec jekyll post "My post name"</code> in your CLI.</p>
+
+<p>Here are my own custom front matter settings:</p>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">jekyll_compose</span><span class="pi">:</span>
+  <span class="na">post_default_front_matter</span><span class="pi">:</span>
+    <span class="na">last_modified_at</span><span class="pi">:</span> 
+    <span class="na">permalink</span><span class="pi">:</span> 
+    <span class="na">description</span><span class="pi">:</span>
+    <span class="na">image</span><span class="pi">:</span>
+    <span class="na">published</span><span class="pi">:</span> <span class="no">true</span>
+    <span class="na">sitemap</span><span class="pi">:</span> <span class="no">true</span>
+    <span class="na">excerpt_separator</span><span class="pi">:</span> <span class="s">&lt;!--more--&gt;</span>
+    <span class="na">categories</span><span class="pi">:</span>
+    <span class="na">tags</span><span class="pi">:</span>
+</code></pre></div></div>
+
+<p>Additionally, you should specify your UTC timezone in your <code class="highlighter-rouge">_config.yml</code> file,
+using the <a rel="nofollow noopener" target="_blank" href="https://en.wikipedia.org/wiki/Tz_database">IANA TimeZone Database</a>
+naming convention.</p>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">timezone</span><span class="pi">:</span> <span class="s">Europe/Paris</span>
+</code></pre></div></div>
+
+<p>This will allow your timestamps to use your correct timezone:</p>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Before setting the timezone</span>
+<span class="na">date</span><span class="pi">:</span>  <span class="s">2019-07-03 08:28:08 +0000</span>
+
+<span class="c1"># After setting the timezone</span>
+<span class="na">date</span><span class="pi">:</span>  <span class="s">2019-07-03 10:28:08 +0200</span>
+</code></pre></div></div>
+
+<h2 id="add-a-google-analytics-tracking-id">Add a Google Analytics tracking ID</h2>
+
+<p>If you haven’t already, you’ll need to add a Google Analytics tag in order
+to follow your traffic.</p>
+
+<p>To do that, let’s create an <code class="highlighter-rouge">analytics.html</code> file in your <code class="highlighter-rouge">_includes</code> folder.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">&lt;!-- Global site tag (gtag.js) - Google Analytics --&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"preconnect"</span> <span class="na">as=</span><span class="s">"script"</span> 
+  <span class="na">href=</span><span class="s">"https://www.googletagmanager.com/gtag/js?id=YOUR_TRACKING_ID"</span><span class="nt">&gt;</span>
+  
+<span class="nt">&lt;script&gt;</span>
+  <span class="nb">window</span><span class="p">.</span><span class="nx">dataLayer</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">dataLayer</span> <span class="o">||</span> <span class="p">[];</span>
+  <span class="kd">function</span> <span class="nx">gtag</span><span class="p">(){</span><span class="nx">dataLayer</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="kr">arguments</span><span class="p">);}</span>
+  <span class="nx">gtag</span><span class="p">(</span><span class="s1">'js'</span><span class="p">,</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">());</span>
+  <span class="nx">gtag</span><span class="p">(</span><span class="s1">'config'</span><span class="p">,</span> <span class="nx">YOUR_TRACKING_ID</span><span class="p">);</span>
+<span class="nt">&lt;/script&gt;</span>
+</code></pre></div></div>
+
+<p>Then, you’ll need to include <code class="highlighter-rouge">analytics.html</code> in your <code class="highlighter-rouge">custom-head.html</code> file:</p>
+
+<script src="https://gist.github.com/e8a02a89d20d53ba4c5671f1c6121de8.js"> </script>
+
+<p>The <code class="highlighter-rouge">% if %</code> condition removes the tracking tag from my own local server. Thus,
+my own local tests will not be taken into account in my global Analytics
+reports.</p>
+
+<h2 id="performance-optimizations">Performance optimizations</h2>
+
+<h3 id="google-analytics-tracking">Google Analytics tracking</h3>
+
+<p>You may have noticed that, in the <code class="highlighter-rouge">analytics.html</code> file, I did not use the
+default script provided by Google.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">&lt;!--Default script--&gt;</span>
+<span class="nt">&lt;script </span><span class="na">async</span> 
+  <span class="na">src=</span><span class="s">"https://www.googletagmanager.com/gtag/js?id=YOUR_TRACKING_ID"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/script&gt;</span>
+
+<span class="c">&lt;!--Custom script--&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"preconnect"</span> <span class="na">as=</span><span class="s">"script"</span> 
+  <span class="na">href=</span><span class="s">"https://www.googletagmanager.com/gtag/js?id=YOUR_TRACKING_ID"</span><span class="nt">&gt;</span>
+</code></pre></div></div>
+
+<p>Instead, I’m using the resource hint <code class="highlighter-rouge">rel="preconnect"</code> in order to tell the 
+browser to start loading the Google Analytics script before an HTTP request 
+is sent to the server. This performance optimization improved my loading time 
+by <strong>130 ms</strong>.</p>
+
+<h3 id="reduce-image-size">Reduce image size</h3>
+
+<p>Before uploading an image, you should always:</p>
+<ul>
+  <li>Resize the image at its minimum. For instance, my blog accepts images up to 
+800 px width, therefore it’s no use uploading a 1500 px photo.</li>
+  <li>Compress the image with a service like <a rel="nofollow noopener" target="_blank" href="https://tinypng.com/">TinyPNG</a></li>
+</ul>
+
+<p>This simple action will save you dozens of ms of loading time.</p>
+
+<h3 id="replace-github-gist-by-code-snippets">Replace Github gist by code snippets</h3>
+
+<p>Whenever possible, use Markdown code snippets instead of Github gist. As 
+pretty as they are, they also take up some precious loading time (about
+<strong>300 ms</strong> for my blog).</p>
+
+<h3 id="remove-useless-fonts">Remove useless fonts</h3>
+
+<p>My Jekyll theme came with a <strong>190 ms</strong> loading time title font. Which could 
+mean only one thing: the font had to go.</p>
+
+<p>Surprisingly, it was actually pretty difficult to get rid of it.</p>
+
+<p>As the font was present in the default <code class="highlighter-rouge">_includes/font-includes.html</code> file,
+I had to create a custom <code class="highlighter-rouge">_includes/head.html</code> file.</p>
+
+<p>Inside this new <code class="highlighter-rouge">head</code>, I deleted the infamous
+<code class="highlighter-rouge">% include font-includes.html %</code> line, and the font loading time magically
+disappeared. 🚀</p>
+
+<h2 id="accessibility">Accessibility</h2>
+
+<p>The theme I’ve used scored pretty poorly on Accessibility items, because the 
+colors chosen (albeit beautiful) lacked contrasts. This was especially true
+for the theme’s code snippets.</p>
+
+<p>Therefore, I’ve used this 
+<a rel="nofollow noopener" target="_blank" href="https://dequeuniversity.com/rules/axe/3.3/color-contrast">contrast tool</a>
+to select new colors. Then, I’ve included the new hexadecimal codes in 
+my <code class="highlighter-rouge">assets/css/main.scss</code> file. Here’s an excerpt:</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">/* Literal.Number */</span>
+<span class="nc">.highlight</span> <span class="nc">.s</span> <span class="p">{</span> <span class="nl">color</span><span class="p">:</span> <span class="m">#C04343</span><span class="p">;</span> <span class="p">}</span>
+<span class="c">/* Literal.String */</span>
+<span class="nc">.highlight</span> <span class="nc">.na</span> <span class="p">{</span> <span class="nl">color</span><span class="p">:</span> <span class="m">#8B38D1</span><span class="p">;</span> <span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="seo-101">SEO 101</h2>
+
+<p>Finally, and perhaps the most important thing, is to consistently respect
+the SEO Best practices throughout your website.</p>
+
+<p>Here are a few of them:</p>
+<ul>
+  <li>Use <strong>HTTPS</strong> (plus it’s so easy to enforce HTTPS with Github Pages!)</li>
+  <li>Declare the <strong>HTML doctype</strong> at the beginning of the page, along as the
+**<lang>** attribute</lang></li>
+  <li>Have a valid <strong>robots.txt</strong> file</li>
+  <li>Use <strong>consistent URLs</strong> (either <code class="highlighter-rouge">/my_link</code> or <code class="highlighter-rouge">/my_link/</code> but not a mix 
+of both)</li>
+  <li>Use the <strong><code class="highlighter-rouge">alt</code> attribute</strong> on your images, both for ranking and accessibility
+reasons</li>
+  <li>Choose a discernable name for your <strong>links</strong></li>
+  <li>Make all <strong>external links</strong> <code class="highlighter-rouge">_blank</code> and <code class="highlighter-rouge">nofollow noopener</code></li>
+  <li>Create a <strong>netlinking</strong> strategy, to improve your pagerank and enhance the 
+Internet user’s journey</li>
+  <li>…and a bunch of other stuff</li>
+</ul>
+
+<p>Your best bet is to frequently run
+<a rel="nofollow noopener" target="_blank" href="https://developers.google.com/web/tools/lighthouse/">Lighthouse audits</a>
+on your pages and fix every problematic item.</p>
+
+    
+
+
+
+<div class="post-tags">
+  
+    
+    <a href="/tags#jekyll">
+    
+      <span class="icon">
+        <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z"/>
+</svg>
+      </span>&nbsp;<span class="tag-name">Jekyll</span>
+    </a>
+  
+    
+    <a href="/tags#seo">
+    
+      <span class="icon">
+        <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z"/>
+</svg>
+      </span>&nbsp;<span class="tag-name">SEO</span>
+    </a>
+  
+    
+    <a href="/tags#google">
+    
+      <span class="icon">
+        <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z"/>
+</svg>
+      </span>&nbsp;<span class="tag-name">Google</span>
+    </a>
+  
+    
+    <a href="/tags#how-to">
+    
+      <span class="icon">
+        <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z"/>
+</svg>
+      </span>&nbsp;<span class="tag-name">How-To</span>
+    </a>
+  
+    
+    <a href="/tags#lighthouse">
+    
+      <span class="icon">
+        <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z"/>
+</svg>
+      </span>&nbsp;<span class="tag-name">Lighthouse</span>
+    </a>
+  
+    
+    <a href="/tags#jekyll-plugin">
+    
+      <span class="icon">
+        <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z"/>
+</svg>
+      </span>&nbsp;<span class="tag-name">Jekyll plugin</span>
+    </a>
+  
+    
+    <a href="/tags#html">
+    
+      <span class="icon">
+        <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z"/>
+</svg>
+      </span>&nbsp;<span class="tag-name">HTML</span>
+    </a>
+  
+    
+    <a href="/tags#css">
+    
+      <span class="icon">
+        <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z"/>
+</svg>
+      </span>&nbsp;<span class="tag-name">CSS</span>
+    </a>
+  
+</div>
+    <div class="post-dates">
+  <!--<span class="post-date">Created: 09 Jul 2019</span>-->
+  <!--  &bull;-->
+  
+  <span class="post-date">Last Modified: 09 Jul 2019</span>
+ 
+ <!-- <span class="post-categories">-->
+ <!--   -->
+ <!--     &bull;-->
+ <!--     -->
+ <!--     -->
+ <!--       -->
+ <!--     -->
+ <!--       -->
+ <!--     -->
+ <!--       -->
+ <!--     -->
+ <!--       -->
+ <!--     -->
+ <!--       -->
+ <!--     -->
+ <!--       -->
+ <!--     -->
+ <!--       -->
+ <!--     -->
+ <!--       -->
+ <!--     -->
+ <!--       -->
+ <!--     -->
+ <!--       -->
+ <!--     -->
+
+ <!--     -->
+ <!--       How-To-->
+ <!--     -->
+ <!---->
+ <!--</span>-->
+</div>
+  </div>
+  
+    
+
+    <div class="relatedPosts">
+<hr>
+<h4>You May Also Enjoy</h4>
+
+
+
+
+
+  
+
+    
+    
+
+    
+
+    
+
+  
+
+    
+    
+
+    
+
+    
+      <div>
+      <h5><a href="/setup-contact-form-jekyll">How to Set Up a Contact Form on Jekyll</a></h5>
+      </div>
+      
+      
+    
+
+  
+
+    
+    
+
+    
+
+    
+      <div>
+      <h5><a href="/hello-world">Hello World</a></h5>
+      </div>
+      
+      
+    
+
+  
+
+</div>
+</div>
+
+    </main>
+
+    <!-- Optional footer content -->
+
+  </body>
+</html>

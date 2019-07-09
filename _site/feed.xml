@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en_US"><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:8080/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:8080/" rel="alternate" type="text/html" hreflang="en_US" /><updated>2019-07-09T09:13:01+02:00</updated><id>http://localhost:8080/feed.xml</id><title type="html">Juliette Sinibardy</title><subtitle>Pending Programmer&lt;br&gt; ███░░░░░░░ 30%</subtitle><author><name>Juliette Sinibardy</name></author><entry><title type="html">A Beginner’s Guide to SEO optimization in a Jekyll static website</title><link href="http://localhost:8080/optimize-seo-jekyll" rel="alternate" type="text/html" title="A Beginner's Guide to SEO optimization in a Jekyll static website" /><published>2019-07-09T08:06:08+02:00</published><updated>2019-07-09T08:06:08+02:00</updated><id>http://localhost:8080/optimize-jekyll-seo</id><content type="html" xml:base="http://localhost:8080/optimize-seo-jekyll">&lt;blockquote&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en_US"><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:8080/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:8080/" rel="alternate" type="text/html" hreflang="en_US" /><updated>2019-07-09T13:20:23+02:00</updated><id>http://localhost:8080/feed.xml</id><title type="html">Juliette Sinibardy</title><subtitle>Pending Programmer&lt;br&gt; ███░░░░░░░ 30%</subtitle><author><name>Juliette Sinibardy</name></author><entry><title type="html">A Beginner’s Guide to SEO optimization in a Jekyll static website</title><link href="http://localhost:8080/optimize-seo-jekyll" rel="alternate" type="text/html" title="A Beginner's Guide to SEO optimization in a Jekyll static website" /><published>2019-07-09T09:16:00+02:00</published><updated>2019-07-09T13:21:00+02:00</updated><id>http://localhost:8080/optimize-jekyll-seo</id><content type="html" xml:base="http://localhost:8080/optimize-seo-jekyll">&lt;blockquote&gt;
   &lt;p&gt;What? There’s no sitemap here?
 &lt;em&gt;- Me when I discovered my new Jekyll blog&lt;/em&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -11,45 +11,247 @@ SEO ranking and
 
 &lt;!--more--&gt;
 
-&lt;h2 id=&quot;1-install-jekyll-seo-tag&quot;&gt;1. Install &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll-seo-tag&lt;/code&gt;&lt;/h2&gt;
+&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#install-jekyll-seo-tag&quot; id=&quot;markdown-toc-install-jekyll-seo-tag&quot;&gt;Install jekyll-seo-tag&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#install-jekyll-sitemap-and-optimize-date-management&quot; id=&quot;markdown-toc-install-jekyll-sitemap-and-optimize-date-management&quot;&gt;Install jekyll-sitemap and optimize date management&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#add-a-google-analytics-tracking-id&quot; id=&quot;markdown-toc-add-a-google-analytics-tracking-id&quot;&gt;Add a Google Analytics tracking ID&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#performance-optimizations&quot; id=&quot;markdown-toc-performance-optimizations&quot;&gt;Performance optimizations&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#google-analytics-tracking&quot; id=&quot;markdown-toc-google-analytics-tracking&quot;&gt;Google Analytics tracking&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#reduce-image-size&quot; id=&quot;markdown-toc-reduce-image-size&quot;&gt;Reduce image size&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#replace-github-gist-by-code-snippets&quot; id=&quot;markdown-toc-replace-github-gist-by-code-snippets&quot;&gt;Replace Github gist by code snippets&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#remove-useless-fonts&quot; id=&quot;markdown-toc-remove-useless-fonts&quot;&gt;Remove useless fonts&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#accessibility&quot; id=&quot;markdown-toc-accessibility&quot;&gt;Accessibility&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#seo-101&quot; id=&quot;markdown-toc-seo-101&quot;&gt;SEO 101&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;install-jekyll-seo-tag&quot;&gt;Install jekyll-seo-tag&lt;/h2&gt;
 
 &lt;p&gt;The first thing you want to do is install the 
 &lt;a href=&quot;https://github.com/jekyll/jekyll-seo-tag&quot;&gt;jekyll-seo-tag plugin&lt;/a&gt;.&lt;/p&gt;
 
-&lt;!--- Install jekyll-seo-tag--&gt;
-&lt;!--- Add title to pages and website--&gt;
-&lt;!--- Add meta description to pages and website--&gt;
+&lt;p&gt;This plugin will automatically generate the following meta tags:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Page title and description&lt;/li&gt;
+  &lt;li&gt;Canonical URL&lt;/li&gt;
+  &lt;li&gt;Open Graph title, description (useful for Facebook or Linkedin)&lt;/li&gt;
+  &lt;li&gt;Twitter Summary Card metadata&lt;/li&gt;
+  &lt;li&gt;and other stuff&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;!--- Install jekyll-sitemap--&gt;
+&lt;p&gt;Once the plugin is added to your &lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt; file, you’ll need to add a simple
+line to the &lt;code class=&quot;highlighter-rouge&quot;&gt;head&lt;/code&gt; of every page. To do that, I created a 
+&lt;code class=&quot;highlighter-rouge&quot;&gt;custom-head.html&lt;/code&gt; file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_includes&lt;/code&gt; folder and added the following 
+SEO tag:&lt;/p&gt;
 
-&lt;!--- Install jekyll-last-modified-at--&gt;
-&lt;!--- Add last modified date to all articles--&gt;
+&lt;script src=&quot;https://gist.github.com/17b76ed8bf8dc7d892dd2e19ca9a59d4.js&quot;&gt; &lt;/script&gt;
 
-&lt;!--- Make all external links _blank nofollow noopener--&gt;
+&lt;p&gt;Now, all you have to do is to update your title, metadescriptions and permalink
+on every article or page ✨&lt;/p&gt;
 
-&lt;!--- Add Google Analytics tracking ID--&gt;
+&lt;div class=&quot;language-yml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;na&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;How&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;to&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Set&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Up&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Contact&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Form&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Jekyll&quot;&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;permalink&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;setup-contact-form-jekyll&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;description&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Here's a detailed tutorial on how to set up a&lt;/span&gt; 
+             &lt;span class=&quot;s&quot;&gt;free contact form on static websites like Jekyll&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;!--- Change 'related post' behaviour to display real related posts--&gt;
-&lt;!--- Accessibility--&gt;
-&lt;!--    - add image link to images--&gt;
-&lt;!--    - change font colors for better contrasts--&gt;
+&lt;h2 id=&quot;install-jekyll-sitemap-and-optimize-date-management&quot;&gt;Install jekyll-sitemap and optimize date management&lt;/h2&gt;
 
-&lt;!--- Performance --&gt;
-&lt;!--  - Replace github gist by code snippets if possible--&gt;
-&lt;!--  - Load GA id with rel=preconnect--&gt;
-&lt;!--  - Remove useless font family--&gt;
-&lt;!--  - Use TinyPNG to reduce image size--&gt;
+&lt;p&gt;The next thing you’ll need is have a good sitemap, to help web crawlers
+do their job.&lt;/p&gt;
 
-&lt;!--SEO 101--&gt;
-&lt;!--- alt for images--&gt;
-&lt;!--- html has a &lt;lang&gt; attribute--&gt;
-&lt;!--- links have a discernable name--&gt;
-&lt;!--- use https--&gt;
-&lt;!--- page has the HTML doctype--&gt;
-&lt;!--- display images with correct aspect ratio--&gt;
-&lt;!--- robots.Txt valid--&gt;
-&lt;!--- valid rel=canonical--&gt;
-&lt;!--- Have consistent urls (/.../ or /...)--&gt;</content><author><name>Juliette Sinibardy</name></author><category term="Jekyll" /><category term="SEO" /><category term="Google" /><category term="How-To" /><category term="Lighthouse" /><category term="HTML" /><category term="CSS" /><summary type="html">What? There’s no sitemap here? - Me when I discovered my new Jekyll blog Although Jekyll comes a little “naked” in terms of necessary SEO tools (especially in comparison to traditional CMS), it’s pretty easy to remedy this situation. Here are a couple of easy steps to follow, in order to improve your SEO ranking and your Lighthouse score.</summary></entry><entry><title type="html">How to Set Up a Contact Form on Jekyll</title><link href="http://localhost:8080/setup-contact-form-jekyll" rel="alternate" type="text/html" title="How to Set Up a Contact Form on Jekyll" /><published>2019-07-04T06:22:08+02:00</published><updated>2019-07-04T06:22:08+02:00</updated><id>http://localhost:8080/setup-contact-form</id><content type="html" xml:base="http://localhost:8080/setup-contact-form-jekyll">&lt;p&gt;I thought it would be cool to give the opportunity to the random internet
+&lt;div style=&quot;text-align: center&quot;&gt;
+    &lt;figure&gt;
+        &lt;a href=&quot;/assets/images/happy-index-robot.jpg&quot;&gt;
+            &lt;img src=&quot;/assets/images/happy-index-robot.jpg&quot; alt=&quot;Busy robot from Wall-E&quot; /&gt;  
+        &lt;/a&gt;
+        &lt;figcaption&gt;🤖 Must... index... everything... 🤖&lt;/figcaption&gt;
+    &lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Fortunately, there’s a plugin for that: 
+&lt;a href=&quot;https://github.com/jekyll/jekyll-sitemap&quot;&gt;jekyll-sitemap&lt;/a&gt;! And its use is
+pretty straightforward.&lt;/p&gt;
+
+&lt;p&gt;The only subtlety is the date and time management. The sitemap plugin will
+automatically use your &lt;strong&gt;Created date&lt;/strong&gt; to fill the &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;lastmod&amp;gt;&lt;/code&gt; tag.&lt;/p&gt;
+
+&lt;p&gt;However, you probably want to have your &lt;strong&gt;Last modified date&lt;/strong&gt; instead. 
+To do that, you could use
+&lt;a href=&quot;https://github.com/gjtorikian/jekyll-last-modified-at&quot;&gt;the jekyll-last-modified-at plugin&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;However the plugin isn’t compatible with Github Pages, because of Github’s 
+automatic builds. Instead, you can add add the parameter &lt;code class=&quot;highlighter-rouge&quot;&gt;last_modified_at&lt;/code&gt;
+inside your front matter directly, and the sitemap will automatically use
+this date as the Last modified date.&lt;/p&gt;
+
+&lt;div class=&quot;language-yml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;na&quot;&gt;date&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;               &lt;span class=&quot;s&quot;&gt;2019-07-03 10:28:08 +0200&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;last_modified_at&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;   &lt;span class=&quot;s&quot;&gt;2019-07-07 11:55:00 +0200&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;To simplify your use of timestamps, I recommend using the 
+&lt;a href=&quot;https://github.com/jekyll/jekyll-compose&quot;&gt;jekyll-compose plugin&lt;/a&gt;. It will
+automatically create your posts with the perfect timestamp and your custom
+front matter.&lt;/p&gt;
+
+&lt;p&gt;All you need to do is correctly set up your &lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt; file and then
+type &lt;code class=&quot;highlighter-rouge&quot;&gt;bundle exec jekyll post &quot;My post name&quot;&lt;/code&gt; in your CLI.&lt;/p&gt;
+
+&lt;p&gt;Here are my own custom front matter settings:&lt;/p&gt;
+
+&lt;div class=&quot;language-yml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;na&quot;&gt;jekyll_compose&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;post_default_front_matter&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;last_modified_at&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; 
+    &lt;span class=&quot;na&quot;&gt;permalink&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; 
+    &lt;span class=&quot;na&quot;&gt;description&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;published&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;true&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;sitemap&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;true&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;excerpt_separator&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;lt;!--more--&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;categories&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;tags&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Additionally, you should specify your UTC timezone in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt; file,
+using the &lt;a href=&quot;https://en.wikipedia.org/wiki/Tz_database&quot;&gt;IANA TimeZone Database&lt;/a&gt;
+naming convention.&lt;/p&gt;
+
+&lt;div class=&quot;language-yml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;na&quot;&gt;timezone&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Europe/Paris&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;This will allow your timestamps to use your correct timezone:&lt;/p&gt;
+
+&lt;div class=&quot;language-yml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# Before setting the timezone&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;date&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;  &lt;span class=&quot;s&quot;&gt;2019-07-03 08:28:08 +0000&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# After setting the timezone&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;date&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;  &lt;span class=&quot;s&quot;&gt;2019-07-03 10:28:08 +0200&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;add-a-google-analytics-tracking-id&quot;&gt;Add a Google Analytics tracking ID&lt;/h2&gt;
+
+&lt;p&gt;If you haven’t already, you’ll need to add a Google Analytics tag in order
+to follow your traffic.&lt;/p&gt;
+
+&lt;p&gt;To do that, let’s create an &lt;code class=&quot;highlighter-rouge&quot;&gt;analytics.html&lt;/code&gt; file in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_includes&lt;/code&gt; folder.&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;&amp;lt;!-- Global site tag (gtag.js) - Google Analytics --&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;link&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;preconnect&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;as=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;script&quot;&lt;/span&gt; 
+  &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://www.googletagmanager.com/gtag/js?id=YOUR_TRACKING_ID&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;script&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dataLayer&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dataLayer&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[];&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;gtag&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dataLayer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;arguments&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);}&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;gtag&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'js'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Date&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;gtag&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'config'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;YOUR_TRACKING_ID&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Then, you’ll need to include &lt;code class=&quot;highlighter-rouge&quot;&gt;analytics.html&lt;/code&gt; in your &lt;code class=&quot;highlighter-rouge&quot;&gt;custom-head.html&lt;/code&gt; file:&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/e8a02a89d20d53ba4c5671f1c6121de8.js&quot;&gt; &lt;/script&gt;
+
+&lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;% if %&lt;/code&gt; condition removes the tracking tag from my own local server. Thus,
+my own local tests will not be taken into account in my global Analytics
+reports.&lt;/p&gt;
+
+&lt;h2 id=&quot;performance-optimizations&quot;&gt;Performance optimizations&lt;/h2&gt;
+
+&lt;h3 id=&quot;google-analytics-tracking&quot;&gt;Google Analytics tracking&lt;/h3&gt;
+
+&lt;p&gt;You may have noticed that, in the &lt;code class=&quot;highlighter-rouge&quot;&gt;analytics.html&lt;/code&gt; file, I did not use the
+default script provided by Google.&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;&amp;lt;!--Default script--&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;async&lt;/span&gt; 
+  &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://www.googletagmanager.com/gtag/js?id=YOUR_TRACKING_ID&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;&amp;lt;!--Custom script--&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;link&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;preconnect&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;as=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;script&quot;&lt;/span&gt; 
+  &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://www.googletagmanager.com/gtag/js?id=YOUR_TRACKING_ID&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Instead, I’m using the resource hint &lt;code class=&quot;highlighter-rouge&quot;&gt;rel=&quot;preconnect&quot;&lt;/code&gt; in order to tell the 
+browser to start loading the Google Analytics script before an HTTP request 
+is sent to the server. This performance optimization improved my loading time 
+by &lt;strong&gt;130 ms&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;reduce-image-size&quot;&gt;Reduce image size&lt;/h3&gt;
+
+&lt;p&gt;Before uploading an image, you should always:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Resize the image at its minimum. For instance, my blog accepts images up to 
+800 px width, therefore it’s no use uploading a 1500 px photo.&lt;/li&gt;
+  &lt;li&gt;Compress the image with a service like &lt;a href=&quot;https://tinypng.com/&quot;&gt;TinyPNG&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This simple action will save you dozens of ms of loading time.&lt;/p&gt;
+
+&lt;h3 id=&quot;replace-github-gist-by-code-snippets&quot;&gt;Replace Github gist by code snippets&lt;/h3&gt;
+
+&lt;p&gt;Whenever possible, use Markdown code snippets instead of Github gist. As 
+pretty as they are, they also take up some precious loading time (about
+&lt;strong&gt;300 ms&lt;/strong&gt; for my blog).&lt;/p&gt;
+
+&lt;h3 id=&quot;remove-useless-fonts&quot;&gt;Remove useless fonts&lt;/h3&gt;
+
+&lt;p&gt;My Jekyll theme came with a &lt;strong&gt;190 ms&lt;/strong&gt; loading time title font. Which could 
+mean only one thing: the font had to go.&lt;/p&gt;
+
+&lt;p&gt;Surprisingly, it was actually pretty difficult to get rid of it.&lt;/p&gt;
+
+&lt;p&gt;As the font was present in the default &lt;code class=&quot;highlighter-rouge&quot;&gt;_includes/font-includes.html&lt;/code&gt; file,
+I had to create a custom &lt;code class=&quot;highlighter-rouge&quot;&gt;_includes/head.html&lt;/code&gt; file.&lt;/p&gt;
+
+&lt;p&gt;Inside this new &lt;code class=&quot;highlighter-rouge&quot;&gt;head&lt;/code&gt;, I deleted the infamous
+&lt;code class=&quot;highlighter-rouge&quot;&gt;% include font-includes.html %&lt;/code&gt; line, and the font loading time magically
+disappeared. 🚀&lt;/p&gt;
+
+&lt;h2 id=&quot;accessibility&quot;&gt;Accessibility&lt;/h2&gt;
+
+&lt;p&gt;The theme I’ve used scored pretty poorly on Accessibility items, because the 
+colors chosen (albeit beautiful) lacked contrasts. This was especially true
+for the theme’s code snippets.&lt;/p&gt;
+
+&lt;p&gt;Therefore, I’ve used this 
+&lt;a href=&quot;https://dequeuniversity.com/rules/axe/3.3/color-contrast&quot;&gt;contrast tool&lt;/a&gt;
+to select new colors. Then, I’ve included the new hexadecimal codes in 
+my &lt;code class=&quot;highlighter-rouge&quot;&gt;assets/css/main.scss&lt;/code&gt; file. Here’s an excerpt:&lt;/p&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;/* Literal.Number */&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;.highlight&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.s&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#C04343&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;/* Literal.String */&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;.highlight&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;.na&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#8B38D1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;seo-101&quot;&gt;SEO 101&lt;/h2&gt;
+
+&lt;p&gt;Finally, and perhaps the most important thing, is to consistently respect
+the SEO Best practices throughout your website.&lt;/p&gt;
+
+&lt;p&gt;Here are a few of them:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Use &lt;strong&gt;HTTPS&lt;/strong&gt; (plus it’s so easy to enforce HTTPS with Github Pages!)&lt;/li&gt;
+  &lt;li&gt;Declare the &lt;strong&gt;HTML doctype&lt;/strong&gt; at the beginning of the page, along as the
+**&lt;lang&gt;** attribute&lt;/lang&gt;&lt;/li&gt;
+  &lt;li&gt;Have a valid &lt;strong&gt;robots.txt&lt;/strong&gt; file&lt;/li&gt;
+  &lt;li&gt;Use &lt;strong&gt;consistent URLs&lt;/strong&gt; (either &lt;code class=&quot;highlighter-rouge&quot;&gt;/my_link&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;/my_link/&lt;/code&gt; but not a mix 
+of both)&lt;/li&gt;
+  &lt;li&gt;Use the &lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;alt&lt;/code&gt; attribute&lt;/strong&gt; on your images, both for ranking and accessibility
+reasons&lt;/li&gt;
+  &lt;li&gt;Choose a discernable name for your &lt;strong&gt;links&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Make all &lt;strong&gt;external links&lt;/strong&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;_blank&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;nofollow noopener&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Create a &lt;strong&gt;netlinking&lt;/strong&gt; strategy, to improve your pagerank and enhance the 
+Internet user’s journey&lt;/li&gt;
+  &lt;li&gt;…and a bunch of other stuff&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Your best bet is to frequently run
+&lt;a href=&quot;https://developers.google.com/web/tools/lighthouse/&quot;&gt;Lighthouse audits&lt;/a&gt;
+on your pages and fix every problematic item.&lt;/p&gt;</content><author><name>Juliette Sinibardy</name></author><category term="Jekyll" /><category term="SEO" /><category term="Google" /><category term="How-To" /><category term="Lighthouse" /><category term="Jekyll plugin" /><category term="HTML" /><category term="CSS" /><summary type="html">What? There’s no sitemap here? - Me when I discovered my new Jekyll blog Although Jekyll comes a little “naked” in terms of necessary SEO tools (especially in comparison to traditional CMS), it’s pretty easy to remedy this situation. Here are a couple of easy steps to follow, in order to improve your SEO ranking and your Lighthouse score.</summary></entry><entry><title type="html">How to Set Up a Contact Form on Jekyll</title><link href="http://localhost:8080/setup-contact-form-jekyll" rel="alternate" type="text/html" title="How to Set Up a Contact Form on Jekyll" /><published>2019-07-04T06:22:08+02:00</published><updated>2019-07-04T06:22:08+02:00</updated><id>http://localhost:8080/setup-contact-form</id><content type="html" xml:base="http://localhost:8080/setup-contact-form-jekyll">&lt;p&gt;I thought it would be cool to give the opportunity to the random internet
 user to &lt;a href=&quot;/contact&quot;&gt;contact me&lt;/a&gt; if they so wanted. Turns out it’s pretty easy,
 so here’s a tutorial on how to set up a contact form on Jekyll using
 &lt;a href=&quot;https://formspree.io/&quot;&gt;Formspree&lt;/a&gt;.&lt;/p&gt;
