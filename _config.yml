@@ -66,3 +66,6 @@ jekyll_compose:
     categories:
     tags:
 
+# Compress CSS files
+sass:
+    style: compressed
