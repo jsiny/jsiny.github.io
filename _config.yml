@@ -13,6 +13,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://jsinibardy.com" # the base hostname & protocol for your site, e.g. http://example.com
 author: Juliette Sinibardy
 lang: en_US
+timezone: Europe/Paris
 
 linkedin: juliette-sinibardy
 github_username: jsiny
@@ -34,8 +35,8 @@ paginate: 5
 paginate_path: '/page/:num'
 
 sidebar_home_link: true
-# sidebar_blog_link: '/blog'
 enable_disqus: false
+# sidebar_blog_link: '/blog'
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
@@ -48,3 +49,21 @@ enable_disqus: false
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+jekyll_compose:
+  draft_default_front_matter:
+    description:
+    image:
+    category:
+    tags:
+  post_default_front_matter:
+    last_modified_at: 
+    permalink: 
+    description:
+    image:
+    published: true
+    sitemap: true
+    excerpt_separator: <!--more-->
+    categories:
+    tags:
+
