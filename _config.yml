@@ -30,7 +30,7 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
 
-paginate: 5
+paginate: 3
 paginate_path: '/page/:num'
 
 sidebar_home_link: true

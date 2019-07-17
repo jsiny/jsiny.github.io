@@ -1,73 +1,27 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en_US"><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:8080/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:8080/" rel="alternate" type="text/html" hreflang="en_US" /><updated>2019-07-16T16:16:42+02:00</updated><id>http://localhost:8080/feed.xml</id><title type="html">Juliette Sinibardy</title><subtitle>Pending Programmer&lt;br&gt; ███░░░░░░░ 30%</subtitle><author><name>Juliette Sinibardy</name></author><entry><title type="html">What I’ll Remember from Tim Ferriss’ Tools of Titans</title><link href="http://localhost:8080/tim-ferriss-tools-of-titans" rel="alternate" type="text/html" title="What I'll Remember from Tim Ferriss' Tools of Titans" /><published>2019-07-16T10:46:00+02:00</published><updated>2019-07-16T10:46:00+02:00</updated><id>http://localhost:8080/tim-ferriss-tools-of-titans</id><content type="html" xml:base="http://localhost:8080/tim-ferriss-tools-of-titans">&lt;p&gt;During my summer vacations, I’ve chosen to browse through the famous 
-book &lt;strong&gt;Tools of Titans&lt;/strong&gt;, by Tim Ferriss. At the beginning of the
-book, Tim warns us that this book’s content is not a one-fit-for-all:
-everyone will pick out some details that speak to them more specifically.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en_US"><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:8080/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:8080/" rel="alternate" type="text/html" hreflang="en_US" /><updated>2019-07-17T12:23:32+02:00</updated><id>http://localhost:8080/feed.xml</id><title type="html">Juliette Sinibardy</title><subtitle>Pending Programmer&lt;br&gt; ███░░░░░░░ 30%</subtitle><author><name>Juliette Sinibardy</name></author><entry><title type="html">How I Prepared for Launch School’s 109 Written Assessment</title><link href="http://localhost:8080/preparing-launch-school-109-written-assessment" rel="alternate" type="text/html" title="How I Prepared for Launch School's 109 Written Assessment" /><published>2019-07-17T12:14:00+02:00</published><updated>2019-07-17T12:14:00+02:00</updated><id>http://localhost:8080/preparing-launch-school-109-written-assessment</id><content type="html" xml:base="http://localhost:8080/preparing-launch-school-109-written-assessment">&lt;p&gt;I recently took Launch School’s first written exam (RB 109), that comes at the
+end of the first course, RB 101, Programming Foundation.&lt;/p&gt;
 
-&lt;p&gt;And unsurprisingly, I’ve found parts that I particularly enjoyed, which
-resonated strangely with my own experiences. Other parts (especially
-everything related to extreme strength) seemed pretty alien to me. 
-Here’s a list of things (in no particular order) that I hope to
-remember from this book.&lt;/p&gt;
+&lt;p&gt;This course is 
+especially challenging because it forces us to simultaneously:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;learn to learn again,&lt;/li&gt;
+  &lt;li&gt;learn Ruby syntax,&lt;/li&gt;
+  &lt;li&gt;learn problem solving.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I thought it would be a good time to reflect on my study methods and the time
+it took me to get there.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
-&lt;h2 id=&quot;fasting-and-chemotherapy&quot;&gt;Fasting and Chemotherapy&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Disclaimer&lt;/strong&gt;:&lt;/p&gt;
 
-&lt;p&gt;According to 
-&lt;a href=&quot;https://dominicdagostino.wordpress.com/&quot;&gt;Dominic d’Agostino&lt;/a&gt;, fasting before 
-chemotherapy helps increase the body’s response to cancer treatments.
-Apparently, fasting stops rapidly dividing cells (ie. cancerous cells) and 
-makes them selectively more vulnerable to radiation and chemotherapy.&lt;/p&gt;
-
-&lt;p&gt;Like most, I hope that this knowledge will never come in handy in my life, but
-it’s a cool piece of information.&lt;/p&gt;
-
-&lt;h2 id=&quot;the-four-bullets-to-dodge&quot;&gt;The Four Bullets to Dodge&lt;/h2&gt;
-
-&lt;p&gt;If you’re non-smoking and over 40 years old, there is a 70-80% chance you’ll
-die of one of the following:&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;heart disease,&lt;/li&gt;
-  &lt;li&gt;cerebrovascular disease (eg. a stroke),&lt;/li&gt;
-  &lt;li&gt;cancer,&lt;/li&gt;
-  &lt;li&gt;neurodegenerative disease (like Alzheimer or Parkinson).&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Therefore, according to &lt;a href=&quot;https://peterattiamd.com/&quot;&gt;Peter Attia&lt;/a&gt;, if you want
-to extend your lifespan, most of your efforts should be geared towards keeping
-these 4 threats at bay.&lt;/p&gt;
-
-&lt;h2 id=&quot;the-billionaires-problem&quot;&gt;The Billionaire’s Problem&lt;/h2&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Every billionaire suffers from the same problem. Nobody around them ever
-says, ‘Hey, that stupid idea you just had is really stupid.&lt;/p&gt;
-
-  &lt;p&gt;&lt;cite&gt;&lt;a href=&quot;https://a16z.com/author/marc-andreessen/&quot;&gt;Marc Andreessen&lt;/a&gt;, 
-also a billionaire&lt;/cite&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;That tweet seemed so true. Although I’ve never met a billionaire, I’ve had the 
-chance to mix with millionaires (the next best thing). Over time, it grew 
-harder to give them honest feedback when requested, because they had grown
-accustomed to hearing that their ideas were fabulous. I think they 
-started to believe it.&lt;/p&gt;
-
-&lt;h2 id=&quot;meditating-for-others&quot;&gt;Meditating for others&lt;/h2&gt;
-
-&lt;p&gt;I’ve read somewhere that if you wish to convert money into happiness, you 
-should buy someone a gift. The act of gift-giving generates in the giver
-more happiness and for a longer time than buying something for yourself.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://chademeng.com/&quot;&gt;Chade-Meng Tan&lt;/a&gt; takes it even further, and suggest
-this simple meditation called &lt;strong&gt;loving-kindness&lt;/strong&gt;. The person meditating needs
-to identify a person and just think “I wish for this person to be happy”.
-The entire exercise is this 5 seconds train of thoughts.&lt;/p&gt;
-
-&lt;p&gt;That’s what makes it brilliant.  Everyone can spare 5 seconds to think
-about someone else and wish them the best. And the simple act of wishing the 
-best for someone else increases your own happiness. That probably is the best
-deal ever: free happiness for a 5 seconds invisible action.&lt;/p&gt;</content><author><name>Juliette Sinibardy</name></author><category term="Tim Ferriss" /><category term="Podcast" /><category term="Tools of Titans" /><category term="Books" /><category term="Self-Help" /><category term="Interviews" /><summary type="html">During my summer vacations, I’ve chosen to browse through the famous book Tools of Titans, by Tim Ferriss. At the beginning of the book, Tim warns us that this book’s content is not a one-fit-for-all: everyone will pick out some details that speak to them more specifically. And unsurprisingly, I’ve found parts that I particularly enjoyed, which resonated strangely with my own experiences. Other parts (especially everything related to extreme strength) seemed pretty alien to me. Here’s a list of things (in no particular order) that I hope to remember from this book.</summary></entry><entry><title type="html">A Beginner’s Guide to SEO optimization in a Jekyll static website</title><link href="http://localhost:8080/optimize-seo-jekyll" rel="alternate" type="text/html" title="A Beginner's Guide to SEO optimization in a Jekyll static website" /><published>2019-07-09T09:16:00+02:00</published><updated>2019-07-09T23:06:00+02:00</updated><id>http://localhost:8080/optimize-jekyll-seo</id><content type="html" xml:base="http://localhost:8080/optimize-seo-jekyll">&lt;blockquote&gt;
+  &lt;li&gt;Going through the lectures (notes + Anki)&lt;/li&gt;
+  &lt;li&gt;Study guide + writing my own examples&lt;/li&gt;
+  &lt;li&gt;5’ per questions&lt;/li&gt;
+  &lt;li&gt;Time spent&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Juliette Sinibardy</name></author><category term="Launch School" /><category term="Learning" /><category term="Memory" /><category term="Ruby" /><category term="Anki" /><summary type="html">I recently took Launch School’s first written exam (RB 109), that comes at the end of the first course, RB 101, Programming Foundation. This course is especially challenging because it forces us to simultaneously: learn to learn again, learn Ruby syntax, learn problem solving. I thought it would be a good time to reflect on my study methods and the time it took me to get there.</summary></entry><entry><title type="html">A Beginner’s Guide to SEO optimization in a Jekyll static website</title><link href="http://localhost:8080/optimize-seo-jekyll" rel="alternate" type="text/html" title="A Beginner's Guide to SEO optimization in a Jekyll static website" /><published>2019-07-09T09:16:00+02:00</published><updated>2019-07-09T23:06:00+02:00</updated><id>http://localhost:8080/optimize-jekyll-seo</id><content type="html" xml:base="http://localhost:8080/optimize-seo-jekyll">&lt;blockquote&gt;
   &lt;p&gt;What? There’s no sitemap here?
 &lt;em&gt;- Me when I discovered my new Jekyll blog&lt;/em&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -492,10 +446,10 @@ to have a coherent style.&lt;/p&gt;
 &lt;p&gt;After a sleepless night, several gallons of tears and dozens of hours spent 
 browsing stackoverflow, my new blog is now live 🌈&lt;/p&gt;
 
-&lt;!--more--&gt;
-
 &lt;p&gt;I’m not exactly new to blogging, but this is the first time I’m wandering away
 from Wordpress. Oh boy, that was &lt;em&gt;difficult&lt;/em&gt;.&lt;/p&gt;
+
+&lt;!--more--&gt;
 
 &lt;h2 id=&quot;why-would-i-do-that&quot;&gt;Why would I do that?&lt;/h2&gt;
 
@@ -550,4 +504,4 @@ public repositories (thank god for public repositories), and finally
 managed to install the &lt;a href=&quot;https://github.com/fongandrew/hydeout&quot;&gt;Hydeout&lt;/a&gt; theme 🍾&lt;/p&gt;
 
 &lt;p&gt;My next challenge will be to buy and set up my first domain (bye bye ugly
-&lt;code class=&quot;highlighter-rouge&quot;&gt;github.io&lt;/code&gt; domain name, you will be missed) …but this is for another day.&lt;/p&gt;</content><author><name>Juliette Sinibardy</name></author><category term="Blogging" /><category term="Jekyll" /><category term="Medium" /><summary type="html">It’s alive! After a sleepless night, several gallons of tears and dozens of hours spent browsing stackoverflow, my new blog is now live 🌈</summary></entry></feed>
+&lt;code class=&quot;highlighter-rouge&quot;&gt;github.io&lt;/code&gt; domain name, you will be missed) …but this is for another day.&lt;/p&gt;</content><author><name>Juliette Sinibardy</name></author><category term="Blogging" /><category term="Jekyll" /><category term="Medium" /><summary type="html">It’s alive! After a sleepless night, several gallons of tears and dozens of hours spent browsing stackoverflow, my new blog is now live 🌈 I’m not exactly new to blogging, but this is the first time I’m wandering away from Wordpress. Oh boy, that was difficult.</summary></entry></feed>

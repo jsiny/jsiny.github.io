@@ -20,10 +20,10 @@ tags:
 After a sleepless night, several gallons of tears and dozens of hours spent 
 browsing stackoverflow, my new blog is now live 🌈
 
-<!--more-->
-
 I'm not exactly new to blogging, but this is the first time I'm wandering away
 from Wordpress. Oh boy, that was *difficult*.
+
+<!--more-->
 
 ## Why would I do that?
 

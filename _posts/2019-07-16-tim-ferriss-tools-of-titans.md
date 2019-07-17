@@ -6,7 +6,7 @@ last_modified_at:
 permalink: tim-ferriss-tools-of-titans
 description: TO BE WRITTEN
 image: 
-published: true
+published: false
 sitemap: true
 excerpt_separator: "<!--more-->"
 categories:
