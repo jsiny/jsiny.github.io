@@ -2,7 +2,7 @@
 layout: post
 title: How I Prepared for Launch School's 109 Written Assessment
 date: 2019-07-17 12:14 +0200
-last_modified_at: 
+last_modified_at: 2019-07-17 18:27 +0200
 permalink: preparing-launch-school-109-written-assessment
 description: Here are my tips on how to study for Launch school's first written assessment (109)
 image: 
@@ -53,6 +53,10 @@ was striving to understand every line of the lesson.
 To take a break in between lessons, I was also advancing on the **Ruby Small 
 Problems**. My goal was to always find a working solution myself, and if I
 didn't, I added this problem in my "to be done again" list.
+
+{% include images.html file="to-do-list.png" 
+  caption="Pro tip: you can create a checkbox in markdown with `[ ]`" 
+  alt="My exercises to do list" %}
 
 I would then briefly read the solution (trying not to spend more than a 
 couple of seconds on it), then hide the solution and try to come up with 
@@ -109,7 +113,7 @@ Example of questions and answers:
 > 
 > `"b"`
 
-I would use my commute time to go through my Anki deck (on the Android app),
+I would use my commute time to go through my Anki deck (on the mobile app),
 sometimes editing old questions when the formulation was too vague or implied
 that I didn't quite grasp a concept at that time.
 
@@ -118,6 +122,10 @@ that I didn't quite grasp a concept at that time.
 At the end of the 101 course, I started to attend as many study sessions as 
 I could. Before that, I was pretty embarrassed to showcase my lack of 
 mastery, and prefered avoiding them. 
+
+{% include images.html file="buzz.gif" 
+  caption="How I thought TAs would react when I'd open my mouth" 
+  alt="Buzz Lightyear gif" %}
 
 However, I can now see how mistaken I was. The Teacher Assistants are nothing
 but kind and encouraging. Attending study sessions both helped me 
@@ -153,7 +161,7 @@ what was happening under the hood.
 I ended up creating a handful of pre-made sentences that were useful all the
 time, like:
 
-> "We've initialized the variable `var_name` and assigned to it the 
+> We've initialized the variable `var_name` and assigned to it the 
 > Integer/String/etc object `value` to it.
 
 This little trick saved me a couple of critical minutes during the exam.
@@ -175,5 +183,9 @@ Here's the total breakdown of my **127 hours** spent on the 101 course:
 | Practice Problems | 10 hours |
 | Live-coding | 8 hours |
 | Exams (incl. quizzes) | 7.5 hours |
+
+{% include images.html file="toggl.png" 
+  caption="The weekly breakdwon" 
+  alt="My weekly toggle timelogs" %}
 
 Now, time to practice for the interview assessment!

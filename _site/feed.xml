@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en_US"><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:8080/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:8080/" rel="alternate" type="text/html" hreflang="en_US" /><updated>2019-07-17T13:26:34+02:00</updated><id>http://localhost:8080/feed.xml</id><title type="html">Juliette Sinibardy</title><subtitle>Pending Programmer&lt;br&gt; ███░░░░░░░ 30%</subtitle><author><name>Juliette Sinibardy</name></author><entry><title type="html">How I Prepared for Launch School’s 109 Written Assessment</title><link href="http://localhost:8080/preparing-launch-school-109-written-assessment" rel="alternate" type="text/html" title="How I Prepared for Launch School's 109 Written Assessment" /><published>2019-07-17T12:14:00+02:00</published><updated>2019-07-17T12:14:00+02:00</updated><id>http://localhost:8080/preparing-launch-school-109-written-assessment</id><content type="html" xml:base="http://localhost:8080/preparing-launch-school-109-written-assessment">&lt;p&gt;I recently took Launch School’s first written exam (RB 109), that comes at the
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en_US"><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:8080/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:8080/" rel="alternate" type="text/html" hreflang="en_US" /><updated>2019-07-17T18:27:28+02:00</updated><id>http://localhost:8080/feed.xml</id><title type="html">Juliette Sinibardy</title><subtitle>Pending Programmer&lt;br&gt; ███░░░░░░░ 30%</subtitle><author><name>Juliette Sinibardy</name></author><entry><title type="html">How I Prepared for Launch School’s 109 Written Assessment</title><link href="http://localhost:8080/preparing-launch-school-109-written-assessment" rel="alternate" type="text/html" title="How I Prepared for Launch School's 109 Written Assessment" /><published>2019-07-17T12:14:00+02:00</published><updated>2019-07-17T18:27:00+02:00</updated><id>http://localhost:8080/preparing-launch-school-109-written-assessment</id><content type="html" xml:base="http://localhost:8080/preparing-launch-school-109-written-assessment">&lt;p&gt;I recently took Launch School’s first written exam (RB 109), that comes at the
 end of the first course, RB 101, Programming Foundations.&lt;/p&gt;
 
 &lt;p&gt;This course is especially challenging because it forces us to simultaneously:&lt;/p&gt;
@@ -34,6 +34,15 @@ was striving to understand every line of the lesson.&lt;/p&gt;
 &lt;p&gt;To take a break in between lessons, I was also advancing on the &lt;strong&gt;Ruby Small 
 Problems&lt;/strong&gt;. My goal was to always find a working solution myself, and if I
 didn’t, I added this problem in my “to be done again” list.&lt;/p&gt;
+
+&lt;div style=&quot;text-align: center&quot;&gt;
+    &lt;figure&gt;
+        &lt;a href=&quot;/assets/images/to-do-list.png&quot;&gt;
+            &lt;img src=&quot;/assets/images/to-do-list.png&quot; alt=&quot;My exercises to do list&quot; /&gt;  
+        &lt;/a&gt;
+        &lt;figcaption&gt;Pro tip: you can create a checkbox in markdown with `[ ]`&lt;/figcaption&gt;
+    &lt;/figure&gt;
+&lt;/div&gt;
 
 &lt;p&gt;I would then briefly read the solution (trying not to spend more than a 
 couple of seconds on it), then hide the solution and try to come up with 
@@ -97,7 +106,7 @@ expression?&lt;/p&gt;
   &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&quot;b&quot;&lt;/code&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;I would use my commute time to go through my Anki deck (on the Android app),
+&lt;p&gt;I would use my commute time to go through my Anki deck (on the mobile app),
 sometimes editing old questions when the formulation was too vague or implied
 that I didn’t quite grasp a concept at that time.&lt;/p&gt;
 
@@ -106,6 +115,15 @@ that I didn’t quite grasp a concept at that time.&lt;/p&gt;
 &lt;p&gt;At the end of the 101 course, I started to attend as many study sessions as 
 I could. Before that, I was pretty embarrassed to showcase my lack of 
 mastery, and prefered avoiding them.&lt;/p&gt;
+
+&lt;div style=&quot;text-align: center&quot;&gt;
+    &lt;figure&gt;
+        &lt;a href=&quot;/assets/images/buzz.gif&quot;&gt;
+            &lt;img src=&quot;/assets/images/buzz.gif&quot; alt=&quot;Buzz Lightyear gif&quot; /&gt;  
+        &lt;/a&gt;
+        &lt;figcaption&gt;How I thought TAs would react when I'd open my mouth&lt;/figcaption&gt;
+    &lt;/figure&gt;
+&lt;/div&gt;
 
 &lt;p&gt;However, I can now see how mistaken I was. The Teacher Assistants are nothing
 but kind and encouraging. Attending study sessions both helped me 
@@ -144,7 +162,7 @@ what was happening under the hood.&lt;/p&gt;
 time, like:&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;“We’ve initialized the variable &lt;code class=&quot;highlighter-rouge&quot;&gt;var_name&lt;/code&gt; and assigned to it the 
+  &lt;p&gt;We’ve initialized the variable &lt;code class=&quot;highlighter-rouge&quot;&gt;var_name&lt;/code&gt; and assigned to it the 
 Integer/String/etc object &lt;code class=&quot;highlighter-rouge&quot;&gt;value&lt;/code&gt; to it.&lt;/p&gt;
 &lt;/blockquote&gt;
 
@@ -196,6 +214,15 @@ objective.&lt;/p&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
+
+&lt;div style=&quot;text-align: center&quot;&gt;
+    &lt;figure&gt;
+        &lt;a href=&quot;/assets/images/toggl.png&quot;&gt;
+            &lt;img src=&quot;/assets/images/toggl.png&quot; alt=&quot;My weekly toggle timelogs&quot; /&gt;  
+        &lt;/a&gt;
+        &lt;figcaption&gt;The weekly breakdwon&lt;/figcaption&gt;
+    &lt;/figure&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Now, time to practice for the interview assessment!&lt;/p&gt;</content><author><name>Juliette Sinibardy</name></author><category term="Launch School" /><category term="Learning" /><category term="Memory" /><category term="Ruby" /><category term="Anki" /><category term="Timelogs" /><summary type="html">I recently took Launch School’s first written exam (RB 109), that comes at the end of the first course, RB 101, Programming Foundations. This course is especially challenging because it forces us to simultaneously: learn to learn again, learn Ruby syntax, learn problem solving. I thought it would be a good time to reflect on my study methods and the time it took me to get there.</summary></entry><entry><title type="html">A Beginner’s Guide to SEO optimization in a Jekyll static website</title><link href="http://localhost:8080/optimize-seo-jekyll" rel="alternate" type="text/html" title="A Beginner's Guide to SEO optimization in a Jekyll static website" /><published>2019-07-09T09:16:00+02:00</published><updated>2019-07-09T23:06:00+02:00</updated><id>http://localhost:8080/optimize-jekyll-seo</id><content type="html" xml:base="http://localhost:8080/optimize-seo-jekyll">&lt;blockquote&gt;
   &lt;p&gt;What? There’s no sitemap here?
