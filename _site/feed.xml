@@ -1,8 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en_US"><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:8080/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:8080/" rel="alternate" type="text/html" hreflang="en_US" /><updated>2019-07-17T12:23:32+02:00</updated><id>http://localhost:8080/feed.xml</id><title type="html">Juliette Sinibardy</title><subtitle>Pending Programmer&lt;br&gt; ███░░░░░░░ 30%</subtitle><author><name>Juliette Sinibardy</name></author><entry><title type="html">How I Prepared for Launch School’s 109 Written Assessment</title><link href="http://localhost:8080/preparing-launch-school-109-written-assessment" rel="alternate" type="text/html" title="How I Prepared for Launch School's 109 Written Assessment" /><published>2019-07-17T12:14:00+02:00</published><updated>2019-07-17T12:14:00+02:00</updated><id>http://localhost:8080/preparing-launch-school-109-written-assessment</id><content type="html" xml:base="http://localhost:8080/preparing-launch-school-109-written-assessment">&lt;p&gt;I recently took Launch School’s first written exam (RB 109), that comes at the
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en_US"><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:8080/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:8080/" rel="alternate" type="text/html" hreflang="en_US" /><updated>2019-07-17T12:29:12+02:00</updated><id>http://localhost:8080/feed.xml</id><title type="html">Juliette Sinibardy</title><subtitle>Pending Programmer&lt;br&gt; ███░░░░░░░ 30%</subtitle><author><name>Juliette Sinibardy</name></author><entry><title type="html">How I Prepared for Launch School’s 109 Written Assessment</title><link href="http://localhost:8080/preparing-launch-school-109-written-assessment" rel="alternate" type="text/html" title="How I Prepared for Launch School's 109 Written Assessment" /><published>2019-07-17T12:14:00+02:00</published><updated>2019-07-17T12:14:00+02:00</updated><id>http://localhost:8080/preparing-launch-school-109-written-assessment</id><content type="html" xml:base="http://localhost:8080/preparing-launch-school-109-written-assessment">&lt;p&gt;I recently took Launch School’s first written exam (RB 109), that comes at the
 end of the first course, RB 101, Programming Foundation.&lt;/p&gt;
 
-&lt;p&gt;This course is 
-especially challenging because it forces us to simultaneously:&lt;/p&gt;
+&lt;p&gt;This course is especially challenging because it forces us to simultaneously:&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;learn to learn again,&lt;/li&gt;
   &lt;li&gt;learn Ruby syntax,&lt;/li&gt;
@@ -14,7 +13,15 @@ it took me to get there.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
-&lt;p&gt;&lt;strong&gt;Disclaimer&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Disclaimer&lt;/strong&gt;: The time it takes to get through the course is entirely
+personal. I may have been at ease on some topics, and completely stuck
+on other parts. The time logs are simply indicative and should not impact
+your own study flow.&lt;/p&gt;
+
+&lt;h2 id=&quot;going-through-the-101-courses&quot;&gt;Going through the 101 courses&lt;/h2&gt;
+
+&lt;p&gt;During the lessons, I always took notes in Markdown (this will come in handy
+later), using &lt;a href=&quot;https://typora.io/&quot;&gt;Typora&lt;/a&gt;.&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Going through the lectures (notes + Anki)&lt;/li&gt;

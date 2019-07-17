@@ -21,8 +21,7 @@ tags:
 I recently took Launch School's first written exam (RB 109), that comes at the
 end of the first course, RB 101, Programming Foundation.
 
-This course is 
-especially challenging because it forces us to simultaneously:
+This course is especially challenging because it forces us to simultaneously:
 * learn to learn again,
 * learn Ruby syntax,
 * learn problem solving.
@@ -32,7 +31,17 @@ it took me to get there.
 
 <!--more-->
 
-**Disclaimer**: 
+**Disclaimer**: The time it takes to get through the course is entirely
+personal. I may have been at ease on some topics, and completely stuck
+on other parts. The time logs are simply indicative and should not impact
+your own study flow.
+
+## Going through the 101 courses
+
+During the lessons, I always took notes in Markdown (this will come in handy
+later), using [Typora](https://typora.io/).
+
+
 
 
 - Going through the lectures (notes + Anki)
