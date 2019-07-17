@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en_US"><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:8080/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:8080/" rel="alternate" type="text/html" hreflang="en_US" /><updated>2019-07-17T12:29:12+02:00</updated><id>http://localhost:8080/feed.xml</id><title type="html">Juliette Sinibardy</title><subtitle>Pending Programmer&lt;br&gt; ███░░░░░░░ 30%</subtitle><author><name>Juliette Sinibardy</name></author><entry><title type="html">How I Prepared for Launch School’s 109 Written Assessment</title><link href="http://localhost:8080/preparing-launch-school-109-written-assessment" rel="alternate" type="text/html" title="How I Prepared for Launch School's 109 Written Assessment" /><published>2019-07-17T12:14:00+02:00</published><updated>2019-07-17T12:14:00+02:00</updated><id>http://localhost:8080/preparing-launch-school-109-written-assessment</id><content type="html" xml:base="http://localhost:8080/preparing-launch-school-109-written-assessment">&lt;p&gt;I recently took Launch School’s first written exam (RB 109), that comes at the
-end of the first course, RB 101, Programming Foundation.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en_US"><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:8080/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:8080/" rel="alternate" type="text/html" hreflang="en_US" /><updated>2019-07-17T13:26:34+02:00</updated><id>http://localhost:8080/feed.xml</id><title type="html">Juliette Sinibardy</title><subtitle>Pending Programmer&lt;br&gt; ███░░░░░░░ 30%</subtitle><author><name>Juliette Sinibardy</name></author><entry><title type="html">How I Prepared for Launch School’s 109 Written Assessment</title><link href="http://localhost:8080/preparing-launch-school-109-written-assessment" rel="alternate" type="text/html" title="How I Prepared for Launch School's 109 Written Assessment" /><published>2019-07-17T12:14:00+02:00</published><updated>2019-07-17T12:14:00+02:00</updated><id>http://localhost:8080/preparing-launch-school-109-written-assessment</id><content type="html" xml:base="http://localhost:8080/preparing-launch-school-109-written-assessment">&lt;p&gt;I recently took Launch School’s first written exam (RB 109), that comes at the
+end of the first course, RB 101, Programming Foundations.&lt;/p&gt;
 
 &lt;p&gt;This course is especially challenging because it forces us to simultaneously:&lt;/p&gt;
 &lt;ul&gt;
@@ -20,15 +20,184 @@ your own study flow.&lt;/p&gt;
 
 &lt;h2 id=&quot;going-through-the-101-courses&quot;&gt;Going through the 101 courses&lt;/h2&gt;
 
-&lt;p&gt;During the lessons, I always took notes in Markdown (this will come in handy
-later), using &lt;a href=&quot;https://typora.io/&quot;&gt;Typora&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;During the lessons, I always took notes in &lt;strong&gt;Markdown&lt;/strong&gt; (this will come in handy
+later), using &lt;a href=&quot;https://typora.io/&quot;&gt;Typora&lt;/a&gt;. My notes were pretty detailed
+(sometimes even bordering on copying word after word the lesson). I guess 
+this meticulous copying helps my memorization, even though I haven’t re-read
+my notes for the most part.&lt;/p&gt;
 
+&lt;p&gt;I spent a significative time going through the lessons (&lt;strong&gt;37.5 hours&lt;/strong&gt;), and
+was striving to understand every line of the lesson.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-ruby-small-problems&quot;&gt;The Ruby Small Problems&lt;/h2&gt;
+
+&lt;p&gt;To take a break in between lessons, I was also advancing on the &lt;strong&gt;Ruby Small 
+Problems&lt;/strong&gt;. My goal was to always find a working solution myself, and if I
+didn’t, I added this problem in my “to be done again” list.&lt;/p&gt;
+
+&lt;p&gt;I would then briefly read the solution (trying not to spend more than a 
+couple of seconds on it), then hide the solution and try to come up with 
+the exact same program without peeking too much.&lt;/p&gt;
+
+&lt;p&gt;If the solution introduced a new method, I would look it up on the 
+documentation and sometimes incorpore it in my Anki memory cards (more on that
+below).&lt;/p&gt;
+
+&lt;p&gt;If I could, I would also work on the Further Exploration. But most of the time,
+the Further Exploration joined the “to be done again” list.&lt;/p&gt;
+
+&lt;p&gt;When I was nearing the end of the 101 course, I started re-doing the “to be 
+done again” exercises, and even though some remained difficult, most of them
+felt much easier. This was probably the biggest sign that I was actually
+making a progress (and it felt good!)&lt;/p&gt;
+
+&lt;p&gt;Most of my time on 101 was spent on the Ruby Small Problems, which took me
+more than &lt;strong&gt;60 hours&lt;/strong&gt;. (And I haven’t quite finished a couple of
+Advanced Problems.)&lt;/p&gt;
+
+&lt;h2 id=&quot;creating-flash-cards-on-anki&quot;&gt;Creating Flash cards on Anki&lt;/h2&gt;
+
+&lt;p&gt;Everytime I would encounter an information that seemed important enough, 
+I would create an Anki flash card.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; on desktop, I prefer using &lt;a href=&quot;https://ankiweb.net&quot;&gt;Anki’s web interface&lt;/a&gt; 
+rather than their pretty dated software interface.&lt;/p&gt;
+
+&lt;p&gt;What’s my gradiant for “important enough”?&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;Going through the lectures (notes + Anki)&lt;/li&gt;
-  &lt;li&gt;Study guide + writing my own examples&lt;/li&gt;
-  &lt;li&gt;5’ per questions&lt;/li&gt;
-  &lt;li&gt;Time spent&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Juliette Sinibardy</name></author><category term="Launch School" /><category term="Learning" /><category term="Memory" /><category term="Ruby" /><category term="Anki" /><summary type="html">I recently took Launch School’s first written exam (RB 109), that comes at the end of the first course, RB 101, Programming Foundation. This course is especially challenging because it forces us to simultaneously: learn to learn again, learn Ruby syntax, learn problem solving. I thought it would be a good time to reflect on my study methods and the time it took me to get there.</summary></entry><entry><title type="html">A Beginner’s Guide to SEO optimization in a Jekyll static website</title><link href="http://localhost:8080/optimize-seo-jekyll" rel="alternate" type="text/html" title="A Beginner's Guide to SEO optimization in a Jekyll static website" /><published>2019-07-09T09:16:00+02:00</published><updated>2019-07-09T23:06:00+02:00</updated><id>http://localhost:8080/optimize-jekyll-seo</id><content type="html" xml:base="http://localhost:8080/optimize-seo-jekyll">&lt;blockquote&gt;
+  &lt;li&gt;An information that contains some general knowledge about computer science
+(eg. regular expressions, command line interface…)&lt;/li&gt;
+  &lt;li&gt;An information about Ruby’s behavior (eg. pass by value / reference, 
+variable scope, truthiness)&lt;/li&gt;
+  &lt;li&gt;A method that seemed particularly useful (eg. &lt;code class=&quot;highlighter-rouge&quot;&gt;Array#|&lt;/code&gt; to merge two arrays
+while only keeping the unique values)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Example of questions and answers:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;How can I add an element to the beginning of the array?&lt;/p&gt;
+
+  &lt;p&gt;By using &lt;code class=&quot;highlighter-rouge&quot;&gt;Array#unshift&lt;/code&gt; (destructive)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;How can I check that a collection has at least one element that satisfies an 
+expression?&lt;/p&gt;
+
+  &lt;p&gt;By using &lt;code class=&quot;highlighter-rouge&quot;&gt;Enumerable#any?&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;What does the last expression return?&lt;/p&gt;
+  &lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'a'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'b'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]],&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;b: &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'bear'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;c: &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'cat'&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'cab'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;  &lt;/div&gt;
+
+  &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&quot;b&quot;&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;I would use my commute time to go through my Anki deck (on the Android app),
+sometimes editing old questions when the formulation was too vague or implied
+that I didn’t quite grasp a concept at that time.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-study-sessions&quot;&gt;The Study Sessions&lt;/h2&gt;
+
+&lt;p&gt;At the end of the 101 course, I started to attend as many study sessions as 
+I could. Before that, I was pretty embarrassed to showcase my lack of 
+mastery, and prefered avoiding them.&lt;/p&gt;
+
+&lt;p&gt;However, I can now see how mistaken I was. The Teacher Assistants are nothing
+but kind and encouraging. Attending study sessions both helped me 
+try new solving methods and gain in confidence. These sessions are 
+absolutely essential for the oral assessment, but I believe they helped me
+for the written assessment as well.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-study-guide&quot;&gt;The Study Guide&lt;/h2&gt;
+
+&lt;p&gt;Launch School provides a Study guide that details what will be covered in the
+written assessment. And this is actually 100% true: what is listed &lt;em&gt;will&lt;/em&gt;
+be useful during the exam.&lt;/p&gt;
+
+&lt;p&gt;I personally spent quite some time on the following:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Variables as pointers&lt;/li&gt;
+  &lt;li&gt;Mutative methods&lt;/li&gt;
+  &lt;li&gt;Pass by reference &amp;amp; Pass by value&lt;/li&gt;
+  &lt;li&gt;Truthiness&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Whenever a concept came up, I tried to create my own example on Ruby and saved
+it for the exam. Complete mastery of the concept is not enough: you need to be 
+able to answer fast, and having pre-made bits of answers can go a long way.&lt;/p&gt;
+
+&lt;p&gt;Keep in mind that you’ll have more than 20 questions (I had 23) and only
+3 hours: if you take into account the necessary time to read the questions and
+proofread your answers, you’ll have less than 10 minutes per question.&lt;/p&gt;
+
+&lt;p&gt;To assess whether I was ready to take the exam, I’ve worked on 
+&lt;a href=&quot;https://medium.com/how-i-started-learning-coding-from-scratch/advice-for-109-written-assessment-part-3-d39dceb06c0c&quot;&gt;Srdjan&lt;/a&gt;’s
+programs while trying to spend less than 5 minutes to precisely describe 
+what was happening under the hood.&lt;/p&gt;
+
+&lt;p&gt;I ended up creating a handful of pre-made sentences that were useful all the
+time, like:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“We’ve initialized the variable &lt;code class=&quot;highlighter-rouge&quot;&gt;var_name&lt;/code&gt; and assigned to it the 
+Integer/String/etc object &lt;code class=&quot;highlighter-rouge&quot;&gt;value&lt;/code&gt; to it.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;This little trick saved me a couple of critical minutes during the exam.&lt;/p&gt;
+
+&lt;h2 id=&quot;my-timelogs&quot;&gt;My Timelogs&lt;/h2&gt;
+
+&lt;p&gt;I’ve used &lt;a href=&quot;https://www.toggl.com/&quot;&gt;Toggl&lt;/a&gt; to keep track of how long I spent
+on each topic, and also to make sure that I reached my 15-hours per week
+objective.&lt;/p&gt;
+
+&lt;p&gt;Here’s the total breakdown of my &lt;strong&gt;127 hours&lt;/strong&gt; spent on the 101 course:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Topic&lt;/th&gt;
+      &lt;th&gt;Duration&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Lessons&lt;/td&gt;
+      &lt;td&gt;33.5 hours&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Video Lessons&lt;/td&gt;
+      &lt;td&gt;4 hours&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Walk-through / Assignments&lt;/td&gt;
+      &lt;td&gt;12 hours&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Ruby Small Problems&lt;/td&gt;
+      &lt;td&gt;52 hours&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Practice Problems&lt;/td&gt;
+      &lt;td&gt;10 hours&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Live-coding&lt;/td&gt;
+      &lt;td&gt;8 hours&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Exams (incl. quizzes)&lt;/td&gt;
+      &lt;td&gt;7.5 hours&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Now, time to practice for the interview assessment!&lt;/p&gt;</content><author><name>Juliette Sinibardy</name></author><category term="Launch School" /><category term="Learning" /><category term="Memory" /><category term="Ruby" /><category term="Anki" /><category term="Timelogs" /><summary type="html">I recently took Launch School’s first written exam (RB 109), that comes at the end of the first course, RB 101, Programming Foundations. This course is especially challenging because it forces us to simultaneously: learn to learn again, learn Ruby syntax, learn problem solving. I thought it would be a good time to reflect on my study methods and the time it took me to get there.</summary></entry><entry><title type="html">A Beginner’s Guide to SEO optimization in a Jekyll static website</title><link href="http://localhost:8080/optimize-seo-jekyll" rel="alternate" type="text/html" title="A Beginner's Guide to SEO optimization in a Jekyll static website" /><published>2019-07-09T09:16:00+02:00</published><updated>2019-07-09T23:06:00+02:00</updated><id>http://localhost:8080/optimize-jekyll-seo</id><content type="html" xml:base="http://localhost:8080/optimize-seo-jekyll">&lt;blockquote&gt;
   &lt;p&gt;What? There’s no sitemap here?
 &lt;em&gt;- Me when I discovered my new Jekyll blog&lt;/em&gt;&lt;/p&gt;
 &lt;/blockquote&gt;

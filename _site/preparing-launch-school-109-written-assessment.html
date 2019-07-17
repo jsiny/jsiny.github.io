@@ -38,15 +38,15 @@
 <meta property="og:title" content="How I Prepared for Launch School’s 109 Written Assessment" />
 <meta name="author" content="Juliette Sinibardy" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="TO BE WRITTEN" />
-<meta property="og:description" content="TO BE WRITTEN" />
+<meta name="description" content="Here are my tips on how to study for Launch school’s first written assessment (109)" />
+<meta property="og:description" content="Here are my tips on how to study for Launch school’s first written assessment (109)" />
 <link rel="canonical" href="http://localhost:8080/preparing-launch-school-109-written-assessment" />
 <meta property="og:url" content="http://localhost:8080/preparing-launch-school-109-written-assessment" />
 <meta property="og:site_name" content="Juliette Sinibardy" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2019-07-17T12:14:00+02:00" />
 <script type="application/ld+json">
-{"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:8080/preparing-launch-school-109-written-assessment"},"description":"TO BE WRITTEN","@type":"BlogPosting","url":"http://localhost:8080/preparing-launch-school-109-written-assessment","headline":"How I Prepared for Launch School’s 109 Written Assessment","dateModified":"2019-07-17T12:14:00+02:00","datePublished":"2019-07-17T12:14:00+02:00","author":{"@type":"Person","name":"Juliette Sinibardy"},"@context":"http://schema.org"}</script>
+{"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:8080/preparing-launch-school-109-written-assessment"},"description":"Here are my tips on how to study for Launch school’s first written assessment (109)","@type":"BlogPosting","url":"http://localhost:8080/preparing-launch-school-109-written-assessment","headline":"How I Prepared for Launch School’s 109 Written Assessment","dateModified":"2019-07-17T12:14:00+02:00","datePublished":"2019-07-17T12:14:00+02:00","author":{"@type":"Person","name":"Juliette Sinibardy"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -288,7 +288,7 @@
 
   <div class="post-body">
     <p>I recently took Launch School’s first written exam (RB 109), that comes at the
-end of the first course, RB 101, Programming Foundation.</p>
+end of the first course, RB 101, Programming Foundations.</p>
 
 <p>This course is especially challenging because it forces us to simultaneously:</p>
 <ul>
@@ -309,16 +309,184 @@ your own study flow.</p>
 
 <h2 id="going-through-the-101-courses">Going through the 101 courses</h2>
 
-<p>During the lessons, I always took notes in Markdown (this will come in handy
-later), using <a rel="noopener" target="_blank" href="https://typora.io/">Typora</a>.</p>
+<p>During the lessons, I always took notes in <strong>Markdown</strong> (this will come in handy
+later), using <a rel="noopener" target="_blank" href="https://typora.io/">Typora</a>. My notes were pretty detailed
+(sometimes even bordering on copying word after word the lesson). I guess 
+this meticulous copying helps my memorization, even though I haven’t re-read
+my notes for the most part.</p>
 
+<p>I spent a significative time going through the lessons (<strong>37.5 hours</strong>), and
+was striving to understand every line of the lesson.</p>
+
+<h2 id="the-ruby-small-problems">The Ruby Small Problems</h2>
+
+<p>To take a break in between lessons, I was also advancing on the <strong>Ruby Small 
+Problems</strong>. My goal was to always find a working solution myself, and if I
+didn’t, I added this problem in my “to be done again” list.</p>
+
+<p>I would then briefly read the solution (trying not to spend more than a 
+couple of seconds on it), then hide the solution and try to come up with 
+the exact same program without peeking too much.</p>
+
+<p>If the solution introduced a new method, I would look it up on the 
+documentation and sometimes incorpore it in my Anki memory cards (more on that
+below).</p>
+
+<p>If I could, I would also work on the Further Exploration. But most of the time,
+the Further Exploration joined the “to be done again” list.</p>
+
+<p>When I was nearing the end of the 101 course, I started re-doing the “to be 
+done again” exercises, and even though some remained difficult, most of them
+felt much easier. This was probably the biggest sign that I was actually
+making a progress (and it felt good!)</p>
+
+<p>Most of my time on 101 was spent on the Ruby Small Problems, which took me
+more than <strong>60 hours</strong>. (And I haven’t quite finished a couple of
+Advanced Problems.)</p>
+
+<h2 id="creating-flash-cards-on-anki">Creating Flash cards on Anki</h2>
+
+<p>Everytime I would encounter an information that seemed important enough, 
+I would create an Anki flash card.</p>
+
+<p><strong>Note:</strong> on desktop, I prefer using <a rel="noopener" target="_blank" href="https://ankiweb.net">Anki’s web interface</a> 
+rather than their pretty dated software interface.</p>
+
+<p>What’s my gradiant for “important enough”?</p>
 <ul>
-  <li>Going through the lectures (notes + Anki)</li>
-  <li>Study guide + writing my own examples</li>
-  <li>5’ per questions</li>
-  <li>Time spent</li>
+  <li>An information that contains some general knowledge about computer science
+(eg. regular expressions, command line interface…)</li>
+  <li>An information about Ruby’s behavior (eg. pass by value / reference, 
+variable scope, truthiness)</li>
+  <li>A method that seemed particularly useful (eg. <code class="highlighter-rouge">Array#|</code> to merge two arrays
+while only keeping the unique values)</li>
 </ul>
 
+<p>Example of questions and answers:</p>
+
+<blockquote>
+  <p>How can I add an element to the beginning of the array?</p>
+
+  <p>By using <code class="highlighter-rouge">Array#unshift</code> (destructive)</p>
+</blockquote>
+
+<blockquote>
+  <p>How can I check that a collection has at least one element that satisfies an 
+expression?</p>
+
+  <p>By using <code class="highlighter-rouge">Enumerable#any?</code></p>
+</blockquote>
+
+<blockquote>
+  <p>What does the last expression return?</p>
+  <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">arr</span> <span class="o">=</span> <span class="p">[[</span><span class="s1">'a'</span><span class="p">,</span> <span class="p">[</span><span class="s1">'b'</span><span class="p">]],</span> <span class="p">{</span> <span class="ss">b: </span><span class="s1">'bear'</span><span class="p">,</span> <span class="ss">c: </span><span class="s1">'cat'</span> <span class="p">},</span> <span class="s1">'cab'</span><span class="p">]</span>
+<span class="n">arr</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="ss">:b</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+</code></pre></div>  </div>
+
+  <p><code class="highlighter-rouge">"b"</code></p>
+</blockquote>
+
+<p>I would use my commute time to go through my Anki deck (on the Android app),
+sometimes editing old questions when the formulation was too vague or implied
+that I didn’t quite grasp a concept at that time.</p>
+
+<h2 id="the-study-sessions">The Study Sessions</h2>
+
+<p>At the end of the 101 course, I started to attend as many study sessions as 
+I could. Before that, I was pretty embarrassed to showcase my lack of 
+mastery, and prefered avoiding them.</p>
+
+<p>However, I can now see how mistaken I was. The Teacher Assistants are nothing
+but kind and encouraging. Attending study sessions both helped me 
+try new solving methods and gain in confidence. These sessions are 
+absolutely essential for the oral assessment, but I believe they helped me
+for the written assessment as well.</p>
+
+<h2 id="the-study-guide">The Study Guide</h2>
+
+<p>Launch School provides a Study guide that details what will be covered in the
+written assessment. And this is actually 100% true: what is listed <em>will</em>
+be useful during the exam.</p>
+
+<p>I personally spent quite some time on the following:</p>
+<ul>
+  <li>Variables as pointers</li>
+  <li>Mutative methods</li>
+  <li>Pass by reference &amp; Pass by value</li>
+  <li>Truthiness</li>
+</ul>
+
+<p>Whenever a concept came up, I tried to create my own example on Ruby and saved
+it for the exam. Complete mastery of the concept is not enough: you need to be 
+able to answer fast, and having pre-made bits of answers can go a long way.</p>
+
+<p>Keep in mind that you’ll have more than 20 questions (I had 23) and only
+3 hours: if you take into account the necessary time to read the questions and
+proofread your answers, you’ll have less than 10 minutes per question.</p>
+
+<p>To assess whether I was ready to take the exam, I’ve worked on 
+<a rel="noopener" target="_blank" href="https://medium.com/how-i-started-learning-coding-from-scratch/advice-for-109-written-assessment-part-3-d39dceb06c0c">Srdjan</a>’s
+programs while trying to spend less than 5 minutes to precisely describe 
+what was happening under the hood.</p>
+
+<p>I ended up creating a handful of pre-made sentences that were useful all the
+time, like:</p>
+
+<blockquote>
+  <p>“We’ve initialized the variable <code class="highlighter-rouge">var_name</code> and assigned to it the 
+Integer/String/etc object <code class="highlighter-rouge">value</code> to it.</p>
+</blockquote>
+
+<p>This little trick saved me a couple of critical minutes during the exam.</p>
+
+<h2 id="my-timelogs">My Timelogs</h2>
+
+<p>I’ve used <a rel="noopener" target="_blank" href="https://www.toggl.com/">Toggl</a> to keep track of how long I spent
+on each topic, and also to make sure that I reached my 15-hours per week
+objective.</p>
+
+<p>Here’s the total breakdown of my <strong>127 hours</strong> spent on the 101 course:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Topic</th>
+      <th>Duration</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Lessons</td>
+      <td>33.5 hours</td>
+    </tr>
+    <tr>
+      <td>Video Lessons</td>
+      <td>4 hours</td>
+    </tr>
+    <tr>
+      <td>Walk-through / Assignments</td>
+      <td>12 hours</td>
+    </tr>
+    <tr>
+      <td>Ruby Small Problems</td>
+      <td>52 hours</td>
+    </tr>
+    <tr>
+      <td>Practice Problems</td>
+      <td>10 hours</td>
+    </tr>
+    <tr>
+      <td>Live-coding</td>
+      <td>8 hours</td>
+    </tr>
+    <tr>
+      <td>Exams (incl. quizzes)</td>
+      <td>7.5 hours</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Now, time to practice for the interview assessment!</p>
 
     
 
@@ -379,6 +547,17 @@ later), using <a rel="noopener" target="_blank" href="https://typora.io/">Typora
     <path d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z"/>
 </svg>
       </span>&nbsp;<span class="tag-name">Anki</span>
+    </a>
+  
+    
+    <a href="/tags#timelogs">
+    
+      <span class="icon">
+        <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z"/>
+</svg>
+      </span>&nbsp;<span class="tag-name">Timelogs</span>
     </a>
   
 </div>
