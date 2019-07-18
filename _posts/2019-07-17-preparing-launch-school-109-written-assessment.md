@@ -2,14 +2,14 @@
 layout: post
 title: How I Prepared for Launch School's 109 Written Assessment
 date: 2019-07-17 12:14 +0200
-last_modified_at: 2019-07-17 18:27 +0200
+last_modified_at: 2019-07-18 18:15 +0200
 permalink: preparing-launch-school-109-written-assessment
 description: Here are my tips on how to study for Launch school's first written assessment (109)
 image: 
 published: true
 sitemap: true
 excerpt_separator: "<!--more-->"
-categories: Launch School
+categories: Launch-School
 tags: 
     - Launch School
     - Learning
@@ -185,7 +185,7 @@ Here's the total breakdown of my **127 hours** spent on the 101 course:
 | Exams (incl. quizzes) | 7.5 hours |
 
 {% include images.html file="toggl.png" 
-  caption="The weekly breakdwon" 
+  caption="The weekly breakdown" 
   alt="My weekly toggle timelogs" %}
 
 Now, time to practice for the interview assessment!
