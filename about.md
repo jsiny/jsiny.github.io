@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About Me
-permalink: /about
+permalink: about
 sidebar_link: true
 description: Hi, I'm Juliette, an aspiring web developer in Paris, France. Here's my story! 😊
 last_modified_at: 2019-07-08 23:26:00 +0200
