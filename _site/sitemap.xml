@@ -14,7 +14,11 @@
 </url>
 <url>
 <loc>http://localhost:8080/preparing-launch-school-109-written-assessment</loc>
-<lastmod>2019-07-17T18:27:00+02:00</lastmod>
+<lastmod>2019-07-18T18:15:00+02:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:8080/codewars-kata-launch-school-109-oral-assessment</loc>
+<lastmod>2019-07-29T21:59:00+02:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:8080/about</loc>
@@ -26,7 +30,7 @@
 </url>
 <url>
 <loc>http://localhost:8080/</loc>
-<lastmod>2019-07-17T18:27:00+02:00</lastmod>
+<lastmod>2019-07-29T21:59:00+02:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:8080/tags</loc>
@@ -38,6 +42,6 @@
 </url>
 <url>
 <loc>http://localhost:8080/page/2/</loc>
-<lastmod>2019-07-17T18:27:00+02:00</lastmod>
+<lastmod>2019-07-29T21:59:00+02:00</lastmod>
 </url>
 </urlset>

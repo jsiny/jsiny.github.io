@@ -1,4 +1,99 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en_US"><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:8080/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:8080/" rel="alternate" type="text/html" hreflang="en_US" /><updated>2019-07-17T18:27:28+02:00</updated><id>http://localhost:8080/feed.xml</id><title type="html">Juliette Sinibardy</title><subtitle>Pending Programmer&lt;br&gt; ███░░░░░░░ 30%</subtitle><author><name>Juliette Sinibardy</name></author><entry><title type="html">How I Prepared for Launch School’s 109 Written Assessment</title><link href="http://localhost:8080/preparing-launch-school-109-written-assessment" rel="alternate" type="text/html" title="How I Prepared for Launch School's 109 Written Assessment" /><published>2019-07-17T12:14:00+02:00</published><updated>2019-07-17T18:27:00+02:00</updated><id>http://localhost:8080/preparing-launch-school-109-written-assessment</id><content type="html" xml:base="http://localhost:8080/preparing-launch-school-109-written-assessment">&lt;p&gt;I recently took Launch School’s first written exam (RB 109), that comes at the
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en_US"><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:8080/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:8080/" rel="alternate" type="text/html" hreflang="en_US" /><updated>2019-07-29T21:58:29+02:00</updated><id>http://localhost:8080/feed.xml</id><title type="html">Juliette Sinibardy</title><subtitle>Pending Programmer&lt;br&gt; ███░░░░░░░ 30%</subtitle><author><name>Juliette Sinibardy</name></author><entry><title type="html">My Favourite Codewars Kata to Prepare for Launch School’s 109 Oral Assessment</title><link href="http://localhost:8080/codewars-kata-launch-school-109-oral-assessment" rel="alternate" type="text/html" title="My Favourite Codewars Kata to Prepare for Launch School's 109 Oral Assessment" /><published>2019-07-29T21:11:00+02:00</published><updated>2019-07-29T21:59:00+02:00</updated><id>http://localhost:8080/codewars-kata-launch-school-109-oral-assessment</id><content type="html" xml:base="http://localhost:8080/codewars-kata-launch-school-109-oral-assessment">&lt;p&gt;I’ve recently passed with success my first Launch School oral assessment (the 
+dreaded 109 oral exam) 🍾&lt;/p&gt;
+
+&lt;p&gt;It was a hell of a ride, and I’d like to share my secret recipe: training with
+&lt;a href=&quot;https://codewars.com&quot;&gt;Codewars&lt;/a&gt;.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;launch-schools-ruby-small-problems&quot;&gt;Launch School’s Ruby Small Problems&lt;/h2&gt;
+
+&lt;p&gt;I’ll start by stating the obvious: you should first and foremost do the 
+Ruby Small Problems provided by Launch School. Once you’re done, you
+should also re-do them at least once. They’re literally made to prepare you
+for the 109 exam so you should put in a lot of efforts on them.&lt;/p&gt;
+
+&lt;p&gt;However as I’m blessed with an excellent memory, re-doing the same 
+exercises wasn’t much of a challenge as I mostly (sometimes vaguely)
+remembered the pattern I was supposed to follow. I sometimes ended up with
+the exact same solution I had found on my first pass.&lt;/p&gt;
+
+&lt;p&gt;Sure, easily redoing the exercises somewhat boosted my confidence, but I felt
+unsure on whether I was actually getting better at coding or if I was doing it
+all from memory.&lt;/p&gt;
+
+&lt;p&gt;I needed fresh exercises! And this is how I started doing exercises on 
+Codewars.&lt;/p&gt;
+
+&lt;h2 id=&quot;whats-codewars&quot;&gt;What’s Codewars?&lt;/h2&gt;
+
+&lt;p&gt;Codewars is a community-based website where you can train on exercises and
+gain points (&lt;em&gt;honor&lt;/em&gt;) solving them. (You can also submit new exercises
+or translate the problem on another programming language.)&lt;/p&gt;
+
+&lt;p&gt;What I liked most is the fact that once you submit your answer, you gain access
+to the solutions provided by others. As the best ones get upvoted, you can 
+therefore discover a much clever way to solve the “Kata”. This is how 
+I’ve discovered new methods, like &lt;code class=&quot;highlighter-rouge&quot;&gt;String#scan&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;Enumerator#with_index&lt;/code&gt;.&lt;/p&gt;
+
+&lt;div style=&quot;text-align: center&quot;&gt;
+    &lt;figure&gt;
+        &lt;a href=&quot;/assets/images/codewars.png&quot;&gt;
+            &lt;img src=&quot;/assets/images/codewars.png&quot; alt=&quot;Codewars solution to a kata&quot; /&gt;  
+        &lt;/a&gt;
+        &lt;figcaption&gt;You can now compare your 10 line method to the glorious one-liners&lt;/figcaption&gt;
+    &lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;my-favourite-katas&quot;&gt;My favourite Katas&lt;/h2&gt;
+
+&lt;p&gt;I’ve listed here my favourite Katas that could help you prepare the 109
+assessment. I’ve tried to avoid the Katas where advanced Math knowledge
+is necessary, and aimed at selecting problems that looked like the ones given
+by Launch School. The Katas are ordered by complexity (&lt;em&gt;8 kyu&lt;/em&gt; is the easiest).&lt;/p&gt;
+
+&lt;p&gt;My personal challenge before the assessment was being able to solve the 6 kyu 
+katas in less than 20 minutes. Bear in mind that the problem given during 
+the oral exam will be much easier than kyu 6 katas, but you’ll be much more
+stressed out and prone to mistakes.&lt;/p&gt;
+
+&lt;h3 id=&quot;7-or-8-kyu&quot;&gt;7 or 8 kyu&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;[8 kyu] &lt;a href=&quot;https://www.codewars.com/kata/59342039eb450e39970000a6&quot;&gt;Count Odd numbers below n&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;[7 kyu] &lt;a href=&quot;https://www.codewars.com/kata/58aa68605aab54a26c0001a6&quot;&gt;Distinct Digit Year&lt;/a&gt; ⭐&lt;/li&gt;
+  &lt;li&gt;[7 kyu] &lt;a href=&quot;https://www.codewars.com/kata/5a523566b3bfa84c2e00010b&quot;&gt;Minimize Sum of Arrays&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;[7 kyu] &lt;a href=&quot;https://www.codewars.com/kata/5a4ea304b3bfa89a9900008e&quot;&gt;Form the Largest&lt;/a&gt; ⭐&lt;/li&gt;
+  &lt;li&gt;[7 kyu] &lt;a href=&quot;https://www.codewars.com/kata/544aed4c4a30184e960010f4&quot;&gt;Find the Divisors&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;[7 kyu] &lt;a href=&quot;https://www.codewars.com/kata/56269eb78ad2e4ced1000013&quot;&gt;Find the Next Perfect Square&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;5-or-6-kyu&quot;&gt;5 or 6 kyu&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;[6 kyu] &lt;a href=&quot;https://www.codewars.com/kata/514b92a657cdc65150000006&quot;&gt;Multiples of 3 or 5&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;[6 kyu] &lt;a href=&quot;https://www.codewars.com/kata/5894318275f2c75695000146&quot;&gt;Delete a Digit&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;[6 kyu] &lt;a href=&quot;https://www.codewars.com/kata/5970df092ef474680a0000c9&quot;&gt;Alphabetized&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;[6 kyu] &lt;a href=&quot;https://www.codewars.com/kata/5ae326342f8cbc72220000d2&quot;&gt;Simple Simple Simple String Expansion&lt;/a&gt; ⭐&lt;/li&gt;
+  &lt;li&gt;[6 kyu] &lt;a href=&quot;https://www.codewars.com/kata/58f5c63f1e26ecda7e000029&quot;&gt;Mexican Wave&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;[6 kyu] &lt;a href=&quot;https://www.codewars.com/kata/53bb1201392478fefc000746&quot;&gt;Sherlock on pockets&lt;/a&gt; (good to practice hashes)&lt;/li&gt;
+  &lt;li&gt;[6 kyu] &lt;a href=&quot;https://www.codewars.com/kata/546f922b54af40e1e90001da&quot;&gt;Replace with Alphabet Position&lt;/a&gt; ⭐&lt;/li&gt;
+  &lt;li&gt;[5 kyu] &lt;a href=&quot;https://www.codewars.com/kata/520b9d2ad5c005041100000f&quot;&gt;Simple Pig Latin&lt;/a&gt; ⭐&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I’ve marked of a star (⭐)   the Katas  that  I   enjoyed the most.&lt;/p&gt;
+
+&lt;p&gt;And for the perfectionists out there, stop fretting because your solution to the
+kata is not as elegant as the top-voted solutions. It’s OK, we’ll get there!
+(I can spot you from afar, I’m the same 😉)&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;If you’re interested in preparing Launch School’s exams, you might want
+to check out this other post:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;/preparing-launch-school-109-written-assessment&quot;&gt;How I Prepared for Launch School’s 109 written assessment&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Juliette Sinibardy</name></author><category term="Launch School" /><category term="Learning" /><category term="Ruby" /><category term="Codewars" /><category term="Programming Exercises" /><summary type="html">I’ve recently passed with success my first Launch School oral assessment (the dreaded 109 oral exam) 🍾 It was a hell of a ride, and I’d like to share my secret recipe: training with Codewars.</summary></entry><entry><title type="html">How I Prepared for Launch School’s 109 Written Assessment</title><link href="http://localhost:8080/preparing-launch-school-109-written-assessment" rel="alternate" type="text/html" title="How I Prepared for Launch School's 109 Written Assessment" /><published>2019-07-17T12:14:00+02:00</published><updated>2019-07-18T18:15:00+02:00</updated><id>http://localhost:8080/preparing-launch-school-109-written-assessment</id><content type="html" xml:base="http://localhost:8080/preparing-launch-school-109-written-assessment">&lt;p&gt;I recently took Launch School’s first written exam (RB 109), that comes at the
 end of the first course, RB 101, Programming Foundations.&lt;/p&gt;
 
 &lt;p&gt;This course is especially challenging because it forces us to simultaneously:&lt;/p&gt;
@@ -220,7 +315,7 @@ objective.&lt;/p&gt;
         &lt;a href=&quot;/assets/images/toggl.png&quot;&gt;
             &lt;img src=&quot;/assets/images/toggl.png&quot; alt=&quot;My weekly toggle timelogs&quot; /&gt;  
         &lt;/a&gt;
-        &lt;figcaption&gt;The weekly breakdwon&lt;/figcaption&gt;
+        &lt;figcaption&gt;The weekly breakdown&lt;/figcaption&gt;
     &lt;/figure&gt;
 &lt;/div&gt;
 
