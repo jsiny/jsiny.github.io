@@ -1,4 +1,422 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en_US"><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:8080/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:8080/" rel="alternate" type="text/html" hreflang="en_US" /><updated>2019-08-05T14:38:35+02:00</updated><id>http://localhost:8080/feed.xml</id><title type="html">Juliette Sinibardy</title><subtitle>Pending Programmer&lt;br&gt; ███░░░░░░░ 30%</subtitle><author><name>Juliette Sinibardy</name></author><entry><title type="html">My Favourite Codewars Kata to Prepare for Launch School’s 109 Oral Assessment</title><link href="http://localhost:8080/codewars-kata-launch-school-109-oral-assessment" rel="alternate" type="text/html" title="My Favourite Codewars Kata to Prepare for Launch School's 109 Oral Assessment" /><published>2019-07-29T21:11:00+02:00</published><updated>2019-07-29T21:59:00+02:00</updated><id>http://localhost:8080/codewars-kata-launch-school-109-oral-assessment</id><content type="html" xml:base="http://localhost:8080/codewars-kata-launch-school-109-oral-assessment">&lt;p&gt;I’ve recently passed with success my first Launch School oral assessment (the 
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en_US"><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:8080/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:8080/" rel="alternate" type="text/html" hreflang="en_US" /><updated>2019-08-05T18:02:02+02:00</updated><id>http://localhost:8080/feed.xml</id><title type="html">Juliette Sinibardy</title><subtitle>Pending Programmer&lt;br&gt; ███░░░░░░░ 30%</subtitle><author><name>Juliette Sinibardy</name></author><entry><title type="html">Making Sense of Equality in Ruby</title><link href="http://localhost:8080/ruby-equality" rel="alternate" type="text/html" title="Making Sense of Equality in Ruby" /><published>2019-08-05T11:23:00+02:00</published><updated>2019-08-05T18:01:00+02:00</updated><id>http://localhost:8080/ruby-equality</id><content type="html" xml:base="http://localhost:8080/ruby-equality">&lt;p&gt;When I discovered programming, I was bamboozled by the incredible amout of 
+times you type the &lt;code class=&quot;highlighter-rouge&quot;&gt;=&lt;/code&gt; key. Among other things, I couldn’t help but 
+wonder: Why on earth was I supposed to use &lt;code class=&quot;highlighter-rouge&quot;&gt;==&lt;/code&gt; instead of the 
+more ‘natural’ &lt;code class=&quot;highlighter-rouge&quot;&gt;=&lt;/code&gt; to express equality?&lt;/p&gt;
+
+&lt;p&gt;Turns out, it’s actually possible to make sense of this &lt;code class=&quot;highlighter-rouge&quot;&gt;=&lt;/code&gt; madness!
+Here’s a cheat sheet to gain a better understanding of equality and the 
+equal sign &lt;code class=&quot;highlighter-rouge&quot;&gt;=&lt;/code&gt; in Ruby.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#the--madness&quot; id=&quot;markdown-toc-the--madness&quot;&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;=&lt;/code&gt; Madness&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#what-about-&quot; id=&quot;markdown-toc-what-about-&quot;&gt;What about &lt;code class=&quot;highlighter-rouge&quot;&gt;=&lt;/code&gt;?&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#general-case-the-assignment-operator&quot; id=&quot;markdown-toc-general-case-the-assignment-operator&quot;&gt;General Case: the Assignment Operator&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#-and-the-combined-assignment-operators&quot; id=&quot;markdown-toc--and-the-combined-assignment-operators&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;+=&lt;/code&gt; and the combined assignment operators&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#element-assignment-&quot; id=&quot;markdown-toc-element-assignment-&quot;&gt;Element Assignment &lt;code class=&quot;highlighter-rouge&quot;&gt;#[]=&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#setter-methods-method&quot; id=&quot;markdown-toc-setter-methods-method&quot;&gt;Setter Methods &lt;code class=&quot;highlighter-rouge&quot;&gt;#method=&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#the--method-and-value-equality&quot; id=&quot;markdown-toc-the--method-and-value-equality&quot;&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;==&lt;/code&gt; method and Value Equality&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#examples-of--usage&quot; id=&quot;markdown-toc-examples-of--usage&quot;&gt;Examples of &lt;code class=&quot;highlighter-rouge&quot;&gt;==&lt;/code&gt; usage&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#the--method&quot; id=&quot;markdown-toc-the--method&quot;&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;==&lt;/code&gt; method&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#implications-for-object-oriented-programming&quot; id=&quot;markdown-toc-implications-for-object-oriented-programming&quot;&gt;Implications for Object Oriented Programming&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#the-equal-method&quot; id=&quot;markdown-toc-the-equal-method&quot;&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;equal?&lt;/code&gt; method&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#what-about--1&quot; id=&quot;markdown-toc-what-about--1&quot;&gt;What about &lt;code class=&quot;highlighter-rouge&quot;&gt;===&lt;/code&gt;?&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#the-eql-method&quot; id=&quot;markdown-toc-the-eql-method&quot;&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;eql?&lt;/code&gt; method&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#ruby-documentation&quot; id=&quot;markdown-toc-ruby-documentation&quot;&gt;Ruby Documentation&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#when-should-you-use-the-eql-method&quot; id=&quot;markdown-toc-when-should-you-use-the-eql-method&quot;&gt;When should you use the &lt;code class=&quot;highlighter-rouge&quot;&gt;eql?&lt;/code&gt; method?&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#implications-for-object-oriented-programming-1&quot; id=&quot;markdown-toc-implications-for-object-oriented-programming-1&quot;&gt;Implications for Object Oriented Programming&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#key-take-aways&quot; id=&quot;markdown-toc-key-take-aways&quot;&gt;Key Take-Aways&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;the--madness&quot;&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;=&lt;/code&gt; Madness&lt;/h2&gt;
+
+&lt;p&gt;Here’s a short program:&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;some_method&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;elsif&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;..&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+&lt;span class=&quot;nb&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;some_method&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; 3&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;some_method&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; 12&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;some_method&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;15&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; 4&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;In the above code, we have no less than &lt;em&gt;5 different forms&lt;/em&gt; of &lt;code class=&quot;highlighter-rouge&quot;&gt;=&lt;/code&gt;:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;=&lt;/code&gt; in &lt;code class=&quot;highlighter-rouge&quot;&gt;a = 3&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;+=&lt;/code&gt; in &lt;code class=&quot;highlighter-rouge&quot;&gt;a += 10&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;[]=&lt;/code&gt; in &lt;code class=&quot;highlighter-rouge&quot;&gt;[1, 2, 3][2] = 4&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;==&lt;/code&gt; in &lt;code class=&quot;highlighter-rouge&quot;&gt;if a == 5&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;===&lt;/code&gt; in &lt;code class=&quot;highlighter-rouge&quot;&gt;elsif (1..10) === a&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Granted, the last situation is actually quite uncommon, but this 
+profusion of &lt;code class=&quot;highlighter-rouge&quot;&gt;=&lt;/code&gt; signs is still confusing. Let’s dive in!&lt;/p&gt;
+
+&lt;h2 id=&quot;what-about-&quot;&gt;What about &lt;code class=&quot;highlighter-rouge&quot;&gt;=&lt;/code&gt;?&lt;/h2&gt;
+
+&lt;h3 id=&quot;general-case-the-assignment-operator&quot;&gt;General Case: the Assignment Operator&lt;/h3&gt;
+
+&lt;p&gt;In most cases, the &lt;code class=&quot;highlighter-rouge&quot;&gt;=&lt;/code&gt; character refers to the &lt;strong&gt;assignment operator&lt;/strong&gt;, 
+ie. the operator used to assign a new value to a variable.&lt;/p&gt;
+
+&lt;p&gt;Therefore, &lt;code class=&quot;highlighter-rouge&quot;&gt;a = 3&lt;/code&gt; is Ruby’s way of informing the program that from
+now on, the &lt;code class=&quot;highlighter-rouge&quot;&gt;a&lt;/code&gt; variable will now reference the &lt;code class=&quot;highlighter-rouge&quot;&gt;Integer&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;3&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;-and-the-combined-assignment-operators&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;+=&lt;/code&gt; and the combined assignment operators&lt;/h3&gt;
+
+&lt;p&gt;Ruby comes with 6 extremely handy “combined assignment operators”,
+that both operate on a variable &lt;em&gt;and&lt;/em&gt; assign the result back to the 
+variable.&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;   &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; 12&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;         &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; 12&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;They are: &lt;code class=&quot;highlighter-rouge&quot;&gt;+=&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;-=&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;*=&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;/=&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;%=&lt;/code&gt; (modulus), &lt;code class=&quot;highlighter-rouge&quot;&gt;**=&lt;/code&gt; (exponent).&lt;/p&gt;
+
+&lt;p&gt;As with regular assignment, these operators have nothing to do with
+testing for equality.&lt;/p&gt;
+
+&lt;h3 id=&quot;element-assignment-&quot;&gt;Element Assignment &lt;code class=&quot;highlighter-rouge&quot;&gt;#[]=&lt;/code&gt;&lt;/h3&gt;
+
+&lt;p&gt;Another common Ruby construct is &lt;strong&gt;element assignment&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;hello&quot;&lt;/span&gt;   &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; &quot;hello&quot;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Y&quot;&lt;/span&gt;    &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; &quot;Y&quot;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;str&lt;/span&gt;             &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; &quot;Yello&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Element assignment is actually a method (&lt;code class=&quot;highlighter-rouge&quot;&gt;#[]=&lt;/code&gt;), available to Strings,
+Arrays and Hashes. It replaces the element referenced
+by its index. Again, it doesn’t check for equality.&lt;/p&gt;
+
+&lt;h3 id=&quot;setter-methods-method&quot;&gt;Setter Methods &lt;code class=&quot;highlighter-rouge&quot;&gt;#method=&lt;/code&gt;&lt;/h3&gt;
+
+&lt;p&gt;Finally, you’ll encounter methods with a final &lt;code class=&quot;highlighter-rouge&quot;&gt;=&lt;/code&gt;, which (spoiler
+alert) have nothing to do with equality. These methods are &lt;strong&gt;setter
+methods&lt;/strong&gt;: they’re used to set a value to an instance variable.&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Cat&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;name&lt;/span&gt;
+    &lt;span class=&quot;vi&quot;&gt;@name&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;   &lt;span class=&quot;c1&quot;&gt;# setter method&lt;/span&gt;
+    &lt;span class=&quot;vi&quot;&gt;@name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;kitty&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Cat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;new&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;kitty&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Pixel&quot;&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;kitty&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;name&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; &quot;Pixel&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;To sum up, &lt;code class=&quot;highlighter-rouge&quot;&gt;=&lt;/code&gt; on its own is &lt;em&gt;never&lt;/em&gt; used to check whether 
+two elements are equal.&lt;/p&gt;
+
+&lt;p&gt;Instead, the &lt;code class=&quot;highlighter-rouge&quot;&gt;==&lt;/code&gt; method will 99% of the times do the job 🌈&lt;/p&gt;
+
+&lt;h2 id=&quot;the--method-and-value-equality&quot;&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;==&lt;/code&gt; method and Value Equality&lt;/h2&gt;
+
+&lt;h3 id=&quot;examples-of--usage&quot;&gt;Examples of &lt;code class=&quot;highlighter-rouge&quot;&gt;==&lt;/code&gt; usage&lt;/h3&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;==&lt;/code&gt; usually checks whether the two objects on either side have
+the same &lt;em&gt;value&lt;/em&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; true&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;hello&quot;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;  &lt;span class=&quot;s2&quot;&gt;&quot;hello&quot;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; true&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;world&quot;&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; false&lt;/span&gt;
+
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;a: &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;b: &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;b: &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;a: &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;    &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; true&lt;/span&gt;
+
+&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;              &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; true&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;              &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; false&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;From these examples, we can deduce the following:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;2 identical integers have equal value (which sounds pretty obvious)&lt;/li&gt;
+  &lt;li&gt;A &lt;code class=&quot;highlighter-rouge&quot;&gt;String&lt;/code&gt; of value &lt;code class=&quot;highlighter-rouge&quot;&gt;&quot;hello&quot;&lt;/code&gt; referenced by a variable has the 
+same value than another &lt;code class=&quot;highlighter-rouge&quot;&gt;String&lt;/code&gt; of value &lt;code class=&quot;highlighter-rouge&quot;&gt;&quot;hello&quot;&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Two &lt;code class=&quot;highlighter-rouge&quot;&gt;String&lt;/code&gt; objects of different values (&lt;code class=&quot;highlighter-rouge&quot;&gt;&quot;hello&quot;&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;&quot;world&quot;&lt;/code&gt;)
+are unequal&lt;/li&gt;
+  &lt;li&gt;Two &lt;code class=&quot;highlighter-rouge&quot;&gt;Hashes&lt;/code&gt; are equal if their key-value pairs are identical (even
+if the order is different)&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Arrays&lt;/code&gt; must also have an identical order to be considered equal&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;the--method&quot;&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;==&lt;/code&gt; method&lt;/h3&gt;
+
+&lt;p&gt;How does Ruby know how to compare two Hashes? Two Arrays? Two
+custom objects? The answer lies in the fact that &lt;code class=&quot;highlighter-rouge&quot;&gt;==&lt;/code&gt; is not 
+an operator but an &lt;strong&gt;instance method&lt;/strong&gt;. You could actually write 
+&lt;code class=&quot;highlighter-rouge&quot;&gt;2.==(2)&lt;/code&gt; instead of &lt;code class=&quot;highlighter-rouge&quot;&gt;2 == 2&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Additionally, &lt;code class=&quot;highlighter-rouge&quot;&gt;==&lt;/code&gt; is a &lt;code class=&quot;highlighter-rouge&quot;&gt;BasicObject&lt;/code&gt; instance method (ie. the class
+that contains every other object in Ruby), which means it’s available
+to &lt;em&gt;any&lt;/em&gt; object.&lt;/p&gt;
+
+&lt;p&gt;However, we almost never use the default &lt;code class=&quot;highlighter-rouge&quot;&gt;BasicObject#==&lt;/code&gt; method. 
+Instead, each subclass is supposed to &lt;strong&gt;override&lt;/strong&gt; the &lt;code class=&quot;highlighter-rouge&quot;&gt;==&lt;/code&gt; method with a 
+custom definition that suits its own needs.&lt;/p&gt;
+
+&lt;p&gt;For instance, the &lt;code class=&quot;highlighter-rouge&quot;&gt;Hash#==&lt;/code&gt; method does not account for key-value pairs order. 
+Here’s the corresponding entry in the 
+&lt;a href=&quot;https://docs.ruby-lang.org/en/2.6.0/Hash.html#method-i-3D-3D&quot;&gt;Ruby documentation&lt;/a&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;hsh == other_hash → true or false&lt;/strong&gt;&lt;/p&gt;
+
+  &lt;p&gt;Equality—Two hashes are equal if they each contain the same number of keys 
+and if each key-value pair is equal to (according to &lt;code class=&quot;highlighter-rouge&quot;&gt;Object#==&lt;/code&gt;) 
+the corresponding elements in the other hash.
+&lt;em&gt;The orders of each hashes are not compared.&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;implications-for-object-oriented-programming&quot;&gt;Implications for Object Oriented Programming&lt;/h3&gt;
+
+&lt;p&gt;Therefore, if you create a custom class and want to compare for “value equality”
+between two instances, you’ll need to implement your own custom &lt;code class=&quot;highlighter-rouge&quot;&gt;==&lt;/code&gt; instance
+method.&lt;/p&gt;
+
+&lt;p&gt;Otherwise, &lt;code class=&quot;highlighter-rouge&quot;&gt;==&lt;/code&gt; will still work, but probably not how you intended it:&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Cat&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;initialize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;vi&quot;&gt;@name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;kitty&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Cat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;teacup&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;kitten&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Cat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;teacup&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;nb&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;kitty&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;kitten&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; false&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Those two &lt;code class=&quot;highlighter-rouge&quot;&gt;Cat&lt;/code&gt; objects have exactly the same value but &lt;code class=&quot;highlighter-rouge&quot;&gt;kitty == kitten&lt;/code&gt;
+returns &lt;code class=&quot;highlighter-rouge&quot;&gt;false&lt;/code&gt; - why?&lt;/p&gt;
+
+&lt;p&gt;The answer is that Ruby applied the &lt;code class=&quot;highlighter-rouge&quot;&gt;BasicObject#==&lt;/code&gt; method, which has the 
+same implementation than &lt;code class=&quot;highlighter-rouge&quot;&gt;BasicObject#equal?&lt;/code&gt; (see next section), and
+basically checks whether two &lt;em&gt;objects&lt;/em&gt; are equal (not whether they
+have the same value).&lt;/p&gt;
+
+&lt;p&gt;Indeed, how could Ruby know when 2 &lt;code class=&quot;highlighter-rouge&quot;&gt;Cat&lt;/code&gt; objects are equal? It doesn’t 
+know how to compare these two custom objects. We need to explicitly tell 
+Ruby how to compare them, by including an instance method &lt;code class=&quot;highlighter-rouge&quot;&gt;Cat#==&lt;/code&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Cat&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;attr_reader&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:name&lt;/span&gt;
+
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;initialize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;vi&quot;&gt;@name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;other_cat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;vi&quot;&gt;@name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;other_cat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;name&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;kitty&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Cat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;teacup&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;kitten&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Cat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;teacup&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;nb&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;kitty&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;kitten&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; true&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Here, we chose to consider two cats identical if they have the same &lt;code class=&quot;highlighter-rouge&quot;&gt;name&lt;/code&gt;
+value. It’s completely up to us: we could also have chosen their &lt;code class=&quot;highlighter-rouge&quot;&gt;size&lt;/code&gt; or 
+&lt;code class=&quot;highlighter-rouge&quot;&gt;color&lt;/code&gt;. And it works! &lt;code class=&quot;highlighter-rouge&quot;&gt;kitty == kitten&lt;/code&gt; now returns &lt;code class=&quot;highlighter-rouge&quot;&gt;true&lt;/code&gt; 🍾&lt;/p&gt;
+
+&lt;h2 id=&quot;the-equal-method&quot;&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;equal?&lt;/code&gt; method&lt;/h2&gt;
+
+&lt;p&gt;If we want to know whether two objects are actually &lt;em&gt;the same object&lt;/em&gt;, we can
+use the &lt;code class=&quot;highlighter-rouge&quot;&gt;object_id&lt;/code&gt; method and compare their IDs:&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;object_id&lt;/span&gt;   &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; 3 &lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;object_id&lt;/span&gt;   &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; 3 &lt;/span&gt;
+
+&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;object_id&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;object_id&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; true&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Here, both &lt;code class=&quot;highlighter-rouge&quot;&gt;1&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;a&lt;/code&gt; share the same ID &lt;code class=&quot;highlighter-rouge&quot;&gt;3&lt;/code&gt;, which means they are both 
+pointing to the same object.&lt;/p&gt;
+
+&lt;p&gt;However, there’s an easier way to compare for object equality, using the 
+&lt;code class=&quot;highlighter-rouge&quot;&gt;BasicObject#equal?&lt;/code&gt; method:&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;equal?&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;   &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; true &lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;equal?&lt;/code&gt; goes deeper than &lt;code class=&quot;highlighter-rouge&quot;&gt;==&lt;/code&gt;: it checks whether two objects have the same
+value &lt;em&gt;and&lt;/em&gt; whether the two variables point to the same object.&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;str1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;hi there&quot;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;str2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;hi there&quot;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;str3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;str1&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;str1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;str2&lt;/span&gt;      &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; true &lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;str1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;equal?&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;str2&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; false &lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;str1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;equal?&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;str3&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; true&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;str1&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;str2&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;str3&lt;/code&gt; all have the same value &lt;code class=&quot;highlighter-rouge&quot;&gt;&quot;hi there&quot;&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;However, only &lt;code class=&quot;highlighter-rouge&quot;&gt;str1&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;str3&lt;/code&gt; point to the same object (as expected, given 
+that &lt;code class=&quot;highlighter-rouge&quot;&gt;str3&lt;/code&gt; is a copy of &lt;code class=&quot;highlighter-rouge&quot;&gt;str1&lt;/code&gt;). Therefore, &lt;code class=&quot;highlighter-rouge&quot;&gt;str1.equal? str3&lt;/code&gt; returns &lt;code class=&quot;highlighter-rouge&quot;&gt;true&lt;/code&gt;, 
+while &lt;code class=&quot;highlighter-rouge&quot;&gt;str1.equal? str2&lt;/code&gt; returns &lt;code class=&quot;highlighter-rouge&quot;&gt;false&lt;/code&gt;: &lt;code class=&quot;highlighter-rouge&quot;&gt;str1&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;str2&lt;/code&gt; are different 
+objects which happen to have the same value &lt;code class=&quot;highlighter-rouge&quot;&gt;&quot;hi there&quot;&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;It’s pretty rare to use the &lt;code class=&quot;highlighter-rouge&quot;&gt;equal?&lt;/code&gt; method, but it’s still useful to 
+understand its behavior, especially when implementing custom classes.&lt;/p&gt;
+
+&lt;h2 id=&quot;what-about--1&quot;&gt;What about &lt;code class=&quot;highlighter-rouge&quot;&gt;===&lt;/code&gt;?&lt;/h2&gt;
+
+&lt;p&gt;If we know how to check for value equality (&lt;code class=&quot;highlighter-rouge&quot;&gt;==&lt;/code&gt;) &lt;em&gt;and&lt;/em&gt; for object equality
+(&lt;code class=&quot;highlighter-rouge&quot;&gt;equal?&lt;/code&gt;), what is &lt;code class=&quot;highlighter-rouge&quot;&gt;===&lt;/code&gt; good for? It’s actually used to check for
+&lt;strong&gt;range inclusion&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;===&lt;/code&gt; method compares two objects by checking whether the first element 
+(the &lt;em&gt;group&lt;/em&gt;) includes the second element. It’s rarely used explicitly.&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;..&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;       &lt;span class=&quot;c1&quot;&gt;# true: 3 is included in the range from 1 to 10&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;..&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;12&lt;/span&gt;      &lt;span class=&quot;c1&quot;&gt;# false&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'a'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;..&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'d'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'c'&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# true: 'c' is included in the range from a to d&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;===&lt;/code&gt; is much more often used implicitly though, as this is the method used 
+“under the hood” by &lt;code class=&quot;highlighter-rouge&quot;&gt;case&lt;/code&gt; statements:&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'d'&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;char&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;when&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;a&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;..&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;e&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;s2&quot;&gt;&quot;yay&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# =&amp;gt; &quot;yay&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The above case statement is equivalent to the following code:&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;s2&quot;&gt;&quot;yay&quot;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;a&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;..&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;e&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;char&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# =&amp;gt; &quot;yay&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;the-eql-method&quot;&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;eql?&lt;/code&gt; method&lt;/h2&gt;
+
+&lt;p&gt;Here’s a last method to consider when thinking about equality. This one is 
+pretty obscure, and there’s a good chance you’ll never even have to use it,
+but I’m aiming for exhaustivity here 👩‍🏫&lt;/p&gt;
+
+&lt;h3 id=&quot;ruby-documentation&quot;&gt;Ruby Documentation&lt;/h3&gt;
+
+&lt;p&gt;According to the 
+&lt;a href=&quot;https://docs.ruby-lang.org/en/2.6.0/Object.html#method-i-eql-3F&quot;&gt;Ruby documentation&lt;/a&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;eql?(other) → true or false&lt;/strong&gt;&lt;/p&gt;
+
+  &lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;eql?&lt;/code&gt; method returns &lt;code class=&quot;highlighter-rouge&quot;&gt;true&lt;/code&gt; if &lt;code class=&quot;highlighter-rouge&quot;&gt;obj&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;other&lt;/code&gt; refer to the same hash
+key. This is used by &lt;code class=&quot;highlighter-rouge&quot;&gt;Hash&lt;/code&gt; to test members for equality. For objects of class 
+&lt;code class=&quot;highlighter-rouge&quot;&gt;Object&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;eql?&lt;/code&gt; is synonymous with &lt;code class=&quot;highlighter-rouge&quot;&gt;==&lt;/code&gt;. Subclasses normally continue 
+this tradition by aliasing &lt;code class=&quot;highlighter-rouge&quot;&gt;eql?&lt;/code&gt; to their overridden &lt;code class=&quot;highlighter-rouge&quot;&gt;==&lt;/code&gt; method, but
+there are exceptions. &lt;code class=&quot;highlighter-rouge&quot;&gt;Numeric&lt;/code&gt; types, for example, perform type conversion
+across &lt;code class=&quot;highlighter-rouge&quot;&gt;==&lt;/code&gt;, but not across &lt;code class=&quot;highlighter-rouge&quot;&gt;eql?&lt;/code&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Therefore, two &lt;code class=&quot;highlighter-rouge&quot;&gt;Numeric&lt;/code&gt; objects could be equal (with &lt;code class=&quot;highlighter-rouge&quot;&gt;==&lt;/code&gt;), but different with
+&lt;code class=&quot;highlighter-rouge&quot;&gt;eql?&lt;/code&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;2.0&lt;/span&gt;        &lt;span class=&quot;c1&quot;&gt;#=&amp;gt; true&lt;/span&gt;
+&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;eql?&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;2.0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;     &lt;span class=&quot;c1&quot;&gt;#=&amp;gt; false&lt;/span&gt;
+&lt;span class=&quot;mf&quot;&gt;2.0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;eql?&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;2.0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;   &lt;span class=&quot;c1&quot;&gt;#=&amp;gt; true&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;But most of the time, two objects that are equal through &lt;code class=&quot;highlighter-rouge&quot;&gt;==&lt;/code&gt; should return 
+&lt;code class=&quot;highlighter-rouge&quot;&gt;true&lt;/code&gt; when &lt;code class=&quot;highlighter-rouge&quot;&gt;eql?&lt;/code&gt; is called.&lt;/p&gt;
+
+&lt;h3 id=&quot;when-should-you-use-the-eql-method&quot;&gt;When should you use the &lt;code class=&quot;highlighter-rouge&quot;&gt;eql?&lt;/code&gt; method?&lt;/h3&gt;
+
+&lt;p&gt;The answer is: probably never. However,
+it’s routinely used by &lt;code class=&quot;highlighter-rouge&quot;&gt;Hash&lt;/code&gt; objects to check for hash key equality. As you 
+know, hash keys must be unique, and this is enforced through &lt;code class=&quot;highlighter-rouge&quot;&gt;eql?&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;To check for this uniqueness, &lt;code class=&quot;highlighter-rouge&quot;&gt;Hash&lt;/code&gt; objects use the &lt;code class=&quot;highlighter-rouge&quot;&gt;eql?&lt;/code&gt; method to 
+convert the keys through the &lt;code class=&quot;highlighter-rouge&quot;&gt;hash&lt;/code&gt; method. This method returns a hash code for 
+each key.&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# Two different String objects with a value of &quot;a&quot; have the same hash:&lt;/span&gt;
+&lt;span class=&quot;s1&quot;&gt;'a'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;hash&lt;/span&gt;	&lt;span class=&quot;c1&quot;&gt;# =&amp;gt; -3382060362238486793&lt;/span&gt;
+&lt;span class=&quot;s1&quot;&gt;'a'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;hash&lt;/span&gt;	&lt;span class=&quot;c1&quot;&gt;# =&amp;gt; -3382060362238486793&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;If the two &lt;code class=&quot;highlighter-rouge&quot;&gt;hash&lt;/code&gt; return values are equal (like for &lt;code class=&quot;highlighter-rouge&quot;&gt;&quot;a&quot;&lt;/code&gt;), then only one
+element can serve as a &lt;code class=&quot;highlighter-rouge&quot;&gt;Hash&lt;/code&gt; key.&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;hash&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'a'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'a'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# warning: key &quot;a&quot; is duplicated and overwritten&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# =&amp;gt; {&quot;a&quot;=&amp;gt;2} &lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;In this case, it’s interesting to note that both &lt;code class=&quot;highlighter-rouge&quot;&gt;&quot;a&quot;&lt;/code&gt; elements share the same
+&lt;code class=&quot;highlighter-rouge&quot;&gt;hash&lt;/code&gt;, but not the same &lt;code class=&quot;highlighter-rouge&quot;&gt;object_id&lt;/code&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# Different object IDs&lt;/span&gt;
+&lt;span class=&quot;s1&quot;&gt;'a'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;object_id&lt;/span&gt;	&lt;span class=&quot;c1&quot;&gt;# =&amp;gt; 33313480&lt;/span&gt;
+&lt;span class=&quot;s1&quot;&gt;'a'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;object_id&lt;/span&gt;	&lt;span class=&quot;c1&quot;&gt;# =&amp;gt; 33412160&lt;/span&gt;
+
+&lt;span class=&quot;s1&quot;&gt;'a'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;eql?&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'a'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;	&lt;span class=&quot;c1&quot;&gt;# =&amp;gt; true&lt;/span&gt;
+&lt;span class=&quot;s1&quot;&gt;'a'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;equal?&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'a'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; false&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Therefore, &lt;code class=&quot;highlighter-rouge&quot;&gt;eql?&lt;/code&gt; returns &lt;code class=&quot;highlighter-rouge&quot;&gt;true&lt;/code&gt; (as it compares the two &lt;code class=&quot;highlighter-rouge&quot;&gt;hash&lt;/code&gt;) and &lt;code class=&quot;highlighter-rouge&quot;&gt;equal?&lt;/code&gt;
+returns &lt;code class=&quot;highlighter-rouge&quot;&gt;false&lt;/code&gt; (because their &lt;code class=&quot;highlighter-rouge&quot;&gt;object_id&lt;/code&gt; are different).&lt;/p&gt;
+
+&lt;h3 id=&quot;implications-for-object-oriented-programming-1&quot;&gt;Implications for Object Oriented Programming&lt;/h3&gt;
+
+&lt;p&gt;If you happen to override &lt;code class=&quot;highlighter-rouge&quot;&gt;eql?&lt;/code&gt; in a custom class, you’ll also need to 
+override the &lt;code class=&quot;highlighter-rouge&quot;&gt;hash&lt;/code&gt; method. If you don’t, instances of this class won’t 
+work as keys in a &lt;code class=&quot;highlighter-rouge&quot;&gt;Hash&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Indeed, objects used as keys &lt;em&gt;must&lt;/em&gt; have a method named &lt;code class=&quot;highlighter-rouge&quot;&gt;hash&lt;/code&gt; that returns
+a numeric hashcode for the key.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;key-take-aways&quot;&gt;Key Take-Aways&lt;/h2&gt;
+
+&lt;p&gt;To sum-up:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;=&lt;/code&gt; on its own is &lt;em&gt;not&lt;/em&gt; about equality: it’s an &lt;strong&gt;assignment operator&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;==&lt;/code&gt; checks whether two objects have the same &lt;strong&gt;value&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;==&lt;/code&gt; method should be &lt;strong&gt;overriden&lt;/strong&gt; when creating a custom class, in order
+to tell Ruby how to compare two custom objects.&lt;/li&gt;
+  &lt;li&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;equal?&lt;/code&gt; method checks whether two variables point to the &lt;strong&gt;same object&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;===&lt;/code&gt; checks for &lt;strong&gt;range inclusion&lt;/strong&gt;, and is mostly used by &lt;code class=&quot;highlighter-rouge&quot;&gt;case&lt;/code&gt; 
+statements.&lt;/li&gt;
+  &lt;li&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;eql?&lt;/code&gt; method is almost exclusively used by &lt;code class=&quot;highlighter-rouge&quot;&gt;Hash&lt;/code&gt; objects to check the
+uniqueness of their hash keys.&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Juliette Sinibardy</name></author><category term="Ruby" /><category term="Learning" /><category term="Equality" /><category term="Ruby Quirks" /><category term="Object Oriented Programming" /><summary type="html">When I discovered programming, I was bamboozled by the incredible amout of times you type the = key. Among other things, I couldn’t help but wonder: Why on earth was I supposed to use == instead of the more ‘natural’ = to express equality? Turns out, it’s actually possible to make sense of this = madness! Here’s a cheat sheet to gain a better understanding of equality and the equal sign = in Ruby.</summary></entry><entry><title type="html">My Favourite Codewars Kata to Prepare for Launch School’s 109 Oral Assessment</title><link href="http://localhost:8080/codewars-kata-launch-school-109-oral-assessment" rel="alternate" type="text/html" title="My Favourite Codewars Kata to Prepare for Launch School's 109 Oral Assessment" /><published>2019-07-29T21:11:00+02:00</published><updated>2019-07-29T21:59:00+02:00</updated><id>http://localhost:8080/codewars-kata-launch-school-109-oral-assessment</id><content type="html" xml:base="http://localhost:8080/codewars-kata-launch-school-109-oral-assessment">&lt;p&gt;I’ve recently passed with success my first Launch School oral assessment (the 
 dreaded 109 oral exam) 🍾&lt;/p&gt;
 
 &lt;p&gt;It was a hell of a ride, and I’d like to share my secret recipe: training with

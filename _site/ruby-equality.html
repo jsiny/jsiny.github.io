@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+
+  <title>
+    
+      Making Sense of Equality in Ruby &middot; Juliette Sinibardy
+    
+  </title>
+
+  
+
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/assets/css/main.css" />
+
+  <!-- Icons -->
+  <link rel="icon" type="image/png" href="/favicon.png" />
+
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml" />
+
+  <!-- Google Analytics tracking ID -->
+
+
+<!-- SEO tags -->
+<!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Making Sense of Equality in Ruby | Juliette Sinibardy</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Making Sense of Equality in Ruby" />
+<meta name="author" content="Juliette Sinibardy" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A detailed explanation about the differences between =, ==, ===, equal? and eql? in Ruby." />
+<meta property="og:description" content="A detailed explanation about the differences between =, ==, ===, equal? and eql? in Ruby." />
+<link rel="canonical" href="http://localhost:8080/ruby-equality" />
+<meta property="og:url" content="http://localhost:8080/ruby-equality" />
+<meta property="og:site_name" content="Juliette Sinibardy" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-08-05T11:23:00+02:00" />
+<script type="application/ld+json">
+{"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:8080/ruby-equality"},"description":"A detailed explanation about the differences between =, ==, ===, equal? and eql? in Ruby.","@type":"BlogPosting","url":"http://localhost:8080/ruby-equality","headline":"Making Sense of Equality in Ruby","dateModified":"2019-08-05T18:01:00+02:00","datePublished":"2019-08-05T11:23:00+02:00","author":{"@type":"Person","name":"Juliette Sinibardy"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+
+  <body class="post">
+
+    <div id="sidebar">
+  <header>
+    <div class="site-title">
+      <a href="/">
+        
+          <span class="back-arrow icon"><svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+  <path d="M0 0h24v24H0z" fill="none"/>
+  <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+</svg></span>
+        
+        Juliette Sinibardy
+      </a>
+    </div>
+    <p class="lead">Pending Programmer<br> ███░░░░░░░ 30%</p>
+  </header>
+  <nav id="sidebar-nav-links">
+  
+    <a class="home-link "
+        href="/">Home</a>
+  
+  
+
+  
+
+  
+
+
+  
+
+  
+    
+      <a class="page-link "
+          href="/about">About Me</a>
+    
+  
+
+  
+    
+      <a class="page-link "
+          href="/contact">Contact</a>
+    
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+      <a class="page-link "
+          href="/work">Work History</a>
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+
+  
+
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+
+  <!-- Optional additional links to insert in sidebar nav -->
+</nav>
+
+
+  
+
+  <nav id="sidebar-icon-links">
+  
+
+  
+  
+  
+  
+
+  
+<a id="github-link"
+    class="icon" title="Github" aria-label="Github"
+    href="https://github.com/jsiny">
+  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 28" width="24" height="24">
+    <path d="M12 2c6.625 0 12 5.375 12 12 0 5.297-3.437 9.797-8.203 11.391-0.609 0.109-0.828-0.266-0.828-0.578 0-0.391 0.016-1.687 0.016-3.297 0-1.125-0.375-1.844-0.812-2.219 2.672-0.297 5.484-1.313 5.484-5.922 0-1.313-0.469-2.375-1.234-3.219 0.125-0.313 0.531-1.531-0.125-3.187-1-0.313-3.297 1.234-3.297 1.234-0.953-0.266-1.984-0.406-3-0.406s-2.047 0.141-3 0.406c0 0-2.297-1.547-3.297-1.234-0.656 1.656-0.25 2.875-0.125 3.187-0.766 0.844-1.234 1.906-1.234 3.219 0 4.594 2.797 5.625 5.469 5.922-0.344 0.313-0.656 0.844-0.766 1.609-0.688 0.313-2.438 0.844-3.484-1-0.656-1.141-1.844-1.234-1.844-1.234-1.172-0.016-0.078 0.734-0.078 0.734 0.781 0.359 1.328 1.75 1.328 1.75 0.703 2.141 4.047 1.422 4.047 1.422 0 1 0.016 1.937 0.016 2.234 0 0.313-0.219 0.688-0.828 0.578-4.766-1.594-8.203-6.094-8.203-11.391 0-6.625 5.375-12 12-12zM4.547 19.234c0.031-0.063-0.016-0.141-0.109-0.187-0.094-0.031-0.172-0.016-0.203 0.031-0.031 0.063 0.016 0.141 0.109 0.187 0.078 0.047 0.172 0.031 0.203-0.031zM5.031 19.766c0.063-0.047 0.047-0.156-0.031-0.25-0.078-0.078-0.187-0.109-0.25-0.047-0.063 0.047-0.047 0.156 0.031 0.25 0.078 0.078 0.187 0.109 0.25 0.047zM5.5 20.469c0.078-0.063 0.078-0.187 0-0.297-0.063-0.109-0.187-0.156-0.266-0.094-0.078 0.047-0.078 0.172 0 0.281s0.203 0.156 0.266 0.109zM6.156 21.125c0.063-0.063 0.031-0.203-0.063-0.297-0.109-0.109-0.25-0.125-0.313-0.047-0.078 0.063-0.047 0.203 0.063 0.297 0.109 0.109 0.25 0.125 0.313 0.047zM7.047 21.516c0.031-0.094-0.063-0.203-0.203-0.25-0.125-0.031-0.266 0.016-0.297 0.109s0.063 0.203 0.203 0.234c0.125 0.047 0.266 0 0.297-0.094zM8.031 21.594c0-0.109-0.125-0.187-0.266-0.172-0.141 0-0.25 0.078-0.25 0.172 0 0.109 0.109 0.187 0.266 0.172 0.141 0 0.25-0.078 0.25-0.172zM8.937 21.438c-0.016-0.094-0.141-0.156-0.281-0.141-0.141 0.031-0.234 0.125-0.219 0.234 0.016 0.094 0.141 0.156 0.281 0.125s0.234-0.125 0.219-0.219z"></path>
+</svg>
+
+</a>
+
+<a id="medium-link"
+    class="icon" title="Medium" aria-label="Medium"
+    href="https://medium.com/@juju.siny">
+  <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 24 24">
+    <path d="M12 0c-6.626 0-12 5.372-12 12 0 6.627 5.374 12 12 12 6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12zm6.974 17.557v-.235l-1.092-1.072c-.096-.073-.144-.194-.124-.313v-7.874c-.02-.119.028-.24.124-.313l1.118-1.072v-.235h-3.869l-2.758 6.88-3.138-6.88h-4.059v.235l1.308 1.575c.128.115.194.285.176.457v6.188c.038.223-.032.451-.189.614l-1.471 1.784v.235h4.17v-.235l-1.471-1.784c-.158-.163-.233-.389-.202-.614v-5.352l3.66 7.985h.425l3.143-7.985v6.365c0 .17 0 .202-.111.313l-1.13 1.098v.235h5.49z"/>
+</svg>
+</a>
+
+<a id="linkedin-link"
+    class="icon" title="LinkedIn" aria-label="LinkedIn"
+    href="https://linkedin.com/in/juliette-sinibardy">
+  <?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="24" height="24" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 490.732 490.732" style="enable-background:new 0 0 490.732 490.732;"
+	 xml:space="preserve">
+<g>
+	<g>
+		<path d="M472.366,0.003H18.36C8.219,0.003,0,8.222,0,18.363v454.005c0,10.143,8.219,18.361,18.36,18.361h454.012
+			c10.142,0,18.36-8.219,18.36-18.361V18.363C490.727,8.222,482.507,0.003,472.366,0.003z M130.375,403.808
+			c0,6.762-5.478,12.238-12.24,12.238H69.132c-6.756,0-12.24-5.477-12.24-12.238V189.625c0-6.763,5.484-12.24,12.24-12.24h49.003
+			c6.762,0,12.24,5.477,12.24,12.24V403.808z M130.375,127.482c0,6.763-5.478,12.24-12.24,12.24H69.132
+			c-6.756,0-12.24-5.478-12.24-12.24V83.969c0-6.763,5.484-12.24,12.24-12.24h49.003c6.762,0,12.24,5.477,12.24,12.24V127.482z
+			 M433.835,403.808c0,6.762-5.483,12.238-12.24,12.238h-49.003c-6.763,0-12.24-5.477-12.24-12.238v-90.436
+			c0-29.988-1.566-49.383-4.712-58.189c-3.14-8.807-8.237-15.649-15.3-20.526c-7.062-4.884-15.558-7.32-25.496-7.32
+			c-12.729,0-24.149,3.488-34.26,10.459c-10.11,6.977-17.038,16.211-20.79,27.717c-3.745,11.506-5.618,32.779-5.618,63.807v74.488
+			c0,6.762-5.483,12.238-12.24,12.238h-49.003c-6.756,0-12.24-5.477-12.24-12.238V189.625c0-6.763,5.483-12.24,12.24-12.24h43.771
+			c6.763,0,12.24,5.477,12.24,12.24v16.316c0,6.763,3.312,7.852,7.858,2.852c22.864-25.123,50.753-37.687,83.673-37.687
+			c16.212,0,31.028,2.919,44.455,8.758c13.422,5.838,23.58,13.292,30.466,22.356c6.885,9.063,11.683,19.351,14.382,30.857
+			c2.699,11.505,4.058,27.98,4.058,49.426V403.808L433.835,403.808z"/>
+	</g>
+</g>
+</svg>
+
+</a>
+  
+    <a id="subscribe-link"
+     class="icon" title="Subscribe" aria-label="Subscribe"
+     href="/feed.xml">
+    <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <circle cx="6.18" cy="17.82" r="2.18"/>
+    <path d="M4 4.44v2.83c7.03 0 12.73 5.7 12.73 12.73h2.83c0-8.59-6.97-15.56-15.56-15.56zm0 5.66v2.83c3.9 0 7.07 3.17 7.07 7.07h2.83c0-5.47-4.43-9.9-9.9-9.9z"/>
+</svg>
+  </a>
+  
+  
+    <a id="tags-link"
+       class="icon"
+       title="Tags" aria-label="Tags"
+       href="/tags">
+      <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z"/>
+</svg>
+    </a>
+  
+
+  
+
+</nav>
+  <p class="copyright">
+  &copy; 2019 - Juliette Sinibardy
+</p>
+</div>
+
+    <main class="container">
+        <header>
+  <h1 class="post-title">Making Sense of Equality in Ruby</h1>
+</header>
+<div class="content">
+  <div class="post-meta">
+  <span class="post-date">05 Aug 2019</span>
+  <span class="post-categories">
+    
+      &bull;
+
+      
+      
+      
+
+      
+        Ruby
+      
+    
+  </span>
+</div>
+
+  <div class="post-body">
+    <p>When I discovered programming, I was bamboozled by the incredible amout of 
+times you type the <code class="highlighter-rouge">=</code> key. Among other things, I couldn’t help but 
+wonder: Why on earth was I supposed to use <code class="highlighter-rouge">==</code> instead of the 
+more ‘natural’ <code class="highlighter-rouge">=</code> to express equality?</p>
+
+<p>Turns out, it’s actually possible to make sense of this <code class="highlighter-rouge">=</code> madness!
+Here’s a cheat sheet to gain a better understanding of equality and the 
+equal sign <code class="highlighter-rouge">=</code> in Ruby.</p>
+
+<!--more-->
+
+<ul id="markdown-toc">
+  <li><a href="#the--madness" id="markdown-toc-the--madness">The <code class="highlighter-rouge">=</code> Madness</a></li>
+  <li><a href="#what-about-" id="markdown-toc-what-about-">What about <code class="highlighter-rouge">=</code>?</a>    <ul>
+      <li><a href="#general-case-the-assignment-operator" id="markdown-toc-general-case-the-assignment-operator">General Case: the Assignment Operator</a></li>
+      <li><a href="#-and-the-combined-assignment-operators" id="markdown-toc--and-the-combined-assignment-operators"><code class="highlighter-rouge">+=</code> and the combined assignment operators</a></li>
+      <li><a href="#element-assignment-" id="markdown-toc-element-assignment-">Element Assignment <code class="highlighter-rouge">#[]=</code></a></li>
+      <li><a href="#setter-methods-method" id="markdown-toc-setter-methods-method">Setter Methods <code class="highlighter-rouge">#method=</code></a></li>
+    </ul>
+  </li>
+  <li><a href="#the--method-and-value-equality" id="markdown-toc-the--method-and-value-equality">The <code class="highlighter-rouge">==</code> method and Value Equality</a>    <ul>
+      <li><a href="#examples-of--usage" id="markdown-toc-examples-of--usage">Examples of <code class="highlighter-rouge">==</code> usage</a></li>
+      <li><a href="#the--method" id="markdown-toc-the--method">The <code class="highlighter-rouge">==</code> method</a></li>
+      <li><a href="#implications-for-object-oriented-programming" id="markdown-toc-implications-for-object-oriented-programming">Implications for Object Oriented Programming</a></li>
+    </ul>
+  </li>
+  <li><a href="#the-equal-method" id="markdown-toc-the-equal-method">The <code class="highlighter-rouge">equal?</code> method</a></li>
+  <li><a href="#what-about--1" id="markdown-toc-what-about--1">What about <code class="highlighter-rouge">===</code>?</a></li>
+  <li><a href="#the-eql-method" id="markdown-toc-the-eql-method">The <code class="highlighter-rouge">eql?</code> method</a>    <ul>
+      <li><a href="#ruby-documentation" id="markdown-toc-ruby-documentation">Ruby Documentation</a></li>
+      <li><a href="#when-should-you-use-the-eql-method" id="markdown-toc-when-should-you-use-the-eql-method">When should you use the <code class="highlighter-rouge">eql?</code> method?</a></li>
+      <li><a href="#implications-for-object-oriented-programming-1" id="markdown-toc-implications-for-object-oriented-programming-1">Implications for Object Oriented Programming</a></li>
+    </ul>
+  </li>
+  <li><a href="#key-take-aways" id="markdown-toc-key-take-aways">Key Take-Aways</a></li>
+</ul>
+<hr />
+
+<h2 id="the--madness">The <code class="highlighter-rouge">=</code> Madness</h2>
+
+<p>Here’s a short program:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">some_method</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+  <span class="k">if</span> <span class="n">a</span> <span class="o">==</span> <span class="mi">5</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="mi">3</span>
+  <span class="k">elsif</span> <span class="p">(</span><span class="mi">1</span><span class="o">..</span><span class="mi">10</span><span class="p">)</span> <span class="o">===</span> <span class="n">a</span>
+    <span class="n">a</span> <span class="o">+=</span> <span class="mi">10</span>
+  <span class="k">else</span>
+    <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">4</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="nb">p</span> <span class="n">some_method</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>  <span class="c1"># =&gt; 3</span>
+<span class="nb">p</span> <span class="n">some_method</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>  <span class="c1"># =&gt; 12</span>
+<span class="nb">p</span> <span class="n">some_method</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span> <span class="c1"># =&gt; 4</span>
+</code></pre></div></div>
+
+<p>In the above code, we have no less than <em>5 different forms</em> of <code class="highlighter-rouge">=</code>:</p>
+<ul>
+  <li><code class="highlighter-rouge">=</code> in <code class="highlighter-rouge">a = 3</code></li>
+  <li><code class="highlighter-rouge">+=</code> in <code class="highlighter-rouge">a += 10</code></li>
+  <li><code class="highlighter-rouge">[]=</code> in <code class="highlighter-rouge">[1, 2, 3][2] = 4</code></li>
+  <li><code class="highlighter-rouge">==</code> in <code class="highlighter-rouge">if a == 5</code></li>
+  <li><code class="highlighter-rouge">===</code> in <code class="highlighter-rouge">elsif (1..10) === a</code></li>
+</ul>
+
+<p>Granted, the last situation is actually quite uncommon, but this 
+profusion of <code class="highlighter-rouge">=</code> signs is still confusing. Let’s dive in!</p>
+
+<h2 id="what-about-">What about <code class="highlighter-rouge">=</code>?</h2>
+
+<h3 id="general-case-the-assignment-operator">General Case: the Assignment Operator</h3>
+
+<p>In most cases, the <code class="highlighter-rouge">=</code> character refers to the <strong>assignment operator</strong>, 
+ie. the operator used to assign a new value to a variable.</p>
+
+<p>Therefore, <code class="highlighter-rouge">a = 3</code> is Ruby’s way of informing the program that from
+now on, the <code class="highlighter-rouge">a</code> variable will now reference the <code class="highlighter-rouge">Integer</code> <code class="highlighter-rouge">3</code>.</p>
+
+<h3 id="-and-the-combined-assignment-operators"><code class="highlighter-rouge">+=</code> and the combined assignment operators</h3>
+
+<p>Ruby comes with 6 extremely handy “combined assignment operators”,
+that both operate on a variable <em>and</em> assign the result back to the 
+variable.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="n">a</span> <span class="o">=</span> <span class="mi">2</span>
+  <span class="n">a</span> <span class="o">+=</span> <span class="mi">10</span>   <span class="c1"># =&gt; 12</span>
+  <span class="n">a</span>         <span class="c1"># =&gt; 12</span>
+</code></pre></div></div>
+
+<p>They are: <code class="highlighter-rouge">+=</code>, <code class="highlighter-rouge">-=</code>, <code class="highlighter-rouge">*=</code>, <code class="highlighter-rouge">/=</code>, <code class="highlighter-rouge">%=</code> (modulus), <code class="highlighter-rouge">**=</code> (exponent).</p>
+
+<p>As with regular assignment, these operators have nothing to do with
+testing for equality.</p>
+
+<h3 id="element-assignment-">Element Assignment <code class="highlighter-rouge">#[]=</code></h3>
+
+<p>Another common Ruby construct is <strong>element assignment</strong>:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">str</span> <span class="o">=</span> <span class="s2">"hello"</span>   <span class="c1"># =&gt; "hello"</span>
+<span class="n">str</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"Y"</span>    <span class="c1"># =&gt; "Y"</span>
+<span class="n">str</span>             <span class="c1"># =&gt; "Yello"</span>
+</code></pre></div></div>
+
+<p>Element assignment is actually a method (<code class="highlighter-rouge">#[]=</code>), available to Strings,
+Arrays and Hashes. It replaces the element referenced
+by its index. Again, it doesn’t check for equality.</p>
+
+<h3 id="setter-methods-method">Setter Methods <code class="highlighter-rouge">#method=</code></h3>
+
+<p>Finally, you’ll encounter methods with a final <code class="highlighter-rouge">=</code>, which (spoiler
+alert) have nothing to do with equality. These methods are <strong>setter
+methods</strong>: they’re used to set a value to an instance variable.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Cat</span>
+  <span class="k">def</span> <span class="nf">name</span>
+    <span class="vi">@name</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nf">name</span><span class="o">=</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>   <span class="c1"># setter method</span>
+    <span class="vi">@name</span> <span class="o">=</span> <span class="nb">name</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="n">kitty</span> <span class="o">=</span> <span class="no">Cat</span><span class="p">.</span><span class="nf">new</span>
+<span class="n">kitty</span><span class="p">.</span><span class="nf">name</span> <span class="o">=</span> <span class="s2">"Pixel"</span>
+<span class="nb">p</span> <span class="n">kitty</span><span class="p">.</span><span class="nf">name</span>  <span class="c1"># =&gt; "Pixel"</span>
+</code></pre></div></div>
+
+<hr />
+
+<p>To sum up, <code class="highlighter-rouge">=</code> on its own is <em>never</em> used to check whether 
+two elements are equal.</p>
+
+<p>Instead, the <code class="highlighter-rouge">==</code> method will 99% of the times do the job 🌈</p>
+
+<h2 id="the--method-and-value-equality">The <code class="highlighter-rouge">==</code> method and Value Equality</h2>
+
+<h3 id="examples-of--usage">Examples of <code class="highlighter-rouge">==</code> usage</h3>
+
+<p><code class="highlighter-rouge">==</code> usually checks whether the two objects on either side have
+the same <em>value</em>:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="mi">3</span> <span class="o">==</span> <span class="mi">3</span>  <span class="c1"># =&gt; true</span>
+
+<span class="n">str</span> <span class="o">=</span> <span class="s2">"hello"</span>
+<span class="n">str</span> <span class="o">==</span>  <span class="s2">"hello"</span> <span class="c1"># =&gt; true</span>
+<span class="n">str</span> <span class="o">==</span> <span class="s2">"world"</span>  <span class="c1"># =&gt; false</span>
+
+<span class="p">{</span> <span class="ss">a: </span><span class="mi">1</span><span class="p">,</span> <span class="ss">b: </span><span class="mi">2</span> <span class="p">}</span> <span class="o">==</span> <span class="p">{</span> <span class="ss">b: </span><span class="mi">2</span><span class="p">,</span> <span class="ss">a: </span><span class="mi">1</span> <span class="p">}</span>    <span class="c1"># =&gt; true</span>
+
+<span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span> <span class="o">==</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>              <span class="c1"># =&gt; true</span>
+<span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span> <span class="o">==</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>              <span class="c1"># =&gt; false</span>
+</code></pre></div></div>
+
+<p>From these examples, we can deduce the following:</p>
+<ul>
+  <li>2 identical integers have equal value (which sounds pretty obvious)</li>
+  <li>A <code class="highlighter-rouge">String</code> of value <code class="highlighter-rouge">"hello"</code> referenced by a variable has the 
+same value than another <code class="highlighter-rouge">String</code> of value <code class="highlighter-rouge">"hello"</code></li>
+  <li>Two <code class="highlighter-rouge">String</code> objects of different values (<code class="highlighter-rouge">"hello"</code> and <code class="highlighter-rouge">"world"</code>)
+are unequal</li>
+  <li>Two <code class="highlighter-rouge">Hashes</code> are equal if their key-value pairs are identical (even
+if the order is different)</li>
+  <li><code class="highlighter-rouge">Arrays</code> must also have an identical order to be considered equal</li>
+</ul>
+
+<h3 id="the--method">The <code class="highlighter-rouge">==</code> method</h3>
+
+<p>How does Ruby know how to compare two Hashes? Two Arrays? Two
+custom objects? The answer lies in the fact that <code class="highlighter-rouge">==</code> is not 
+an operator but an <strong>instance method</strong>. You could actually write 
+<code class="highlighter-rouge">2.==(2)</code> instead of <code class="highlighter-rouge">2 == 2</code>.</p>
+
+<p>Additionally, <code class="highlighter-rouge">==</code> is a <code class="highlighter-rouge">BasicObject</code> instance method (ie. the class
+that contains every other object in Ruby), which means it’s available
+to <em>any</em> object.</p>
+
+<p>However, we almost never use the default <code class="highlighter-rouge">BasicObject#==</code> method. 
+Instead, each subclass is supposed to <strong>override</strong> the <code class="highlighter-rouge">==</code> method with a 
+custom definition that suits its own needs.</p>
+
+<p>For instance, the <code class="highlighter-rouge">Hash#==</code> method does not account for key-value pairs order. 
+Here’s the corresponding entry in the 
+<a rel="noopener" target="_blank" href="https://docs.ruby-lang.org/en/2.6.0/Hash.html#method-i-3D-3D">Ruby documentation</a>:</p>
+
+<blockquote>
+  <p><strong>hsh == other_hash → true or false</strong></p>
+
+  <p>Equality—Two hashes are equal if they each contain the same number of keys 
+and if each key-value pair is equal to (according to <code class="highlighter-rouge">Object#==</code>) 
+the corresponding elements in the other hash.
+<em>The orders of each hashes are not compared.</em></p>
+</blockquote>
+
+<h3 id="implications-for-object-oriented-programming">Implications for Object Oriented Programming</h3>
+
+<p>Therefore, if you create a custom class and want to compare for “value equality”
+between two instances, you’ll need to implement your own custom <code class="highlighter-rouge">==</code> instance
+method.</p>
+
+<p>Otherwise, <code class="highlighter-rouge">==</code> will still work, but probably not how you intended it:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Cat</span>
+  <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
+    <span class="vi">@name</span> <span class="o">=</span> <span class="nb">name</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="n">kitty</span> <span class="o">=</span> <span class="no">Cat</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="s2">"teacup"</span><span class="p">)</span>
+<span class="n">kitten</span> <span class="o">=</span> <span class="no">Cat</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="s2">"teacup"</span><span class="p">)</span>
+
+<span class="nb">p</span> <span class="n">kitty</span> <span class="o">==</span> <span class="n">kitten</span> <span class="c1"># =&gt; false</span>
+</code></pre></div></div>
+<p>Those two <code class="highlighter-rouge">Cat</code> objects have exactly the same value but <code class="highlighter-rouge">kitty == kitten</code>
+returns <code class="highlighter-rouge">false</code> - why?</p>
+
+<p>The answer is that Ruby applied the <code class="highlighter-rouge">BasicObject#==</code> method, which has the 
+same implementation than <code class="highlighter-rouge">BasicObject#equal?</code> (see next section), and
+basically checks whether two <em>objects</em> are equal (not whether they
+have the same value).</p>
+
+<p>Indeed, how could Ruby know when 2 <code class="highlighter-rouge">Cat</code> objects are equal? It doesn’t 
+know how to compare these two custom objects. We need to explicitly tell 
+Ruby how to compare them, by including an instance method <code class="highlighter-rouge">Cat#==</code>:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Cat</span>
+  <span class="nb">attr_reader</span> <span class="ss">:name</span>
+
+  <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
+    <span class="vi">@name</span> <span class="o">=</span> <span class="nb">name</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nf">==</span><span class="p">(</span><span class="n">other_cat</span><span class="p">)</span>
+    <span class="vi">@name</span> <span class="o">==</span> <span class="n">other_cat</span><span class="p">.</span><span class="nf">name</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="n">kitty</span> <span class="o">=</span> <span class="no">Cat</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="s2">"teacup"</span><span class="p">)</span>
+<span class="n">kitten</span> <span class="o">=</span> <span class="no">Cat</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="s2">"teacup"</span><span class="p">)</span>
+
+<span class="nb">p</span> <span class="n">kitty</span> <span class="o">==</span> <span class="n">kitten</span> <span class="c1"># =&gt; true</span>
+</code></pre></div></div>
+
+<p>Here, we chose to consider two cats identical if they have the same <code class="highlighter-rouge">name</code>
+value. It’s completely up to us: we could also have chosen their <code class="highlighter-rouge">size</code> or 
+<code class="highlighter-rouge">color</code>. And it works! <code class="highlighter-rouge">kitty == kitten</code> now returns <code class="highlighter-rouge">true</code> 🍾</p>
+
+<h2 id="the-equal-method">The <code class="highlighter-rouge">equal?</code> method</h2>
+
+<p>If we want to know whether two objects are actually <em>the same object</em>, we can
+use the <code class="highlighter-rouge">object_id</code> method and compare their IDs:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="mi">1</span><span class="p">.</span><span class="nf">object_id</span>   <span class="c1"># =&gt; 3 </span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">a</span><span class="p">.</span><span class="nf">object_id</span>   <span class="c1"># =&gt; 3 </span>
+
+<span class="mi">1</span><span class="p">.</span><span class="nf">object_id</span> <span class="o">==</span> <span class="n">a</span><span class="p">.</span><span class="nf">object_id</span>  <span class="c1"># =&gt; true</span>
+</code></pre></div></div>
+
+<p>Here, both <code class="highlighter-rouge">1</code> and <code class="highlighter-rouge">a</code> share the same ID <code class="highlighter-rouge">3</code>, which means they are both 
+pointing to the same object.</p>
+
+<p>However, there’s an easier way to compare for object equality, using the 
+<code class="highlighter-rouge">BasicObject#equal?</code> method:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">a</span><span class="p">.</span><span class="nf">equal?</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>   <span class="c1"># =&gt; true </span>
+</code></pre></div></div>
+
+<p><code class="highlighter-rouge">equal?</code> goes deeper than <code class="highlighter-rouge">==</code>: it checks whether two objects have the same
+value <em>and</em> whether the two variables point to the same object.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">str1</span> <span class="o">=</span> <span class="s2">"hi there"</span>
+<span class="n">str2</span> <span class="o">=</span> <span class="s2">"hi there"</span>
+<span class="n">str3</span> <span class="o">=</span> <span class="n">str1</span>
+
+<span class="n">str1</span> <span class="o">==</span> <span class="n">str2</span>      <span class="c1"># =&gt; true </span>
+<span class="n">str1</span><span class="p">.</span><span class="nf">equal?</span> <span class="n">str2</span>  <span class="c1"># =&gt; false </span>
+<span class="n">str1</span><span class="p">.</span><span class="nf">equal?</span> <span class="n">str3</span>  <span class="c1"># =&gt; true</span>
+</code></pre></div></div>
+
+<p><code class="highlighter-rouge">str1</code>, <code class="highlighter-rouge">str2</code> and <code class="highlighter-rouge">str3</code> all have the same value <code class="highlighter-rouge">"hi there"</code>.</p>
+
+<p>However, only <code class="highlighter-rouge">str1</code> and <code class="highlighter-rouge">str3</code> point to the same object (as expected, given 
+that <code class="highlighter-rouge">str3</code> is a copy of <code class="highlighter-rouge">str1</code>). Therefore, <code class="highlighter-rouge">str1.equal? str3</code> returns <code class="highlighter-rouge">true</code>, 
+while <code class="highlighter-rouge">str1.equal? str2</code> returns <code class="highlighter-rouge">false</code>: <code class="highlighter-rouge">str1</code> and <code class="highlighter-rouge">str2</code> are different 
+objects which happen to have the same value <code class="highlighter-rouge">"hi there"</code>.</p>
+
+<p>It’s pretty rare to use the <code class="highlighter-rouge">equal?</code> method, but it’s still useful to 
+understand its behavior, especially when implementing custom classes.</p>
+
+<h2 id="what-about--1">What about <code class="highlighter-rouge">===</code>?</h2>
+
+<p>If we know how to check for value equality (<code class="highlighter-rouge">==</code>) <em>and</em> for object equality
+(<code class="highlighter-rouge">equal?</code>), what is <code class="highlighter-rouge">===</code> good for? It’s actually used to check for
+<strong>range inclusion</strong>.</p>
+
+<p>The <code class="highlighter-rouge">===</code> method compares two objects by checking whether the first element 
+(the <em>group</em>) includes the second element. It’s rarely used explicitly.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">(</span><span class="mi">1</span><span class="o">..</span><span class="mi">10</span><span class="p">)</span> <span class="o">===</span> <span class="mi">3</span>       <span class="c1"># true: 3 is included in the range from 1 to 10</span>
+<span class="p">(</span><span class="mi">1</span><span class="o">..</span><span class="mi">10</span><span class="p">)</span> <span class="o">===</span> <span class="mi">12</span>      <span class="c1"># false</span>
+<span class="p">(</span><span class="s1">'a'</span><span class="o">..</span><span class="s1">'d'</span><span class="p">)</span> <span class="o">===</span> <span class="s1">'c'</span>  <span class="c1"># true: 'c' is included in the range from a to d</span>
+</code></pre></div></div>
+
+<p><code class="highlighter-rouge">===</code> is much more often used implicitly though, as this is the method used 
+“under the hood” by <code class="highlighter-rouge">case</code> statements:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">char</span> <span class="o">=</span> <span class="s1">'d'</span>
+
+<span class="k">case</span> <span class="n">char</span>
+<span class="k">when</span> <span class="p">(</span><span class="s2">"a"</span><span class="o">..</span><span class="s2">"e"</span><span class="p">)</span>
+  <span class="s2">"yay"</span>
+<span class="k">end</span>
+
+<span class="c1"># =&gt; "yay"</span>
+</code></pre></div></div>
+
+<p>The above case statement is equivalent to the following code:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s2">"yay"</span> <span class="k">if</span> <span class="p">(</span><span class="s2">"a"</span><span class="o">..</span><span class="s2">"e"</span><span class="p">)</span> <span class="o">===</span> <span class="n">char</span>
+<span class="c1"># =&gt; "yay"</span>
+</code></pre></div></div>
+
+<h2 id="the-eql-method">The <code class="highlighter-rouge">eql?</code> method</h2>
+
+<p>Here’s a last method to consider when thinking about equality. This one is 
+pretty obscure, and there’s a good chance you’ll never even have to use it,
+but I’m aiming for exhaustivity here 👩‍🏫</p>
+
+<h3 id="ruby-documentation">Ruby Documentation</h3>
+
+<p>According to the 
+<a rel="noopener" target="_blank" href="https://docs.ruby-lang.org/en/2.6.0/Object.html#method-i-eql-3F">Ruby documentation</a>:</p>
+
+<blockquote>
+  <p><strong>eql?(other) → true or false</strong></p>
+
+  <p>The <code class="highlighter-rouge">eql?</code> method returns <code class="highlighter-rouge">true</code> if <code class="highlighter-rouge">obj</code> and <code class="highlighter-rouge">other</code> refer to the same hash
+key. This is used by <code class="highlighter-rouge">Hash</code> to test members for equality. For objects of class 
+<code class="highlighter-rouge">Object</code>, <code class="highlighter-rouge">eql?</code> is synonymous with <code class="highlighter-rouge">==</code>. Subclasses normally continue 
+this tradition by aliasing <code class="highlighter-rouge">eql?</code> to their overridden <code class="highlighter-rouge">==</code> method, but
+there are exceptions. <code class="highlighter-rouge">Numeric</code> types, for example, perform type conversion
+across <code class="highlighter-rouge">==</code>, but not across <code class="highlighter-rouge">eql?</code>.</p>
+</blockquote>
+
+<p>Therefore, two <code class="highlighter-rouge">Numeric</code> objects could be equal (with <code class="highlighter-rouge">==</code>), but different with
+<code class="highlighter-rouge">eql?</code>:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="mi">2</span> <span class="o">==</span> <span class="mf">2.0</span>        <span class="c1">#=&gt; true</span>
+<span class="mi">2</span><span class="p">.</span><span class="nf">eql?</span><span class="p">(</span><span class="mf">2.0</span><span class="p">)</span>     <span class="c1">#=&gt; false</span>
+<span class="mf">2.0</span><span class="p">.</span><span class="nf">eql?</span><span class="p">(</span><span class="mf">2.0</span><span class="p">)</span>   <span class="c1">#=&gt; true</span>
+</code></pre></div></div>
+<p>But most of the time, two objects that are equal through <code class="highlighter-rouge">==</code> should return 
+<code class="highlighter-rouge">true</code> when <code class="highlighter-rouge">eql?</code> is called.</p>
+
+<h3 id="when-should-you-use-the-eql-method">When should you use the <code class="highlighter-rouge">eql?</code> method?</h3>
+
+<p>The answer is: probably never. However,
+it’s routinely used by <code class="highlighter-rouge">Hash</code> objects to check for hash key equality. As you 
+know, hash keys must be unique, and this is enforced through <code class="highlighter-rouge">eql?</code>.</p>
+
+<p>To check for this uniqueness, <code class="highlighter-rouge">Hash</code> objects use the <code class="highlighter-rouge">eql?</code> method to 
+convert the keys through the <code class="highlighter-rouge">hash</code> method. This method returns a hash code for 
+each key.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Two different String objects with a value of "a" have the same hash:</span>
+<span class="s1">'a'</span><span class="p">.</span><span class="nf">hash</span>	<span class="c1"># =&gt; -3382060362238486793</span>
+<span class="s1">'a'</span><span class="p">.</span><span class="nf">hash</span>	<span class="c1"># =&gt; -3382060362238486793</span>
+</code></pre></div></div>
+
+<p>If the two <code class="highlighter-rouge">hash</code> return values are equal (like for <code class="highlighter-rouge">"a"</code>), then only one
+element can serve as a <code class="highlighter-rouge">Hash</code> key.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">hash</span> <span class="o">=</span> <span class="p">{</span> <span class="s1">'a'</span> <span class="o">=&gt;</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">'a'</span> <span class="o">=&gt;</span> <span class="mi">2</span> <span class="p">}</span>
+<span class="c1"># warning: key "a" is duplicated and overwritten</span>
+<span class="c1"># =&gt; {"a"=&gt;2} </span>
+</code></pre></div></div>
+
+<p>In this case, it’s interesting to note that both <code class="highlighter-rouge">"a"</code> elements share the same
+<code class="highlighter-rouge">hash</code>, but not the same <code class="highlighter-rouge">object_id</code>:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Different object IDs</span>
+<span class="s1">'a'</span><span class="p">.</span><span class="nf">object_id</span>	<span class="c1"># =&gt; 33313480</span>
+<span class="s1">'a'</span><span class="p">.</span><span class="nf">object_id</span>	<span class="c1"># =&gt; 33412160</span>
+
+<span class="s1">'a'</span><span class="p">.</span><span class="nf">eql?</span><span class="p">(</span><span class="s1">'a'</span><span class="p">)</span>	<span class="c1"># =&gt; true</span>
+<span class="s1">'a'</span><span class="p">.</span><span class="nf">equal?</span><span class="p">(</span><span class="s1">'a'</span><span class="p">)</span> <span class="c1"># =&gt; false</span>
+</code></pre></div></div>
+<p>Therefore, <code class="highlighter-rouge">eql?</code> returns <code class="highlighter-rouge">true</code> (as it compares the two <code class="highlighter-rouge">hash</code>) and <code class="highlighter-rouge">equal?</code>
+returns <code class="highlighter-rouge">false</code> (because their <code class="highlighter-rouge">object_id</code> are different).</p>
+
+<h3 id="implications-for-object-oriented-programming-1">Implications for Object Oriented Programming</h3>
+
+<p>If you happen to override <code class="highlighter-rouge">eql?</code> in a custom class, you’ll also need to 
+override the <code class="highlighter-rouge">hash</code> method. If you don’t, instances of this class won’t 
+work as keys in a <code class="highlighter-rouge">Hash</code>.</p>
+
+<p>Indeed, objects used as keys <em>must</em> have a method named <code class="highlighter-rouge">hash</code> that returns
+a numeric hashcode for the key.</p>
+
+<hr />
+
+<h2 id="key-take-aways">Key Take-Aways</h2>
+
+<p>To sum-up:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">=</code> on its own is <em>not</em> about equality: it’s an <strong>assignment operator</strong>.</li>
+  <li><code class="highlighter-rouge">==</code> checks whether two objects have the same <strong>value</strong>.</li>
+  <li>The <code class="highlighter-rouge">==</code> method should be <strong>overriden</strong> when creating a custom class, in order
+to tell Ruby how to compare two custom objects.</li>
+  <li>The <code class="highlighter-rouge">equal?</code> method checks whether two variables point to the <strong>same object</strong>.</li>
+  <li><code class="highlighter-rouge">===</code> checks for <strong>range inclusion</strong>, and is mostly used by <code class="highlighter-rouge">case</code> 
+statements.</li>
+  <li>The <code class="highlighter-rouge">eql?</code> method is almost exclusively used by <code class="highlighter-rouge">Hash</code> objects to check the
+uniqueness of their hash keys.</li>
+</ul>
+
+    
+
+
+
+<div class="post-tags">
+  
+    
+    <a href="/tags#ruby">
+    
+      <span class="icon">
+        <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z"/>
+</svg>
+      </span>&nbsp;<span class="tag-name">Ruby</span>
+    </a>
+  
+    
+    <a href="/tags#learning">
+    
+      <span class="icon">
+        <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z"/>
+</svg>
+      </span>&nbsp;<span class="tag-name">Learning</span>
+    </a>
+  
+    
+    <a href="/tags#equality">
+    
+      <span class="icon">
+        <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z"/>
+</svg>
+      </span>&nbsp;<span class="tag-name">Equality</span>
+    </a>
+  
+    
+    <a href="/tags#ruby-quirks">
+    
+      <span class="icon">
+        <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z"/>
+</svg>
+      </span>&nbsp;<span class="tag-name">Ruby Quirks</span>
+    </a>
+  
+    
+    <a href="/tags#object-oriented-programming">
+    
+      <span class="icon">
+        <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z"/>
+</svg>
+      </span>&nbsp;<span class="tag-name">Object Oriented Programming</span>
+    </a>
+  
+</div>
+    <div class="post-dates">
+  <!--<span class="post-date">Created: 05 Aug 2019</span>-->
+  <!--  &bull;-->
+  
+  <span class="post-date">Last Modified: 05 Aug 2019</span>
+ 
+ <!-- <span class="post-categories">-->
+ <!--   -->
+ <!--     &bull;-->
+ <!--     -->
+ <!--     -->
+ <!--       -->
+ <!--     -->
+ <!--       -->
+ <!--     -->
+ <!--       -->
+ <!--     -->
+ <!--       -->
+ <!--     -->
+ <!--       -->
+ <!--     -->
+ <!--       -->
+ <!--     -->
+ <!--       -->
+ <!--     -->
+ <!--       -->
+ <!--     -->
+ <!--       -->
+ <!--     -->
+ <!--       -->
+ <!--     -->
+ <!--       -->
+ <!--     -->
+
+ <!--     -->
+ <!--       Ruby-->
+ <!--     -->
+ <!---->
+ <!--</span>-->
+</div>
+  </div>
+  
+    
+
+    <div class="relatedPosts">
+<hr>
+<h4>You May Also Enjoy</h4>
+
+
+
+
+
+  
+
+    
+    
+
+    
+
+    
+
+  
+
+    
+    
+
+    
+
+    
+      <div>
+      <h5><a href="/codewars-kata-launch-school-109-oral-assessment">My Favourite Codewars Kata to Prepare for Launch School's 109 Oral Assessment</a></h5>
+      </div>
+      
+      
+    
+
+  
+
+    
+    
+
+    
+
+    
+      <div>
+      <h5><a href="/preparing-launch-school-109-written-assessment">How I Prepared for Launch School's 109 Written Assessment</a></h5>
+      </div>
+      
+      
+    
+
+  
+
+    
+    
+
+    
+
+    
+
+  
+
+    
+    
+
+    
+
+    
+
+  
+
+    
+    
+
+    
+
+    
+
+  
+
+</div>
+</div>
+
+    </main>
+
+    <!-- Optional footer content -->
+
+  </body>
+</html>

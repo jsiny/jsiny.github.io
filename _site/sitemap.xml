@@ -21,6 +21,10 @@
 <lastmod>2019-07-29T21:59:00+02:00</lastmod>
 </url>
 <url>
+<loc>http://localhost:8080/ruby-equality</loc>
+<lastmod>2019-08-05T18:01:00+02:00</lastmod>
+</url>
+<url>
 <loc>http://localhost:8080/about</loc>
 <lastmod>2019-07-08T23:26:00+02:00</lastmod>
 </url>
@@ -30,7 +34,7 @@
 </url>
 <url>
 <loc>http://localhost:8080/</loc>
-<lastmod>2019-07-29T21:59:00+02:00</lastmod>
+<lastmod>2019-08-05T18:01:00+02:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:8080/tags</loc>
@@ -42,6 +46,6 @@
 </url>
 <url>
 <loc>http://localhost:8080/page/2/</loc>
-<lastmod>2019-07-29T21:59:00+02:00</lastmod>
+<lastmod>2019-08-05T18:01:00+02:00</lastmod>
 </url>
 </urlset>
