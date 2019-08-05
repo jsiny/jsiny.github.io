@@ -286,7 +286,7 @@
 (especially in comparison to traditional CMS), it’s pretty easy to remedy this
 situation. Here are a couple of easy steps to follow, in order to improve your
 SEO ranking and 
-<a target="_blank" href="https://developers.google.com/web/tools/lighthouse/">your Lighthouse score</a>.</p>
+<a rel="noopener" target="_blank" href="https://developers.google.com/web/tools/lighthouse/">your Lighthouse score</a>.</p>
 
 <!--more-->
 
@@ -309,7 +309,7 @@ SEO ranking and
 <h2 id="install-jekyll-seo-tag">Install jekyll-seo-tag</h2>
 
 <p>The first thing you want to do is install the 
-<a target="_blank" href="https://github.com/jekyll/jekyll-seo-tag">jekyll-seo-tag plugin</a>.</p>
+<a rel="noopener" target="_blank" href="https://github.com/jekyll/jekyll-seo-tag">jekyll-seo-tag plugin</a>.</p>
 
 <p>This plugin will automatically generate the following meta tags:</p>
 <ul>
@@ -351,7 +351,7 @@ do their job.</p>
 </div>
 
 <p>Fortunately, there’s a plugin for that: 
-<a target="_blank" href="https://github.com/jekyll/jekyll-sitemap">jekyll-sitemap</a>! And its use is
+<a rel="noopener" target="_blank" href="https://github.com/jekyll/jekyll-sitemap">jekyll-sitemap</a>! And its use is
 pretty straightforward.</p>
 
 <p>The only subtlety is the date and time management. The sitemap plugin will
@@ -359,7 +359,7 @@ automatically use your <strong>Created date</strong> to fill the <code class="hi
 
 <p>However, you probably want to have your <strong>Last modified date</strong> instead. 
 To do that, you could use
-<a target="_blank" href="https://github.com/gjtorikian/jekyll-last-modified-at">the jekyll-last-modified-at plugin</a>.</p>
+<a rel="noopener" target="_blank" href="https://github.com/gjtorikian/jekyll-last-modified-at">the jekyll-last-modified-at plugin</a>.</p>
 
 <p>However the plugin isn’t compatible with Github Pages, because of Github’s 
 automatic builds. Instead, you can add add the parameter <code class="highlighter-rouge">last_modified_at</code>
@@ -371,7 +371,7 @@ this date as the Last modified date.</p>
 </code></pre></div></div>
 
 <p>To simplify your use of timestamps, I recommend using the 
-<a target="_blank" href="https://github.com/jekyll/jekyll-compose">jekyll-compose plugin</a>. It will
+<a rel="noopener" target="_blank" href="https://github.com/jekyll/jekyll-compose">jekyll-compose plugin</a>. It will
 automatically create your posts with the perfect timestamp and your custom
 front matter.</p>
 
@@ -394,7 +394,7 @@ type <code class="highlighter-rouge">bundle exec jekyll post "My post name"</cod
 </code></pre></div></div>
 
 <p>Additionally, you should specify your UTC timezone in your <code class="highlighter-rouge">_config.yml</code> file,
-using the <a target="_blank" href="https://en.wikipedia.org/wiki/Tz_database">IANA TimeZone Database</a>
+using the <a rel="noopener" target="_blank" href="https://en.wikipedia.org/wiki/Tz_database">IANA TimeZone Database</a>
 naming convention.</p>
 
 <div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">timezone</span><span class="pi">:</span> <span class="s">Europe/Paris</span>
@@ -464,7 +464,7 @@ by <strong>130 ms</strong>.</p>
 <ul>
   <li>Resize the image at its minimum. For instance, my blog accepts images up to 
 800 px width, therefore it’s no use uploading a 1500 px photo.</li>
-  <li>Compress the image with a service like <a target="_blank" href="https://tinypng.com/">TinyPNG</a></li>
+  <li>Compress the image with a service like <a rel="noopener" target="_blank" href="https://tinypng.com/">TinyPNG</a></li>
 </ul>
 
 <p>This simple action will save you dozens of ms of loading time.</p>
@@ -505,7 +505,7 @@ colors chosen (albeit beautiful) lacked contrasts. This was especially true
 for the theme’s code snippets.</p>
 
 <p>Therefore, I’ve used this 
-<a target="_blank" href="https://dequeuniversity.com/rules/axe/3.3/color-contrast">contrast tool</a>
+<a rel="noopener" target="_blank" href="https://dequeuniversity.com/rules/axe/3.3/color-contrast">contrast tool</a>
 to select new colors. Then, I’ve included the new hexadecimal codes in 
 my <code class="highlighter-rouge">assets/css/main.scss</code> file. Here’s an excerpt:</p>
 
@@ -538,7 +538,7 @@ Internet user’s journey</li>
 </ul>
 
 <p>Your best bet is to frequently run
-<a target="_blank" href="https://developers.google.com/web/tools/lighthouse/">Lighthouse audits</a>
+<a rel="noopener" target="_blank" href="https://developers.google.com/web/tools/lighthouse/">Lighthouse audits</a>
 on your pages and fix every problematic item.</p>
 
 <p>Here’s the Lighthouse audit for this page:</p>
