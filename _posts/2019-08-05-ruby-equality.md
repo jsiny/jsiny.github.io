@@ -4,7 +4,7 @@ title: Making Sense of Equality in Ruby
 date: 2019-08-05 11:23 +0200
 last_modified_at: 2019-08-05 18:01 +0200
 permalink: ruby-equality
-description: A detailed explanation about the differences between `=`, `==`, `===`, `equal?` and `eql?` in Ruby.
+description: A detailed explanation of the differences between `=`, `==`, `===`, `equal?` and `eql?` in Ruby.
 image: 
 published: true
 sitemap: true
