@@ -35,6 +35,7 @@ paginate_path: '/page/:num'
 
 sidebar_home_link: true
 enable_disqus: false
+enable_commento: true
 # sidebar_blog_link: '/blog'
 
 # Exclude from processing.
