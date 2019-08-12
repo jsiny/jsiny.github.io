@@ -14,9 +14,11 @@ layout: default
     {% include dates.html post=page %}
   </div>
   
+  <!-- <div class="post-body"></div> -->
     {% if site.enable_commento %}
       {% include comments.html %}
     {% endif %}
+  <!-- </div> -->
 
     {% include related_posts.html %}
 </div>
