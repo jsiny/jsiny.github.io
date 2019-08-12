@@ -1,4 +1,276 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en_US"><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en_US" /><updated>2019-08-12T09:02:43+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Juliette Sinibardy</title><subtitle>Pending Programmer&lt;br&gt; ███░░░░░░░ 30%</subtitle><author><name>Juliette Sinibardy</name></author><entry><title type="html">Making Sense of Equality in Ruby</title><link href="http://localhost:4000/ruby-equality" rel="alternate" type="text/html" title="Making Sense of Equality in Ruby" /><published>2019-08-05T11:23:00+02:00</published><updated>2019-08-05T18:01:00+02:00</updated><id>http://localhost:4000/ruby-equality</id><content type="html" xml:base="http://localhost:4000/ruby-equality">&lt;p&gt;When I discovered programming, I was bamboozled by the incredible amout of 
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en_US"><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en_US" /><updated>2019-08-12T16:59:13+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Juliette Sinibardy</title><subtitle>Pending Programmer&lt;br&gt; ███░░░░░░░ 30%</subtitle><author><name>Juliette Sinibardy</name></author><entry><title type="html">How I Prepared for Launch School’s 109 Oral Assessment</title><link href="http://localhost:4000/preparing-launch-school-109-oral-assessment" rel="alternate" type="text/html" title="How I Prepared for Launch School's 109 Oral Assessment" /><published>2019-08-12T12:25:00+02:00</published><updated>2019-08-12T16:53:00+02:00</updated><id>http://localhost:4000/preparing-launch-school-109-oral-assessment</id><content type="html" xml:base="http://localhost:4000/preparing-launch-school-109-oral-assessment">&lt;p&gt;A couple of weeks ago, I took Launch School’s first oral exam (RB 109). 
+Since I’m now somewhat stuck on the next lesson, I thought it’d be best to 
+reflect on the road taken thus far.&lt;/p&gt;
+
+&lt;p&gt;You’ll find here my time logs and general advice regarding this Launch
+School exam.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;I’ll include the same disclaimer as in 
+&lt;a href=&quot;preparing-launch-school-109-written-assessment&quot;&gt;my previous related article&lt;/a&gt;:
+the timelogs included are entirely personal, and should not impact your
+own study flow.&lt;/p&gt;
+
+&lt;h2 id=&quot;getting-through-launch-schools-101-course&quot;&gt;Getting through Launch School’s 101 course&lt;/h2&gt;
+
+&lt;p&gt;First, let’s answer the big question, the one that tormented my days in
+the Preparatory course: &lt;em&gt;How long does it take to get through course 101?&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Of course the answer is: it varies. On your time commitment, on your 
+previous coding experience, on how easily you can grasp the difficult concepts,
+on how much repetition your memory needs, etc.&lt;/p&gt;
+
+&lt;p&gt;Therefore, the answer provided here is nothing but the time it took
+&lt;em&gt;me&lt;/em&gt; to pass this course.&lt;/p&gt;
+
+&lt;h3 id=&quot;overall&quot;&gt;Overall&lt;/h3&gt;
+
+&lt;p&gt;Overall, it took me &lt;strong&gt;156 hours&lt;/strong&gt; of active learning to pass Launch
+School’s first course. I studied for approximately 2 months and a half (72
+days), with an average of more than 2 hours per day. The daily effort
+varied greatly, from 30 min to more than 5h per day - as I had other 
+commitments, like my day job 😒&lt;/p&gt;
+
+&lt;p&gt;However, I tried to study every single day (even during my week-long holiday).
+I wanted programming to become one of my natural routines, and I felt that 
+daily practice probably helped my memorization.&lt;/p&gt;
+
+&lt;div style=&quot;text-align: center&quot;&gt;
+    &lt;figure&gt;
+        &lt;a href=&quot;/assets/images/github-commit-history.png&quot;&gt;
+            &lt;img src=&quot;/assets/images/github-commit-history.png&quot; alt=&quot;My Github commit history&quot; /&gt;  
+        &lt;/a&gt;
+        &lt;figcaption&gt;Proof: my Github commit history 💚&lt;/figcaption&gt;
+    &lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;time-breakdown&quot;&gt;Time breakdown&lt;/h3&gt;
+
+&lt;p&gt;I’ll detail here the time spent on various topics, for the entire 101-109 
+course. I’ve done a similar table for the 
+&lt;a href=&quot;preparing-launch-school-109-written-assessment&quot;&gt;written assessment&lt;/a&gt;, and 
+felt it’d be weird to only detail the time I spent afterwards preparing the
+&lt;em&gt;oral&lt;/em&gt; exam. Indeed, the time spend for the written exam 
+greatly prepared me for the oral exam as well, which meant that splitting the 
+two didn’t really make sense to me.&lt;/p&gt;
+
+&lt;p&gt;Without further ado, here’s my time breakdown per topic:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Topic&lt;/th&gt;
+      &lt;th style=&quot;text-align: right&quot;&gt;Duration&lt;/th&gt;
+      &lt;th style=&quot;text-align: right&quot;&gt;Percentage&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Lessons&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;33.5 hours&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;21 %&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Video Lessons&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;6.5 hours&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;4 %&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Walk-through / Assignments&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;12 hours&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;8 %&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Ruby Small Problems&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;59.5 hours&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;38 %&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Practice Problems&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;10 hours&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;6 %&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Code Wars&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;12 hours&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;8 %&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Live-coding&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;15 hours&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;10 %&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Exams (incl. quizzes)&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;7.5 hours&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;5 %&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;And per lesson:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Chapter&lt;/th&gt;
+      &lt;th style=&quot;text-align: right&quot;&gt;Duration&lt;/th&gt;
+      &lt;th style=&quot;text-align: right&quot;&gt;Percentage&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Lesson 1&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;7 hours&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;5 %&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Lesson 2&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;21 hours&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;14 %&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Lesson 3&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;14.5 hours&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;9 %&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Lesson 4&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;20 hours&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;13 %&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Lesson 5&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;14.5 hours&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;9 %&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Lesson 6&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;10 hours&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;6 %&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Assessment Preparation&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;68.5 hours&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;44 %&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;key-take-aways&quot;&gt;Key Take-Aways&lt;/h2&gt;
+
+&lt;p&gt;What to make of these tables?&lt;/p&gt;
+
+&lt;h3 id=&quot;1--almost-50-of-my-time-was-spent-working-after-the-end-of-lesson-6&quot;&gt;1. ⌛ Almost 50% of my time was spent working &lt;em&gt;after&lt;/em&gt; the end of Lesson 6&lt;/h3&gt;
+
+&lt;p&gt;When I prepared this article, this is the first thing that struck me:
+44% of my time on 101 was spent in the Assessment preparation part, where my 
+“only job” was to make sure I had indeed fully understood the material.&lt;/p&gt;
+
+&lt;p&gt;Within this period, I’ve spent my 68 hours doing the following:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Topic&lt;/th&gt;
+      &lt;th style=&quot;text-align: right&quot;&gt;Duration&lt;/th&gt;
+      &lt;th style=&quot;text-align: right&quot;&gt;Percentage&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Reviewing lessons&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;16 hours&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;23 %&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Ruby Small Problems&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;22 hours&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;32 %&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Live-coding&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;15 hours&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;22 %&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Code Wars&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;12 hours&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;18 %&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Exams&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;3.5 hours&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;5 %&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Going through the lessons was not enough for me: I needed to practice for
+dozens of hours afterwards before feeling ready to tackle the exams.&lt;/p&gt;
+
+&lt;p&gt;You may have noticed that I spent a significant time live-coding, either
+during TA sessions or with another fellow Launch School student 
+(&lt;a href=&quot;https://www.orgamizer.com/&quot;&gt;hello Dimitri&lt;/a&gt;!)&lt;/p&gt;
+
+&lt;p&gt;This was by far the most important part of my preparation, and I think what
+was decisive for my good exam grades. I cannot recommend this enough: if
+you’re currently preparing for the 109 exam, please register to a TA study
+session, and practice on 1-to-1 with another student!&lt;/p&gt;
+
+&lt;p&gt;Solving a code problem and explaining out loud your thought process are 
+two difficult and &lt;em&gt;different&lt;/em&gt; skills. My first live coding attempts were
+disastrous: I misread the instructions, kept getting errors on my method 
+implementations, and was half-panicked.&lt;/p&gt;
+
+&lt;p&gt;But fortunately, with a bit of practice, solving problems in front of a peer
+becomes &lt;em&gt;much&lt;/em&gt; easier.&lt;/p&gt;
+
+&lt;h3 id=&quot;2--practice-practice-practice&quot;&gt;2. 👩‍💻 Practice, practice, practice&lt;/h3&gt;
+
+&lt;p&gt;If you do the math, I’ve actually spent 60% of my overall time practicing
+code. The Ruby Small Problems, the Practice Problems, the 
+&lt;a href=&quot;codewars-kata-launch-school-109-oral-assessment&quot;&gt;Code Wars katas&lt;/a&gt;
+and the Assignments amounted to more than 90 hours.&lt;/p&gt;
+
+&lt;p&gt;The reason behind this is simple: as with any skill, you need to build your
+&lt;a href=&quot;https://medium.com/@talentaccurate/how-to-create-muscle-memory-in-programming-ff881fae52d0&quot;&gt;muscle memory&lt;/a&gt;.
+And the secret ingredients are: 1) practice, and 2) practice.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;how-my-interview-went&quot;&gt;How my interview went&lt;/h2&gt;
+
+&lt;p&gt;My interview was with &lt;a href=&quot;https://medium.com/@srdjancoric&quot;&gt;Srdjan&lt;/a&gt; and lasted 
+for about 20 minutes; I received two exercises.&lt;/p&gt;
+
+&lt;p&gt;During the first one, as usual, I misread the instructions, and only realised my
+mistake once my code was written and half of my test cases refused to pass.
+Oops. 🤦‍♀️&lt;/p&gt;
+
+&lt;p&gt;At that point, I was fairly sure that I’d blown my interview. What (probably)
+‘saved’ me was: going back to the algorithm part of 
+&lt;a href=&quot;https://medium.com/launch-school/solving-coding-problems-with-pedac-29141331f93f&quot;&gt;the PEDAC process&lt;/a&gt;
+and solving the &lt;em&gt;actual&lt;/em&gt; exercise there before
+attempting another line of code. And this time, it worked!&lt;/p&gt;
+
+&lt;p&gt;The second exercise went quite smoothly.&lt;/p&gt;
+
+&lt;p&gt;During the interview, Srdjan was pretty silent, which can be intimidating. 
+I received my grades less than 2 hours afterwards, and I had &lt;em&gt;actually&lt;/em&gt;
+passed the exam 🎉&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;If you’re currently preparing the 109 Launch School exams, good luck! 🤞 
+You might want to check out those two other posts:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;preparing-launch-school-109-written-assessment&quot;&gt;How I Prepared for Launch School’s 109 written assessment&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;codewars-kata-launch-school-109-oral-assessment&quot;&gt;My Favorite Katas to Prepare for Launch School’s 109 oral assessment&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Juliette Sinibardy</name></author><category term="Launch School" /><category term="Learning" /><category term="Memory" /><category term="Ruby" /><category term="Anki" /><category term="Timelogs" /><summary type="html">A couple of weeks ago, I took Launch School’s first oral exam (RB 109). Since I’m now somewhat stuck on the next lesson, I thought it’d be best to reflect on the road taken thus far. You’ll find here my time logs and general advice regarding this Launch School exam.</summary></entry><entry><title type="html">Making Sense of Equality in Ruby</title><link href="http://localhost:4000/ruby-equality" rel="alternate" type="text/html" title="Making Sense of Equality in Ruby" /><published>2019-08-05T11:23:00+02:00</published><updated>2019-08-05T18:01:00+02:00</updated><id>http://localhost:4000/ruby-equality</id><content type="html" xml:base="http://localhost:4000/ruby-equality">&lt;p&gt;When I discovered programming, I was bamboozled by the incredible amout of 
 times you type the &lt;code class=&quot;highlighter-rouge&quot;&gt;=&lt;/code&gt; key. Among other things, I couldn’t help but 
 wonder: Why on earth was I supposed to use &lt;code class=&quot;highlighter-rouge&quot;&gt;==&lt;/code&gt; instead of the 
 more ‘natural’ &lt;code class=&quot;highlighter-rouge&quot;&gt;=&lt;/code&gt; to express equality?&lt;/p&gt;
@@ -416,7 +688,7 @@ to tell Ruby how to compare two custom objects.&lt;/li&gt;
 statements.&lt;/li&gt;
   &lt;li&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;eql?&lt;/code&gt; method is almost exclusively used by &lt;code class=&quot;highlighter-rouge&quot;&gt;Hash&lt;/code&gt; objects to check the
 uniqueness of their hash keys.&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Juliette Sinibardy</name></author><category term="Ruby" /><category term="Learning" /><category term="Equality" /><category term="Ruby Quirks" /><category term="Object Oriented Programming" /><summary type="html">When I discovered programming, I was bamboozled by the incredible amout of times you type the = key. Among other things, I couldn’t help but wonder: Why on earth was I supposed to use == instead of the more ‘natural’ = to express equality? Turns out, it’s actually possible to make sense of this = madness! Here’s a cheat sheet to gain a better understanding of equality and the equal sign = in Ruby.</summary></entry><entry><title type="html">My Favourite Codewars Kata to Prepare for Launch School’s 109 Oral Assessment</title><link href="http://localhost:4000/codewars-kata-launch-school-109-oral-assessment" rel="alternate" type="text/html" title="My Favourite Codewars Kata to Prepare for Launch School's 109 Oral Assessment" /><published>2019-07-29T21:11:00+02:00</published><updated>2019-07-29T21:59:00+02:00</updated><id>http://localhost:4000/codewars-kata-launch-school-109-oral-assessment</id><content type="html" xml:base="http://localhost:4000/codewars-kata-launch-school-109-oral-assessment">&lt;p&gt;I’ve recently passed with success my first Launch School oral assessment (the 
+&lt;/ul&gt;</content><author><name>Juliette Sinibardy</name></author><category term="Ruby" /><category term="Learning" /><category term="Equality" /><category term="Ruby Quirks" /><category term="Object Oriented Programming" /><summary type="html">When I discovered programming, I was bamboozled by the incredible amout of times you type the = key. Among other things, I couldn’t help but wonder: Why on earth was I supposed to use == instead of the more ‘natural’ = to express equality? Turns out, it’s actually possible to make sense of this = madness! Here’s a cheat sheet to gain a better understanding of equality and the equal sign = in Ruby.</summary></entry><entry><title type="html">My Favourite Codewars Kata to Prepare for Launch School’s 109 Oral Assessment</title><link href="http://localhost:4000/codewars-kata-launch-school-109-oral-assessment" rel="alternate" type="text/html" title="My Favourite Codewars Kata to Prepare for Launch School's 109 Oral Assessment" /><published>2019-07-29T21:11:00+02:00</published><updated>2019-08-12T16:56:00+02:00</updated><id>http://localhost:4000/codewars-kata-launch-school-109-oral-assessment</id><content type="html" xml:base="http://localhost:4000/codewars-kata-launch-school-109-oral-assessment">&lt;p&gt;I’ve recently passed with success my first Launch School oral assessment (the 
 dreaded 109 oral exam) 🍾&lt;/p&gt;
 
 &lt;p&gt;It was a hell of a ride, and I’d like to share my secret recipe: training with
@@ -508,10 +780,11 @@ kata is not as elegant as the top-voted solutions. It’s OK, we’ll get there!
 &lt;hr /&gt;
 
 &lt;p&gt;If you’re interested in preparing Launch School’s exams, you might want
-to check out this other post:&lt;/p&gt;
+to check out these other posts:&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;/preparing-launch-school-109-written-assessment&quot;&gt;How I Prepared for Launch School’s 109 written assessment&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Juliette Sinibardy</name></author><category term="Launch School" /><category term="Learning" /><category term="Ruby" /><category term="Codewars" /><category term="Programming Exercises" /><summary type="html">I’ve recently passed with success my first Launch School oral assessment (the dreaded 109 oral exam) 🍾 It was a hell of a ride, and I’d like to share my secret recipe: training with Codewars.</summary></entry><entry><title type="html">How I Prepared for Launch School’s 109 Written Assessment</title><link href="http://localhost:4000/preparing-launch-school-109-written-assessment" rel="alternate" type="text/html" title="How I Prepared for Launch School's 109 Written Assessment" /><published>2019-07-17T12:14:00+02:00</published><updated>2019-07-18T18:15:00+02:00</updated><id>http://localhost:4000/preparing-launch-school-109-written-assessment</id><content type="html" xml:base="http://localhost:4000/preparing-launch-school-109-written-assessment">&lt;p&gt;I recently took Launch School’s first written exam (RB 109), that comes at the
+  &lt;li&gt;&lt;a href=&quot;preparing-launch-school-109-oral-assessment&quot;&gt;How I Prepared for Launch School’s 109 oral assessment&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Juliette Sinibardy</name></author><category term="Launch School" /><category term="Learning" /><category term="Ruby" /><category term="Codewars" /><category term="Programming Exercises" /><summary type="html">I’ve recently passed with success my first Launch School oral assessment (the dreaded 109 oral exam) 🍾 It was a hell of a ride, and I’d like to share my secret recipe: training with Codewars.</summary></entry><entry><title type="html">How I Prepared for Launch School’s 109 Written Assessment</title><link href="http://localhost:4000/preparing-launch-school-109-written-assessment" rel="alternate" type="text/html" title="How I Prepared for Launch School's 109 Written Assessment" /><published>2019-07-17T12:14:00+02:00</published><updated>2019-08-12T16:57:00+02:00</updated><id>http://localhost:4000/preparing-launch-school-109-written-assessment</id><content type="html" xml:base="http://localhost:4000/preparing-launch-school-109-written-assessment">&lt;p&gt;I recently took Launch School’s first written exam (RB 109), that comes at the
 end of the first course, RB 101, Programming Foundations.&lt;/p&gt;
 
 &lt;p&gt;This course is especially challenging because it forces us to simultaneously:&lt;/p&gt;
@@ -737,7 +1010,16 @@ objective.&lt;/p&gt;
     &lt;/figure&gt;
 &lt;/div&gt;
 
-&lt;p&gt;Now, time to practice for the interview assessment!&lt;/p&gt;</content><author><name>Juliette Sinibardy</name></author><category term="Launch School" /><category term="Learning" /><category term="Memory" /><category term="Ruby" /><category term="Anki" /><category term="Timelogs" /><summary type="html">I recently took Launch School’s first written exam (RB 109), that comes at the end of the first course, RB 101, Programming Foundations. This course is especially challenging because it forces us to simultaneously: learn to learn again, learn Ruby syntax, learn problem solving. I thought it would be a good time to reflect on my study methods and the time it took me to get there.</summary></entry><entry><title type="html">A Beginner’s Guide to SEO optimization in a Jekyll static website</title><link href="http://localhost:4000/optimize-seo-jekyll" rel="alternate" type="text/html" title="A Beginner's Guide to SEO optimization in a Jekyll static website" /><published>2019-07-09T09:16:00+02:00</published><updated>2019-07-09T23:06:00+02:00</updated><id>http://localhost:4000/optimize-jekyll-seo</id><content type="html" xml:base="http://localhost:4000/optimize-seo-jekyll">&lt;blockquote&gt;
+&lt;p&gt;Now, time to practice for the interview assessment!&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;If you’re currently preparing the 109 Launch School exams, congratulations! 🎉 
+Additionally, you might find these other posts useful:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;preparing-launch-school-109-oral-assessment&quot;&gt;How I Prepared for Launch School’s 109 oral assessment&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;codewars-kata-launch-school-109-oral-assessment&quot;&gt;My Favorite Katas to Prepare for Launch School’s 109 oral assessment&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Juliette Sinibardy</name></author><category term="Launch School" /><category term="Learning" /><category term="Memory" /><category term="Ruby" /><category term="Anki" /><category term="Timelogs" /><summary type="html">I recently took Launch School’s first written exam (RB 109), that comes at the end of the first course, RB 101, Programming Foundations. This course is especially challenging because it forces us to simultaneously: learn to learn again, learn Ruby syntax, learn problem solving. I thought it would be a good time to reflect on my study methods and the time it took me to get there.</summary></entry><entry><title type="html">A Beginner’s Guide to SEO optimization in a Jekyll static website</title><link href="http://localhost:4000/optimize-seo-jekyll" rel="alternate" type="text/html" title="A Beginner's Guide to SEO optimization in a Jekyll static website" /><published>2019-07-09T09:16:00+02:00</published><updated>2019-07-09T23:06:00+02:00</updated><id>http://localhost:4000/optimize-jekyll-seo</id><content type="html" xml:base="http://localhost:4000/optimize-seo-jekyll">&lt;blockquote&gt;
   &lt;p&gt;What? There’s no sitemap here?
 &lt;em&gt;- Me when I discovered my new Jekyll blog&lt;/em&gt;&lt;/p&gt;
 &lt;/blockquote&gt;

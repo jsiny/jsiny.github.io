@@ -2,7 +2,7 @@
 layout: post
 title: How I Prepared for Launch School's 109 Written Assessment
 date: 2019-07-17 12:14 +0200
-last_modified_at: 2019-07-18 18:15 +0200
+last_modified_at: 2019-08-12 16:57 +0200
 permalink: preparing-launch-school-109-written-assessment
 description: Here are my tips on how to study for Launch school's first written assessment (109)
 image: 
@@ -189,3 +189,10 @@ Here's the total breakdown of my **127 hours** spent on the 101 course:
   alt="My weekly toggle timelogs" %}
 
 Now, time to practice for the interview assessment!
+
+----
+
+If you're currently preparing the 109 Launch School exams, congratulations! 🎉 
+Additionally, you might find these other posts useful:
+* [How I Prepared for Launch School's 109 oral assessment](preparing-launch-school-109-oral-assessment)
+* [My Favorite Katas to Prepare for Launch School's 109 oral assessment](codewars-kata-launch-school-109-oral-assessment)

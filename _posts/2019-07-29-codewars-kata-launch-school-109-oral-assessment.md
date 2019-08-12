@@ -2,7 +2,7 @@
 layout: post
 title: My Favourite Codewars Kata to Prepare for Launch School's 109 Oral Assessment
 date: 2019-07-29 21:11 +0200
-last_modified_at: 2019-07-29 21:59 +0200
+last_modified_at: 2019-08-12 16:56 +0200
 permalink: codewars-kata-launch-school-109-oral-assessment
 description: Here is a selection of the most useful codewars katas in order to prepare for Launch School's RB 109 oral interview assessment
 image: 
@@ -102,5 +102,6 @@ kata is not as elegant as the top-voted solutions. It's OK, we'll get there!
 ----
 
 If you're interested in preparing Launch School's exams, you might want
-to check out this other post:
+to check out these other posts:
 * [How I Prepared for Launch School's 109 written assessment](/preparing-launch-school-109-written-assessment)
+* [How I Prepared for Launch School's 109 oral assessment](preparing-launch-school-109-oral-assessment)
