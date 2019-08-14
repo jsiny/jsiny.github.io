@@ -67,8 +67,8 @@ I'll detail here the time spent on various topics, for the entire 101-109
 course. I've done a similar table for the 
 [written assessment](preparing-launch-school-109-written-assessment), and 
 felt it'd be weird to only detail the time I spent afterwards preparing the
-*oral* exam. Indeed, the time spend for the written exam 
-greatly prepared me for the oral exam as well, which meant that splitting the 
+*oral* exam. Indeed, the time spent for the written exam 
+greatly prepared me for the oral exam as well, therefore splitting the 
 two didn't really make sense to me.
 
 Without further ado, here's my time breakdown per topic:

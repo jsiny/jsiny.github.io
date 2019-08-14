@@ -69,8 +69,8 @@ by Launch School. The Katas are ordered by complexity (*8 kyu* is the easiest).
 
 My personal challenge before the assessment was being able to solve the 6 kyu 
 katas in less than 20 minutes. Bear in mind that the problem given during 
-the oral exam will be much easier than kyu 6 katas, but you'll be much more
-stressed out and prone to mistakes.
+the oral exam will be more or less of the level of 6 kyu katas, *and* you'll be
+much more stressed out and prone to mistakes.
 
 ### 7 or 8 kyu
 
