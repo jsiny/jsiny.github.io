@@ -2,8 +2,8 @@
 layout: post
 title: What's up with the & (ampersand) in Ruby closures?
 date: 2019-09-09 08:19 +0200
-last_modified_at: 2019-09-09 10:25 +0200
-permalink: ampersand-&-ruby-closures
+last_modified_at: 2019-09-09 17:14 +0200
+permalink: ampersand-ruby-closures
 description: A detailed explanation of the subtleties behind using the ampersand (&) in Ruby closures (blocks and Procs)
 image: 
 published: true
