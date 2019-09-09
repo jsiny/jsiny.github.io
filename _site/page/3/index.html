@@ -45,7 +45,7 @@
 <meta property="og:site_name" content="Juliette Sinibardy" />
 <link rel="prev" href="http://localhost:4000/page/2" />
 <script type="application/ld+json">
-{"author":{"@type":"Person","name":"Juliette Sinibardy"},"description":"Juliette Sinibardy’s blog about programming, career changes and learning.","@type":"WebPage","url":"http://localhost:4000/page/3/","headline":"Juliette Sinibardy’s Blog","dateModified":"2019-08-12T16:57:00+02:00","@context":"http://schema.org"}</script>
+{"headline":"Juliette Sinibardy’s Blog","dateModified":"2019-09-09T10:25:00+02:00","description":"Juliette Sinibardy’s blog about programming, career changes and learning.","@type":"WebPage","url":"http://localhost:4000/page/3/","author":{"@type":"Person","name":"Juliette Sinibardy"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -274,6 +274,173 @@
 
 
   
+
+  
+      <article class="post-body">
+        <h2 class="post-title">
+          <a href="/setup-contact-form-jekyll">
+            How to Set Up a Contact Form on Jekyll
+            
+          </a>
+        </h2>
+        <div class="post-meta">
+  <span class="post-date">04 Jul 2019</span>
+  <span class="post-categories">
+    
+      &bull;
+
+      
+      
+      
+
+      
+        How-To
+      
+    
+  </span>
+</div>
+
+        
+          <p>I thought it would be cool to give the opportunity to the random internet
+user to <a href="/contact">contact me</a> if they so wanted. Turns out it’s pretty easy,
+so here’s a tutorial on how to set up a contact form on Jekyll using
+<a rel="noopener" target="_blank" href="https://formspree.io/">Formspree</a>.</p>
+
+<h2 id="whats-formspree">What’s Formspree?</h2>
+
+<p>It’s a HTML form generator, that transfers the form’s answers to your
+email address. Plus it’s free and no registration is required.</p>
+
+<p>There is also a paid plan for additional features, but until 50 messages
+a month, I guess the free plan is enough for most uses.</p>
+
+<h2 id="basic-setup">Basic setup</h2>
+
+<p>Formspree provides a <a rel="noopener" target="_blank" href="https://test.formspree.io/">test environment</a>
+where you can tweak your HTML before including it on your website.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;form</span> <span class="na">method=</span><span class="s">"POST"</span> <span class="na">action=</span><span class="s">"https://formspree.io/&lt;YOUR_EMAIL_HERE&gt;"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"email"</span> <span class="na">name=</span><span class="s">"email"</span> <span class="na">placeholder=</span><span class="s">"Your email"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">placeholder=</span><span class="s">"Your name"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;textarea</span> <span class="na">name=</span><span class="s">"message"</span> <span class="na">placeholder=</span><span class="s">"Your message"</span> <span class="na">rows=</span><span class="s">"3"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/textarea&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"submit"</span><span class="nt">&gt;</span>Send Message<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;/form&gt;</span>
+</code></pre></div></div>
+
+<p>You simply have to include your contact email on line 1 
+(<code class="highlighter-rouge">&lt;YOUR_EMAIL_HERE&gt;</code>), and the form works!</p>
+
+<div style="text-align: center">
+    <figure>
+        <a href="/assets/images/formspree-test-form.png">
+            <img src="/assets/images/formspree-test-form.png" alt="Test your contact form" />  
+        </a>
+        <figcaption>You can test the form directly in Formspree's environment</figcaption>
+    </figure>
+</div>
+
+<p><em>Note:</em> You’ll have to first activate each domain you set up
+your contact form on (through an activation link sent to the email address
+provided), so it’s no use adding your friend’s email for a prank 😉</p>
+
+<p>You can also customize the <code class="highlighter-rouge">placeholder</code> of your
+input questions, or add any other question, like:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"subject"</span> <span class="na">placeholder=</span><span class="s">"Message's subject"</span><span class="nt">&gt;</span>
+</code></pre></div></div>
+
+<h2 id="integration-with-jekyll">Integration with Jekyll</h2>
+
+<p>You could now copy/paste the HTML code and include it any <code class="highlighter-rouge">.html</code> file of your
+blog.</p>
+
+<p>However, the best way to do that would be to insert this code into an
+<code class="highlighter-rouge">_includes</code> file, and create a dedicated <code class="highlighter-rouge">_layouts</code>. This way, you’ll be able
+to edit the page with the contact form using a nice and clean Markdown! 💙</p>
+
+<p>First, let’s create a new layout in your <code class="highlighter-rouge">root/_layouts</code> folder and name 
+it <code class="highlighter-rouge">contact.html</code>.</p>
+
+<script src="https://gist.github.com/838f4658b87635fca91333972b91f066.js"> </script>
+
+<p>You’ll notice that this layout is based on the default <code class="highlighter-rouge">page.html</code> layout,
+and this allows us to do the following:</p>
+
+<ul>
+  <li>Automatically use the title attribute to create a <code class="highlighter-rouge">&lt;h1&gt;</code></li>
+  <li>Type your content and it will appear before the contact form</li>
+</ul>
+
+<p><em>Note</em>: I’m using the Hydeout Jekyll template, which may have different layout
+names than your own.</p>
+
+<p>Then, we’ll create the <code class="highlighter-rouge">contact-form.html</code> mentioned in the previous code 
+excerpt. Place it in the <code class="highlighter-rouge">root/_includes</code> folder. This file will host the
+HTML you generated through Formspree, which in this case, is:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;form</span> <span class="na">method=</span><span class="s">"POST"</span> <span class="na">action=</span><span class="s">"https://formspree.io/&lt;YOUR_EMAIL_HERE&gt;"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"email"</span> <span class="na">name=</span><span class="s">"email"</span> <span class="na">placeholder=</span><span class="s">"Your email"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">placeholder=</span><span class="s">"Your name"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;textarea</span> <span class="na">name=</span><span class="s">"message"</span> <span class="na">placeholder=</span><span class="s">"Your message"</span> <span class="na">rows=</span><span class="s">"3"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/textarea&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"submit"</span><span class="nt">&gt;</span>Send Message<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;/form&gt;</span>
+</code></pre></div></div>
+
+<p>You now have a working <code class="highlighter-rouge">contact</code> layout! 🌈</p>
+
+<p>To use it, create a new post, and insert <code class="highlighter-rouge">layout: contact</code> in the YAML front
+matter. You can now type any Markdown content you want, and your text will be
+displayed before your contact form!</p>
+
+<h2 id="final-adjustments">Final Adjustments</h2>
+
+<p>However, in my case, the <code class="highlighter-rouge">Your Message</code> (<code class="highlighter-rouge">textarea</code>) part was displayed poorly,
+because the Hydeout template did not have any CSS for <code class="highlighter-rouge">textarea</code>.</p>
+
+<p>I therefore had to create some styling in order to homogenize the form. I’ve
+included the following SCSS in my <code class="highlighter-rouge">assets/css/main.scss</code>:</p>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s2">"text"</span><span class="o">],</span> <span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s2">"email"</span><span class="o">],</span> <span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s2">"search"</span><span class="o">],</span> 
+<span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s2">"submit"</span><span class="o">],</span> <span class="nt">button</span><span class="o">,</span> <span class="nt">textarea</span> <span class="p">{</span> 
+  <span class="nl">padding</span><span class="p">:</span> <span class="m">1em</span> <span class="m">1</span><span class="mi">.5em</span><span class="p">;</span> 
+  <span class="nl">border</span><span class="p">:</span> <span class="m">1px</span> <span class="nb">solid</span> <span class="mh">#e5e5e5</span><span class="p">;</span> 
+  <span class="nl">border-radius</span><span class="p">:</span> <span class="m">300px</span><span class="p">;</span> 
+  <span class="nl">margin-bottom</span><span class="p">:</span> <span class="m">1em</span><span class="p">;</span> 
+  <span class="nl">font-family</span><span class="p">:</span>  <span class="o">-</span><span class="n">apple-system</span><span class="o">,</span> <span class="n">BlinkMacSystemFont</span><span class="o">,</span> <span class="s2">"Segoe UI"</span><span class="o">,</span> 
+                <span class="s2">"Roboto"</span><span class="o">,</span> <span class="s2">"Oxygen"</span><span class="o">,</span> <span class="s2">"Ubuntu"</span><span class="o">,</span> <span class="s2">"Cantarell"</span><span class="o">,</span> 
+                <span class="s2">"Fira Sans"</span><span class="o">,</span> <span class="s2">"Droid Sans"</span><span class="o">,</span> <span class="s2">"Helvetica Neue"</span><span class="o">,</span> 
+                <span class="n">Arial</span><span class="o">,</span> <span class="nb">sans-serif</span><span class="p">;</span> 
+<span class="p">}</span>
+
+<span class="nt">textarea</span> <span class="p">{</span> <span class="nl">width</span><span class="p">:</span> <span class="m">73%</span><span class="p">;</span>  <span class="nl">resize</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span> <span class="p">}</span>
+</code></pre></div></div>
+
+<p>I’ve also added <code class="highlighter-rouge">rows="3"</code> in the <code class="highlighter-rouge">contact-form.html</code> in order to widen the 
+text area. Bear in mind that all these changes are pretty specific to the
+Hydeout template so you’ll probably have to tweak your own CSS in order
+to have a coherent style.</p>
+
+<div style="text-align: center">
+    <figure>
+        <a href="/assets/images/contact-form.png">
+            <img src="/assets/images/contact-form.png" alt="Here you go!" />  
+        </a>
+        <figcaption>Example of contact form</figcaption>
+    </figure>
+</div>
+
+        
+
+        
+          
+          
+          
+
+          
+        
+      </article>
 
   
       <article class="post-body">

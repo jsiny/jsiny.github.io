@@ -1,4 +1,305 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en_US"><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en_US" /><updated>2019-08-13T09:15:10+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Juliette Sinibardy</title><subtitle>Pending Programmer&lt;br&gt; ███░░░░░░░ 30%</subtitle><author><name>Juliette Sinibardy</name></author><entry><title type="html">How I Prepared for Launch School’s 109 Oral Assessment</title><link href="http://localhost:4000/preparing-launch-school-109-oral-assessment" rel="alternate" type="text/html" title="How I Prepared for Launch School's 109 Oral Assessment" /><published>2019-08-12T12:25:00+02:00</published><updated>2019-08-12T16:53:00+02:00</updated><id>http://localhost:4000/preparing-launch-school-109-oral-assessment</id><content type="html" xml:base="http://localhost:4000/preparing-launch-school-109-oral-assessment">&lt;p&gt;A couple of weeks ago, I took Launch School’s first oral exam (RB 109). 
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en_US"><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en_US" /><updated>2019-09-09T10:26:26+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Juliette Sinibardy</title><subtitle>Pending Programmer&lt;br&gt; ███░░░░░░░ 30%</subtitle><author><name>Juliette Sinibardy</name></author><entry><title type="html">What’s up with the &amp;amp; (ampersand) in Ruby closures?</title><link href="http://localhost:4000/ampersand-&-ruby-closures" rel="alternate" type="text/html" title="What's up with the &amp; (ampersand) in Ruby closures?" /><published>2019-09-09T08:19:00+02:00</published><updated>2019-09-09T10:25:00+02:00</updated><id>http://localhost:4000/ampersand-&amp;-ruby-closures</id><content type="html" xml:base="http://localhost:4000/ampersand-&amp;-ruby-closures">&lt;p&gt;Quite surprisingly, the following Ruby program is correct:&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;first_method&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;block&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;second_method&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;block&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;second_method&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;block&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;third_method&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;block&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;third_method&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;block&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;block&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;call&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;first_method&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;hello!&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# &quot;hello!&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;You might therefore notice that the &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;amp;&lt;/code&gt; (ampersand) pops up and disappears 
+pretty randomly in the above program. As it’s pretty hard to wrap one’s head 
+around all this &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;amp;&lt;/code&gt; madness, let’s dive into this!&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#whats-a-closure&quot; id=&quot;markdown-toc-whats-a-closure&quot;&gt;What’s a closure?&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#blocks&quot; id=&quot;markdown-toc-blocks&quot;&gt;Blocks&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#implicit-block-calling&quot; id=&quot;markdown-toc-implicit-block-calling&quot;&gt;Implicit Block-Calling&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#explicit-block-calling&quot; id=&quot;markdown-toc-explicit-block-calling&quot;&gt;Explicit Block-Calling&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#the--within-a-method-call&quot; id=&quot;markdown-toc-the--within-a-method-call&quot;&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;amp;&lt;/code&gt; within a method call&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#explaining-our-initial-example&quot; id=&quot;markdown-toc-explaining-our-initial-example&quot;&gt;Explaining our initial example&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#tldr---its-all-about-context&quot; id=&quot;markdown-toc-tldr---its-all-about-context&quot;&gt;TL;DR - It’s all about context!&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;whats-a-closure&quot;&gt;What’s a closure?&lt;/h2&gt;
+
+&lt;p&gt;In this post, we’ll talk about &lt;strong&gt;closures&lt;/strong&gt; (and in particular, &lt;em&gt;blocks&lt;/em&gt; and
+&lt;em&gt;Proc objects&lt;/em&gt;). And as I like nothing more than a proper introduction, let’s
+first define a closure.&lt;/p&gt;
+
+&lt;p&gt;One of the “official-looking” (and pretty unhelpful) definition I have found
+is the following:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;A closure is a first-class function that has lexical scope.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;… 😒 (sigh)&lt;/p&gt;
+
+&lt;p&gt;It might help to consider the following instead:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;A closure is a ‘bunch of code’ that can be defined and saved for later use.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Additionally, a closure ‘remembers’ its surrounding context at the time it was
+initialized, ie. it &lt;em&gt;binds&lt;/em&gt; its environment (local variables, method
+definitions, constants) to be sure to have everything it needs to run 
+successfully.&lt;/p&gt;
+
+&lt;p&gt;In Ruby, closures are: Proc objects, blocks and lambdas.&lt;/p&gt;
+
+&lt;div style=&quot;text-align: center&quot;&gt;
+    &lt;figure&gt;
+        &lt;a href=&quot;/assets/images/closure.gif&quot;&gt;
+            &lt;img src=&quot;/assets/images/closure.gif&quot; alt=&quot;Friends Serie Dialogue Closure&quot; /&gt;  
+        &lt;/a&gt;
+        &lt;figcaption&gt;Not exactly *that* type of closure though&lt;/figcaption&gt;
+    &lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Here, we’ll only talk about blocks and Procs, and more specifically, how 
+to call them from methods.&lt;/p&gt;
+
+&lt;h2 id=&quot;blocks&quot;&gt;Blocks&lt;/h2&gt;
+
+&lt;p&gt;First, let’s talk about &lt;em&gt;blocks&lt;/em&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;map&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;In the above program, &lt;code class=&quot;highlighter-rouge&quot;&gt;{ |n| n + 2 }&lt;/code&gt; is the block. A block is an ‘unnamed’
+function that can be called implicitly or explicitly.&lt;/p&gt;
+
+&lt;h3 id=&quot;implicit-block-calling&quot;&gt;Implicit Block-Calling&lt;/h3&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;some_method&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;hi from the method&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;some_method&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;hi from the block!&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# &quot;hi from the method&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The above program only outputs the first string (&lt;code class=&quot;highlighter-rouge&quot;&gt;&quot;hi from the method&quot;&lt;/code&gt;)
+and somehow forgets about the second string (&lt;code class=&quot;highlighter-rouge&quot;&gt;&quot;hi from the block!&quot;&lt;/code&gt;).&lt;/p&gt;
+
+&lt;p&gt;That’s because even though we implicitly passed the block to the method, 
+we didn’t execute the block within the method. To do that, we’d need to 
+&lt;em&gt;yield to the block&lt;/em&gt; by using the keyword &lt;code class=&quot;highlighter-rouge&quot;&gt;yield&lt;/code&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;some_method&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;hi from the method&quot;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;yield&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;some_method&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;hi from the block!&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# &quot;hi from the method&quot;&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# &quot;hi from the block!&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;As a matter of fact, &lt;strong&gt;all Ruby methods can implicitly take a block&lt;/strong&gt;, without
+needing to specify the block in its argument list or even having to execute 
+the block.&lt;/p&gt;
+
+&lt;h3 id=&quot;explicit-block-calling&quot;&gt;Explicit Block-Calling&lt;/h3&gt;
+
+&lt;p&gt;When we write a method definition, it can be relevant to explicitly
+require a block. To do that, Ruby uses a &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;amp;&lt;/code&gt; prepending the parameter’s name:&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;some_method&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;block&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;yield&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;some_method&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;hi from the explicit block!&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Here, &lt;code class=&quot;highlighter-rouge&quot;&gt;block&lt;/code&gt; acts as a handle (a reference) for the block: within the method
+definition, that block is no more an &lt;em&gt;unnamed&lt;/em&gt; function.&lt;/p&gt;
+
+&lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;amp;&lt;/code&gt; prefixed to &lt;code class=&quot;highlighter-rouge&quot;&gt;block&lt;/code&gt; signals that any block passed to &lt;code class=&quot;highlighter-rouge&quot;&gt;some_method&lt;/code&gt;
+upon method invocation will be converted to a &lt;code class=&quot;highlighter-rouge&quot;&gt;Proc&lt;/code&gt; object.&lt;/p&gt;
+
+&lt;p&gt;As such, we can do a bit more than simply &lt;em&gt;yield&lt;/em&gt; to it:&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;some_method&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;block&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;block&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;call&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;some_method&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;hi from the explicit block!&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;As &lt;code class=&quot;highlighter-rouge&quot;&gt;block&lt;/code&gt; now refers to a &lt;code class=&quot;highlighter-rouge&quot;&gt;Proc&lt;/code&gt; object, we can invoke &lt;code class=&quot;highlighter-rouge&quot;&gt;call&lt;/code&gt; on it. We can
+also pass this object to another method like in our initial example:&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;first_method&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;block&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;second_method&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;block&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# rest of the code omitted for brevity&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;first_method&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;hello!&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Here, the block &lt;code class=&quot;highlighter-rouge&quot;&gt;{ puts &quot;hello&quot;! }&lt;/code&gt; is converted to a &lt;code class=&quot;highlighter-rouge&quot;&gt;Proc&lt;/code&gt; thanks to the &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;amp;&lt;/code&gt;
+prefixed in the method definition, and assigned to the local variable &lt;code class=&quot;highlighter-rouge&quot;&gt;block&lt;/code&gt;.
+Then, a second method is invoked and the &lt;code class=&quot;highlighter-rouge&quot;&gt;Proc&lt;/code&gt; object is passed to it as 
+an argument.&lt;/p&gt;
+
+&lt;p&gt;Notice that we dropped the &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;amp;&lt;/code&gt; in the &lt;code class=&quot;highlighter-rouge&quot;&gt;second_method&lt;/code&gt; method invocation.&lt;/p&gt;
+
+&lt;p&gt;To sum up: in the context of a &lt;strong&gt;method definition&lt;/strong&gt;, prepending the last 
+parameter with an &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;amp;&lt;/code&gt; indicates that the method takes an explicit block and that 
+this block is converted to a &lt;code class=&quot;highlighter-rouge&quot;&gt;Proc&lt;/code&gt; object (with a name) within the method body.&lt;/p&gt;
+
+&lt;h2 id=&quot;the--within-a-method-call&quot;&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;amp;&lt;/code&gt; within a method call&lt;/h2&gt;
+
+&lt;p&gt;As a &lt;a href=&quot;/codewars-kata-launch-school-109-oral-assessment&quot;&gt;Codewar addict&lt;/a&gt;,
+I’ve had my fair share of time spent on coming up with “one-liners”, aka
+the shortest programs possible.&lt;/p&gt;
+
+&lt;p&gt;One of the tricks I use is the &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;amp;&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'a'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'b'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'c'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;each&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:upcase!&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# ['A', 'B', 'C']&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Somehow, this code:&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:upcase!&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;…is converted to this code:&lt;/p&gt;
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;char&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;char&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;upcase!&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Here’s the mechanism at play here (in the context of a &lt;strong&gt;method invocation&lt;/strong&gt;):&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Ruby checks whether the object right after the &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;amp;&lt;/code&gt; is a Proc:
+    &lt;ul&gt;
+      &lt;li&gt;If it is: great! Ruby uses the Proc object as it is&lt;/li&gt;
+      &lt;li&gt;If it isn’t, Ruby calls a &lt;code class=&quot;highlighter-rouge&quot;&gt;to_proc&lt;/code&gt; method on the object, if such a method
+exists for that particular class. Fortunately, a &lt;code class=&quot;highlighter-rouge&quot;&gt;Symbol#to_proc&lt;/code&gt; instance 
+method does exist. In our example, the &lt;code class=&quot;highlighter-rouge&quot;&gt;:upcase&lt;/code&gt; symbol is therefore 
+converted to a &lt;code class=&quot;highlighter-rouge&quot;&gt;Proc&lt;/code&gt; object.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;If the object is now a &lt;code class=&quot;highlighter-rouge&quot;&gt;Proc&lt;/code&gt;, the &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;amp;&lt;/code&gt; converts the &lt;code class=&quot;highlighter-rouge&quot;&gt;Proc&lt;/code&gt; into a &lt;code class=&quot;highlighter-rouge&quot;&gt;block&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Let’s go back to our initial example (and recall that the &lt;code class=&quot;highlighter-rouge&quot;&gt;first_method&lt;/code&gt; 
+converted the initial block to a &lt;code class=&quot;highlighter-rouge&quot;&gt;Proc&lt;/code&gt; and passed that object to the 
+&lt;code class=&quot;highlighter-rouge&quot;&gt;second_method&lt;/code&gt;):&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;second_method&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;block&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;third_method&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;block&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;second_method&lt;/code&gt; receives a &lt;code class=&quot;highlighter-rouge&quot;&gt;Proc&lt;/code&gt; object, assigned to the local variable
+&lt;code class=&quot;highlighter-rouge&quot;&gt;block&lt;/code&gt;. Within the method body, a &lt;code class=&quot;highlighter-rouge&quot;&gt;third_method&lt;/code&gt; is called, with &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;amp;block&lt;/code&gt;
+passed to it as an argument.&lt;/p&gt;
+
+&lt;p&gt;As we’re here in the context of a &lt;strong&gt;method invocation&lt;/strong&gt;, the &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;amp;&lt;/code&gt; does the
+following:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Checks whether &lt;code class=&quot;highlighter-rouge&quot;&gt;block&lt;/code&gt; is indeed a &lt;code class=&quot;highlighter-rouge&quot;&gt;Proc&lt;/code&gt; (which it is)&lt;/li&gt;
+  &lt;li&gt;Converts the &lt;code class=&quot;highlighter-rouge&quot;&gt;Proc&lt;/code&gt; into a block&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;explaining-our-initial-example&quot;&gt;Explaining our initial example&lt;/h2&gt;
+
+&lt;p&gt;We now have everything required to understand our initial example! Let’s 
+rewrite it with more self-explanatory names:&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;block_to_proc_method&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;block_to_proc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;proc_to_block_method&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;block_to_proc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;proc_to_block_method&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;proc_to_block&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;call_the_block_to_proc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;proc_to_block&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;call_the_block_to_proc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;block_to_proc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;block_to_proc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;call&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;block_to_proc_method&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;hello!&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Let’s explain the program step-by-step, thanks to our new understanding
+of the subtleties behind the &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;amp;&lt;/code&gt;:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;At first, the &lt;code class=&quot;highlighter-rouge&quot;&gt;block_to_proc_method&lt;/code&gt; is invoked, with a block 
+&lt;code class=&quot;highlighter-rouge&quot;&gt;{ puts &quot;hello!&quot; }&lt;/code&gt; passed to it as an argument.&lt;/li&gt;
+  &lt;li&gt;The block &lt;code class=&quot;highlighter-rouge&quot;&gt;{ puts &quot;hello!&quot; }&lt;/code&gt; is converted to a &lt;code class=&quot;highlighter-rouge&quot;&gt;Proc&lt;/code&gt; object thanks to the
+&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;amp;&lt;/code&gt; prefixed within &lt;code class=&quot;highlighter-rouge&quot;&gt;block_to_proc&lt;/code&gt;’s method definition. This &lt;code class=&quot;highlighter-rouge&quot;&gt;Proc&lt;/code&gt; is 
+assigned to the local variable &lt;code class=&quot;highlighter-rouge&quot;&gt;block_to_proc&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;Within the first method’s body, a second method is invoked
+(&lt;code class=&quot;highlighter-rouge&quot;&gt;proc_to_block_method&lt;/code&gt;), with the &lt;code class=&quot;highlighter-rouge&quot;&gt;Proc&lt;/code&gt; passed to it as an argument.&lt;/li&gt;
+  &lt;li&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;proc_to_block_method&lt;/code&gt; initializes the local variable &lt;code class=&quot;highlighter-rouge&quot;&gt;proc_to_block&lt;/code&gt; 
+and assigns the &lt;code class=&quot;highlighter-rouge&quot;&gt;Proc&lt;/code&gt; object to it.&lt;/li&gt;
+  &lt;li&gt;Within the second method’s body, a third method is invoked 
+(&lt;code class=&quot;highlighter-rouge&quot;&gt;call_the_block_to_proc&lt;/code&gt;), with &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;amp;proc_to_block&lt;/code&gt; passed to it as an argument.
+In the context of a method invocation, that &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;amp;&lt;/code&gt; first checks whether
+&lt;code class=&quot;highlighter-rouge&quot;&gt;proc_to_block&lt;/code&gt; is a &lt;code class=&quot;highlighter-rouge&quot;&gt;Proc&lt;/code&gt; (it is) and then converts it to a block.&lt;/li&gt;
+  &lt;li&gt;The block received by &lt;code class=&quot;highlighter-rouge&quot;&gt;call_the_block_to_proc&lt;/code&gt; is converted to a &lt;code class=&quot;highlighter-rouge&quot;&gt;Proc&lt;/code&gt;
+object because of the &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;amp;&lt;/code&gt; prefixed to the parameter within the method
+definition. Therefore, &lt;code class=&quot;highlighter-rouge&quot;&gt;block_to_proc&lt;/code&gt; refers to a &lt;code class=&quot;highlighter-rouge&quot;&gt;Proc&lt;/code&gt; object within the 
+third method’s body.&lt;/li&gt;
+  &lt;li&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;Proc&lt;/code&gt; is then called, which outputs &lt;code class=&quot;highlighter-rouge&quot;&gt;&quot;hello!&quot;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div style=&quot;text-align: center&quot;&gt;
+    &lt;figure&gt;
+        &lt;a href=&quot;/assets/images/spongebob.gif&quot;&gt;
+            &lt;img src=&quot;/assets/images/spongebob.gif&quot; alt=&quot;Spongebob Squarepants goes Phew&quot; /&gt;  
+        &lt;/a&gt;
+        &lt;figcaption&gt;Phew! We made it&lt;/figcaption&gt;
+    &lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;tldr---its-all-about-context&quot;&gt;TL;DR - It’s all about context!&lt;/h2&gt;
+
+&lt;p&gt;To sum up, an &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;amp;&lt;/code&gt; prefixing an object can do two opposite actions, depending
+on the &lt;em&gt;context&lt;/em&gt;:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Within a &lt;strong&gt;method definition&lt;/strong&gt;, the &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;amp;&lt;/code&gt; converts a block (passed as an 
+argument) to a &lt;code class=&quot;highlighter-rouge&quot;&gt;Proc&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;some_method&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;block&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;   &lt;span class=&quot;c1&quot;&gt;# &amp;amp; within a method definition&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;block&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;call&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;some_method&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;hi from the explicit block!&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Within a &lt;strong&gt;method invocation&lt;/strong&gt;, the &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;amp;&lt;/code&gt; first converts the object to a &lt;code class=&quot;highlighter-rouge&quot;&gt;Proc&lt;/code&gt;,
+and then converts the &lt;code class=&quot;highlighter-rouge&quot;&gt;Proc&lt;/code&gt; to a block&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:odd?&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;    &lt;span class=&quot;c1&quot;&gt;# &amp;amp; within a method invocation&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Juliette Sinibardy</name></author><category term="Ruby" /><category term="Ruby Quirks" /><category term="Closures" /><category term="Learning" /><category term="Ampersand" /><category term="Block" /><category term="Proc" /><summary type="html">Quite surprisingly, the following Ruby program is correct: def first_method(&amp;amp;block) second_method(block) end def second_method(block) third_method(&amp;amp;block) end def third_method(&amp;amp;block) block.call end first_method { puts &quot;hello!&quot; } # &quot;hello!&quot; You might therefore notice that the &amp;amp; (ampersand) pops up and disappears pretty randomly in the above program. As it’s pretty hard to wrap one’s head around all this &amp;amp; madness, let’s dive into this!</summary></entry><entry><title type="html">How I Prepared for Launch School’s 109 Oral Assessment</title><link href="http://localhost:4000/preparing-launch-school-109-oral-assessment" rel="alternate" type="text/html" title="How I Prepared for Launch School's 109 Oral Assessment" /><published>2019-08-12T12:25:00+02:00</published><updated>2019-08-12T16:53:00+02:00</updated><id>http://localhost:4000/preparing-launch-school-109-oral-assessment</id><content type="html" xml:base="http://localhost:4000/preparing-launch-school-109-oral-assessment">&lt;p&gt;A couple of weeks ago, I took Launch School’s first oral exam (RB 109). 
 Since I’m now somewhat stuck on the next lesson, I thought it’d be best to 
 reflect on the road taken thus far.&lt;/p&gt;
 
@@ -744,8 +1045,8 @@ by Launch School. The Katas are ordered by complexity (&lt;em&gt;8 kyu&lt;/em&gt
 
 &lt;p&gt;My personal challenge before the assessment was being able to solve the 6 kyu 
 katas in less than 20 minutes. Bear in mind that the problem given during 
-the oral exam will be much easier than kyu 6 katas, but you’ll be much more
-stressed out and prone to mistakes.&lt;/p&gt;
+the oral exam will be more or less of the level of 6 kyu katas, &lt;em&gt;and&lt;/em&gt; you’ll be
+much more stressed out and prone to mistakes.&lt;/p&gt;
 
 &lt;h3 id=&quot;7-or-8-kyu&quot;&gt;7 or 8 kyu&lt;/h3&gt;
 
@@ -1437,7 +1738,7 @@ to have a coherent style.&lt;/p&gt;
         &lt;/a&gt;
         &lt;figcaption&gt;Example of contact form&lt;/figcaption&gt;
     &lt;/figure&gt;
-&lt;/div&gt;</content><author><name>Juliette Sinibardy</name></author><category term="Jekyll" /><category term="Contact Form" /><category term="Formspree" /><category term="How-To" /><category term="HTML" /><category term="CSS" /><summary type="html">I thought it would be cool to give the opportunity to the random internet user to contact me if they so wanted. Turns out it’s pretty easy, so here’s a tutorial on how to set up a contact form on Jekyll using Formspree.</summary></entry><entry><title type="html">Hello World</title><link href="http://localhost:4000/hello-world" rel="alternate" type="text/html" title="Hello World" /><published>2019-07-03T10:28:08+02:00</published><updated>2019-07-07T11:55:00+02:00</updated><id>http://localhost:4000/hello-world</id><content type="html" xml:base="http://localhost:4000/hello-world">&lt;blockquote&gt;
+&lt;/div&gt;</content><author><name>Juliette Sinibardy</name></author><category term="Jekyll" /><category term="Contact Form" /><category term="Formspree" /><category term="How-To" /><category term="HTML" /><category term="CSS" /><summary type="html">I thought it would be cool to give the opportunity to the random internet user to contact me if they so wanted. Turns out it’s pretty easy, so here’s a tutorial on how to set up a contact form on Jekyll using Formspree. What’s Formspree? It’s a HTML form generator, that transfers the form’s answers to your email address. Plus it’s free and no registration is required. There is also a paid plan for additional features, but until 50 messages a month, I guess the free plan is enough for most uses. Basic setup Formspree provides a test environment where you can tweak your HTML before including it on your website. &amp;lt;form method=&quot;POST&quot; action=&quot;https://formspree.io/&amp;lt;YOUR_EMAIL_HERE&amp;gt;&quot;&amp;gt; &amp;lt;input type=&quot;email&quot; name=&quot;email&quot; placeholder=&quot;Your email&quot;&amp;gt; &amp;lt;input type=&quot;text&quot; name=&quot;name&quot; placeholder=&quot;Your name&quot;&amp;gt; &amp;lt;textarea name=&quot;message&quot; placeholder=&quot;Your message&quot; rows=&quot;3&quot;&amp;gt; &amp;lt;/textarea&amp;gt; &amp;lt;button type=&quot;submit&quot;&amp;gt;Send Message&amp;lt;/button&amp;gt; &amp;lt;/form&amp;gt; You simply have to include your contact email on line 1 (&amp;lt;YOUR_EMAIL_HERE&amp;gt;), and the form works! You can test the form directly in Formspree's environment Note: You’ll have to first activate each domain you set up your contact form on (through an activation link sent to the email address provided), so it’s no use adding your friend’s email for a prank 😉 You can also customize the placeholder of your input questions, or add any other question, like: &amp;lt;input type=&quot;text&quot; name=&quot;subject&quot; placeholder=&quot;Message's subject&quot;&amp;gt; Integration with Jekyll You could now copy/paste the HTML code and include it any .html file of your blog. However, the best way to do that would be to insert this code into an _includes file, and create a dedicated _layouts. This way, you’ll be able to edit the page with the contact form using a nice and clean Markdown! 💙 First, let’s create a new layout in your root/_layouts folder and name it contact.html. You’ll notice that this layout is based on the default page.html layout, and this allows us to do the following: Automatically use the title attribute to create a &amp;lt;h1&amp;gt; Type your content and it will appear before the contact form Note: I’m using the Hydeout Jekyll template, which may have different layout names than your own. Then, we’ll create the contact-form.html mentioned in the previous code excerpt. Place it in the root/_includes folder. This file will host the HTML you generated through Formspree, which in this case, is: &amp;lt;form method=&quot;POST&quot; action=&quot;https://formspree.io/&amp;lt;YOUR_EMAIL_HERE&amp;gt;&quot;&amp;gt; &amp;lt;input type=&quot;email&quot; name=&quot;email&quot; placeholder=&quot;Your email&quot;&amp;gt; &amp;lt;input type=&quot;text&quot; name=&quot;name&quot; placeholder=&quot;Your name&quot;&amp;gt; &amp;lt;textarea name=&quot;message&quot; placeholder=&quot;Your message&quot; rows=&quot;3&quot;&amp;gt; &amp;lt;/textarea&amp;gt; &amp;lt;button type=&quot;submit&quot;&amp;gt;Send Message&amp;lt;/button&amp;gt; &amp;lt;/form&amp;gt; You now have a working contact layout! 🌈 To use it, create a new post, and insert layout: contact in the YAML front matter. You can now type any Markdown content you want, and your text will be displayed before your contact form! Final Adjustments However, in my case, the Your Message (textarea) part was displayed poorly, because the Hydeout template did not have any CSS for textarea. I therefore had to create some styling in order to homogenize the form. I’ve included the following SCSS in my assets/css/main.scss: input[type=&quot;text&quot;], input[type=&quot;email&quot;], input[type=&quot;search&quot;], input[type=&quot;submit&quot;], button, textarea { padding: 1em 1.5em; border: 1px solid #e5e5e5; border-radius: 300px; margin-bottom: 1em; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, &quot;Roboto&quot;, &quot;Oxygen&quot;, &quot;Ubuntu&quot;, &quot;Cantarell&quot;, &quot;Fira Sans&quot;, &quot;Droid Sans&quot;, &quot;Helvetica Neue&quot;, Arial, sans-serif; } textarea { width: 73%; resize: none; } I’ve also added rows=&quot;3&quot; in the contact-form.html in order to widen the text area. Bear in mind that all these changes are pretty specific to the Hydeout template so you’ll probably have to tweak your own CSS in order to have a coherent style. Example of contact form</summary></entry><entry><title type="html">Hello World</title><link href="http://localhost:4000/hello-world" rel="alternate" type="text/html" title="Hello World" /><published>2019-07-03T10:28:08+02:00</published><updated>2019-07-07T11:55:00+02:00</updated><id>http://localhost:4000/hello-world</id><content type="html" xml:base="http://localhost:4000/hello-world">&lt;blockquote&gt;
   &lt;p&gt;It’s alive!&lt;/p&gt;
 &lt;/blockquote&gt;
 
