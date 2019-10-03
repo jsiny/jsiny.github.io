@@ -2,7 +2,7 @@
 layout: post
 title: How does the Internet work?
 date: 2019-10-03 11:06 +0200
-last_modified_at: 2019-10-03 17:27 +0200
+last_modified_at: 2019-10-03 19:50 +0200
 permalink: how-internet-works
 description: Let's dive into networking and explain how IP, TCP, TLS or HTTP work!
 image: 
@@ -255,11 +255,13 @@ the retransmission of lost packets
 * De-duplicating the packets
 
 TCP effectively allows us to abstract away from the unreliability of the
-lower-layer protocols.
+lower-layer protocols. However, this reliability comes at the price of
+performance, as TCP requires an entire round-trip of latency before the
+browser can send its request.
 
 ### The TLS Handshake
 
-However, if the URL's scheme is `https` (which it is, in our example), we
+Furthermore, if the URL's scheme is `https` (which it is, in our example), we
 need another exchange before the HTTP requests can begin. This exchange
 will ensure the **encryption** of all subsequent HTTP requests between 
 the client and the server, and **authenticate** the host.
@@ -297,13 +299,20 @@ a browser and a server, to ask the server for a particular web page.
 The requests are sent in plaintext and would look like this:
 
 ```http
-GET / HTTP/1.1
+GET /home HTTP/1.1
 Host: twitter.com
 [Other headers]
 
 ```
-The HTTP request features one mandatory header (`Host`) and ends with an empty
-line.
+The HTTP request (v1.1) features a request line, one mandatory header (`Host`)
+and ends with an empty line. 
+
+Here are the components from the request line:
+
+* `GET` is the HTTP request method, which tells the server what we want
+to do with the resource (in this case, to retrieve it)
+* `/home` is the path of the resource we want to access
+* `HTTP/1.1` is the version of the HTTP protocol we want to use
 
 The server receives the request, and responds, also in plain text:
 
@@ -312,7 +321,7 @@ The server receives the request, and responds, also in plain text:
 ```
 This status line (which indicates that the request was processed successfully)
 can be accompanied with optional headers and body, like the raw HTML that
-composed Twitter's home page.
+composes Twitter's home page:
 
 ```html
 <!DOCTYPE html>

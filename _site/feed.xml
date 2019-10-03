@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en_US"><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en_US" /><updated>2019-10-03T17:28:10+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Juliette Sinibardy</title><subtitle>Pending Programmer&lt;br&gt; ███░░░░░░░ 30%</subtitle><author><name>Juliette Sinibardy</name></author><entry><title type="html">How does the Internet work?</title><link href="http://localhost:4000/how-internet-works" rel="alternate" type="text/html" title="How does the Internet work?" /><published>2019-10-03T11:06:00+02:00</published><updated>2019-10-03T17:27:00+02:00</updated><id>http://localhost:4000/how-does-the-internet-work</id><content type="html" xml:base="http://localhost:4000/how-internet-works">&lt;p&gt;Being born in the 90s, I’ve lived most of my life in a post-Internet world. I
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en_US"><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en_US" /><updated>2019-10-03T19:51:06+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Juliette Sinibardy</title><subtitle>Pending Programmer&lt;br&gt; ███░░░░░░░ 30%</subtitle><author><name>Juliette Sinibardy</name></author><entry><title type="html">How does the Internet work?</title><link href="http://localhost:4000/how-internet-works" rel="alternate" type="text/html" title="How does the Internet work?" /><published>2019-10-03T11:06:00+02:00</published><updated>2019-10-03T19:50:00+02:00</updated><id>http://localhost:4000/how-does-the-internet-work</id><content type="html" xml:base="http://localhost:4000/how-internet-works">&lt;p&gt;Being born in the 90s, I’ve lived most of my life in a post-Internet world. I
 do remember the sweet sound of 56 kb/s modem, but most of my browsing time
 has been &lt;em&gt;after&lt;/em&gt; the dial-up era.&lt;/p&gt;
 
@@ -293,11 +293,13 @@ the retransmission of lost packets&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;TCP effectively allows us to abstract away from the unreliability of the
-lower-layer protocols.&lt;/p&gt;
+lower-layer protocols. However, this reliability comes at the price of
+performance, as TCP requires an entire round-trip of latency before the
+browser can send its request.&lt;/p&gt;
 
 &lt;h3 id=&quot;the-tls-handshake&quot;&gt;The TLS Handshake&lt;/h3&gt;
 
-&lt;p&gt;However, if the URL’s scheme is &lt;code class=&quot;highlighter-rouge&quot;&gt;https&lt;/code&gt; (which it is, in our example), we
+&lt;p&gt;Furthermore, if the URL’s scheme is &lt;code class=&quot;highlighter-rouge&quot;&gt;https&lt;/code&gt; (which it is, in our example), we
 need another exchange before the HTTP requests can begin. This exchange
 will ensure the &lt;strong&gt;encryption&lt;/strong&gt; of all subsequent HTTP requests between 
 the client and the server, and &lt;strong&gt;authenticate&lt;/strong&gt; the host.&lt;/p&gt;
@@ -343,13 +345,22 @@ a browser and a server, to ask the server for a particular web page.&lt;/p&gt;
 
 &lt;p&gt;The requests are sent in plaintext and would look like this:&lt;/p&gt;
 
-&lt;div class=&quot;language-http highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nf&quot;&gt;GET&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;HTTP&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1.1&lt;/span&gt;
+&lt;div class=&quot;language-http highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nf&quot;&gt;GET&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;/home&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;HTTP&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1.1&lt;/span&gt;
 &lt;span class=&quot;na&quot;&gt;Host&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;twitter.com&lt;/span&gt;
 &lt;span class=&quot;s&quot;&gt;[Other headers]&lt;/span&gt;
 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;The HTTP request features one mandatory header (&lt;code class=&quot;highlighter-rouge&quot;&gt;Host&lt;/code&gt;) and ends with an empty
-line.&lt;/p&gt;
+&lt;p&gt;The HTTP request (v1.1) features a request line, one mandatory header (&lt;code class=&quot;highlighter-rouge&quot;&gt;Host&lt;/code&gt;)
+and ends with an empty line.&lt;/p&gt;
+
+&lt;p&gt;Here are the components from the request line:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;GET&lt;/code&gt; is the HTTP request method, which tells the server what we want
+to do with the resource (in this case, to retrieve it)&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;/home&lt;/code&gt; is the path of the resource we want to access&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;HTTP/1.1&lt;/code&gt; is the version of the HTTP protocol we want to use&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;The server receives the request, and responds, also in plain text:&lt;/p&gt;
 
@@ -357,7 +368,7 @@ line.&lt;/p&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;This status line (which indicates that the request was processed successfully)
 can be accompanied with optional headers and body, like the raw HTML that
-composed Twitter’s home page.&lt;/p&gt;
+composes Twitter’s home page:&lt;/p&gt;
 
 &lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;html&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;lang=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;fr&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;data-scribe-reduced-action-queue=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;true&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;

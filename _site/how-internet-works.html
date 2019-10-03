@@ -46,7 +46,7 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2019-10-03T11:06:00+02:00" />
 <script type="application/ld+json">
-{"description":"Let’s dive into networking and explain how IP, TCP, TLS or HTTP work!","headline":"How does the Internet work?","dateModified":"2019-10-03T17:27:00+02:00","datePublished":"2019-10-03T11:06:00+02:00","@type":"BlogPosting","url":"http://localhost:4000/how-internet-works","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/how-internet-works"},"author":{"@type":"Person","name":"Juliette Sinibardy"},"@context":"http://schema.org"}</script>
+{"description":"Let’s dive into networking and explain how IP, TCP, TLS or HTTP work!","headline":"How does the Internet work?","dateModified":"2019-10-03T19:50:00+02:00","datePublished":"2019-10-03T11:06:00+02:00","@type":"BlogPosting","url":"http://localhost:4000/how-internet-works","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/how-internet-works"},"author":{"@type":"Person","name":"Juliette Sinibardy"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -566,11 +566,13 @@ the retransmission of lost packets</li>
 </ul>
 
 <p>TCP effectively allows us to abstract away from the unreliability of the
-lower-layer protocols.</p>
+lower-layer protocols. However, this reliability comes at the price of
+performance, as TCP requires an entire round-trip of latency before the
+browser can send its request.</p>
 
 <h3 id="the-tls-handshake">The TLS Handshake</h3>
 
-<p>However, if the URL’s scheme is <code class="highlighter-rouge">https</code> (which it is, in our example), we
+<p>Furthermore, if the URL’s scheme is <code class="highlighter-rouge">https</code> (which it is, in our example), we
 need another exchange before the HTTP requests can begin. This exchange
 will ensure the <strong>encryption</strong> of all subsequent HTTP requests between 
 the client and the server, and <strong>authenticate</strong> the host.</p>
@@ -616,13 +618,25 @@ a browser and a server, to ask the server for a particular web page.</p>
 
 <p>The requests are sent in plaintext and would look like this:</p>
 
-<div class="language-http highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">GET</span> <span class="nn">/</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<div class="language-http highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">GET</span> <span class="nn">/home</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
 <span class="na">Host</span><span class="p">:</span> <span class="s">twitter.com</span>
 <span class="s">[Other headers]</span>
 
 </code></pre></div></div>
-<p>The HTTP request features one mandatory header (<code class="highlighter-rouge">Host</code>) and ends with an empty
-line.</p>
+<p>The HTTP request (v1.1) features a request line, one mandatory header (<code class="highlighter-rouge">Host</code>)
+and ends with an empty line.</p>
+
+<p>Here are the components from the request line:</p>
+
+<ul>
+  <li>
+<code class="highlighter-rouge">GET</code> is the HTTP request method, which tells the server what we want
+to do with the resource (in this case, to retrieve it)</li>
+  <li>
+<code class="highlighter-rouge">/home</code> is the path of the resource we want to access</li>
+  <li>
+<code class="highlighter-rouge">HTTP/1.1</code> is the version of the HTTP protocol we want to use</li>
+</ul>
 
 <p>The server receives the request, and responds, also in plain text:</p>
 
@@ -630,7 +644,7 @@ line.</p>
 </span></code></pre></div></div>
 <p>This status line (which indicates that the request was processed successfully)
 can be accompanied with optional headers and body, like the raw HTML that
-composed Twitter’s home page.</p>
+composes Twitter’s home page:</p>
 
 <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"fr"</span> <span class="na">data-scribe-reduced-action-queue=</span><span class="s">"true"</span><span class="nt">&gt;</span>
