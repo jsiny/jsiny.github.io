@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+
+  <title>
+    
+      How does the Internet work? &middot; Juliette Sinibardy
+    
+  </title>
+
+  
+
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/assets/css/main.css" />
+
+  <!-- Icons -->
+  <link rel="icon" type="image/png" href="/favicon.png" />
+
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml" />
+
+  <!-- Google Analytics tracking ID -->
+
+
+<!-- SEO tags -->
+<!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>How does the Internet work? | Juliette Sinibardy</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="How does the Internet work?" />
+<meta name="author" content="Juliette Sinibardy" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Let’s dive into networking and explain how IP, TCP, TLS or HTTP work!" />
+<meta property="og:description" content="Let’s dive into networking and explain how IP, TCP, TLS or HTTP work!" />
+<link rel="canonical" href="http://localhost:4000/how-internet-works" />
+<meta property="og:url" content="http://localhost:4000/how-internet-works" />
+<meta property="og:site_name" content="Juliette Sinibardy" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-10-03T11:06:00+02:00" />
+<script type="application/ld+json">
+{"description":"Let’s dive into networking and explain how IP, TCP, TLS or HTTP work!","headline":"How does the Internet work?","dateModified":"2019-10-03T17:27:00+02:00","datePublished":"2019-10-03T11:06:00+02:00","@type":"BlogPosting","url":"http://localhost:4000/how-internet-works","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/how-internet-works"},"author":{"@type":"Person","name":"Juliette Sinibardy"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+
+  <body class="post">
+
+    <div id="sidebar">
+  <header>
+    <div class="site-title">
+      <a href="/">
+        
+          <span class="back-arrow icon"><svg fill="#000000" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+  <path d="M0 0h24v24H0z" fill="none"></path>
+  <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"></path>
+</svg></span>
+        
+        Juliette Sinibardy
+      </a>
+    </div>
+    <p class="lead">Pending Programmer<br> ███░░░░░░░ 30%</p>
+  </header>
+  <nav id="sidebar-nav-links">
+  
+    <a class="home-link " href="/">Home</a>
+  
+  
+
+  
+
+  
+
+
+  
+
+  
+    
+      <a class="page-link " href="/about">About Me</a>
+    
+  
+
+  
+    
+      <a class="page-link " href="/contact">Contact</a>
+    
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+      <a class="page-link " href="/work">Work History</a>
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+
+  
+
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+
+  <!-- Optional additional links to insert in sidebar nav -->
+</nav>
+
+
+  
+
+  <nav id="sidebar-icon-links">
+  
+
+  
+  
+  
+  
+
+  
+<a id="github-link" class="icon" title="Github" aria-label="Github" href="https://github.com/jsiny">
+  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 28" width="24" height="24">
+    <path d="M12 2c6.625 0 12 5.375 12 12 0 5.297-3.437 9.797-8.203 11.391-0.609 0.109-0.828-0.266-0.828-0.578 0-0.391 0.016-1.687 0.016-3.297 0-1.125-0.375-1.844-0.812-2.219 2.672-0.297 5.484-1.313 5.484-5.922 0-1.313-0.469-2.375-1.234-3.219 0.125-0.313 0.531-1.531-0.125-3.187-1-0.313-3.297 1.234-3.297 1.234-0.953-0.266-1.984-0.406-3-0.406s-2.047 0.141-3 0.406c0 0-2.297-1.547-3.297-1.234-0.656 1.656-0.25 2.875-0.125 3.187-0.766 0.844-1.234 1.906-1.234 3.219 0 4.594 2.797 5.625 5.469 5.922-0.344 0.313-0.656 0.844-0.766 1.609-0.688 0.313-2.438 0.844-3.484-1-0.656-1.141-1.844-1.234-1.844-1.234-1.172-0.016-0.078 0.734-0.078 0.734 0.781 0.359 1.328 1.75 1.328 1.75 0.703 2.141 4.047 1.422 4.047 1.422 0 1 0.016 1.937 0.016 2.234 0 0.313-0.219 0.688-0.828 0.578-4.766-1.594-8.203-6.094-8.203-11.391 0-6.625 5.375-12 12-12zM4.547 19.234c0.031-0.063-0.016-0.141-0.109-0.187-0.094-0.031-0.172-0.016-0.203 0.031-0.031 0.063 0.016 0.141 0.109 0.187 0.078 0.047 0.172 0.031 0.203-0.031zM5.031 19.766c0.063-0.047 0.047-0.156-0.031-0.25-0.078-0.078-0.187-0.109-0.25-0.047-0.063 0.047-0.047 0.156 0.031 0.25 0.078 0.078 0.187 0.109 0.25 0.047zM5.5 20.469c0.078-0.063 0.078-0.187 0-0.297-0.063-0.109-0.187-0.156-0.266-0.094-0.078 0.047-0.078 0.172 0 0.281s0.203 0.156 0.266 0.109zM6.156 21.125c0.063-0.063 0.031-0.203-0.063-0.297-0.109-0.109-0.25-0.125-0.313-0.047-0.078 0.063-0.047 0.203 0.063 0.297 0.109 0.109 0.25 0.125 0.313 0.047zM7.047 21.516c0.031-0.094-0.063-0.203-0.203-0.25-0.125-0.031-0.266 0.016-0.297 0.109s0.063 0.203 0.203 0.234c0.125 0.047 0.266 0 0.297-0.094zM8.031 21.594c0-0.109-0.125-0.187-0.266-0.172-0.141 0-0.25 0.078-0.25 0.172 0 0.109 0.109 0.187 0.266 0.172 0.141 0 0.25-0.078 0.25-0.172zM8.937 21.438c-0.016-0.094-0.141-0.156-0.281-0.141-0.141 0.031-0.234 0.125-0.219 0.234 0.016 0.094 0.141 0.156 0.281 0.125s0.234-0.125 0.219-0.219z"></path>
+</svg>
+
+</a>
+
+<a id="medium-link" class="icon" title="Medium" aria-label="Medium" href="https://medium.com/@juju.siny">
+  <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" viewbox="0 0 24 24">
+    <path d="M12 0c-6.626 0-12 5.372-12 12 0 6.627 5.374 12 12 12 6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12zm6.974 17.557v-.235l-1.092-1.072c-.096-.073-.144-.194-.124-.313v-7.874c-.02-.119.028-.24.124-.313l1.118-1.072v-.235h-3.869l-2.758 6.88-3.138-6.88h-4.059v.235l1.308 1.575c.128.115.194.285.176.457v6.188c.038.223-.032.451-.189.614l-1.471 1.784v.235h4.17v-.235l-1.471-1.784c-.158-.163-.233-.389-.202-.614v-5.352l3.66 7.985h.425l3.143-7.985v6.365c0 .17 0 .202-.111.313l-1.13 1.098v.235h5.49z"></path>
+</svg>
+</a>
+
+<a id="linkedin-link" class="icon" title="LinkedIn" aria-label="LinkedIn" href="https://linkedin.com/in/juliette-sinibardy">
+  <?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+
+<svg width="24" height="24" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 490.732 490.732" style="enable-background:new 0 0 490.732 490.732;" xml:space="preserve">
+<g>
+	<g>
+		<path d="M472.366,0.003H18.36C8.219,0.003,0,8.222,0,18.363v454.005c0,10.143,8.219,18.361,18.36,18.361h454.012
+			c10.142,0,18.36-8.219,18.36-18.361V18.363C490.727,8.222,482.507,0.003,472.366,0.003z M130.375,403.808
+			c0,6.762-5.478,12.238-12.24,12.238H69.132c-6.756,0-12.24-5.477-12.24-12.238V189.625c0-6.763,5.484-12.24,12.24-12.24h49.003
+			c6.762,0,12.24,5.477,12.24,12.24V403.808z M130.375,127.482c0,6.763-5.478,12.24-12.24,12.24H69.132
+			c-6.756,0-12.24-5.478-12.24-12.24V83.969c0-6.763,5.484-12.24,12.24-12.24h49.003c6.762,0,12.24,5.477,12.24,12.24V127.482z
+			 M433.835,403.808c0,6.762-5.483,12.238-12.24,12.238h-49.003c-6.763,0-12.24-5.477-12.24-12.238v-90.436
+			c0-29.988-1.566-49.383-4.712-58.189c-3.14-8.807-8.237-15.649-15.3-20.526c-7.062-4.884-15.558-7.32-25.496-7.32
+			c-12.729,0-24.149,3.488-34.26,10.459c-10.11,6.977-17.038,16.211-20.79,27.717c-3.745,11.506-5.618,32.779-5.618,63.807v74.488
+			c0,6.762-5.483,12.238-12.24,12.238h-49.003c-6.756,0-12.24-5.477-12.24-12.238V189.625c0-6.763,5.483-12.24,12.24-12.24h43.771
+			c6.763,0,12.24,5.477,12.24,12.24v16.316c0,6.763,3.312,7.852,7.858,2.852c22.864-25.123,50.753-37.687,83.673-37.687
+			c16.212,0,31.028,2.919,44.455,8.758c13.422,5.838,23.58,13.292,30.466,22.356c6.885,9.063,11.683,19.351,14.382,30.857
+			c2.699,11.505,4.058,27.98,4.058,49.426V403.808L433.835,403.808z"></path>
+	</g>
+</g>
+</svg>
+
+</a>
+  
+    <a id="subscribe-link" class="icon" title="Subscribe" aria-label="Subscribe" href="/feed.xml">
+    <svg fill="#000000" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"></path>
+    <circle cx="6.18" cy="17.82" r="2.18"></circle>
+    <path d="M4 4.44v2.83c7.03 0 12.73 5.7 12.73 12.73h2.83c0-8.59-6.97-15.56-15.56-15.56zm0 5.66v2.83c3.9 0 7.07 3.17 7.07 7.07h2.83c0-5.47-4.43-9.9-9.9-9.9z"></path>
+</svg>
+  </a>
+  
+  
+    <a id="tags-link" class="icon" title="Tags" aria-label="Tags" href="/tags">
+      <svg fill="#000000" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"></path>
+    <path d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z"></path>
+</svg>
+    </a>
+  
+
+  
+
+</nav>
+  <p class="copyright">
+  © 2019 - Juliette Sinibardy
+</p>
+</div>
+
+    <main class="container">
+        <header>
+  <h1 class="post-title">How does the Internet work?</h1>
+</header>
+<div class="content">
+  <div class="post-meta">
+  <span class="post-date">03 Oct 2019</span>
+  <span class="post-categories">
+    
+      •
+
+      
+      
+      
+
+      
+        Networking
+      
+    
+  </span>
+</div>
+
+  <div class="post-body">
+    <p>Being born in the 90s, I’ve lived most of my life in a post-Internet world. I
+do remember the sweet sound of 56 kb/s modem, but most of my browsing time
+has been <em>after</em> the dial-up era.</p>
+
+<p>Internet, for my generation, is just an inherent part of life. It’s kind
+of hard to imagine what it was like <em>before</em> (did people actually read books?),
+and we never pause to think:</p>
+
+<blockquote>
+  <p>Wait, how does the Internet even work?</p>
+</blockquote>
+
+<p>So <em>that</em>’s exactly the subject of this post. Buckle up your
+seatbelt, we’re going deep into networking!</p>
+
+<!--more-->
+
+<div style="text-align: center">
+    <figure>
+        <a href="/assets/images/internet.jpg">
+            <img src="/assets/images/internet.jpg" alt="90s Internet book">  
+        </a>
+        <figcaption>Welcome to the Internet! I'll be your guide</figcaption>
+    </figure>
+</div>
+
+<p>We’ll examine two aspects of the Internet:</p>
+<ul>
+  <li>how data is <em>transferred</em> over the network</li>
+  <li>how users can <em>access a webpage</em>
+</li>
+</ul>
+
+<hr>
+
+<p><strong>Table of Contents:</strong></p>
+
+<ul id="markdown-toc">
+  <li>
+<a href="#how-data-is-transferred-over-a-network" id="markdown-toc-how-data-is-transferred-over-a-network">How data is transferred over a network</a>    <ul>
+      <li><a href="#url-parsing" id="markdown-toc-url-parsing">URL Parsing</a></li>
+      <li><a href="#dns-lookup" id="markdown-toc-dns-lookup">DNS Lookup</a></li>
+      <li><a href="#encapsulating-the-request" id="markdown-toc-encapsulating-the-request">Encapsulating the Request</a></li>
+      <li><a href="#travelling-on-the-network" id="markdown-toc-travelling-on-the-network">Travelling on the network</a></li>
+      <li><a href="#receiving-the-request" id="markdown-toc-receiving-the-request">Receiving the Request</a></li>
+    </ul>
+  </li>
+  <li>
+<a href="#how-to-access-a-webpage" id="markdown-toc-how-to-access-a-webpage">How to access a webpage</a>    <ul>
+      <li><a href="#the-tcp-handshake" id="markdown-toc-the-tcp-handshake">The TCP Handshake</a></li>
+      <li><a href="#the-tls-handshake" id="markdown-toc-the-tls-handshake">The TLS Handshake</a></li>
+      <li><a href="#the-http-request--response-cycle" id="markdown-toc-the-http-request--response-cycle">The HTTP Request / Response cycle</a></li>
+    </ul>
+  </li>
+  <li><a href="#internet---better-than-magic" id="markdown-toc-internet---better-than-magic">Internet - better than magic</a></li>
+</ul>
+<hr>
+
+<h2 id="how-data-is-transferred-over-a-network">How data is transferred over a network</h2>
+
+<p>What happens when you type a URL into your browser?</p>
+
+<p>Let’s assume you want to reach Twitter, and typed <code class="highlighter-rouge">https://twitter.com/home</code>
+into your browser.</p>
+
+<h3 id="url-parsing">URL Parsing</h3>
+
+<p>The first thing your browser does is <em>parse</em> the URL, in order to extract
+its components:</p>
+<ul>
+  <li>the <strong>scheme</strong> (<code class="highlighter-rouge">https</code>), which informs the browser that we want to use 
+the HyperText Transfor Protocol Secure to exchange data with the server;</li>
+  <li>the <strong>host</strong> (<code class="highlighter-rouge">twitter.com</code>), which is the computer that <em>hosts</em> the 
+resources of this website (eg. the HTML, the pictures, etc.);</li>
+  <li>the <strong>path</strong> (<code class="highlighter-rouge">/home</code>), which corresponds to the particular resource we 
+want to access.</li>
+</ul>
+
+<h3 id="dns-lookup">DNS Lookup</h3>
+
+<p>The domain name (<code class="highlighter-rouge">twitter.com</code>) typed is nothing more than a human-friendly name
+that refers to a server somewhere on the Internet.</p>
+
+<p>In order for data to be transferred to this server, we need to know
+its <strong>IP address</strong>. IP addresses (v4) are sets of 4 numbers (from 0 to 255)
+separated by dots <code class="highlighter-rouge">.</code>, like <code class="highlighter-rouge">104.244.42.193</code>. This logicial address is <em>unique</em>
+and allows to locate a device on the internet.</p>
+
+<p>As IP addresses would be hard to remember for humans with limited memory
+slots, we use domain names to cover up this complexity. But how do we convert
+a domain name into an IP address?</p>
+
+<p>That’s where <strong>DNS</strong> (Domain Name System) comes in! The DNS is a distributed
+database which translates a domain name into an IP address.</p>
+
+<p>When you typed <code class="highlighter-rouge">https://twitter.com/home</code> into your browser, it first checked
+whether <code class="highlighter-rouge">twitter.com</code> was already available in its cache (from a previous
+browsing session). If it wasn’t, the browser used its DNS provider in order 
+to find the IP address associated with the domain name (and cached the answer
+for later use).</p>
+
+<h3 id="encapsulating-the-request">Encapsulating the Request</h3>
+
+<p>As we are in possession of <code class="highlighter-rouge">twitter.com</code>’s IP address, we are now ready to
+send a request to the server!</p>
+
+<p>The browser thus takes the server’s IP address and combines it with the
+port number (optional field from the URL) to create a <strong>socket</strong>.</p>
+
+<p>This request is then passed through several layers where the data is further
+encapsulated.</p>
+
+<div style="text-align: center">
+    <figure>
+        <a href="/assets/images/wrapped-cat.gif">
+            <img src="/assets/images/wrapped-cat.gif" alt="Cat wrapped in Chritsmas wrapping paper">  
+        </a>
+        <figcaption>Example of a cat being encapsulated, with a nice bow header</figcaption>
+    </figure>
+</div>
+
+<p>First, the request is passed to the <strong>Transport Layer</strong>, where a TCP
+segment (or UDP datagram) is crafted. This segment now has a <em>header</em>, which
+includes the following information:</p>
+
+<ul>
+  <li>the destination port (which defaults to 80 for HTTP and 443 for HTTPS)</li>
+  <li>the source port (chosen from the kernel’s available range)</li>
+</ul>
+
+<p>These network ports is what allows two specific processes on two different
+devices to communicate. A device likely has multiple processes running
+at the same time (eg. a browser connected to multiple websites, a Spotify
+application running in the background, your email client, etc.), with
+each having a special dedicated network port.</p>
+
+<p>Second, the segment is sent to the <strong>Network Layer</strong>, where it is wrapped
+with additional headers containing:</p>
+
+<ul>
+  <li>the destination IP address (obtained through the DNS mapping of the URL)</li>
+  <li>the source IP address (your device’s IP address)</li>
+</ul>
+
+<p>The segment is now an IP packet.</p>
+
+<p>Third, the packet is sent to the <strong>Link Layer</strong>, where another header is added,
+containing:</p>
+
+<ul>
+  <li>the source MAC address (of the device’s NIC)</li>
+  <li>the destination MAC address (at this point being the exit gateway’s address,
+ie. the local router’s)</li>
+</ul>
+
+<p>Fourth, the <strong>Physical Layer</strong>. The frame is converted to binary data and sent
+through the physicial medium (eg. Ethernet cable, optic fiber, radio waves)
+linking your device to the rest of the network.</p>
+
+<p>At this point, the frame is now ready for the great travel throughout the
+unknown network beyond your local router!</p>
+
+<div style="text-align: center">
+    <figure>
+        <a href="/assets/images/adventure.gif">
+            <img src="/assets/images/adventure.gif" alt="Adventure through the unknown">  
+        </a>
+        <figcaption>Good luck tiny packet!</figcaption>
+    </figure>
+</div>
+
+<h3 id="travelling-on-the-network">Travelling on the network</h3>
+
+<p>The internet is a vast <em>network of networks</em>, which connects your home local
+network to an infinite information sphere (the <em>Web</em>).</p>
+
+<p>Once the packet leaves your local network through the subnet’s router, it
+needs to find its way up to its destination IP (featured within its Network
+Layer header).</p>
+
+<p>On its way, the packet will encounter <strong>routers</strong>, which will extract its 
+destination IP and orient it to the next relevant network hop. The route
+taken by the packet is not necessarily the <em>shortest</em>: among other things,
+routers take into account the network congestion when deciding how to
+route packets.</p>
+
+<p>If the packet errs for too long on the network (ie. when its Time-to-Live
+countdown equals 0), it will be dropped mercilessly.</p>
+
+<p>Additionally, if a router is overflowed with packets, it will not hesitate
+to shamelessly abandon the next packets.</p>
+
+<div style="text-align: center">
+    <figure>
+        <a href="/assets/images/computer-destruction.gif">
+            <img src="/assets/images/computer-destruction.gif" alt="IT guy destroying a computer with a hammer">  
+        </a>
+        <figcaption>Accurate depiction of a router murdering an IP packet</figcaption>
+    </figure>
+</div>
+
+<p>Being a packet on the internet is tough.</p>
+
+<p>All this also means that the internet is essentially an <em>unreliable</em> network.
+Fortunately, we’ve invented protocols to abstract away from this 
+unreliability: this is the role of the Transport Control Protocol (see below).</p>
+
+<p>Let’s assume here that our packet has a safe travel and reaches its destination
+server (congrats tiny packet!)</p>
+
+<h3 id="receiving-the-request">Receiving the Request</h3>
+
+<p>When the packet gets to the destination host, it has to go through the same
+encapsulation layers, but in reverse order, in order to strip off all the
+header information that was attached by the sender for a safe navigation
+on the internet seas.</p>
+
+<ol>
+  <li>The Physical Layer receives a frame containing the packet, and sends it to
+the Link Layer.</li>
+  <li>The Link Layer verifies that the frame is intact (through its checksum), and
+removes the frame header, before sending it to the Internet Layer.</li>
+  <li>The Internet Layer assembles the fragmented packets into the original
+datagram. It also removes the packet header before sending the datagram
+over to the Transport Layer.</li>
+  <li>The Transport Layer (in our example, TCP) uses the destination port
+(contained in the header) to know to which application to route
+the request. It removes the Transport headers and sends the segment to the
+Application Layer.</li>
+  <li>The Application Layer receives the segment and performs the requested
+operation.</li>
+</ol>
+
+<div style="text-align: center">
+    <figure>
+        <a href="/assets/images/phew.gif">
+            <img src="/assets/images/phew.gif" alt="Jeff Goldblum sighing">  
+        </a>
+        <figcaption>Our tiny packet made it all the way!</figcaption>
+    </figure>
+</div>
+
+<p>Our original request has now arrived to the server. However, that doesn’t
+explain <em>how</em> our browser communicates with a remote server. For all we know,
+our request could have been immediately dropped by the server because
+it didn’t speak <em>the same language</em>.</p>
+
+<p>So - how does our browser communicate with a web server? To answer this
+question, we will now explore HTTP, the Web Protocol.</p>
+
+<hr>
+
+<h2 id="how-to-access-a-webpage">How to access a webpage</h2>
+
+<p>A web page is a document written in HTML, with references to various 
+resources (images, videos, etc.)</p>
+
+<p>However, the browser and the server exchange quite a lot before displaying 
+a webpage onto your screen. There are several round-trips of exchanges 
+before a single HTTP request is sent to the server.</p>
+
+<h3 id="the-tcp-handshake">The TCP Handshake</h3>
+
+<p>One of these exchanges correspond to the TCP handshake, ie. the way our
+browser establishes a <em>connection</em> to a remote server.</p>
+
+<p>This handshake goes a little bit like this:</p>
+<ul>
+  <li>Browser: “Hey server, I have something to ask you, do you mind?” [<code class="highlighter-rouge">SYN</code>]</li>
+  <li>Server: “Hey browser, I’m listening. What do you want?” [<code class="highlighter-rouge">SYN ACK</code>]</li>
+  <li>Browser: “Cool! I’ll tell you what I want” [<code class="highlighter-rouge">ACK</code>]</li>
+</ul>
+
+<div style="text-align: center">
+    <figure>
+        <a href="/assets/images/syn-ack.jpg">
+            <img src="/assets/images/syn-ack.jpg" alt="SYN ACK joke">  
+        </a>
+        <figcaption>I'll tell you what I want, what I really really want!</figcaption>
+    </figure>
+</div>
+
+<p>Once the browser has sent the last <code class="highlighter-rouge">ACK</code> segment, it can now start sending
+data to the server.</p>
+
+<p>Using the Transport Control Layer protocol ensures that the 
+exchange of data is now being done onto a reliable network.
+One a connection is established, TCP takes care of:</p>
+
+<ul>
+  <li>Checking that the data has not been altered during transit</li>
+  <li>Checking that the various segments are all here, and if not, supervises
+the retransmission of lost packets</li>
+  <li>Logically ordering the packets</li>
+  <li>De-duplicating the packets</li>
+</ul>
+
+<p>TCP effectively allows us to abstract away from the unreliability of the
+lower-layer protocols.</p>
+
+<h3 id="the-tls-handshake">The TLS Handshake</h3>
+
+<p>However, if the URL’s scheme is <code class="highlighter-rouge">https</code> (which it is, in our example), we
+need another exchange before the HTTP requests can begin. This exchange
+will ensure the <strong>encryption</strong> of all subsequent HTTP requests between 
+the client and the server, and <strong>authenticate</strong> the host.</p>
+
+<p>Here’s a broad picture of how this handshake works:</p>
+<ul>
+  <li>Browser: “Here’s the TLS version I support, and here are my favourite
+cipher suites” [<code class="highlighter-rouge">ClientHello</code>]</li>
+  <li>Server: “Okay so let’s use this TLS version, this cipher, and by the way, 
+here are my public certificate and my public encryption key” [<code class="highlighter-rouge">ServerHello</code>]</li>
+  <li>Browser: <em>checks the validity of the certificate</em> “Ok you’re good!”</li>
+  <li>Browser: “Here’s how we’ll decide on a private symmetric key for encryption”</li>
+  <li>Server: “Copy 5/5! Will now start using this key for encryption”</li>
+</ul>
+
+<p>This TLS handshake uses asymmetric encryption to agree on:</p>
+<ul>
+  <li>which version of TLS to use</li>
+  <li>the exchange of symmetric encryption key</li>
+  <li>the validity of the host’s certificate</li>
+  <li>the cipher suite used</li>
+</ul>
+
+<p>Once the TLS handshake is completed, all messages exchanged between the server
+and the browser are now encrypted.</p>
+
+<div style="text-align: center">
+    <figure>
+        <a href="/assets/images/matrix.gif">
+            <img src="/assets/images/matrix.gif" alt="Neo from the Matrix">  
+        </a>
+        <figcaption>There is no spoon</figcaption>
+    </figure>
+</div>
+
+<h3 id="the-http-request--response-cycle">The HTTP Request / Response cycle</h3>
+
+<p>“Okay”, the browser asks timidly, “am I good to send my HTTP request now?” - 
+Yes, dear browser, you can!</p>
+
+<p>The browser uses HTTP, a protocol designed for the communication between
+a browser and a server, to ask the server for a particular web page.</p>
+
+<p>The requests are sent in plaintext and would look like this:</p>
+
+<div class="language-http highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">GET</span> <span class="nn">/</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">twitter.com</span>
+<span class="s">[Other headers]</span>
+
+</code></pre></div></div>
+<p>The HTTP request features one mandatory header (<code class="highlighter-rouge">Host</code>) and ends with an empty
+line.</p>
+
+<p>The server receives the request, and responds, also in plain text:</p>
+
+<div class="language-http highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">200 OK
+</span></code></pre></div></div>
+<p>This status line (which indicates that the request was processed successfully)
+can be accompanied with optional headers and body, like the raw HTML that
+composed Twitter’s home page.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"fr"</span> <span class="na">data-scribe-reduced-action-queue=</span><span class="s">"true"</span><span class="nt">&gt;</span>
+
+<span class="nt">&lt;head&gt;</span>
+  <span class="c">&lt;!-- Rest of the page --&gt;</span>
+</code></pre></div></div>
+
+<p>If the HTTP response contains references to other resources (like images,
+fonts, or scripts), our browser automatically sends new HTTP requests to
+collect them. If these resources are hosted on a different domain than 
+the current one, the whole TCP / TLS process starts again for these new
+domains.</p>
+
+<p>Now that our browser has everything it needs, it parses the HTML, CSS
+and JavaScript files, and renders the web page. I’m still a newbie in 
+front-end so this part of the explanation will be for a future article 🥺</p>
+
+<hr>
+
+<h2 id="internet---better-than-magic">Internet - better than magic</h2>
+
+<div style="text-align: center">
+    <figure>
+        <a href="/assets/images/internet-surfing.gif">
+            <img src="/assets/images/internet-surfing.gif" alt="Surfer between internet memes">  
+        </a>
+        <figcaption>Here we are, surfing on the web!</figcaption>
+    </figure>
+</div>
+
+<p>Turns out: internet is <em>actually</em> a tangible thing that can be explained!</p>
+
+<p>But it’s still damn hard to do so.</p>
+
+    
+
+
+
+<div class="post-tags">
+  
+    
+    <a href="/tags#learning">
+    
+      <span class="icon">
+        <svg fill="#000000" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"></path>
+    <path d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z"></path>
+</svg>
+      </span> <span class="tag-name">Learning</span>
+    </a>
+  
+    
+    <a href="/tags#how-to">
+    
+      <span class="icon">
+        <svg fill="#000000" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"></path>
+    <path d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z"></path>
+</svg>
+      </span> <span class="tag-name">How-To</span>
+    </a>
+  
+    
+    <a href="/tags#launch-school">
+    
+      <span class="icon">
+        <svg fill="#000000" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"></path>
+    <path d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z"></path>
+</svg>
+      </span> <span class="tag-name">Launch School</span>
+    </a>
+  
+    
+    <a href="/tags#internet">
+    
+      <span class="icon">
+        <svg fill="#000000" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"></path>
+    <path d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z"></path>
+</svg>
+      </span> <span class="tag-name">Internet</span>
+    </a>
+  
+    
+    <a href="/tags#osi-model">
+    
+      <span class="icon">
+        <svg fill="#000000" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"></path>
+    <path d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z"></path>
+</svg>
+      </span> <span class="tag-name">OSI Model</span>
+    </a>
+  
+    
+    <a href="/tags#http">
+    
+      <span class="icon">
+        <svg fill="#000000" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"></path>
+    <path d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z"></path>
+</svg>
+      </span> <span class="tag-name">HTTP</span>
+    </a>
+  
+    
+    <a href="/tags#tcp">
+    
+      <span class="icon">
+        <svg fill="#000000" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"></path>
+    <path d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z"></path>
+</svg>
+      </span> <span class="tag-name">TCP</span>
+    </a>
+  
+    
+    <a href="/tags#ip">
+    
+      <span class="icon">
+        <svg fill="#000000" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"></path>
+    <path d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z"></path>
+</svg>
+      </span> <span class="tag-name">IP</span>
+    </a>
+  
+    
+    <a href="/tags#dns">
+    
+      <span class="icon">
+        <svg fill="#000000" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"></path>
+    <path d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z"></path>
+</svg>
+      </span> <span class="tag-name">DNS</span>
+    </a>
+  
+    
+    <a href="/tags#tls">
+    
+      <span class="icon">
+        <svg fill="#000000" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"></path>
+    <path d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z"></path>
+</svg>
+      </span> <span class="tag-name">TLS</span>
+    </a>
+  
+</div>
+    <div class="post-dates">
+  <!--<span class="post-date">Created: 03 Oct 2019</span>-->
+  <!--  &bull;-->
+  
+  <span class="post-date">Last Modified: 03 Oct 2019</span>
+ 
+ <!-- <span class="post-categories">-->
+ <!--   -->
+ <!--     &bull;-->
+ <!--     -->
+ <!--     -->
+ <!--       -->
+ <!--     -->
+ <!--       -->
+ <!--     -->
+ <!--       -->
+ <!--     -->
+ <!--       -->
+ <!--     -->
+ <!--       -->
+ <!--     -->
+ <!--       -->
+ <!--     -->
+ <!--       -->
+ <!--     -->
+ <!--       -->
+ <!--     -->
+ <!--       -->
+ <!--     -->
+ <!--       -->
+ <!--     -->
+ <!--       -->
+ <!--     -->
+ <!--       -->
+ <!--     -->
+
+ <!--     -->
+ <!--       Networking-->
+ <!--     -->
+ <!---->
+ <!--</span>-->
+</div>
+  </div>
+  
+  <hr>
+<script src="https://utteranc.es/client.js" repo="jsiny/jsiny.github.io" issue-term="pathname" label=":speech_balloon: Comments" theme="github-light" crossorigin="anonymous" async>
+</script>
+
+  <div class="relatedPosts">
+<hr>
+<h4>You May Also Enjoy</h4>
+
+
+
+
+
+  
+
+    
+    
+
+    
+
+    
+
+  
+
+    
+    
+
+    
+
+    
+      <div>
+      <h5><a href="/ampersand-ruby-closures">What's up with the &amp; (ampersand) in Ruby closures?</a></h5>
+      </div>
+      
+      
+    
+
+  
+
+    
+    
+
+    
+
+    
+      <div>
+      <h5><a href="/preparing-launch-school-109-oral-assessment">How I Prepared for Launch School's 109 Oral Assessment</a></h5>
+      </div>
+      
+      
+    
+
+  
+
+    
+    
+
+    
+
+    
+      <div>
+      <h5><a href="/ruby-equality">Making Sense of Equality in Ruby</a></h5>
+      </div>
+      
+      
+    
+
+  
+
+    
+    
+
+    
+
+    
+      <div>
+      <h5><a href="/codewars-kata-launch-school-109-oral-assessment">My Favourite Codewars Kata to Prepare for Launch School's 109 Oral Assessment</a></h5>
+      </div>
+      
+      
+        
+
+</div>
+</div>
+
+    </main>
+
+    <!-- Optional footer content -->
+
+  </body>
+</html>

@@ -1,4 +1,397 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en_US"><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en_US" /><updated>2019-09-09T17:38:31+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Juliette Sinibardy</title><subtitle>Pending Programmer&lt;br&gt; ███░░░░░░░ 30%</subtitle><author><name>Juliette Sinibardy</name></author><entry><title type="html">What’s up with the &amp;amp; (ampersand) in Ruby closures?</title><link href="http://localhost:4000/ampersand-ruby-closures" rel="alternate" type="text/html" title="What's up with the &amp; (ampersand) in Ruby closures?" /><published>2019-09-09T08:19:00+02:00</published><updated>2019-09-09T17:14:00+02:00</updated><id>http://localhost:4000/ampersand-&amp;-ruby-closures</id><content type="html" xml:base="http://localhost:4000/ampersand-ruby-closures">&lt;p&gt;Quite surprisingly, the following Ruby program is correct:&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en_US"><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en_US" /><updated>2019-10-03T17:28:10+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Juliette Sinibardy</title><subtitle>Pending Programmer&lt;br&gt; ███░░░░░░░ 30%</subtitle><author><name>Juliette Sinibardy</name></author><entry><title type="html">How does the Internet work?</title><link href="http://localhost:4000/how-internet-works" rel="alternate" type="text/html" title="How does the Internet work?" /><published>2019-10-03T11:06:00+02:00</published><updated>2019-10-03T17:27:00+02:00</updated><id>http://localhost:4000/how-does-the-internet-work</id><content type="html" xml:base="http://localhost:4000/how-internet-works">&lt;p&gt;Being born in the 90s, I’ve lived most of my life in a post-Internet world. I
+do remember the sweet sound of 56 kb/s modem, but most of my browsing time
+has been &lt;em&gt;after&lt;/em&gt; the dial-up era.&lt;/p&gt;
+
+&lt;p&gt;Internet, for my generation, is just an inherent part of life. It’s kind
+of hard to imagine what it was like &lt;em&gt;before&lt;/em&gt; (did people actually read books?),
+and we never pause to think:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Wait, how does the Internet even work?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;So &lt;em&gt;that&lt;/em&gt;’s exactly the subject of this post. Buckle up your
+seatbelt, we’re going deep into networking!&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;div style=&quot;text-align: center&quot;&gt;
+    &lt;figure&gt;
+        &lt;a href=&quot;/assets/images/internet.jpg&quot;&gt;
+            &lt;img src=&quot;/assets/images/internet.jpg&quot; alt=&quot;90s Internet book&quot; /&gt;  
+        &lt;/a&gt;
+        &lt;figcaption&gt;Welcome to the Internet! I'll be your guide&lt;/figcaption&gt;
+    &lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;p&gt;We’ll examine two aspects of the Internet:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;how data is &lt;em&gt;transferred&lt;/em&gt; over the network&lt;/li&gt;
+  &lt;li&gt;how users can &lt;em&gt;access a webpage&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;Table of Contents:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#how-data-is-transferred-over-a-network&quot; id=&quot;markdown-toc-how-data-is-transferred-over-a-network&quot;&gt;How data is transferred over a network&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#url-parsing&quot; id=&quot;markdown-toc-url-parsing&quot;&gt;URL Parsing&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#dns-lookup&quot; id=&quot;markdown-toc-dns-lookup&quot;&gt;DNS Lookup&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#encapsulating-the-request&quot; id=&quot;markdown-toc-encapsulating-the-request&quot;&gt;Encapsulating the Request&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#travelling-on-the-network&quot; id=&quot;markdown-toc-travelling-on-the-network&quot;&gt;Travelling on the network&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#receiving-the-request&quot; id=&quot;markdown-toc-receiving-the-request&quot;&gt;Receiving the Request&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#how-to-access-a-webpage&quot; id=&quot;markdown-toc-how-to-access-a-webpage&quot;&gt;How to access a webpage&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#the-tcp-handshake&quot; id=&quot;markdown-toc-the-tcp-handshake&quot;&gt;The TCP Handshake&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#the-tls-handshake&quot; id=&quot;markdown-toc-the-tls-handshake&quot;&gt;The TLS Handshake&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#the-http-request--response-cycle&quot; id=&quot;markdown-toc-the-http-request--response-cycle&quot;&gt;The HTTP Request / Response cycle&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#internet---better-than-magic&quot; id=&quot;markdown-toc-internet---better-than-magic&quot;&gt;Internet - better than magic&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;how-data-is-transferred-over-a-network&quot;&gt;How data is transferred over a network&lt;/h2&gt;
+
+&lt;p&gt;What happens when you type a URL into your browser?&lt;/p&gt;
+
+&lt;p&gt;Let’s assume you want to reach Twitter, and typed &lt;code class=&quot;highlighter-rouge&quot;&gt;https://twitter.com/home&lt;/code&gt;
+into your browser.&lt;/p&gt;
+
+&lt;h3 id=&quot;url-parsing&quot;&gt;URL Parsing&lt;/h3&gt;
+
+&lt;p&gt;The first thing your browser does is &lt;em&gt;parse&lt;/em&gt; the URL, in order to extract
+its components:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;the &lt;strong&gt;scheme&lt;/strong&gt; (&lt;code class=&quot;highlighter-rouge&quot;&gt;https&lt;/code&gt;), which informs the browser that we want to use 
+the HyperText Transfor Protocol Secure to exchange data with the server;&lt;/li&gt;
+  &lt;li&gt;the &lt;strong&gt;host&lt;/strong&gt; (&lt;code class=&quot;highlighter-rouge&quot;&gt;twitter.com&lt;/code&gt;), which is the computer that &lt;em&gt;hosts&lt;/em&gt; the 
+resources of this website (eg. the HTML, the pictures, etc.);&lt;/li&gt;
+  &lt;li&gt;the &lt;strong&gt;path&lt;/strong&gt; (&lt;code class=&quot;highlighter-rouge&quot;&gt;/home&lt;/code&gt;), which corresponds to the particular resource we 
+want to access.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;dns-lookup&quot;&gt;DNS Lookup&lt;/h3&gt;
+
+&lt;p&gt;The domain name (&lt;code class=&quot;highlighter-rouge&quot;&gt;twitter.com&lt;/code&gt;) typed is nothing more than a human-friendly name
+that refers to a server somewhere on the Internet.&lt;/p&gt;
+
+&lt;p&gt;In order for data to be transferred to this server, we need to know
+its &lt;strong&gt;IP address&lt;/strong&gt;. IP addresses (v4) are sets of 4 numbers (from 0 to 255)
+separated by dots &lt;code class=&quot;highlighter-rouge&quot;&gt;.&lt;/code&gt;, like &lt;code class=&quot;highlighter-rouge&quot;&gt;104.244.42.193&lt;/code&gt;. This logicial address is &lt;em&gt;unique&lt;/em&gt;
+and allows to locate a device on the internet.&lt;/p&gt;
+
+&lt;p&gt;As IP addresses would be hard to remember for humans with limited memory
+slots, we use domain names to cover up this complexity. But how do we convert
+a domain name into an IP address?&lt;/p&gt;
+
+&lt;p&gt;That’s where &lt;strong&gt;DNS&lt;/strong&gt; (Domain Name System) comes in! The DNS is a distributed
+database which translates a domain name into an IP address.&lt;/p&gt;
+
+&lt;p&gt;When you typed &lt;code class=&quot;highlighter-rouge&quot;&gt;https://twitter.com/home&lt;/code&gt; into your browser, it first checked
+whether &lt;code class=&quot;highlighter-rouge&quot;&gt;twitter.com&lt;/code&gt; was already available in its cache (from a previous
+browsing session). If it wasn’t, the browser used its DNS provider in order 
+to find the IP address associated with the domain name (and cached the answer
+for later use).&lt;/p&gt;
+
+&lt;h3 id=&quot;encapsulating-the-request&quot;&gt;Encapsulating the Request&lt;/h3&gt;
+
+&lt;p&gt;As we are in possession of &lt;code class=&quot;highlighter-rouge&quot;&gt;twitter.com&lt;/code&gt;’s IP address, we are now ready to
+send a request to the server!&lt;/p&gt;
+
+&lt;p&gt;The browser thus takes the server’s IP address and combines it with the
+port number (optional field from the URL) to create a &lt;strong&gt;socket&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;This request is then passed through several layers where the data is further
+encapsulated.&lt;/p&gt;
+
+&lt;div style=&quot;text-align: center&quot;&gt;
+    &lt;figure&gt;
+        &lt;a href=&quot;/assets/images/wrapped-cat.gif&quot;&gt;
+            &lt;img src=&quot;/assets/images/wrapped-cat.gif&quot; alt=&quot;Cat wrapped in Chritsmas wrapping paper&quot; /&gt;  
+        &lt;/a&gt;
+        &lt;figcaption&gt;Example of a cat being encapsulated, with a nice bow header&lt;/figcaption&gt;
+    &lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;p&gt;First, the request is passed to the &lt;strong&gt;Transport Layer&lt;/strong&gt;, where a TCP
+segment (or UDP datagram) is crafted. This segment now has a &lt;em&gt;header&lt;/em&gt;, which
+includes the following information:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;the destination port (which defaults to 80 for HTTP and 443 for HTTPS)&lt;/li&gt;
+  &lt;li&gt;the source port (chosen from the kernel’s available range)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;These network ports is what allows two specific processes on two different
+devices to communicate. A device likely has multiple processes running
+at the same time (eg. a browser connected to multiple websites, a Spotify
+application running in the background, your email client, etc.), with
+each having a special dedicated network port.&lt;/p&gt;
+
+&lt;p&gt;Second, the segment is sent to the &lt;strong&gt;Network Layer&lt;/strong&gt;, where it is wrapped
+with additional headers containing:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;the destination IP address (obtained through the DNS mapping of the URL)&lt;/li&gt;
+  &lt;li&gt;the source IP address (your device’s IP address)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The segment is now an IP packet.&lt;/p&gt;
+
+&lt;p&gt;Third, the packet is sent to the &lt;strong&gt;Link Layer&lt;/strong&gt;, where another header is added,
+containing:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;the source MAC address (of the device’s NIC)&lt;/li&gt;
+  &lt;li&gt;the destination MAC address (at this point being the exit gateway’s address,
+ie. the local router’s)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Fourth, the &lt;strong&gt;Physical Layer&lt;/strong&gt;. The frame is converted to binary data and sent
+through the physicial medium (eg. Ethernet cable, optic fiber, radio waves)
+linking your device to the rest of the network.&lt;/p&gt;
+
+&lt;p&gt;At this point, the frame is now ready for the great travel throughout the
+unknown network beyond your local router!&lt;/p&gt;
+
+&lt;div style=&quot;text-align: center&quot;&gt;
+    &lt;figure&gt;
+        &lt;a href=&quot;/assets/images/adventure.gif&quot;&gt;
+            &lt;img src=&quot;/assets/images/adventure.gif&quot; alt=&quot;Adventure through the unknown&quot; /&gt;  
+        &lt;/a&gt;
+        &lt;figcaption&gt;Good luck tiny packet!&lt;/figcaption&gt;
+    &lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;travelling-on-the-network&quot;&gt;Travelling on the network&lt;/h3&gt;
+
+&lt;p&gt;The internet is a vast &lt;em&gt;network of networks&lt;/em&gt;, which connects your home local
+network to an infinite information sphere (the &lt;em&gt;Web&lt;/em&gt;).&lt;/p&gt;
+
+&lt;p&gt;Once the packet leaves your local network through the subnet’s router, it
+needs to find its way up to its destination IP (featured within its Network
+Layer header).&lt;/p&gt;
+
+&lt;p&gt;On its way, the packet will encounter &lt;strong&gt;routers&lt;/strong&gt;, which will extract its 
+destination IP and orient it to the next relevant network hop. The route
+taken by the packet is not necessarily the &lt;em&gt;shortest&lt;/em&gt;: among other things,
+routers take into account the network congestion when deciding how to
+route packets.&lt;/p&gt;
+
+&lt;p&gt;If the packet errs for too long on the network (ie. when its Time-to-Live
+countdown equals 0), it will be dropped mercilessly.&lt;/p&gt;
+
+&lt;p&gt;Additionally, if a router is overflowed with packets, it will not hesitate
+to shamelessly abandon the next packets.&lt;/p&gt;
+
+&lt;div style=&quot;text-align: center&quot;&gt;
+    &lt;figure&gt;
+        &lt;a href=&quot;/assets/images/computer-destruction.gif&quot;&gt;
+            &lt;img src=&quot;/assets/images/computer-destruction.gif&quot; alt=&quot;IT guy destroying a computer with a hammer&quot; /&gt;  
+        &lt;/a&gt;
+        &lt;figcaption&gt;Accurate depiction of a router murdering an IP packet&lt;/figcaption&gt;
+    &lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Being a packet on the internet is tough.&lt;/p&gt;
+
+&lt;p&gt;All this also means that the internet is essentially an &lt;em&gt;unreliable&lt;/em&gt; network.
+Fortunately, we’ve invented protocols to abstract away from this 
+unreliability: this is the role of the Transport Control Protocol (see below).&lt;/p&gt;
+
+&lt;p&gt;Let’s assume here that our packet has a safe travel and reaches its destination
+server (congrats tiny packet!)&lt;/p&gt;
+
+&lt;h3 id=&quot;receiving-the-request&quot;&gt;Receiving the Request&lt;/h3&gt;
+
+&lt;p&gt;When the packet gets to the destination host, it has to go through the same
+encapsulation layers, but in reverse order, in order to strip off all the
+header information that was attached by the sender for a safe navigation
+on the internet seas.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;The Physical Layer receives a frame containing the packet, and sends it to
+the Link Layer.&lt;/li&gt;
+  &lt;li&gt;The Link Layer verifies that the frame is intact (through its checksum), and
+removes the frame header, before sending it to the Internet Layer.&lt;/li&gt;
+  &lt;li&gt;The Internet Layer assembles the fragmented packets into the original
+datagram. It also removes the packet header before sending the datagram
+over to the Transport Layer.&lt;/li&gt;
+  &lt;li&gt;The Transport Layer (in our example, TCP) uses the destination port
+(contained in the header) to know to which application to route
+the request. It removes the Transport headers and sends the segment to the
+Application Layer.&lt;/li&gt;
+  &lt;li&gt;The Application Layer receives the segment and performs the requested
+operation.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div style=&quot;text-align: center&quot;&gt;
+    &lt;figure&gt;
+        &lt;a href=&quot;/assets/images/phew.gif&quot;&gt;
+            &lt;img src=&quot;/assets/images/phew.gif&quot; alt=&quot;Jeff Goldblum sighing&quot; /&gt;  
+        &lt;/a&gt;
+        &lt;figcaption&gt;Our tiny packet made it all the way!&lt;/figcaption&gt;
+    &lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Our original request has now arrived to the server. However, that doesn’t
+explain &lt;em&gt;how&lt;/em&gt; our browser communicates with a remote server. For all we know,
+our request could have been immediately dropped by the server because
+it didn’t speak &lt;em&gt;the same language&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;So - how does our browser communicate with a web server? To answer this
+question, we will now explore HTTP, the Web Protocol.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;how-to-access-a-webpage&quot;&gt;How to access a webpage&lt;/h2&gt;
+
+&lt;p&gt;A web page is a document written in HTML, with references to various 
+resources (images, videos, etc.)&lt;/p&gt;
+
+&lt;p&gt;However, the browser and the server exchange quite a lot before displaying 
+a webpage onto your screen. There are several round-trips of exchanges 
+before a single HTTP request is sent to the server.&lt;/p&gt;
+
+&lt;h3 id=&quot;the-tcp-handshake&quot;&gt;The TCP Handshake&lt;/h3&gt;
+
+&lt;p&gt;One of these exchanges correspond to the TCP handshake, ie. the way our
+browser establishes a &lt;em&gt;connection&lt;/em&gt; to a remote server.&lt;/p&gt;
+
+&lt;p&gt;This handshake goes a little bit like this:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Browser: “Hey server, I have something to ask you, do you mind?” [&lt;code class=&quot;highlighter-rouge&quot;&gt;SYN&lt;/code&gt;]&lt;/li&gt;
+  &lt;li&gt;Server: “Hey browser, I’m listening. What do you want?” [&lt;code class=&quot;highlighter-rouge&quot;&gt;SYN ACK&lt;/code&gt;]&lt;/li&gt;
+  &lt;li&gt;Browser: “Cool! I’ll tell you what I want” [&lt;code class=&quot;highlighter-rouge&quot;&gt;ACK&lt;/code&gt;]&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div style=&quot;text-align: center&quot;&gt;
+    &lt;figure&gt;
+        &lt;a href=&quot;/assets/images/syn-ack.jpg&quot;&gt;
+            &lt;img src=&quot;/assets/images/syn-ack.jpg&quot; alt=&quot;SYN ACK joke&quot; /&gt;  
+        &lt;/a&gt;
+        &lt;figcaption&gt;I'll tell you what I want, what I really really want!&lt;/figcaption&gt;
+    &lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Once the browser has sent the last &lt;code class=&quot;highlighter-rouge&quot;&gt;ACK&lt;/code&gt; segment, it can now start sending
+data to the server.&lt;/p&gt;
+
+&lt;p&gt;Using the Transport Control Layer protocol ensures that the 
+exchange of data is now being done onto a reliable network.
+One a connection is established, TCP takes care of:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Checking that the data has not been altered during transit&lt;/li&gt;
+  &lt;li&gt;Checking that the various segments are all here, and if not, supervises
+the retransmission of lost packets&lt;/li&gt;
+  &lt;li&gt;Logically ordering the packets&lt;/li&gt;
+  &lt;li&gt;De-duplicating the packets&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;TCP effectively allows us to abstract away from the unreliability of the
+lower-layer protocols.&lt;/p&gt;
+
+&lt;h3 id=&quot;the-tls-handshake&quot;&gt;The TLS Handshake&lt;/h3&gt;
+
+&lt;p&gt;However, if the URL’s scheme is &lt;code class=&quot;highlighter-rouge&quot;&gt;https&lt;/code&gt; (which it is, in our example), we
+need another exchange before the HTTP requests can begin. This exchange
+will ensure the &lt;strong&gt;encryption&lt;/strong&gt; of all subsequent HTTP requests between 
+the client and the server, and &lt;strong&gt;authenticate&lt;/strong&gt; the host.&lt;/p&gt;
+
+&lt;p&gt;Here’s a broad picture of how this handshake works:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Browser: “Here’s the TLS version I support, and here are my favourite
+cipher suites” [&lt;code class=&quot;highlighter-rouge&quot;&gt;ClientHello&lt;/code&gt;]&lt;/li&gt;
+  &lt;li&gt;Server: “Okay so let’s use this TLS version, this cipher, and by the way, 
+here are my public certificate and my public encryption key” [&lt;code class=&quot;highlighter-rouge&quot;&gt;ServerHello&lt;/code&gt;]&lt;/li&gt;
+  &lt;li&gt;Browser: &lt;em&gt;checks the validity of the certificate&lt;/em&gt; “Ok you’re good!”&lt;/li&gt;
+  &lt;li&gt;Browser: “Here’s how we’ll decide on a private symmetric key for encryption”&lt;/li&gt;
+  &lt;li&gt;Server: “Copy 5/5! Will now start using this key for encryption”&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This TLS handshake uses asymmetric encryption to agree on:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;which version of TLS to use&lt;/li&gt;
+  &lt;li&gt;the exchange of symmetric encryption key&lt;/li&gt;
+  &lt;li&gt;the validity of the host’s certificate&lt;/li&gt;
+  &lt;li&gt;the cipher suite used&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Once the TLS handshake is completed, all messages exchanged between the server
+and the browser are now encrypted.&lt;/p&gt;
+
+&lt;div style=&quot;text-align: center&quot;&gt;
+    &lt;figure&gt;
+        &lt;a href=&quot;/assets/images/matrix.gif&quot;&gt;
+            &lt;img src=&quot;/assets/images/matrix.gif&quot; alt=&quot;Neo from the Matrix&quot; /&gt;  
+        &lt;/a&gt;
+        &lt;figcaption&gt;There is no spoon&lt;/figcaption&gt;
+    &lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;the-http-request--response-cycle&quot;&gt;The HTTP Request / Response cycle&lt;/h3&gt;
+
+&lt;p&gt;“Okay”, the browser asks timidly, “am I good to send my HTTP request now?” - 
+Yes, dear browser, you can!&lt;/p&gt;
+
+&lt;p&gt;The browser uses HTTP, a protocol designed for the communication between
+a browser and a server, to ask the server for a particular web page.&lt;/p&gt;
+
+&lt;p&gt;The requests are sent in plaintext and would look like this:&lt;/p&gt;
+
+&lt;div class=&quot;language-http highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nf&quot;&gt;GET&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;HTTP&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1.1&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;Host&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;twitter.com&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;[Other headers]&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;The HTTP request features one mandatory header (&lt;code class=&quot;highlighter-rouge&quot;&gt;Host&lt;/code&gt;) and ends with an empty
+line.&lt;/p&gt;
+
+&lt;p&gt;The server receives the request, and responds, also in plain text:&lt;/p&gt;
+
+&lt;div class=&quot;language-http highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;err&quot;&gt;200 OK
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;This status line (which indicates that the request was processed successfully)
+can be accompanied with optional headers and body, like the raw HTML that
+composed Twitter’s home page.&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;lang=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;fr&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;data-scribe-reduced-action-queue=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;true&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- Rest of the page --&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;If the HTTP response contains references to other resources (like images,
+fonts, or scripts), our browser automatically sends new HTTP requests to
+collect them. If these resources are hosted on a different domain than 
+the current one, the whole TCP / TLS process starts again for these new
+domains.&lt;/p&gt;
+
+&lt;p&gt;Now that our browser has everything it needs, it parses the HTML, CSS
+and JavaScript files, and renders the web page. I’m still a newbie in 
+front-end so this part of the explanation will be for a future article 🥺&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;internet---better-than-magic&quot;&gt;Internet - better than magic&lt;/h2&gt;
+
+&lt;div style=&quot;text-align: center&quot;&gt;
+    &lt;figure&gt;
+        &lt;a href=&quot;/assets/images/internet-surfing.gif&quot;&gt;
+            &lt;img src=&quot;/assets/images/internet-surfing.gif&quot; alt=&quot;Surfer between internet memes&quot; /&gt;  
+        &lt;/a&gt;
+        &lt;figcaption&gt;Here we are, surfing on the web!&lt;/figcaption&gt;
+    &lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Turns out: internet is &lt;em&gt;actually&lt;/em&gt; a tangible thing that can be explained!&lt;/p&gt;
+
+&lt;p&gt;But it’s still damn hard to do so.&lt;/p&gt;</content><author><name>Juliette Sinibardy</name></author><category term="Learning" /><category term="How-To" /><category term="Launch School" /><category term="Internet" /><category term="OSI Model" /><category term="HTTP" /><category term="TCP" /><category term="IP" /><category term="DNS" /><category term="TLS" /><summary type="html">Being born in the 90s, I’ve lived most of my life in a post-Internet world. I do remember the sweet sound of 56 kb/s modem, but most of my browsing time has been after the dial-up era. Internet, for my generation, is just an inherent part of life. It’s kind of hard to imagine what it was like before (did people actually read books?), and we never pause to think: Wait, how does the Internet even work? So that’s exactly the subject of this post. Buckle up your seatbelt, we’re going deep into networking!</summary></entry><entry><title type="html">What’s up with the &amp;amp; (ampersand) in Ruby closures?</title><link href="http://localhost:4000/ampersand-ruby-closures" rel="alternate" type="text/html" title="What's up with the &amp; (ampersand) in Ruby closures?" /><published>2019-09-09T08:19:00+02:00</published><updated>2019-09-09T17:14:00+02:00</updated><id>http://localhost:4000/ampersand-&amp;-ruby-closures</id><content type="html" xml:base="http://localhost:4000/ampersand-ruby-closures">&lt;p&gt;Quite surprisingly, the following Ruby program is correct:&lt;/p&gt;
 
 &lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;first_method&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;block&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
   &lt;span class=&quot;n&quot;&gt;second_method&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;block&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
