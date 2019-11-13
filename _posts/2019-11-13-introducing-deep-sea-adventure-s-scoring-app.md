@@ -4,8 +4,8 @@ title: Introducing Deep Sea Adventure's Scoring App
 date: 2019-11-13 09:42 +0100
 last_modified_at: 2019-11-13 11:23 +0100
 permalink: deep-sea-adventure
-description: This app is a project built in Ruby / Sinatra, dedicated to be a assistant to the board game Deep Sea Adventure
-image: 
+description: This app is a project built in Ruby / Sinatra, dedicated to be an assistant to the board game Deep Sea Adventure
+image: /assets/images/end.png
 published: true
 sitemap: true
 excerpt_separator: "<!--more-->"
