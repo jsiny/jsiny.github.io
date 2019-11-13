@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en_US"><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en_US" /><updated>2019-11-13T10:41:25+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Juliette Sinibardy</title><subtitle>Pending Programmer&lt;br&gt; ███░░░░░░░ 30%</subtitle><author><name>Juliette Sinibardy</name></author><entry><title type="html">Introducing Deep Sea Adventure’s Scoring App</title><link href="http://localhost:4000/deep-sea-adventure" rel="alternate" type="text/html" title="Introducing Deep Sea Adventure's Scoring App" /><published>2019-11-13T09:42:00+01:00</published><updated>2019-11-13T09:42:00+01:00</updated><id>http://localhost:4000/introducing-deep-sea-adventure-s-scoring-app</id><content type="html" xml:base="http://localhost:4000/deep-sea-adventure">&lt;p&gt;This &lt;a href=&quot;https://deep-sea-adventure.herokuapp.com/&quot;&gt;website&lt;/a&gt; is a &lt;strong&gt;scoring tool&lt;/strong&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en_US"><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en_US" /><updated>2019-11-13T11:24:24+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Juliette Sinibardy</title><subtitle>Pending Programmer&lt;br&gt; ███░░░░░░░ 30%</subtitle><author><name>Juliette Sinibardy</name></author><entry><title type="html">Introducing Deep Sea Adventure’s Scoring App</title><link href="http://localhost:4000/deep-sea-adventure" rel="alternate" type="text/html" title="Introducing Deep Sea Adventure's Scoring App" /><published>2019-11-13T09:42:00+01:00</published><updated>2019-11-13T11:23:00+01:00</updated><id>http://localhost:4000/introducing-deep-sea-adventure-s-scoring-app</id><content type="html" xml:base="http://localhost:4000/deep-sea-adventure">&lt;p&gt;This &lt;a href=&quot;https://deep-sea-adventure.herokuapp.com/&quot;&gt;website&lt;/a&gt; is a &lt;strong&gt;scoring tool&lt;/strong&gt;
 dedicated to the board game
 &lt;a href=&quot;https://oinkgms.com/en/deep-sea-adventure&quot;&gt;Deep Sea Adventure&lt;/a&gt; edited by
 &lt;a href=&quot;https://oinkgms.com/en/&quot;&gt;Oink Games&lt;/a&gt;.&lt;/p&gt;
@@ -22,6 +22,13 @@ project, and I’m very proud of it.&lt;/p&gt;
 &lt;!--more--&gt;
 
 &lt;hr /&gt;
+
+&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#tech-stack&quot; id=&quot;markdown-toc-tech-stack&quot;&gt;Tech Stack&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#challenges&quot; id=&quot;markdown-toc-challenges&quot;&gt;Challenges&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#motivation&quot; id=&quot;markdown-toc-motivation&quot;&gt;Motivation&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#screenshots&quot; id=&quot;markdown-toc-screenshots&quot;&gt;Screenshots&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h2 id=&quot;tech-stack&quot;&gt;Tech Stack&lt;/h2&gt;
 
@@ -81,8 +88,66 @@ the best practices.&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;I had to learn the basics of front-end and Bootstrap to go through it&lt;/li&gt;
   &lt;li&gt;I wanted to build an application &lt;em&gt;with no database and log-in system&lt;/em&gt; so
-instead, I extensively used session storage&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Juliette Sinibardy</name></author><category term="Ruby" /><category term="Sinatra" /><category term="Bootstrap" /><category term="Heroku" /><category term="Travis CI" /><category term="Minitest" /><category term="Project" /><category term="Learning" /><category term="Deep Sea Adventure" /><category term="Game" /><summary type="html">This website is a scoring tool dedicated to the board game Deep Sea Adventure edited by Oink Games. Its goal is to provide players a reliable way to compute the oxygen decrease during a round. It’s meant to be used side by side with the board game, either on a mobile or computer. After 6 months of learning, this project is my first big, entirely personal project, and I’m very proud of it. Visit the website See on Github</summary></entry><entry><title type="html">How does the Internet work?</title><link href="http://localhost:4000/how-internet-works" rel="alternate" type="text/html" title="How does the Internet work?" /><published>2019-10-03T11:06:00+02:00</published><updated>2019-10-03T19:50:00+02:00</updated><id>http://localhost:4000/how-does-the-internet-work</id><content type="html" xml:base="http://localhost:4000/how-internet-works">&lt;p&gt;Being born in the 90s, I’ve lived most of my life in a post-Internet world. I
+instead, I extensively used session storage to persist user data&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Why did I choose to steer clear of login and databases?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Mainly because I think that most users find it tiresome to go through a
+registration process for almost every Internet service. A “plug and play”
+approach is much nicer instead.&lt;/p&gt;
+
+&lt;p&gt;Plus, in this situation, using session storage worked pretty well because:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Most games last less than 1 hour so sessions expiring was not a concern&lt;/li&gt;
+  &lt;li&gt;Even though several players could want to keep score, it feels acceptable
+that they use only one player’s device.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;motivation&quot;&gt;Motivation&lt;/h2&gt;
+
+&lt;p&gt;I’ve chosen to build this app mostly because I like games but dislike
+arguing over a messy count score.&lt;/p&gt;
+
+&lt;p&gt;In Deep Sea Adventure, players dive into the deep ocean looking for treasures.
+All divers share the same oxygen tank, and each treasure picked up weighs down
+the diver and increases its oxygen intake. All divers must be back into the
+submarine before the oxygen tank becomes empty. As such, it is critical to
+accurately monitor the available oxygen. (&lt;a href=&quot;https://oinkgms.com/en/deep-sea-adventure&quot;&gt;More on the game’s rules&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;However, experience shows that it can be difficult to accurately compute the
+available oxygen in a quick game setup, and that arguments over which player
+should have drowned tend to ruin the fun. This is where this Scoring App comes
+handy!&lt;/p&gt;
+
+&lt;h2 id=&quot;screenshots&quot;&gt;Screenshots&lt;/h2&gt;
+
+&lt;div style=&quot;text-align: center&quot;&gt;
+    &lt;figure&gt;
+        &lt;a href=&quot;/assets/images/player_turn.png&quot;&gt;
+            &lt;img src=&quot;/assets/images/player_turn.png&quot; alt=&quot;Deep Sea Adventure - Player's turn&quot; /&gt;  
+        &lt;/a&gt;
+        &lt;figcaption&gt;The app records the choices made by the player and displays the available oxygen supply&lt;/figcaption&gt;
+    &lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;div style=&quot;text-align: center&quot;&gt;
+    &lt;figure&gt;
+        &lt;a href=&quot;/assets/images/score.png&quot;&gt;
+            &lt;img src=&quot;/assets/images/score.png&quot; alt=&quot;Deep Sea Adventure - Score&quot; /&gt;  
+        &lt;/a&gt;
+        &lt;figcaption&gt;At the end of the round, players who made it back to the submarine count their treasures&lt;/figcaption&gt;
+    &lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;div style=&quot;text-align: center&quot;&gt;
+    &lt;figure&gt;
+        &lt;a href=&quot;/assets/images/end.png&quot;&gt;
+            &lt;img src=&quot;/assets/images/end.png&quot; alt=&quot;Deep Sea Adventure - Score&quot; /&gt;  
+        &lt;/a&gt;
+        &lt;figcaption&gt;After 3 rounds, the app computes the scoreboard&lt;/figcaption&gt;
+    &lt;/figure&gt;
+&lt;/div&gt;</content><author><name>Juliette Sinibardy</name></author><category term="Ruby" /><category term="Sinatra" /><category term="Bootstrap" /><category term="Heroku" /><category term="Travis CI" /><category term="Minitest" /><category term="Project" /><category term="Learning" /><category term="Deep Sea Adventure" /><category term="Game" /><summary type="html">This website is a scoring tool dedicated to the board game Deep Sea Adventure edited by Oink Games. Its goal is to provide players a reliable way to compute the oxygen decrease during a round. It’s meant to be used side by side with the board game, either on a mobile or computer. After 6 months of learning, this project is my first big, entirely personal project, and I’m very proud of it. Visit the website See on Github</summary></entry><entry><title type="html">How does the Internet work?</title><link href="http://localhost:4000/how-internet-works" rel="alternate" type="text/html" title="How does the Internet work?" /><published>2019-10-03T11:06:00+02:00</published><updated>2019-10-03T19:50:00+02:00</updated><id>http://localhost:4000/how-does-the-internet-work</id><content type="html" xml:base="http://localhost:4000/how-internet-works">&lt;p&gt;Being born in the 90s, I’ve lived most of my life in a post-Internet world. I
 do remember the sweet sound of 56 kb/s modem, but most of my browsing time
 has been &lt;em&gt;after&lt;/em&gt; the dial-up era.&lt;/p&gt;
 

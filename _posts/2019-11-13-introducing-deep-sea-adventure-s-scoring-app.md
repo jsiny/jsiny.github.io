@@ -2,9 +2,9 @@
 layout: post
 title: Introducing Deep Sea Adventure's Scoring App
 date: 2019-11-13 09:42 +0100
-last_modified_at: 
+last_modified_at: 2019-11-13 11:23 +0100
 permalink: deep-sea-adventure
-description: 
+description: This app is a project built in Ruby / Sinatra, dedicated to be a assistant to the board game Deep Sea Adventure
 image: 
 published: true
 sitemap: true
@@ -40,6 +40,8 @@ project, and I'm very proud of it.
 <!--more--> 
 
 <hr>
+* TOC
+{:toc}
 
 ## Tech Stack
 
@@ -94,6 +96,45 @@ the best practices.
 Through this project, I've faced two main challenges:
 * I had to learn the basics of front-end and Bootstrap to go through it
 * I wanted to build an application *with no database and log-in system* so
-instead, I extensively used session storage
+instead, I extensively used session storage to persist user data
 
+**Why did I choose to steer clear of login and databases?**
 
+Mainly because I think that most users find it tiresome to go through a
+registration process for almost every Internet service. A "plug and play"
+approach is much nicer instead.
+
+Plus, in this situation, using session storage worked pretty well because:
+* Most games last less than 1 hour so sessions expiring was not a concern
+* Even though several players could want to keep score, it feels acceptable
+that they use only one player's device.
+
+## Motivation
+
+I've chosen to build this app mostly because I like games but dislike
+arguing over a messy count score.
+
+In Deep Sea Adventure, players dive into the deep ocean looking for treasures.
+All divers share the same oxygen tank, and each treasure picked up weighs down
+the diver and increases its oxygen intake. All divers must be back into the
+submarine before the oxygen tank becomes empty. As such, it is critical to
+accurately monitor the available oxygen. ([More on the game's rules](https://oinkgms.com/en/deep-sea-adventure))
+
+However, experience shows that it can be difficult to accurately compute the
+available oxygen in a quick game setup, and that arguments over which player
+should have drowned tend to ruin the fun. This is where this Scoring App comes
+handy!
+
+## Screenshots
+
+{% include images.html file="player_turn.png" 
+  caption="The app records the choices made by the player and displays the available oxygen supply" 
+  alt="Deep Sea Adventure - Player's turn" %}
+
+{% include images.html file="score.png" 
+  caption="At the end of the round, players who made it back to the submarine count their treasures" 
+  alt="Deep Sea Adventure - Score" %}
+
+{% include images.html file="end.png" 
+  caption="After 3 rounds, the app computes the scoreboard" 
+  alt="Deep Sea Adventure - Score" %}

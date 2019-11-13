@@ -38,15 +38,15 @@
 <meta property="og:title" content="Introducing Deep Sea Adventure’s Scoring App" />
 <meta name="author" content="Juliette Sinibardy" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="This website is a scoring tool dedicated to the board game Deep Sea Adventure edited by Oink Games. Its goal is to provide players a reliable way to compute the oxygen decrease during a round. It’s meant to be used side by side with the board game, either on a mobile or computer. After 6 months of learning, this project is my first big, entirely personal project, and I’m very proud of it. Visit the website See on Github" />
-<meta property="og:description" content="This website is a scoring tool dedicated to the board game Deep Sea Adventure edited by Oink Games. Its goal is to provide players a reliable way to compute the oxygen decrease during a round. It’s meant to be used side by side with the board game, either on a mobile or computer. After 6 months of learning, this project is my first big, entirely personal project, and I’m very proud of it. Visit the website See on Github" />
+<meta name="description" content="This app is a project built in Ruby / Sinatra, dedicated to be a assistant to the board game Deep Sea Adventure" />
+<meta property="og:description" content="This app is a project built in Ruby / Sinatra, dedicated to be a assistant to the board game Deep Sea Adventure" />
 <link rel="canonical" href="http://localhost:4000/deep-sea-adventure" />
 <meta property="og:url" content="http://localhost:4000/deep-sea-adventure" />
 <meta property="og:site_name" content="Juliette Sinibardy" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2019-11-13T09:42:00+01:00" />
 <script type="application/ld+json">
-{"description":"This website is a scoring tool dedicated to the board game Deep Sea Adventure edited by Oink Games. Its goal is to provide players a reliable way to compute the oxygen decrease during a round. It’s meant to be used side by side with the board game, either on a mobile or computer. After 6 months of learning, this project is my first big, entirely personal project, and I’m very proud of it. Visit the website See on Github","headline":"Introducing Deep Sea Adventure’s Scoring App","dateModified":"2019-11-13T09:42:00+01:00","datePublished":"2019-11-13T09:42:00+01:00","@type":"BlogPosting","url":"http://localhost:4000/deep-sea-adventure","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/deep-sea-adventure"},"author":{"@type":"Person","name":"Juliette Sinibardy"},"@context":"http://schema.org"}</script>
+{"description":"This app is a project built in Ruby / Sinatra, dedicated to be a assistant to the board game Deep Sea Adventure","headline":"Introducing Deep Sea Adventure’s Scoring App","dateModified":"2019-11-13T11:23:00+01:00","datePublished":"2019-11-13T09:42:00+01:00","@type":"BlogPosting","url":"http://localhost:4000/deep-sea-adventure","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/deep-sea-adventure"},"author":{"@type":"Person","name":"Juliette Sinibardy"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -301,6 +301,13 @@ project, and I’m very proud of it.</p>
 
 <hr>
 
+<ul id="markdown-toc">
+  <li><a href="#tech-stack" id="markdown-toc-tech-stack">Tech Stack</a></li>
+  <li><a href="#challenges" id="markdown-toc-challenges">Challenges</a></li>
+  <li><a href="#motivation" id="markdown-toc-motivation">Motivation</a></li>
+  <li><a href="#screenshots" id="markdown-toc-screenshots">Screenshots</a></li>
+</ul>
+
 <h2 id="tech-stack">Tech Stack</h2>
 
 <p>This tool has been developed in <strong>Ruby</strong>, as I’ve spent the past months
@@ -359,9 +366,66 @@ the best practices.</p>
 <ul>
   <li>I had to learn the basics of front-end and Bootstrap to go through it</li>
   <li>I wanted to build an application <em>with no database and log-in system</em> so
-instead, I extensively used session storage</li>
+instead, I extensively used session storage to persist user data</li>
 </ul>
 
+<p><strong>Why did I choose to steer clear of login and databases?</strong></p>
+
+<p>Mainly because I think that most users find it tiresome to go through a
+registration process for almost every Internet service. A “plug and play”
+approach is much nicer instead.</p>
+
+<p>Plus, in this situation, using session storage worked pretty well because:</p>
+<ul>
+  <li>Most games last less than 1 hour so sessions expiring was not a concern</li>
+  <li>Even though several players could want to keep score, it feels acceptable
+that they use only one player’s device.</li>
+</ul>
+
+<h2 id="motivation">Motivation</h2>
+
+<p>I’ve chosen to build this app mostly because I like games but dislike
+arguing over a messy count score.</p>
+
+<p>In Deep Sea Adventure, players dive into the deep ocean looking for treasures.
+All divers share the same oxygen tank, and each treasure picked up weighs down
+the diver and increases its oxygen intake. All divers must be back into the
+submarine before the oxygen tank becomes empty. As such, it is critical to
+accurately monitor the available oxygen. (<a rel="noopener" target="_blank" href="https://oinkgms.com/en/deep-sea-adventure">More on the game’s rules</a>)</p>
+
+<p>However, experience shows that it can be difficult to accurately compute the
+available oxygen in a quick game setup, and that arguments over which player
+should have drowned tend to ruin the fun. This is where this Scoring App comes
+handy!</p>
+
+<h2 id="screenshots">Screenshots</h2>
+
+<div style="text-align: center">
+    <figure>
+        <a href="/assets/images/player_turn.png">
+            <img src="/assets/images/player_turn.png" alt="Deep Sea Adventure - Player's turn">  
+        </a>
+        <figcaption>The app records the choices made by the player and displays the available oxygen supply</figcaption>
+    </figure>
+</div>
+
+<div style="text-align: center">
+    <figure>
+        <a href="/assets/images/score.png">
+            <img src="/assets/images/score.png" alt="Deep Sea Adventure - Score">  
+        </a>
+        <figcaption>At the end of the round, players who made it back to the submarine count their treasures</figcaption>
+    </figure>
+</div>
+
+<div style="text-align: center">
+    <figure>
+        <a href="/assets/images/end.png">
+            <img src="/assets/images/end.png" alt="Deep Sea Adventure - Score">  
+        </a>
+        <figcaption>After 3 rounds, the app computes the scoreboard</figcaption>
+    </figure>
+</div>
 
     
 
@@ -484,7 +548,7 @@ instead, I extensively used session storage</li>
   <!--<span class="post-date">Created: 13 Nov 2019</span>-->
   <!--  &bull;-->
   
-  <span class="post-date">Last Modified: </span>
+  <span class="post-date">Last Modified: 13 Nov 2019</span>
  
  <!-- <span class="post-categories">-->
  <!--   -->
