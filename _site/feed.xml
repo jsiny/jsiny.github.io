@@ -1,4 +1,88 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en_US"><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en_US" /><updated>2019-10-03T19:51:06+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Juliette Sinibardy</title><subtitle>Pending Programmer&lt;br&gt; ███░░░░░░░ 30%</subtitle><author><name>Juliette Sinibardy</name></author><entry><title type="html">How does the Internet work?</title><link href="http://localhost:4000/how-internet-works" rel="alternate" type="text/html" title="How does the Internet work?" /><published>2019-10-03T11:06:00+02:00</published><updated>2019-10-03T19:50:00+02:00</updated><id>http://localhost:4000/how-does-the-internet-work</id><content type="html" xml:base="http://localhost:4000/how-internet-works">&lt;p&gt;Being born in the 90s, I’ve lived most of my life in a post-Internet world. I
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en_US"><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en_US" /><updated>2019-11-13T10:41:25+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Juliette Sinibardy</title><subtitle>Pending Programmer&lt;br&gt; ███░░░░░░░ 30%</subtitle><author><name>Juliette Sinibardy</name></author><entry><title type="html">Introducing Deep Sea Adventure’s Scoring App</title><link href="http://localhost:4000/deep-sea-adventure" rel="alternate" type="text/html" title="Introducing Deep Sea Adventure's Scoring App" /><published>2019-11-13T09:42:00+01:00</published><updated>2019-11-13T09:42:00+01:00</updated><id>http://localhost:4000/introducing-deep-sea-adventure-s-scoring-app</id><content type="html" xml:base="http://localhost:4000/deep-sea-adventure">&lt;p&gt;This &lt;a href=&quot;https://deep-sea-adventure.herokuapp.com/&quot;&gt;website&lt;/a&gt; is a &lt;strong&gt;scoring tool&lt;/strong&gt;
+dedicated to the board game
+&lt;a href=&quot;https://oinkgms.com/en/deep-sea-adventure&quot;&gt;Deep Sea Adventure&lt;/a&gt; edited by
+&lt;a href=&quot;https://oinkgms.com/en/&quot;&gt;Oink Games&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Its goal is to provide players a &lt;strong&gt;reliable way to compute the oxygen decrease&lt;/strong&gt;
+during a round. It’s meant to be used side by side with the board game,
+either on a mobile or computer.&lt;/p&gt;
+
+&lt;p&gt;After 6 months of learning, this project is my &lt;strong&gt;first&lt;/strong&gt; big, entirely personal
+project, and I’m very proud of it.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;https://deep-sea-adventure.herokuapp.com/&quot;&gt;Visit the website&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/jsiny/deep_sea_adventure&quot;&gt;See on Github&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;!--more--&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;tech-stack&quot;&gt;Tech Stack&lt;/h2&gt;
+
+&lt;p&gt;This tool has been developed in &lt;strong&gt;Ruby&lt;/strong&gt;, as I’ve spent the past months
+learning programming through that language. I’ve applied an object-oriented
+design as it felt natural to segment the various elements into objects with
+an interface (&lt;code class=&quot;highlighter-rouge&quot;&gt;Players&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;Round&lt;/code&gt;, etc.)&lt;/p&gt;
+
+&lt;p&gt;I’ve chosen to develop the website through the light-weight, Ruby 
+domain-specific language &lt;strong&gt;Sinatra&lt;/strong&gt;. Even though I’ve previously worked with
+Ruby on Rails, I preferred using a lighter library rather than a comprehensive
+framework that may hide away the complexity of web applications.&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# Homepage&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;get&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'/'&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;erb&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:home&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;For instance, this Sinatra code snippet means that a &lt;code class=&quot;highlighter-rouge&quot;&gt;GET&lt;/code&gt; request to the
+homepage (&lt;code class=&quot;highlighter-rouge&quot;&gt;/&lt;/code&gt;) will trigger the loading of the ERB (embedded Ruby) template
+&lt;code class=&quot;highlighter-rouge&quot;&gt;home.erb&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;As the project grew in complexity, I’ve added a comprehensive test suite (with
+&lt;strong&gt;Minitest&lt;/strong&gt;), in order to be able to safely refactor and prevent regressions.&lt;/p&gt;
+
+&lt;div style=&quot;text-align: center&quot;&gt;
+    &lt;figure&gt;
+        &lt;a href=&quot;/assets/images/minitest.jpg&quot;&gt;
+            &lt;img src=&quot;/assets/images/minitest.jpg&quot; alt=&quot;Minitest&quot; /&gt;  
+        &lt;/a&gt;
+        &lt;figcaption&gt;All green! 💚&lt;/figcaption&gt;
+    &lt;/figure&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Additionally, I taught myself to work with &lt;strong&gt;Bootstrap&lt;/strong&gt; for this project.
+Being a complete beginner in front-end development, with no knowledge of
+JavaScript and only the very basics of CSS, this proved to be quite
+challenging.&lt;/p&gt;
+
+&lt;p&gt;However, I’m happy I went through that struggle because Bootstrap helped me
+build a smooth and user-friendly application (both on desktop &lt;em&gt;and&lt;/em&gt; mobile).&lt;/p&gt;
+
+&lt;p&gt;I’ve deployed the application on &lt;strong&gt;Heroku&lt;/strong&gt;, mostly because it’s a 
+free hosting service. (The app is hosted onto an EU server, so US-based
+users might encounter some latency.)&lt;/p&gt;
+
+&lt;p&gt;Finally, I also took the opportunity to learn about &lt;strong&gt;Travis CI&lt;/strong&gt; and set up
+my first continuous integration and automatic deployment, through
+&lt;code class=&quot;highlighter-rouge&quot;&gt;Github &amp;gt; Travis CI &amp;gt; Heroku&lt;/code&gt;. As I was working alone on this project,
+this configuration probably is a luxury, but it’s never too early to learn
+the best practices.&lt;/p&gt;
+
+&lt;h2 id=&quot;challenges&quot;&gt;Challenges&lt;/h2&gt;
+
+&lt;p&gt;Through this project, I’ve faced two main challenges:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;I had to learn the basics of front-end and Bootstrap to go through it&lt;/li&gt;
+  &lt;li&gt;I wanted to build an application &lt;em&gt;with no database and log-in system&lt;/em&gt; so
+instead, I extensively used session storage&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Juliette Sinibardy</name></author><category term="Ruby" /><category term="Sinatra" /><category term="Bootstrap" /><category term="Heroku" /><category term="Travis CI" /><category term="Minitest" /><category term="Project" /><category term="Learning" /><category term="Deep Sea Adventure" /><category term="Game" /><summary type="html">This website is a scoring tool dedicated to the board game Deep Sea Adventure edited by Oink Games. Its goal is to provide players a reliable way to compute the oxygen decrease during a round. It’s meant to be used side by side with the board game, either on a mobile or computer. After 6 months of learning, this project is my first big, entirely personal project, and I’m very proud of it. Visit the website See on Github</summary></entry><entry><title type="html">How does the Internet work?</title><link href="http://localhost:4000/how-internet-works" rel="alternate" type="text/html" title="How does the Internet work?" /><published>2019-10-03T11:06:00+02:00</published><updated>2019-10-03T19:50:00+02:00</updated><id>http://localhost:4000/how-does-the-internet-work</id><content type="html" xml:base="http://localhost:4000/how-internet-works">&lt;p&gt;Being born in the 90s, I’ve lived most of my life in a post-Internet world. I
 do remember the sweet sound of 56 kb/s modem, but most of my browsing time
 has been &lt;em&gt;after&lt;/em&gt; the dial-up era.&lt;/p&gt;
 
@@ -2019,6 +2103,8 @@ user to &lt;a href=&quot;/contact&quot;&gt;contact me&lt;/a&gt; if they so wante
 so here’s a tutorial on how to set up a contact form on Jekyll using
 &lt;a href=&quot;https://formspree.io/&quot;&gt;Formspree&lt;/a&gt;.&lt;/p&gt;
 
+&lt;!--more--&gt;
+
 &lt;h2 id=&quot;whats-formspree&quot;&gt;What’s Formspree?&lt;/h2&gt;
 
 &lt;p&gt;It’s a HTML form generator, that transfers the form’s answers to your
@@ -2142,7 +2228,7 @@ to have a coherent style.&lt;/p&gt;
         &lt;/a&gt;
         &lt;figcaption&gt;Example of contact form&lt;/figcaption&gt;
     &lt;/figure&gt;
-&lt;/div&gt;</content><author><name>Juliette Sinibardy</name></author><category term="Jekyll" /><category term="Contact Form" /><category term="Formspree" /><category term="How-To" /><category term="HTML" /><category term="CSS" /><summary type="html">I thought it would be cool to give the opportunity to the random internet user to contact me if they so wanted. Turns out it’s pretty easy, so here’s a tutorial on how to set up a contact form on Jekyll using Formspree. What’s Formspree? It’s a HTML form generator, that transfers the form’s answers to your email address. Plus it’s free and no registration is required. There is also a paid plan for additional features, but until 50 messages a month, I guess the free plan is enough for most uses. Basic setup Formspree provides a test environment where you can tweak your HTML before including it on your website. &amp;lt;form method=&quot;POST&quot; action=&quot;https://formspree.io/&amp;lt;YOUR_EMAIL_HERE&amp;gt;&quot;&amp;gt; &amp;lt;input type=&quot;email&quot; name=&quot;email&quot; placeholder=&quot;Your email&quot;&amp;gt; &amp;lt;input type=&quot;text&quot; name=&quot;name&quot; placeholder=&quot;Your name&quot;&amp;gt; &amp;lt;textarea name=&quot;message&quot; placeholder=&quot;Your message&quot; rows=&quot;3&quot;&amp;gt; &amp;lt;/textarea&amp;gt; &amp;lt;button type=&quot;submit&quot;&amp;gt;Send Message&amp;lt;/button&amp;gt; &amp;lt;/form&amp;gt; You simply have to include your contact email on line 1 (&amp;lt;YOUR_EMAIL_HERE&amp;gt;), and the form works! You can test the form directly in Formspree's environment Note: You’ll have to first activate each domain you set up your contact form on (through an activation link sent to the email address provided), so it’s no use adding your friend’s email for a prank 😉 You can also customize the placeholder of your input questions, or add any other question, like: &amp;lt;input type=&quot;text&quot; name=&quot;subject&quot; placeholder=&quot;Message's subject&quot;&amp;gt; Integration with Jekyll You could now copy/paste the HTML code and include it any .html file of your blog. However, the best way to do that would be to insert this code into an _includes file, and create a dedicated _layouts. This way, you’ll be able to edit the page with the contact form using a nice and clean Markdown! 💙 First, let’s create a new layout in your root/_layouts folder and name it contact.html. You’ll notice that this layout is based on the default page.html layout, and this allows us to do the following: Automatically use the title attribute to create a &amp;lt;h1&amp;gt; Type your content and it will appear before the contact form Note: I’m using the Hydeout Jekyll template, which may have different layout names than your own. Then, we’ll create the contact-form.html mentioned in the previous code excerpt. Place it in the root/_includes folder. This file will host the HTML you generated through Formspree, which in this case, is: &amp;lt;form method=&quot;POST&quot; action=&quot;https://formspree.io/&amp;lt;YOUR_EMAIL_HERE&amp;gt;&quot;&amp;gt; &amp;lt;input type=&quot;email&quot; name=&quot;email&quot; placeholder=&quot;Your email&quot;&amp;gt; &amp;lt;input type=&quot;text&quot; name=&quot;name&quot; placeholder=&quot;Your name&quot;&amp;gt; &amp;lt;textarea name=&quot;message&quot; placeholder=&quot;Your message&quot; rows=&quot;3&quot;&amp;gt; &amp;lt;/textarea&amp;gt; &amp;lt;button type=&quot;submit&quot;&amp;gt;Send Message&amp;lt;/button&amp;gt; &amp;lt;/form&amp;gt; You now have a working contact layout! 🌈 To use it, create a new post, and insert layout: contact in the YAML front matter. You can now type any Markdown content you want, and your text will be displayed before your contact form! Final Adjustments However, in my case, the Your Message (textarea) part was displayed poorly, because the Hydeout template did not have any CSS for textarea. I therefore had to create some styling in order to homogenize the form. I’ve included the following SCSS in my assets/css/main.scss: input[type=&quot;text&quot;], input[type=&quot;email&quot;], input[type=&quot;search&quot;], input[type=&quot;submit&quot;], button, textarea { padding: 1em 1.5em; border: 1px solid #e5e5e5; border-radius: 300px; margin-bottom: 1em; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, &quot;Roboto&quot;, &quot;Oxygen&quot;, &quot;Ubuntu&quot;, &quot;Cantarell&quot;, &quot;Fira Sans&quot;, &quot;Droid Sans&quot;, &quot;Helvetica Neue&quot;, Arial, sans-serif; } textarea { width: 73%; resize: none; } I’ve also added rows=&quot;3&quot; in the contact-form.html in order to widen the text area. Bear in mind that all these changes are pretty specific to the Hydeout template so you’ll probably have to tweak your own CSS in order to have a coherent style. Example of contact form</summary></entry><entry><title type="html">Hello World</title><link href="http://localhost:4000/hello-world" rel="alternate" type="text/html" title="Hello World" /><published>2019-07-03T10:28:08+02:00</published><updated>2019-07-07T11:55:00+02:00</updated><id>http://localhost:4000/hello-world</id><content type="html" xml:base="http://localhost:4000/hello-world">&lt;blockquote&gt;
+&lt;/div&gt;</content><author><name>Juliette Sinibardy</name></author><category term="Jekyll" /><category term="Contact Form" /><category term="Formspree" /><category term="How-To" /><category term="HTML" /><category term="CSS" /><summary type="html">I thought it would be cool to give the opportunity to the random internet user to contact me if they so wanted. Turns out it’s pretty easy, so here’s a tutorial on how to set up a contact form on Jekyll using Formspree.</summary></entry><entry><title type="html">Hello World</title><link href="http://localhost:4000/hello-world" rel="alternate" type="text/html" title="Hello World" /><published>2019-07-03T10:28:08+02:00</published><updated>2019-07-07T11:55:00+02:00</updated><id>http://localhost:4000/hello-world</id><content type="html" xml:base="http://localhost:4000/hello-world">&lt;blockquote&gt;
   &lt;p&gt;It’s alive!&lt;/p&gt;
 &lt;/blockquote&gt;
 

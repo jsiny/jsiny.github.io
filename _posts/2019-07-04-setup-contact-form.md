@@ -5,9 +5,11 @@ date:   2019-07-04 06:22:08 +0200
 last_modified_at: 2019-07-04 06:22:08 +0200
 permalink: setup-contact-form-jekyll
 description: Here's a detailed tutorial on how to set up a free contact form on static websites like Jekyll
+published: true
+sitemap: true
+excerpt_separator: "<!--more-->"
 categories:
   - How-To
-
 tags:
   - Jekyll
   - Contact Form
@@ -21,6 +23,8 @@ I thought it would be cool to give the opportunity to the random internet
 user to [contact me](/contact) if they so wanted. Turns out it's pretty easy,
 so here's a tutorial on how to set up a contact form on Jekyll using
 [Formspree](https://formspree.io/).
+
+<!--more-->
 
 ## What's Formspree?
 
