@@ -1,4 +1,35 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en_US"><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en_US" /><updated>2019-11-13T11:28:04+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Juliette Sinibardy</title><subtitle>Pending Programmer&lt;br&gt; ███░░░░░░░ 30%</subtitle><author><name>Juliette Sinibardy</name></author><entry><title type="html">Introducing Deep Sea Adventure’s Scoring App</title><link href="http://localhost:4000/deep-sea-adventure" rel="alternate" type="text/html" title="Introducing Deep Sea Adventure's Scoring App" /><published>2019-11-13T09:42:00+01:00</published><updated>2019-11-13T11:23:00+01:00</updated><id>http://localhost:4000/introducing-deep-sea-adventure-s-scoring-app</id><content type="html" xml:base="http://localhost:4000/deep-sea-adventure">&lt;p&gt;This &lt;a href=&quot;https://deep-sea-adventure.herokuapp.com/&quot;&gt;website&lt;/a&gt; is a &lt;strong&gt;scoring tool&lt;/strong&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en_US"><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en_US" /><updated>2019-12-17T22:23:20+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Juliette Sinibardy</title><subtitle>Pending Programmer&lt;br&gt; ███░░░░░░░ 30%</subtitle><author><name>Juliette Sinibardy</name></author><entry><title type="html">Halfway Point Check-In</title><link href="http://localhost:4000/launch-school-halfway-point" rel="alternate" type="text/html" title="Halfway Point Check-In" /><published>2019-12-17T21:39:00+01:00</published><updated>2019-12-17T21:39:00+01:00</updated><id>http://localhost:4000/halfway-point-check-in</id><content type="html" xml:base="http://localhost:4000/launch-school-halfway-point">&lt;p&gt;I’ve recently reached the halfway-point in Launch School’s Core Curriculum,
+and thought it would be a great time to reflect on the road taken thus far.&lt;/p&gt;
+
+&lt;p&gt;Plus we’re reaching the end of the year &lt;em&gt;and&lt;/em&gt; the end of the decade, so 
+looking back on your own path seems like the sensible thing to do.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;!-- Ideas:
+- Long life on the plateau =&gt; timelog?
+- Ruby Meetup and Dimelo
+- Mentoring students
+- Deep Sea Adventure
+- Do things differently?
+- Rabbit holes? --&gt;
+
+&lt;p&gt;I’ll start by stating the painful and obvious: reaching the halfway
+point &lt;em&gt;sucks&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Or, more precisely, realising that you have to do &lt;em&gt;again&lt;/em&gt; the same amount of 
+efforts is pretty disheartening.&lt;/p&gt;
+
+&lt;p&gt;Not that I didn’t enjoy my studies with Launch School - quite the
+opposite actually. I just can’t push away that nasty voice telling me that
+I’m not “a real Software Engineer” just yet. And as I’m now leaving
+Ruby behind (but fear not, you’ll always be in my heart!) for the tedious
+world of CSS and JavaScript, I’m wondering whether I’ll ever feel like
+I am, in fact, a real Software Engineer.&lt;/p&gt;
+
+&lt;p&gt;Anyway, and on a lighter note - I’ll try to account here for my experiences 
+at Launch School so far, and hopefully help you through your own 
+learning journey.&lt;/p&gt;</content><author><name>Juliette Sinibardy</name></author><category term="Launch-School" /><category term="Blogging" /><category term="Learning" /><category term="Ruby" /><category term="Overview" /><category term="Timelogs" /><summary type="html">I’ve recently reached the halfway-point in Launch School’s Core Curriculum, and thought it would be a great time to reflect on the road taken thus far. Plus we’re reaching the end of the year and the end of the decade, so looking back on your own path seems like the sensible thing to do.</summary></entry><entry><title type="html">Introducing Deep Sea Adventure’s Scoring App</title><link href="http://localhost:4000/deep-sea-adventure" rel="alternate" type="text/html" title="Introducing Deep Sea Adventure's Scoring App" /><published>2019-11-13T09:42:00+01:00</published><updated>2019-11-13T11:23:00+01:00</updated><id>http://localhost:4000/introducing-deep-sea-adventure-s-scoring-app</id><content type="html" xml:base="http://localhost:4000/deep-sea-adventure">&lt;p&gt;This &lt;a href=&quot;https://deep-sea-adventure.herokuapp.com/&quot;&gt;website&lt;/a&gt; is a &lt;strong&gt;scoring tool&lt;/strong&gt;
 dedicated to the board game
 &lt;a href=&quot;https://oinkgms.com/en/deep-sea-adventure&quot;&gt;Deep Sea Adventure&lt;/a&gt; edited by
 &lt;a href=&quot;https://oinkgms.com/en/&quot;&gt;Oink Games&lt;/a&gt;.&lt;/p&gt;
@@ -2293,69 +2324,4 @@ to have a coherent style.&lt;/p&gt;
         &lt;/a&gt;
         &lt;figcaption&gt;Example of contact form&lt;/figcaption&gt;
     &lt;/figure&gt;
-&lt;/div&gt;</content><author><name>Juliette Sinibardy</name></author><category term="Jekyll" /><category term="Contact Form" /><category term="Formspree" /><category term="How-To" /><category term="HTML" /><category term="CSS" /><summary type="html">I thought it would be cool to give the opportunity to the random internet user to contact me if they so wanted. Turns out it’s pretty easy, so here’s a tutorial on how to set up a contact form on Jekyll using Formspree.</summary></entry><entry><title type="html">Hello World</title><link href="http://localhost:4000/hello-world" rel="alternate" type="text/html" title="Hello World" /><published>2019-07-03T10:28:08+02:00</published><updated>2019-07-07T11:55:00+02:00</updated><id>http://localhost:4000/hello-world</id><content type="html" xml:base="http://localhost:4000/hello-world">&lt;blockquote&gt;
-  &lt;p&gt;It’s alive!&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;After a sleepless night, several gallons of tears and dozens of hours spent 
-browsing stackoverflow, my new blog is now live 🌈&lt;/p&gt;
-
-&lt;p&gt;I’m not exactly new to blogging, but this is the first time I’m wandering away
-from Wordpress. Oh boy, that was &lt;em&gt;difficult&lt;/em&gt;.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;h2 id=&quot;why-would-i-do-that&quot;&gt;Why would I do that?&lt;/h2&gt;
-
-&lt;p&gt;It all came down to one of my dearest colleague ranting about Medium.
-I had just wrote &lt;a href=&quot;https://medium.com/@juju.siny/my-study-habits-ae5c778b5a14&quot;&gt;my first Medium post&lt;/a&gt;
-(and was pretty pleased with myself), when he told me:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;I like your post, but why would anyone pay to read blog posts that could be 
-found somewhere else, without any added value to the reading experience?&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Admittedly, he’s a grumpy old man, but as I’m not too fond of the new 
-Medium paywall either, I thought he had a point.&lt;/p&gt;
-
-&lt;p&gt;Anyway, I had wanted to create a “professional” blog for ages, and thought that
-my 3 months of consecutive programming might be enough to create a “real”
-blog, away from traditional CMS.&lt;/p&gt;
-
-&lt;p&gt;Looking back, I &lt;em&gt;may&lt;/em&gt; have bitten more than I could chew. No regrets though, 
-the learning experience was well worth it.&lt;/p&gt;
-
-&lt;h2 id=&quot;how-i-did-it&quot;&gt;How I did it&lt;/h2&gt;
-
-&lt;p&gt;Initially, I tried to set up a blog through &lt;a href=&quot;https://gohugo.io/&quot;&gt;Hugo&lt;/a&gt;,
-because I had read somewhere that their loading time was exceptionally fast,
-and (let’s be honest) because their templates were stunning.&lt;/p&gt;
-
-&lt;p&gt;However, I failed miserably. It seemed that whatever I did, my Cloud9
-environment refused to accept &lt;code class=&quot;highlighter-rouge&quot;&gt;Homebrew&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;My ego a little bruised, I looked up alternatives and found another
-static-site generator: &lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt;.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Good news: it’s in Ruby! I can finally grasp what’s happening 
-under the hood 🙌 Hugo, on the other hand, is written in Go and therefore
-looks like gibberish to the beginner that I am.&lt;/li&gt;
-  &lt;li&gt;Bad news: Jekyll seems a bit ouf of fashion, and most resources about
-it are somewhat dated. Most templates or blog posts are based on earlier
-versions of Jekyll, therefore I encountered a couple of version issues.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The biggest difficulty arose when I tried escaping the dry 
-&lt;a href=&quot;https://jekyll.github.io/minima/&quot;&gt;Minima&lt;/a&gt; default Jekyll template.
-Apparently, there are some layout naming issues between templates
-and Github pages that made transitions difficult.&lt;/p&gt;
-
-&lt;p&gt;A bit lost, I tweaked my &lt;code class=&quot;highlighter-rouge&quot;&gt;_layout&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;_includes&lt;/code&gt; a lot, heavily drawing
-inspiration from &lt;a href=&quot;https://github.com/d0n601/ryankozak.com&quot;&gt;Ryan Kozak&lt;/a&gt;
-and &lt;a href=&quot;https://github.com/ltebben/ltebben.github.io&quot;&gt;Laura Tebben&lt;/a&gt;’s 
-public repositories (thank god for public repositories), and finally
-managed to install the &lt;a href=&quot;https://github.com/fongandrew/hydeout&quot;&gt;Hydeout&lt;/a&gt; theme 🍾&lt;/p&gt;
-
-&lt;p&gt;My next challenge will be to buy and set up my first domain (bye bye ugly
-&lt;code class=&quot;highlighter-rouge&quot;&gt;github.io&lt;/code&gt; domain name, you will be missed) …but this is for another day.&lt;/p&gt;</content><author><name>Juliette Sinibardy</name></author><category term="Blogging" /><category term="Jekyll" /><category term="Medium" /><summary type="html">It’s alive! After a sleepless night, several gallons of tears and dozens of hours spent browsing stackoverflow, my new blog is now live 🌈 I’m not exactly new to blogging, but this is the first time I’m wandering away from Wordpress. Oh boy, that was difficult.</summary></entry></feed>
+&lt;/div&gt;</content><author><name>Juliette Sinibardy</name></author><category term="Jekyll" /><category term="Contact Form" /><category term="Formspree" /><category term="How-To" /><category term="HTML" /><category term="CSS" /><summary type="html">I thought it would be cool to give the opportunity to the random internet user to contact me if they so wanted. Turns out it’s pretty easy, so here’s a tutorial on how to set up a contact form on Jekyll using Formspree.</summary></entry></feed>
