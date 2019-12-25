@@ -6,7 +6,7 @@ last_modified_at:
 permalink: launch-school-halfway-point
 description: 
 image: 
-published: true
+published: false
 sitemap: true
 excerpt_separator: "<!--more-->"
 categories: Launch-School
