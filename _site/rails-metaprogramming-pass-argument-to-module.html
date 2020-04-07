@@ -11,7 +11,7 @@
 
   <title>
     
-      Halfway Point Check-In &middot; Juliette Sinibardy
+      Using Metaprogramming to Pass an Argument to a Rails Module &middot; Juliette Sinibardy
     
   </title>
 
@@ -33,20 +33,20 @@
 
 <!-- SEO tags -->
 <!-- Begin Jekyll SEO tag v2.5.0 -->
-<title>Halfway Point Check-In | Juliette Sinibardy</title>
+<title>Using Metaprogramming to Pass an Argument to a Rails Module | Juliette Sinibardy</title>
 <meta name="generator" content="Jekyll v3.8.5" />
-<meta property="og:title" content="Halfway Point Check-In" />
+<meta property="og:title" content="Using Metaprogramming to Pass an Argument to a Rails Module" />
 <meta name="author" content="Juliette Sinibardy" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="I’ve recently reached the halfway-point in Launch School’s Core Curriculum, and thought it would be a great time to reflect on the road taken thus far. Plus we’re reaching the end of the year and the end of the decade, so looking back on your own path seems like the sensible thing to do." />
-<meta property="og:description" content="I’ve recently reached the halfway-point in Launch School’s Core Curriculum, and thought it would be a great time to reflect on the road taken thus far. Plus we’re reaching the end of the year and the end of the decade, so looking back on your own path seems like the sensible thing to do." />
-<link rel="canonical" href="http://localhost:4000/launch-school-halfway-point" />
-<meta property="og:url" content="http://localhost:4000/launch-school-halfway-point" />
+<meta name="description" content="Here’s a detailed example of passing an argument to a Ruby on Rails module through some metaprogramming" />
+<meta property="og:description" content="Here’s a detailed example of passing an argument to a Ruby on Rails module through some metaprogramming" />
+<link rel="canonical" href="http://localhost:4000/rails-metaprogramming-pass-argument-to-module" />
+<meta property="og:url" content="http://localhost:4000/rails-metaprogramming-pass-argument-to-module" />
 <meta property="og:site_name" content="Juliette Sinibardy" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2019-12-17T21:39:00+01:00" />
+<meta property="article:published_time" content="2020-04-06T15:35:00+02:00" />
 <script type="application/ld+json">
-{"description":"I’ve recently reached the halfway-point in Launch School’s Core Curriculum, and thought it would be a great time to reflect on the road taken thus far. Plus we’re reaching the end of the year and the end of the decade, so looking back on your own path seems like the sensible thing to do.","headline":"Halfway Point Check-In","dateModified":"2019-12-17T21:39:00+01:00","datePublished":"2019-12-17T21:39:00+01:00","@type":"BlogPosting","url":"http://localhost:4000/launch-school-halfway-point","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/launch-school-halfway-point"},"author":{"@type":"Person","name":"Juliette Sinibardy"},"@context":"http://schema.org"}</script>
+{"url":"http://localhost:4000/rails-metaprogramming-pass-argument-to-module","description":"Here’s a detailed example of passing an argument to a Ruby on Rails module through some metaprogramming","headline":"Using Metaprogramming to Pass an Argument to a Rails Module","dateModified":"2020-04-07T10:25:00+02:00","datePublished":"2020-04-06T15:35:00+02:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/rails-metaprogramming-pass-argument-to-module"},"author":{"@type":"Person","name":"Juliette Sinibardy"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -249,17 +249,17 @@
 
 </nav>
   <p class="copyright">
-  © 2019 - Juliette Sinibardy
+  © 2020 - Juliette Sinibardy
 </p>
 </div>
 
     <main class="container">
         <header>
-  <h1 class="post-title">Halfway Point Check-In</h1>
+  <h1 class="post-title">Using Metaprogramming to Pass an Argument to a Rails Module</h1>
 </header>
 <div class="content">
   <div class="post-meta">
-  <span class="post-date">17 Dec 2019</span>
+  <span class="post-date">06 Apr 2020</span>
   <span class="post-categories">
     
       •
@@ -269,46 +269,78 @@
       
 
       
-        Launch-School
+        Ruby
       
     
   </span>
 </div>
 
   <div class="post-body">
-    <p>I’ve recently reached the halfway-point in Launch School’s Core Curriculum,
-and thought it would be a great time to reflect on the road taken thus far.</p>
+    <p><strong>Refactoring</strong> is my favorite hobby. Nothing feels quite as satisfying than 
+extracting some common methods to an elegantly named module.</p>
 
-<p>Plus we’re reaching the end of the year <em>and</em> the end of the decade, so 
-looking back on your own path seems like the sensible thing to do.</p>
+<p>Quickly though, I usually run into trouble - how exactly am I supposed to pass an 
+argument to a module in Ruby? The answer is: through some <strong>metaprogramming</strong>!
+(<em>such a scary word</em>)</p>
 
 <!--more-->
 
-<!-- Ideas:
-- Long life on the plateau => timelog?
-- Ruby Meetup and Dimelo
-- Mentoring students
-- Deep Sea Adventure
-- Do things differently?
-- Rabbit holes? -->
+<p>Let’s draft up a (somewhat contrived) example using Ruby on Rails.</p>
 
-<p>I’ll start by stating the painful and obvious: reaching the halfway
-point <em>sucks</em>.</p>
+<p>Imagine a Facebook-like application with the following models and <code class="highlighter-rouge">Likeable</code> 
+module:</p>
 
-<p>Or, more precisely, realising that you have to do <em>again</em> the same amount of 
-efforts is pretty disheartening.</p>
+<script src="https://gist.github.com/jsiny/0baf8980901e299d9534e0d2fae828eb.js"></script>
 
-<p>Not that I didn’t enjoy my studies with Launch School - quite the
-opposite actually. I just can’t push away that nasty voice telling me that
-I’m not “a real Software Engineer” just yet. And as I’m now leaving
-Ruby behind (but fear not, you’ll always be in my heart!) for the tedious
-world of CSS and JavaScript, I’m wondering whether I’ll ever feel like
-I am, in fact, a real Software Engineer.</p>
+<p>Through the <code class="highlighter-rouge">Likeable</code> module, we can now retrieve the total number of likes for
+any instance of the <code class="highlighter-rouge">Image</code> (or <code class="highlighter-rouge">Video</code>) class with the following pattern: 
+<code class="highlighter-rouge">Image.find(params[:id]).total_likes</code>.</p>
 
-<p>Anyway, and on a lighter note - I’ll try to account here for my experiences 
-at Launch School so far, and hopefully help you through your own 
-learning journey.</p>
+<p>That’s pretty neat.</p>
 
+<p>Now, let’s assume that the two classes handle differently which users get 
+notified when a new like is submitted. As it’s related to likes, we’d like to
+include this behaviour within the <code class="highlighter-rouge">Likeable</code> module.</p>
+
+<p>However, Ruby does <em>not</em> provide an easy way to pass an argument to a method
+defined within a module. We could of course add some conditional logic to the
+module method, but that would become messy quickly as we create other 
+classes mixed in the <code class="highlighter-rouge">Likeable</code> module.</p>
+
+<script src="https://gist.github.com/jsiny/699caa3540195819b844194b0f167412.js"></script>
+
+<p>Let’s <em>not</em> do that.</p>
+
+<p>Instead, we’d like to be able to directly define who should be notified for 
+each class within the model, like so:</p>
+
+<script src="https://gist.github.com/jsiny/15bb9e42c214db82cdfee5a1800f2d1d.js"></script>
+
+<p>Turns out, we can use some metaprogramming to mimic the passing of an argument:</p>
+
+<script src="https://gist.github.com/jsiny/40b97c1ea25599c0c468b6cfcd322716.js"></script>
+
+<p>Here’s what this code does:</p>
+<ul>
+  <li>Lines 5-7: when the module <code class="highlighter-rouge">Likeable</code> is included within the class, the 
+(Rails) class attribute <code class="highlighter-rouge">users_to_be_notified</code> is created.</li>
+  <li>Lines 18-22: Within the <code class="highlighter-rouge">Likeable</code> module is defined the class method 
+<code class="highlighter-rouge">notifiable_users</code>. This method sets <code class="highlighter-rouge">users_to_be_notified</code> to the
+parameters.</li>
+  <li>Line 34: <code class="highlighter-rouge">notifiable_users :creator, :tagged_users</code>: the <code class="highlighter-rouge">notifiable_users</code> 
+class method is called with two arguments (representing ActiveRecord attributes).
+This sets the class attribute <code class="highlighter-rouge">users_to_be_notified</code> to <code class="highlighter-rouge">[:creator, 
+:tagged_users]</code> (for the <code class="highlighter-rouge">Video</code> class).</li>
+  <li>Line 14: we retrieve the values behind <code class="highlighter-rouge">:creator</code> and <code class="highlighter-rouge">:tagged_users</code> for 
+the specific instances of the class, and notify them individually.</li>
+</ul>
+
+<p>You can now create a new class and easily define who gets notified for new
+likes:</p>
+
+<script src="https://gist.github.com/jsiny/af94934e767fa0da4f721544278628d4.js"></script>
+
+<p>There you go!</p>
 
     
 
@@ -317,36 +349,14 @@ learning journey.</p>
 <div class="post-tags">
   
     
-    <a href="/tags#launch-school">
+    <a href="/tags#rails">
     
       <span class="icon">
         <svg fill="#000000" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
     <path d="M0 0h24v24H0z" fill="none"></path>
     <path d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z"></path>
 </svg>
-      </span> <span class="tag-name">Launch-School</span>
-    </a>
-  
-    
-    <a href="/tags#blogging">
-    
-      <span class="icon">
-        <svg fill="#000000" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-    <path d="M0 0h24v24H0z" fill="none"></path>
-    <path d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z"></path>
-</svg>
-      </span> <span class="tag-name">Blogging</span>
-    </a>
-  
-    
-    <a href="/tags#learning">
-    
-      <span class="icon">
-        <svg fill="#000000" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-    <path d="M0 0h24v24H0z" fill="none"></path>
-    <path d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z"></path>
-</svg>
-      </span> <span class="tag-name">Learning</span>
+      </span> <span class="tag-name">Rails</span>
     </a>
   
     
@@ -361,33 +371,55 @@ learning journey.</p>
     </a>
   
     
-    <a href="/tags#overview">
+    <a href="/tags#metaprogramming">
     
       <span class="icon">
         <svg fill="#000000" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
     <path d="M0 0h24v24H0z" fill="none"></path>
     <path d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z"></path>
 </svg>
-      </span> <span class="tag-name">Overview</span>
+      </span> <span class="tag-name">Metaprogramming</span>
     </a>
   
     
-    <a href="/tags#timelogs">
+    <a href="/tags#ruby-on-rails">
     
       <span class="icon">
         <svg fill="#000000" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
     <path d="M0 0h24v24H0z" fill="none"></path>
     <path d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z"></path>
 </svg>
-      </span> <span class="tag-name">Timelogs</span>
+      </span> <span class="tag-name">Ruby on rails</span>
+    </a>
+  
+    
+    <a href="/tags#module">
+    
+      <span class="icon">
+        <svg fill="#000000" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"></path>
+    <path d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z"></path>
+</svg>
+      </span> <span class="tag-name">Module</span>
+    </a>
+  
+    
+    <a href="/tags#how-to">
+    
+      <span class="icon">
+        <svg fill="#000000" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"></path>
+    <path d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z"></path>
+</svg>
+      </span> <span class="tag-name">How-To</span>
     </a>
   
 </div>
     <div class="post-dates">
-  <!--<span class="post-date">Created: 17 Dec 2019</span>-->
+  <!--<span class="post-date">Created: 06 Apr 2020</span>-->
   <!--  &bull;-->
   
-  <span class="post-date">Last Modified: </span>
+  <span class="post-date">Last Modified: 07 Apr 2020</span>
  
  <!-- <span class="post-categories">-->
  <!--   -->
@@ -422,7 +454,7 @@ learning journey.</p>
  <!--     -->
 
  <!--     -->
- <!--       Launch-School-->
+ <!--       Ruby-->
  <!--     -->
  <!---->
  <!--</span>-->

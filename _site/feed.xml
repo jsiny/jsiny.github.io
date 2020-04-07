@@ -1,35 +1,68 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en_US"><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en_US" /><updated>2019-12-17T22:23:20+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Juliette Sinibardy</title><subtitle>Pending Programmer&lt;br&gt; ███░░░░░░░ 30%</subtitle><author><name>Juliette Sinibardy</name></author><entry><title type="html">Halfway Point Check-In</title><link href="http://localhost:4000/launch-school-halfway-point" rel="alternate" type="text/html" title="Halfway Point Check-In" /><published>2019-12-17T21:39:00+01:00</published><updated>2019-12-17T21:39:00+01:00</updated><id>http://localhost:4000/halfway-point-check-in</id><content type="html" xml:base="http://localhost:4000/launch-school-halfway-point">&lt;p&gt;I’ve recently reached the halfway-point in Launch School’s Core Curriculum,
-and thought it would be a great time to reflect on the road taken thus far.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en_US"><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en_US" /><updated>2020-04-07T10:21:46+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Juliette Sinibardy</title><subtitle>Pending Programmer&lt;br&gt; ███░░░░░░░ 30%</subtitle><author><name>Juliette Sinibardy</name></author><entry><title type="html">Using Metaprogramming to Pass an Argument to a Rails Module</title><link href="http://localhost:4000/rails-metaprogramming-pass-argument-to-module" rel="alternate" type="text/html" title="Using Metaprogramming to Pass an Argument to a Rails Module" /><published>2020-04-06T15:35:00+02:00</published><updated>2020-04-07T10:25:00+02:00</updated><id>http://localhost:4000/using-metaprogramming-to-pass-an-argument-to-a-rails-module</id><content type="html" xml:base="http://localhost:4000/rails-metaprogramming-pass-argument-to-module">&lt;p&gt;&lt;strong&gt;Refactoring&lt;/strong&gt; is my favorite hobby. Nothing feels quite as satisfying than 
+extracting some common methods to an elegantly named module.&lt;/p&gt;
 
-&lt;p&gt;Plus we’re reaching the end of the year &lt;em&gt;and&lt;/em&gt; the end of the decade, so 
-looking back on your own path seems like the sensible thing to do.&lt;/p&gt;
+&lt;p&gt;Quickly though, I usually run into trouble - how exactly am I supposed to pass an 
+argument to a module in Ruby? The answer is: through some &lt;strong&gt;metaprogramming&lt;/strong&gt;!
+(&lt;em&gt;such a scary word&lt;/em&gt;)&lt;/p&gt;
 
 &lt;!--more--&gt;
 
-&lt;!-- Ideas:
-- Long life on the plateau =&gt; timelog?
-- Ruby Meetup and Dimelo
-- Mentoring students
-- Deep Sea Adventure
-- Do things differently?
-- Rabbit holes? --&gt;
+&lt;p&gt;Let’s draft up a (somewhat contrived) example using Ruby on Rails.&lt;/p&gt;
 
-&lt;p&gt;I’ll start by stating the painful and obvious: reaching the halfway
-point &lt;em&gt;sucks&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Imagine a Facebook-like application with the following models and &lt;code class=&quot;highlighter-rouge&quot;&gt;Likeable&lt;/code&gt; 
+module:&lt;/p&gt;
 
-&lt;p&gt;Or, more precisely, realising that you have to do &lt;em&gt;again&lt;/em&gt; the same amount of 
-efforts is pretty disheartening.&lt;/p&gt;
+&lt;script src=&quot;https://gist.github.com/jsiny/0baf8980901e299d9534e0d2fae828eb.js&quot;&gt;&lt;/script&gt;
 
-&lt;p&gt;Not that I didn’t enjoy my studies with Launch School - quite the
-opposite actually. I just can’t push away that nasty voice telling me that
-I’m not “a real Software Engineer” just yet. And as I’m now leaving
-Ruby behind (but fear not, you’ll always be in my heart!) for the tedious
-world of CSS and JavaScript, I’m wondering whether I’ll ever feel like
-I am, in fact, a real Software Engineer.&lt;/p&gt;
+&lt;p&gt;Through the &lt;code class=&quot;highlighter-rouge&quot;&gt;Likeable&lt;/code&gt; module, we can now retrieve the total number of likes for
+any instance of the &lt;code class=&quot;highlighter-rouge&quot;&gt;Image&lt;/code&gt; (or &lt;code class=&quot;highlighter-rouge&quot;&gt;Video&lt;/code&gt;) class with the following pattern: 
+&lt;code class=&quot;highlighter-rouge&quot;&gt;Image.find(params[:id]).total_likes&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;Anyway, and on a lighter note - I’ll try to account here for my experiences 
-at Launch School so far, and hopefully help you through your own 
-learning journey.&lt;/p&gt;</content><author><name>Juliette Sinibardy</name></author><category term="Launch-School" /><category term="Blogging" /><category term="Learning" /><category term="Ruby" /><category term="Overview" /><category term="Timelogs" /><summary type="html">I’ve recently reached the halfway-point in Launch School’s Core Curriculum, and thought it would be a great time to reflect on the road taken thus far. Plus we’re reaching the end of the year and the end of the decade, so looking back on your own path seems like the sensible thing to do.</summary></entry><entry><title type="html">Introducing Deep Sea Adventure’s Scoring App</title><link href="http://localhost:4000/deep-sea-adventure" rel="alternate" type="text/html" title="Introducing Deep Sea Adventure's Scoring App" /><published>2019-11-13T09:42:00+01:00</published><updated>2019-11-13T11:23:00+01:00</updated><id>http://localhost:4000/introducing-deep-sea-adventure-s-scoring-app</id><content type="html" xml:base="http://localhost:4000/deep-sea-adventure">&lt;p&gt;This &lt;a href=&quot;https://deep-sea-adventure.herokuapp.com/&quot;&gt;website&lt;/a&gt; is a &lt;strong&gt;scoring tool&lt;/strong&gt;
+&lt;p&gt;That’s pretty neat.&lt;/p&gt;
+
+&lt;p&gt;Now, let’s assume that the two classes handle differently which users get 
+notified when a new like is submitted. As it’s related to likes, we’d like to
+include this behaviour within the &lt;code class=&quot;highlighter-rouge&quot;&gt;Likeable&lt;/code&gt; module.&lt;/p&gt;
+
+&lt;p&gt;However, Ruby does &lt;em&gt;not&lt;/em&gt; provide an easy way to pass an argument to a method
+defined within a module. We could of course add some conditional logic to the
+module method, but that would become messy quickly as we create other 
+classes mixed in the &lt;code class=&quot;highlighter-rouge&quot;&gt;Likeable&lt;/code&gt; module.&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/jsiny/699caa3540195819b844194b0f167412.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;Let’s &lt;em&gt;not&lt;/em&gt; do that.&lt;/p&gt;
+
+&lt;p&gt;Instead, we’d like to be able to directly define who should be notified for 
+each class within the model, like so:&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/jsiny/15bb9e42c214db82cdfee5a1800f2d1d.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;Turns out, we can use some metaprogramming to mimic the passing of an argument:&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/jsiny/40b97c1ea25599c0c468b6cfcd322716.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;Here’s what this code does:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Lines 5-7: when the module &lt;code class=&quot;highlighter-rouge&quot;&gt;Likeable&lt;/code&gt; is included within the class, the 
+(Rails) class attribute &lt;code class=&quot;highlighter-rouge&quot;&gt;users_to_be_notified&lt;/code&gt; is created.&lt;/li&gt;
+  &lt;li&gt;Lines 18-22: Within the &lt;code class=&quot;highlighter-rouge&quot;&gt;Likeable&lt;/code&gt; module is defined the class method 
+&lt;code class=&quot;highlighter-rouge&quot;&gt;notifiable_users&lt;/code&gt;. This method sets &lt;code class=&quot;highlighter-rouge&quot;&gt;users_to_be_notified&lt;/code&gt; to the
+parameters.&lt;/li&gt;
+  &lt;li&gt;Line 34: &lt;code class=&quot;highlighter-rouge&quot;&gt;notifiable_users :creator, :tagged_users&lt;/code&gt;: the &lt;code class=&quot;highlighter-rouge&quot;&gt;notifiable_users&lt;/code&gt; 
+class method is called with two arguments (representing ActiveRecord attributes).
+This sets the class attribute &lt;code class=&quot;highlighter-rouge&quot;&gt;users_to_be_notified&lt;/code&gt; to &lt;code class=&quot;highlighter-rouge&quot;&gt;[:creator, 
+:tagged_users]&lt;/code&gt; (for the &lt;code class=&quot;highlighter-rouge&quot;&gt;Video&lt;/code&gt; class).&lt;/li&gt;
+  &lt;li&gt;Line 14: we retrieve the values behind &lt;code class=&quot;highlighter-rouge&quot;&gt;:creator&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;:tagged_users&lt;/code&gt; for 
+the specific instances of the class, and notify them individually.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;You can now create a new class and easily define who gets notified for new
+likes:&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/jsiny/af94934e767fa0da4f721544278628d4.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;There you go!&lt;/p&gt;</content><author><name>Juliette Sinibardy</name></author><category term="Rails" /><category term="Ruby" /><category term="Metaprogramming" /><category term="Ruby on rails" /><category term="Module" /><category term="How-To" /><summary type="html">Refactoring is my favorite hobby. Nothing feels quite as satisfying than extracting some common methods to an elegantly named module. Quickly though, I usually run into trouble - how exactly am I supposed to pass an argument to a module in Ruby? The answer is: through some metaprogramming! (such a scary word)</summary></entry><entry><title type="html">Introducing Deep Sea Adventure’s Scoring App</title><link href="http://localhost:4000/deep-sea-adventure" rel="alternate" type="text/html" title="Introducing Deep Sea Adventure's Scoring App" /><published>2019-11-13T09:42:00+01:00</published><updated>2019-11-13T11:23:00+01:00</updated><id>http://localhost:4000/introducing-deep-sea-adventure-s-scoring-app</id><content type="html" xml:base="http://localhost:4000/deep-sea-adventure">&lt;p&gt;This &lt;a href=&quot;https://deep-sea-adventure.herokuapp.com/&quot;&gt;website&lt;/a&gt; is a &lt;strong&gt;scoring tool&lt;/strong&gt;
 dedicated to the board game
 &lt;a href=&quot;https://oinkgms.com/en/deep-sea-adventure&quot;&gt;Deep Sea Adventure&lt;/a&gt; edited by
 &lt;a href=&quot;https://oinkgms.com/en/&quot;&gt;Oink Games&lt;/a&gt;.&lt;/p&gt;
