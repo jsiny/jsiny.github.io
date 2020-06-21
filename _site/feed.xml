@@ -1,4 +1,356 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en_US"><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en_US" /><updated>2020-04-07T10:21:46+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Juliette Sinibardy</title><subtitle>Pending Programmer&lt;br&gt; ███░░░░░░░ 30%</subtitle><author><name>Juliette Sinibardy</name></author><entry><title type="html">Using Metaprogramming to Pass an Argument to a Rails Module</title><link href="http://localhost:4000/rails-metaprogramming-pass-argument-to-module" rel="alternate" type="text/html" title="Using Metaprogramming to Pass an Argument to a Rails Module" /><published>2020-04-06T15:35:00+02:00</published><updated>2020-04-07T10:25:00+02:00</updated><id>http://localhost:4000/using-metaprogramming-to-pass-an-argument-to-a-rails-module</id><content type="html" xml:base="http://localhost:4000/rails-metaprogramming-pass-argument-to-module">&lt;p&gt;&lt;strong&gt;Refactoring&lt;/strong&gt; is my favorite hobby. Nothing feels quite as satisfying than 
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en_US"><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en_US" /><updated>2020-06-21T16:28:00+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Juliette Sinibardy</title><subtitle>Pending Programmer&lt;br&gt; ███░░░░░░░ 30%</subtitle><author><name>Juliette Sinibardy</name></author><entry><title type="html">My First Weeks as a Software Engineer</title><link href="http://localhost:4000/first-weeks-software-engineer" rel="alternate" type="text/html" title="My First Weeks as a Software Engineer" /><published>2020-06-20T18:28:00+02:00</published><updated>2020-06-21T18:28:00+02:00</updated><id>http://localhost:4000/becoming-software-engineer</id><content type="html" xml:base="http://localhost:4000/first-weeks-software-engineer">&lt;p&gt;After a year of solitary learning, I’ve finally started my first software engineering job. I’m 
+excited, exhausted and extremely grateful for the path that led me here.&lt;/p&gt;
+
+&lt;p&gt;I loved to read career switching stories so I thought I’d give a shot at writing my own.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#introduction&quot; id=&quot;markdown-toc-introduction&quot;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#job-searching&quot; id=&quot;markdown-toc-job-searching&quot;&gt;Job searching&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#interviews&quot; id=&quot;markdown-toc-interviews&quot;&gt;Interviews&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#my-company-and-position&quot; id=&quot;markdown-toc-my-company-and-position&quot;&gt;My company and position&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#bridging-the-gap-between-studying-and-working&quot; id=&quot;markdown-toc-bridging-the-gap-between-studying-and-working&quot;&gt;Bridging the gap between studying and working&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#useful-resources&quot; id=&quot;markdown-toc-useful-resources&quot;&gt;Useful resources&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#final-notes&quot; id=&quot;markdown-toc-final-notes&quot;&gt;Final Notes&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+
+&lt;p&gt;For those who don’t know me, I’m a 26 years old woman living with my partner and my cats in Paris, 
+France. I studied Economics and previously worked in a successful startup, where I ended up 
+becoming general manager - until I decided to quit and become a software engineer. That was 
+last August.&lt;/p&gt;
+
+&lt;p&gt;Since May 2019, I had joined an online school dedicated to mastery based learning - Launch School,
+where I started my programming journey. It took me until the end of 2019 to finish the back-end 
+portion of the course, and I still haven’t finished the front-end portion (oopsie).&lt;/p&gt;
+
+&lt;p&gt;I found a job in March 2020 (more on that later) but only started at the beginning of June, because
+I had planned on going to Southern Africa in May 2020 - but covid happened and my safari 
+became hundreds of hours playing Animal Crossing. Close enough.&lt;/p&gt;
+
+&lt;h2 id=&quot;job-searching&quot;&gt;Job searching&lt;/h2&gt;
+
+&lt;p&gt;Not gonna lie - I got extremely lucky on that part. I’m not sure how much of my job searching 
+experience here is applicable to other situations, but here we go.&lt;/p&gt;
+
+&lt;p&gt;I had registered on specialised platforms where software engineers describe their skills and 
+job / salary expectations, and are later contacted by companies interested in their profile. 
+Most French engineers use &lt;a href=&quot;https://www.talent.io/en/&quot;&gt;talent.io&lt;/a&gt; or 
+&lt;a href=&quot;https://www.hiresweet.com/&quot;&gt;hiresweet&lt;/a&gt; for that purpose.&lt;/p&gt;
+
+&lt;p&gt;I set up my profile without much expectations - given that I was a half-baked engineer - and 
+thought I’d go back and improve it later (spoiler: I never did).&lt;/p&gt;
+
+&lt;p&gt;A couple of weeks later, I was contacted by a recruiter from a company. I had 
+already received my fair share of annoying Linkedin recruiters telling me I was perfect for some
+position that clearly proved they hadn’t read a thing of my resume - but this offer stood out.
+We got in touch, and as I moved along the interview process, it became clear that I could
+&lt;em&gt;actually&lt;/em&gt; receive an offer from the company.&lt;/p&gt;
+
+&lt;p&gt;So I did the only rational thing possible: I dropped everything and job searched like a maniac.
+I didn’t want to receive an offer and not be able to actually know whether I liked this company
+more than others, or if the salary offer was any good. I had grown accustomed to hearing the 
+insane salaries that the &lt;a href=&quot;https://launchschool.com/results&quot;&gt;Launch School Capstone students&lt;/a&gt; earn 
+in the US, so I needed to tune my own expectations to the realities of the French engineering
+market.&lt;/p&gt;
+
+&lt;p&gt;I approached the job search exercise quite boldly. I had previously hired and interviewed dozens
+of candidates, and I think this experience taught me quite a few things on how to craft a good
+application. Therefore, I didn’t waste my time sending dozens of applications to positions I didn’t
+even know. Instead, I researched the companies that I liked and tried to envision myself working
+there. Once I could, I tried to get in touch with their recruiters on Linkedin (recruiters are
+craving for connections with engineers so it usually is pretty easy), in order to directly send them
+my carefully crafted application. I also contacted my network in order to know whether any 
+fitting position was opened. This led to interesting leads that never went through though.&lt;/p&gt;
+
+&lt;p&gt;In the end, I applied to 5 companies, and received 2 offers - a third was perhaps
+on the way, but I got hired before finishing the process. The two offers promised different things,
+but in the end I chose the company that contacted me in the first place.&lt;/p&gt;
+
+&lt;h2 id=&quot;interviews&quot;&gt;Interviews&lt;/h2&gt;
+
+&lt;p&gt;Most companies I applied to were engineering-centric and had pretty similar processes:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;a screening call (done by a recruiter) that mostly focuses on whether you’ve actually read the 
+job opening and know the basics of the company&lt;/li&gt;
+  &lt;li&gt;an on-site interview with a lead developer (with or without some live-coding)&lt;/li&gt;
+  &lt;li&gt;a take-home project that takes between 2 and 4 hours&lt;/li&gt;
+  &lt;li&gt;an on-site live-coding interview with another lead developer&lt;/li&gt;
+  &lt;li&gt;a team lunch / dinner / drink to meet other people of the team and assess the cultural fit&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Some companies switched steps 2 and 3, but the overall structure remained the same.&lt;/p&gt;
+
+&lt;p&gt;As for the coding exercises in particular, I was surprised on how much emphasis there was on
+actually building a small working application during the take-home projects. Most were about 
+writing from scratch a small application with limited features, without forgetting a test suite.
+I could usually choose the framework (and opted for Sinatra, of course!). I also made the mistake 
+of discovering how APIs and JSON conversion worked during one of them!&lt;/p&gt;
+
+&lt;p&gt;Live-coding exercises are always pretty stressful but I felt that probably was where I shined 
+the most. I guess that endless study sessions with Launch School students definitely prepared me
+on managing my stress level and on being able to think while I speak (a surprisinly difficult feat). 
+It also didn’t hurt that I extensively prepared through Leetcode exercises and became familiar
+with some algorithmic patterns.&lt;/p&gt;
+
+&lt;p&gt;Here are some examples of live-coding exercises I was given:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;writing a new feature to my take-home project (that seems to be pretty common)&lt;/li&gt;
+  &lt;li&gt;solving the &lt;a href=&quot;https://www.geeksforgeeks.org/understanding-the-coin-change-problem-with-dynamic-programming/&quot;&gt;coin change problem&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;implementing from scratch the &lt;code class=&quot;highlighter-rouge&quot;&gt;reduce&lt;/code&gt; function&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;my-company-and-position&quot;&gt;My company and position&lt;/h2&gt;
+
+&lt;p&gt;I’m a proud full-stack software engineer at &lt;a href=&quot;https://shipup.co&quot;&gt;Shipup&lt;/a&gt;, a SaaS company that
+helps online retailers create a better post-purchase experience for their customers (eg. better 
+delivery tracking emails, integration with customer support in case there’s an issue with the
+delivery, etc.)&lt;/p&gt;
+
+&lt;p&gt;Basically, the company is extremely API-oriented: it’s integrated with dozens of different carriers
+and provides multiple ways for online retailers to send them order data. The technical stack is a 
+mix of Ruby on Rails and React.&lt;/p&gt;
+
+&lt;p&gt;I’m still pretty new to the React world so my work has been mostly focused on Rails so far - but
+I’m trying to do some 
+&lt;a href=&quot;https://medium.com/launch-school/just-in-time-learning-f6a10886ddfe&quot;&gt;“just-in-time” learning&lt;/a&gt; in 
+order to soon become proficient in React.&lt;/p&gt;
+
+&lt;p&gt;Shipup is a small French startup, with only 25 employees so far (including 6 engineers). They’re
+pretty ambitious and I can see these numbers rapidly growing in the upcoming months - I feel like it’s an
+exciting time to join a company!&lt;/p&gt;
+
+&lt;h2 id=&quot;bridging-the-gap-between-studying-and-working&quot;&gt;Bridging the gap between studying and working&lt;/h2&gt;
+
+&lt;p&gt;I started working 3 weeks ago, and since then, I’ve had to learn an insane amount of tools 
+and technologies. Here they are, with a personal assessment on how well I need to know them.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Tool&lt;/th&gt;
+      &lt;th&gt;Importance?&lt;/th&gt;
+      &lt;th&gt;Comment&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;https://rubyonrails.org/&quot;&gt;Rails&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;Extremely&lt;/td&gt;
+      &lt;td&gt;I was already pretty familiar with the framework&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;https://rspec.info/&quot;&gt;RSpec&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;Extremely&lt;/td&gt;
+      &lt;td&gt;I use it every day&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/bblimke/webmock&quot;&gt;WebMock&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;Very important&lt;/td&gt;
+      &lt;td&gt;Essential for API testing&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;https://lostisland.github.io/faraday/&quot;&gt;Faraday&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;Important&lt;/td&gt;
+      &lt;td&gt;Very useful for opening a persistent connection with an API&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;https://www.docker.com/&quot;&gt;Docker&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;Limited&lt;/td&gt;
+      &lt;td&gt;I only use some specific commands and so far, I haven’t had to master anything Docker-related&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;https://kubernetes.io/&quot;&gt;Kubernetes&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;Limited&lt;/td&gt;
+      &lt;td&gt;Same as Docker&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;https://reactjs.org/&quot;&gt;React&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;Extremely&lt;/td&gt;
+      &lt;td&gt;Unfortunately I’m still very new to the framework so I feel a lot of pressure on quickly becoming up to speed&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;https://redux.js.org/&quot;&gt;Redux&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;Very important&lt;/td&gt;
+      &lt;td&gt;Same as React&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;https://jestjs.io/&quot;&gt;Jest&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;Very important&lt;/td&gt;
+      &lt;td&gt;Fortunately, I already knew some basics&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;https://storybook.js.org/&quot;&gt;Storybook&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;Very important&lt;/td&gt;
+      &lt;td&gt;I’m still unfamiliar with this technology&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;https://www.gatsbyjs.org/&quot;&gt;Gatsby&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;Important&lt;/td&gt;
+      &lt;td&gt;Used for the corporate website&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;On top of that, I also have to acclimatize to this gigantic codebase, to the various APIs I have
+to work with, and to using a specific git workflow.&lt;/p&gt;
+
+&lt;p&gt;I guess it becomes easier with time, but the first few weeks have been packed with discoveries and
+frustration at my own ignorance.&lt;/p&gt;
+
+&lt;p&gt;The hardest and central part of my job seems to be “making every tool work together”, surprisingly.
+I usually do not tackle difficult puzzle or code challenge - most of my Ruby knowledge is more 
+than enough to solve the problems I’m faced with. However, identifying the problem(s) and 
+unveiling the various problematic layers take a lot of patience and pugnacity. Finding what to do
+is where most of my job resides - actually coding it is the easy part.&lt;/p&gt;
+
+&lt;p&gt;So far, I’ve had to build 2 features, that demanded an in-depth understanding of the core business 
+and the existing codebase. Before writing a single line of code, I’ve had to dive deep in various
+files in order to actually understand what the hell was going on there. It doesn’t help that my
+first weeks were done remotely (covid, again) and that I’m not very good at asking for help when
+I need it - I’m working on that though.&lt;/p&gt;
+
+&lt;h2 id=&quot;useful-resources&quot;&gt;Useful resources&lt;/h2&gt;
+
+&lt;p&gt;Launch School’s core curriculum provides strong programming foundations, and is not meant to be
+exhaustive. Here are some resources that helped me build on these foundations:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Preparing for interviews:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://pragprog.com/titles/jwdsal2/&quot;&gt;A Common Sense Guide to Data Structures and Algorithms&lt;/a&gt;
+by Jay Wengrow&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;http://www.crackingthecodinginterview.com/&quot;&gt;Cracking the Coding Interview&lt;/a&gt; by 
+&lt;a href=&quot;http://www.gayle.com/&quot;&gt;Gayle Laakmann McDowell&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Ruby on Rails:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://www.railstutorial.org/&quot;&gt;Rails Tutorial&lt;/a&gt; by 
+&lt;a href=&quot;https://www.michaelhartl.com/&quot;&gt;Michael Hartl&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://launchschool.com/books/demystifying_rails&quot;&gt;Demystifying Rails&lt;/a&gt; by 
+&lt;a href=&quot;https://launchschool.com&quot;&gt;Launch School&lt;/a&gt; (free)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;React:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://www.newline.co/fullstack-react/&quot;&gt;Fullstack React&lt;/a&gt; by &lt;a href=&quot;https://www.newline.co/&quot;&gt;Newline&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;APIs:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://launchschool.com/books/working_with_apis/&quot;&gt;Working with Web APIs&lt;/a&gt; by 
+&lt;a href=&quot;https://launchschool.com&quot;&gt;Launch School&lt;/a&gt; (free)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;final-notes&quot;&gt;Final Notes&lt;/h2&gt;
+
+&lt;p&gt;I’ve been asked a couple of questions by other Launch School students - I’ll try to answer them 
+here.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;In my job search, which industry did I target?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;I didn’t target any specific industry. However, I did target one &lt;em&gt;type&lt;/em&gt; of company: SaaS companies
+(as in &lt;a href=&quot;https://www.techradar.com/news/what-is-saas&quot;&gt;Software as a Service&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;My goal was to join a company where the technical team was a &lt;em&gt;profit-center&lt;/em&gt; rather than a 
+&lt;em&gt;cost-center&lt;/em&gt;, ie. where the product shipped by the engineers was the main money-maker of 
+the company. I felt that SaaS startups fit that description pretty well.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Any surprises during the job interviews?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The highs and lows of job searching are exhausting. Between applications, screening calls, 
+interviews, take-home projects and preparing for the future interviews, job searching is a full 
+time job. In my experience, it’s not compatible with other things like still working for your 
+previous job, advancing through the curriculum or caring for anything else.&lt;/p&gt;
+
+&lt;p&gt;As for the interviews themselves, I was surprised by how awkward some companies were regarding 
+promoting diversity. I felt extremely uncomfortable when a recruiter candidly told me that they
+would get an additional bonus for recruiting a female software engineer - ugh, okay.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Is there anything I wished was covered by the LS curriculum?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;First, I’ll start by saying how grateful I am that the Networking course is that much in-depth. 
+I use this knowledge on an everyday basis.&lt;/p&gt;
+
+&lt;p&gt;As stated in the prevous section, I have used numerous resources to complement my Launch School
+knowledge. Most of these resources are not based on ‘fundamental knowledge’ - I need them because
+I use these technologies at my workplace, not because of their intrinsic value.&lt;/p&gt;
+
+&lt;p&gt;However, there are two topics that I think should be covered more in LS (or at least seem
+pretty fundamental to me):&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Data Structure and Algorithms&lt;/li&gt;
+  &lt;li&gt;Web APIs&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;That being said, it’s pretty easy to pick up a book about these topics once you’ve worked 
+through the Core curriculum.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;How is using git ‘in real life’?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Short answer: not that difficult and awesome!&lt;/p&gt;
+
+&lt;p&gt;Most companies have their own version of a git workflow. We use 
+&lt;a href=&quot;https://www.endoflineblog.com/oneflow-a-git-branching-model-and-workflow&quot;&gt;oneflow&lt;/a&gt;, which is 
+a simplified version of 
+&lt;a href=&quot;https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow&quot;&gt;git flow&lt;/a&gt; 
+(which seems to be pretty widespread).&lt;/p&gt;
+
+&lt;p&gt;Using git &lt;em&gt;in real life&lt;/em&gt; is mostly, to me:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Always working on a separate branch&lt;/li&gt;
+  &lt;li&gt;Being extremely careful with how I name my commits&lt;/li&gt;
+  &lt;li&gt;…and with &lt;em&gt;what&lt;/em&gt; I commit (&lt;code class=&quot;highlighter-rouge&quot;&gt;git add --patch&lt;/code&gt; is my new best friend)&lt;/li&gt;
+  &lt;li&gt;Constantly rewriting my local git history (&lt;code class=&quot;highlighter-rouge&quot;&gt;git rebase -i origin/master&lt;/code&gt;) so that my commits
+are self-explanatory and grouped logically&lt;/li&gt;
+  &lt;li&gt;Always making a Pull Request once I’m done with my feature (to allow my colleagues to review
+my work)&lt;/li&gt;
+  &lt;li&gt;Merging with incredible care into &lt;code class=&quot;highlighter-rouge&quot;&gt;master&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;And going through the CI/CD pipeline before deploying to production&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;What’s unique about France’s tech industry compared to the US?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;I’ve never worked in the US and can only guess.&lt;/p&gt;
+
+&lt;p&gt;I think the main difference is the type of companies you can work with here. You won’t find any 
+tech giant like in the Bay Area or New York. The biggest engineering companies probably have a 
+maximum of a 100 engineers. Therefore, your options are limited to:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;tech startups (my choice)&lt;/li&gt;
+  &lt;li&gt;IT services companies (tech consultancy)&lt;/li&gt;
+  &lt;li&gt;companies with a ‘cost-center’ IT department (and you’d rather avoid these)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Paris is a great place for tech startups, and I guess that most major cities (Lyon, Lille, 
+Bordeaux…) have some bubbling startup activity but I wouldn’t expect it to be true elsewhere. 
+In short, there are only a handful of cities where some interesting engineering work can be found.&lt;/p&gt;
+
+&lt;p&gt;Also, English truly is the main language for software engineering - even in France. Most of my 
+meetings, all of the code and all the documentation is in English. That caught me a bit off-guard
+in a country that fought so long against the invasion of the English language. (In all seriousness, 
+the &lt;a href=&quot;http://www.academie-francaise.fr/dire-ne-pas-dire/neologismes-anglicismes&quot;&gt;French academy&lt;/a&gt; has
+a list of English phrases that &lt;em&gt;should&lt;/em&gt; be replaced by French sentences.)&lt;/p&gt;
+
+&lt;p&gt;Finally, I should mention that the tech industry salaries definitely are above average in France, 
+but are &lt;em&gt;not&lt;/em&gt; exponentially inflated like they are in some US cities. Realistic figures are between
+€35-40,000 (graduate) and €100,000 (experienced manager) - and 
+&lt;a href=&quot;https://www.numbeo.com/cost-of-living/in/Paris&quot;&gt;Paris&lt;/a&gt; has a pretty high cost of life as well.&lt;/p&gt;
+
+&lt;p&gt;In short, while most software engineers have a better wage than most here, it’s not exactly
+as insanely profitable as it is in the US.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Alright! This has been a wildly long article, and I hope you found it useful.
+Don’t hesitate to get in touch with me if you have some further questions, and I wish you all
+the best on your programming journey!&lt;/p&gt;</content><author><name>Juliette Sinibardy</name></author><category term="Programming" /><category term="Blogging" /><category term="Learning" /><category term="First days in a company" /><category term="Software engineer" /><category term="Job searching" /><category term="Interviews" /><category term="Launch School" /><summary type="html">After a year of solitary learning, I’ve finally started my first software engineering job. I’m excited, exhausted and extremely grateful for the path that led me here. I loved to read career switching stories so I thought I’d give a shot at writing my own.</summary></entry><entry><title type="html">Using Metaprogramming to Pass an Argument to a Rails Module</title><link href="http://localhost:4000/rails-metaprogramming-pass-argument-to-module" rel="alternate" type="text/html" title="Using Metaprogramming to Pass an Argument to a Rails Module" /><published>2020-04-06T15:35:00+02:00</published><updated>2020-04-07T10:25:00+02:00</updated><id>http://localhost:4000/using-metaprogramming-to-pass-an-argument-to-a-rails-module</id><content type="html" xml:base="http://localhost:4000/rails-metaprogramming-pass-argument-to-module">&lt;p&gt;&lt;strong&gt;Refactoring&lt;/strong&gt; is my favorite hobby. Nothing feels quite as satisfying than 
 extracting some common methods to an elegantly named module.&lt;/p&gt;
 
 &lt;p&gt;Quickly though, I usually run into trouble - how exactly am I supposed to pass an 
@@ -2227,134 +2579,4 @@ of external resources loaded on the front page (no Github gist, no images).&lt;/
         &lt;/a&gt;
         &lt;figcaption&gt;Static websites are incredibly fast 😍&lt;/figcaption&gt;
     &lt;/figure&gt;
-&lt;/div&gt;</content><author><name>Juliette Sinibardy</name></author><category term="Jekyll" /><category term="SEO" /><category term="Google" /><category term="How-To" /><category term="Lighthouse" /><category term="Jekyll plugin" /><category term="HTML" /><category term="CSS" /><summary type="html">What? There’s no sitemap here? - Me when I discovered my new Jekyll blog Although Jekyll comes a little “naked” in terms of necessary SEO tools (especially in comparison to traditional CMS), it’s pretty easy to remedy this situation. Here are a couple of easy steps to follow, in order to improve your SEO ranking and your Lighthouse score.</summary></entry><entry><title type="html">How to Set Up a Contact Form on Jekyll</title><link href="http://localhost:4000/setup-contact-form-jekyll" rel="alternate" type="text/html" title="How to Set Up a Contact Form on Jekyll" /><published>2019-07-04T06:22:08+02:00</published><updated>2019-07-04T06:22:08+02:00</updated><id>http://localhost:4000/setup-contact-form</id><content type="html" xml:base="http://localhost:4000/setup-contact-form-jekyll">&lt;p&gt;I thought it would be cool to give the opportunity to the random internet
-user to &lt;a href=&quot;/contact&quot;&gt;contact me&lt;/a&gt; if they so wanted. Turns out it’s pretty easy,
-so here’s a tutorial on how to set up a contact form on Jekyll using
-&lt;a href=&quot;https://formspree.io/&quot;&gt;Formspree&lt;/a&gt;.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;h2 id=&quot;whats-formspree&quot;&gt;What’s Formspree?&lt;/h2&gt;
-
-&lt;p&gt;It’s a HTML form generator, that transfers the form’s answers to your
-email address. Plus it’s free and no registration is required.&lt;/p&gt;
-
-&lt;p&gt;There is also a paid plan for additional features, but until 50 messages
-a month, I guess the free plan is enough for most uses.&lt;/p&gt;
-
-&lt;h2 id=&quot;basic-setup&quot;&gt;Basic setup&lt;/h2&gt;
-
-&lt;p&gt;Formspree provides a &lt;a href=&quot;https://test.formspree.io/&quot;&gt;test environment&lt;/a&gt;
-where you can tweak your HTML before including it on your website.&lt;/p&gt;
-
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;form&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;method=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;POST&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;action=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://formspree.io/&amp;lt;YOUR_EMAIL_HERE&amp;gt;&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;input&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;email&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;email&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;placeholder=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Your email&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;input&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;text&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;name&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;placeholder=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Your name&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;textarea&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;message&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;placeholder=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Your message&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rows=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;3&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/textarea&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;button&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;submit&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Send Message&lt;span class=&quot;nt&quot;&gt;&amp;lt;/button&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/form&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;You simply have to include your contact email on line 1 
-(&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;YOUR_EMAIL_HERE&amp;gt;&lt;/code&gt;), and the form works!&lt;/p&gt;
-
-&lt;div style=&quot;text-align: center&quot;&gt;
-    &lt;figure&gt;
-        &lt;a href=&quot;/assets/images/formspree-test-form.png&quot;&gt;
-            &lt;img src=&quot;/assets/images/formspree-test-form.png&quot; alt=&quot;Test your contact form&quot; /&gt;  
-        &lt;/a&gt;
-        &lt;figcaption&gt;You can test the form directly in Formspree's environment&lt;/figcaption&gt;
-    &lt;/figure&gt;
-&lt;/div&gt;
-
-&lt;p&gt;&lt;em&gt;Note:&lt;/em&gt; You’ll have to first activate each domain you set up
-your contact form on (through an activation link sent to the email address
-provided), so it’s no use adding your friend’s email for a prank 😉&lt;/p&gt;
-
-&lt;p&gt;You can also customize the &lt;code class=&quot;highlighter-rouge&quot;&gt;placeholder&lt;/code&gt; of your
-input questions, or add any other question, like:&lt;/p&gt;
-
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;input&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;text&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;subject&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;placeholder=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Message's subject&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;integration-with-jekyll&quot;&gt;Integration with Jekyll&lt;/h2&gt;
-
-&lt;p&gt;You could now copy/paste the HTML code and include it any &lt;code class=&quot;highlighter-rouge&quot;&gt;.html&lt;/code&gt; file of your
-blog.&lt;/p&gt;
-
-&lt;p&gt;However, the best way to do that would be to insert this code into an
-&lt;code class=&quot;highlighter-rouge&quot;&gt;_includes&lt;/code&gt; file, and create a dedicated &lt;code class=&quot;highlighter-rouge&quot;&gt;_layouts&lt;/code&gt;. This way, you’ll be able
-to edit the page with the contact form using a nice and clean Markdown! 💙&lt;/p&gt;
-
-&lt;p&gt;First, let’s create a new layout in your &lt;code class=&quot;highlighter-rouge&quot;&gt;root/_layouts&lt;/code&gt; folder and name 
-it &lt;code class=&quot;highlighter-rouge&quot;&gt;contact.html&lt;/code&gt;.&lt;/p&gt;
-
-&lt;script src=&quot;https://gist.github.com/838f4658b87635fca91333972b91f066.js&quot;&gt; &lt;/script&gt;
-
-&lt;p&gt;You’ll notice that this layout is based on the default &lt;code class=&quot;highlighter-rouge&quot;&gt;page.html&lt;/code&gt; layout,
-and this allows us to do the following:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Automatically use the title attribute to create a &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;h1&amp;gt;&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;Type your content and it will appear before the contact form&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;em&gt;Note&lt;/em&gt;: I’m using the Hydeout Jekyll template, which may have different layout
-names than your own.&lt;/p&gt;
-
-&lt;p&gt;Then, we’ll create the &lt;code class=&quot;highlighter-rouge&quot;&gt;contact-form.html&lt;/code&gt; mentioned in the previous code 
-excerpt. Place it in the &lt;code class=&quot;highlighter-rouge&quot;&gt;root/_includes&lt;/code&gt; folder. This file will host the
-HTML you generated through Formspree, which in this case, is:&lt;/p&gt;
-
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;form&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;method=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;POST&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;action=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://formspree.io/&amp;lt;YOUR_EMAIL_HERE&amp;gt;&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;input&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;email&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;email&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;placeholder=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Your email&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;input&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;text&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;name&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;placeholder=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Your name&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;textarea&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;message&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;placeholder=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Your message&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rows=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;3&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/textarea&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;button&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;submit&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Send Message&lt;span class=&quot;nt&quot;&gt;&amp;lt;/button&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/form&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;You now have a working &lt;code class=&quot;highlighter-rouge&quot;&gt;contact&lt;/code&gt; layout! 🌈&lt;/p&gt;
-
-&lt;p&gt;To use it, create a new post, and insert &lt;code class=&quot;highlighter-rouge&quot;&gt;layout: contact&lt;/code&gt; in the YAML front
-matter. You can now type any Markdown content you want, and your text will be
-displayed before your contact form!&lt;/p&gt;
-
-&lt;h2 id=&quot;final-adjustments&quot;&gt;Final Adjustments&lt;/h2&gt;
-
-&lt;p&gt;However, in my case, the &lt;code class=&quot;highlighter-rouge&quot;&gt;Your Message&lt;/code&gt; (&lt;code class=&quot;highlighter-rouge&quot;&gt;textarea&lt;/code&gt;) part was displayed poorly,
-because the Hydeout template did not have any CSS for &lt;code class=&quot;highlighter-rouge&quot;&gt;textarea&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;I therefore had to create some styling in order to homogenize the form. I’ve
-included the following SCSS in my &lt;code class=&quot;highlighter-rouge&quot;&gt;assets/css/main.scss&lt;/code&gt;:&lt;/p&gt;
-
-&lt;div class=&quot;language-scss highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;text&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;email&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;search&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;],&lt;/span&gt; 
-&lt;span class=&quot;nt&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;submit&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;button&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;textarea&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; 
-  &lt;span class=&quot;nl&quot;&gt;padding&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1em&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;.5em&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; 
-  &lt;span class=&quot;nl&quot;&gt;border&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1px&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;solid&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;#e5e5e5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; 
-  &lt;span class=&quot;nl&quot;&gt;border-radius&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;300px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; 
-  &lt;span class=&quot;nl&quot;&gt;margin-bottom&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1em&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; 
-  &lt;span class=&quot;nl&quot;&gt;font-family&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;apple-system&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BlinkMacSystemFont&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Segoe UI&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; 
-                &lt;span class=&quot;s2&quot;&gt;&quot;Roboto&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Oxygen&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Ubuntu&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Cantarell&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; 
-                &lt;span class=&quot;s2&quot;&gt;&quot;Fira Sans&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Droid Sans&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Helvetica Neue&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; 
-                &lt;span class=&quot;n&quot;&gt;Arial&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;sans-serif&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; 
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;nt&quot;&gt;textarea&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;73%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;  &lt;span class=&quot;nl&quot;&gt;resize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;none&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;I’ve also added &lt;code class=&quot;highlighter-rouge&quot;&gt;rows=&quot;3&quot;&lt;/code&gt; in the &lt;code class=&quot;highlighter-rouge&quot;&gt;contact-form.html&lt;/code&gt; in order to widen the 
-text area. Bear in mind that all these changes are pretty specific to the
-Hydeout template so you’ll probably have to tweak your own CSS in order
-to have a coherent style.&lt;/p&gt;
-
-&lt;div style=&quot;text-align: center&quot;&gt;
-    &lt;figure&gt;
-        &lt;a href=&quot;/assets/images/contact-form.png&quot;&gt;
-            &lt;img src=&quot;/assets/images/contact-form.png&quot; alt=&quot;Here you go!&quot; /&gt;  
-        &lt;/a&gt;
-        &lt;figcaption&gt;Example of contact form&lt;/figcaption&gt;
-    &lt;/figure&gt;
-&lt;/div&gt;</content><author><name>Juliette Sinibardy</name></author><category term="Jekyll" /><category term="Contact Form" /><category term="Formspree" /><category term="How-To" /><category term="HTML" /><category term="CSS" /><summary type="html">I thought it would be cool to give the opportunity to the random internet user to contact me if they so wanted. Turns out it’s pretty easy, so here’s a tutorial on how to set up a contact form on Jekyll using Formspree.</summary></entry></feed>
+&lt;/div&gt;</content><author><name>Juliette Sinibardy</name></author><category term="Jekyll" /><category term="SEO" /><category term="Google" /><category term="How-To" /><category term="Lighthouse" /><category term="Jekyll plugin" /><category term="HTML" /><category term="CSS" /><summary type="html">What? There’s no sitemap here? - Me when I discovered my new Jekyll blog Although Jekyll comes a little “naked” in terms of necessary SEO tools (especially in comparison to traditional CMS), it’s pretty easy to remedy this situation. Here are a couple of easy steps to follow, in order to improve your SEO ranking and your Lighthouse score.</summary></entry></feed>

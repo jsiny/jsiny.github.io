@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+
+  <title>
+    
+      My First Weeks as a Software Engineer &middot; Juliette Sinibardy
+    
+  </title>
+
+  
+
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/assets/css/main.css" />
+
+  <!-- Icons -->
+  <link rel="icon" type="image/png" href="/favicon.png" />
+
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml" />
+
+  <!-- Google Analytics tracking ID -->
+
+
+<!-- SEO tags -->
+<!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>My First Weeks as a Software Engineer | Juliette Sinibardy</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="My First Weeks as a Software Engineer" />
+<meta name="author" content="Juliette Sinibardy" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="I take a step back and tell the story of how I transitioned into software engineering after a year of studies" />
+<meta property="og:description" content="I take a step back and tell the story of how I transitioned into software engineering after a year of studies" />
+<link rel="canonical" href="http://localhost:4000/first-weeks-software-engineer" />
+<meta property="og:url" content="http://localhost:4000/first-weeks-software-engineer" />
+<meta property="og:site_name" content="Juliette Sinibardy" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-06-20T18:28:00+02:00" />
+<script type="application/ld+json">
+{"url":"http://localhost:4000/first-weeks-software-engineer","headline":"My First Weeks as a Software Engineer","dateModified":"2020-06-21T18:28:00+02:00","datePublished":"2020-06-20T18:28:00+02:00","author":{"@type":"Person","name":"Juliette Sinibardy"},"description":"I take a step back and tell the story of how I transitioned into software engineering after a year of studies","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/first-weeks-software-engineer"},"@type":"BlogPosting","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+
+  <body class="post">
+
+    <div id="sidebar">
+  <header>
+    <div class="site-title">
+      <a href="/">
+        
+          <span class="back-arrow icon"><svg fill="#000000" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+  <path d="M0 0h24v24H0z" fill="none"></path>
+  <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"></path>
+</svg></span>
+        
+        Juliette Sinibardy
+      </a>
+    </div>
+    <p class="lead">Pending Programmer<br> ███░░░░░░░ 30%</p>
+  </header>
+  <nav id="sidebar-nav-links">
+  
+    <a class="home-link " href="/">Home</a>
+  
+  
+
+  
+
+  
+
+
+  
+    
+  
+
+  
+    
+      <a class="page-link " href="/about">About Me</a>
+    
+  
+
+  
+    
+      <a class="page-link " href="/contact">Contact</a>
+    
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+      <a class="page-link " href="/work">Work History</a>
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+
+  
+
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+
+  <!-- Optional additional links to insert in sidebar nav -->
+</nav>
+
+
+  
+
+  <nav id="sidebar-icon-links">
+  
+
+  
+  
+  
+  
+
+  
+<a id="github-link" class="icon" title="Github" aria-label="Github" href="https://github.com/jsiny">
+  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 28" width="24" height="24">
+    <path d="M12 2c6.625 0 12 5.375 12 12 0 5.297-3.437 9.797-8.203 11.391-0.609 0.109-0.828-0.266-0.828-0.578 0-0.391 0.016-1.687 0.016-3.297 0-1.125-0.375-1.844-0.812-2.219 2.672-0.297 5.484-1.313 5.484-5.922 0-1.313-0.469-2.375-1.234-3.219 0.125-0.313 0.531-1.531-0.125-3.187-1-0.313-3.297 1.234-3.297 1.234-0.953-0.266-1.984-0.406-3-0.406s-2.047 0.141-3 0.406c0 0-2.297-1.547-3.297-1.234-0.656 1.656-0.25 2.875-0.125 3.187-0.766 0.844-1.234 1.906-1.234 3.219 0 4.594 2.797 5.625 5.469 5.922-0.344 0.313-0.656 0.844-0.766 1.609-0.688 0.313-2.438 0.844-3.484-1-0.656-1.141-1.844-1.234-1.844-1.234-1.172-0.016-0.078 0.734-0.078 0.734 0.781 0.359 1.328 1.75 1.328 1.75 0.703 2.141 4.047 1.422 4.047 1.422 0 1 0.016 1.937 0.016 2.234 0 0.313-0.219 0.688-0.828 0.578-4.766-1.594-8.203-6.094-8.203-11.391 0-6.625 5.375-12 12-12zM4.547 19.234c0.031-0.063-0.016-0.141-0.109-0.187-0.094-0.031-0.172-0.016-0.203 0.031-0.031 0.063 0.016 0.141 0.109 0.187 0.078 0.047 0.172 0.031 0.203-0.031zM5.031 19.766c0.063-0.047 0.047-0.156-0.031-0.25-0.078-0.078-0.187-0.109-0.25-0.047-0.063 0.047-0.047 0.156 0.031 0.25 0.078 0.078 0.187 0.109 0.25 0.047zM5.5 20.469c0.078-0.063 0.078-0.187 0-0.297-0.063-0.109-0.187-0.156-0.266-0.094-0.078 0.047-0.078 0.172 0 0.281s0.203 0.156 0.266 0.109zM6.156 21.125c0.063-0.063 0.031-0.203-0.063-0.297-0.109-0.109-0.25-0.125-0.313-0.047-0.078 0.063-0.047 0.203 0.063 0.297 0.109 0.109 0.25 0.125 0.313 0.047zM7.047 21.516c0.031-0.094-0.063-0.203-0.203-0.25-0.125-0.031-0.266 0.016-0.297 0.109s0.063 0.203 0.203 0.234c0.125 0.047 0.266 0 0.297-0.094zM8.031 21.594c0-0.109-0.125-0.187-0.266-0.172-0.141 0-0.25 0.078-0.25 0.172 0 0.109 0.109 0.187 0.266 0.172 0.141 0 0.25-0.078 0.25-0.172zM8.937 21.438c-0.016-0.094-0.141-0.156-0.281-0.141-0.141 0.031-0.234 0.125-0.219 0.234 0.016 0.094 0.141 0.156 0.281 0.125s0.234-0.125 0.219-0.219z"></path>
+</svg>
+
+</a>
+
+<a id="medium-link" class="icon" title="Medium" aria-label="Medium" href="https://medium.com/@juju.siny">
+  <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" viewbox="0 0 24 24">
+    <path d="M12 0c-6.626 0-12 5.372-12 12 0 6.627 5.374 12 12 12 6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12zm6.974 17.557v-.235l-1.092-1.072c-.096-.073-.144-.194-.124-.313v-7.874c-.02-.119.028-.24.124-.313l1.118-1.072v-.235h-3.869l-2.758 6.88-3.138-6.88h-4.059v.235l1.308 1.575c.128.115.194.285.176.457v6.188c.038.223-.032.451-.189.614l-1.471 1.784v.235h4.17v-.235l-1.471-1.784c-.158-.163-.233-.389-.202-.614v-5.352l3.66 7.985h.425l3.143-7.985v6.365c0 .17 0 .202-.111.313l-1.13 1.098v.235h5.49z"></path>
+</svg>
+</a>
+
+<a id="linkedin-link" class="icon" title="LinkedIn" aria-label="LinkedIn" href="https://linkedin.com/in/juliette-sinibardy">
+  <?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+
+<svg width="24" height="24" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 490.732 490.732" style="enable-background:new 0 0 490.732 490.732;" xml:space="preserve">
+<g>
+	<g>
+		<path d="M472.366,0.003H18.36C8.219,0.003,0,8.222,0,18.363v454.005c0,10.143,8.219,18.361,18.36,18.361h454.012
+			c10.142,0,18.36-8.219,18.36-18.361V18.363C490.727,8.222,482.507,0.003,472.366,0.003z M130.375,403.808
+			c0,6.762-5.478,12.238-12.24,12.238H69.132c-6.756,0-12.24-5.477-12.24-12.238V189.625c0-6.763,5.484-12.24,12.24-12.24h49.003
+			c6.762,0,12.24,5.477,12.24,12.24V403.808z M130.375,127.482c0,6.763-5.478,12.24-12.24,12.24H69.132
+			c-6.756,0-12.24-5.478-12.24-12.24V83.969c0-6.763,5.484-12.24,12.24-12.24h49.003c6.762,0,12.24,5.477,12.24,12.24V127.482z
+			 M433.835,403.808c0,6.762-5.483,12.238-12.24,12.238h-49.003c-6.763,0-12.24-5.477-12.24-12.238v-90.436
+			c0-29.988-1.566-49.383-4.712-58.189c-3.14-8.807-8.237-15.649-15.3-20.526c-7.062-4.884-15.558-7.32-25.496-7.32
+			c-12.729,0-24.149,3.488-34.26,10.459c-10.11,6.977-17.038,16.211-20.79,27.717c-3.745,11.506-5.618,32.779-5.618,63.807v74.488
+			c0,6.762-5.483,12.238-12.24,12.238h-49.003c-6.756,0-12.24-5.477-12.24-12.238V189.625c0-6.763,5.483-12.24,12.24-12.24h43.771
+			c6.763,0,12.24,5.477,12.24,12.24v16.316c0,6.763,3.312,7.852,7.858,2.852c22.864-25.123,50.753-37.687,83.673-37.687
+			c16.212,0,31.028,2.919,44.455,8.758c13.422,5.838,23.58,13.292,30.466,22.356c6.885,9.063,11.683,19.351,14.382,30.857
+			c2.699,11.505,4.058,27.98,4.058,49.426V403.808L433.835,403.808z"></path>
+	</g>
+</g>
+</svg>
+
+</a>
+  
+    <a id="subscribe-link" class="icon" title="Subscribe" aria-label="Subscribe" href="/feed.xml">
+    <svg fill="#000000" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"></path>
+    <circle cx="6.18" cy="17.82" r="2.18"></circle>
+    <path d="M4 4.44v2.83c7.03 0 12.73 5.7 12.73 12.73h2.83c0-8.59-6.97-15.56-15.56-15.56zm0 5.66v2.83c3.9 0 7.07 3.17 7.07 7.07h2.83c0-5.47-4.43-9.9-9.9-9.9z"></path>
+</svg>
+  </a>
+  
+  
+    <a id="tags-link" class="icon" title="Tags" aria-label="Tags" href="/tags">
+      <svg fill="#000000" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"></path>
+    <path d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z"></path>
+</svg>
+    </a>
+  
+
+  
+
+</nav>
+  <p class="copyright">
+  © 2020 - Juliette Sinibardy
+</p>
+</div>
+
+    <main class="container">
+        <header>
+  <h1 class="post-title">My First Weeks as a Software Engineer</h1>
+</header>
+<div class="content">
+  <div class="post-meta">
+  <span class="post-date">20 Jun 2020</span>
+  <span class="post-categories">
+    
+      •
+
+      
+      
+      
+
+      
+        Blogging
+      
+    
+  </span>
+</div>
+
+  <div class="post-body">
+    <p>After a year of solitary learning, I’ve finally started my first software engineering job. I’m 
+excited, exhausted and extremely grateful for the path that led me here.</p>
+
+<p>I loved to read career switching stories so I thought I’d give a shot at writing my own.</p>
+
+<!--more-->
+
+<ul id="markdown-toc">
+  <li><a href="#introduction" id="markdown-toc-introduction">Introduction</a></li>
+  <li><a href="#job-searching" id="markdown-toc-job-searching">Job searching</a></li>
+  <li><a href="#interviews" id="markdown-toc-interviews">Interviews</a></li>
+  <li><a href="#my-company-and-position" id="markdown-toc-my-company-and-position">My company and position</a></li>
+  <li><a href="#bridging-the-gap-between-studying-and-working" id="markdown-toc-bridging-the-gap-between-studying-and-working">Bridging the gap between studying and working</a></li>
+  <li><a href="#useful-resources" id="markdown-toc-useful-resources">Useful resources</a></li>
+  <li><a href="#final-notes" id="markdown-toc-final-notes">Final Notes</a></li>
+</ul>
+<hr>
+
+<h2 id="introduction">Introduction</h2>
+
+<p>For those who don’t know me, I’m a 26 years old woman living with my partner and my cats in Paris, 
+France. I studied Economics and previously worked in a successful startup, where I ended up 
+becoming general manager - until I decided to quit and become a software engineer. That was 
+last August.</p>
+
+<p>Since May 2019, I had joined an online school dedicated to mastery based learning - Launch School,
+where I started my programming journey. It took me until the end of 2019 to finish the back-end 
+portion of the course, and I still haven’t finished the front-end portion (oopsie).</p>
+
+<p>I found a job in March 2020 (more on that later) but only started at the beginning of June, because
+I had planned on going to Southern Africa in May 2020 - but covid happened and my safari 
+became hundreds of hours playing Animal Crossing. Close enough.</p>
+
+<h2 id="job-searching">Job searching</h2>
+
+<p>Not gonna lie - I got extremely lucky on that part. I’m not sure how much of my job searching 
+experience here is applicable to other situations, but here we go.</p>
+
+<p>I had registered on specialised platforms where software engineers describe their skills and 
+job / salary expectations, and are later contacted by companies interested in their profile. 
+Most French engineers use <a rel="noopener" target="_blank" href="https://www.talent.io/en/">talent.io</a> or 
+<a rel="noopener" target="_blank" href="https://www.hiresweet.com/">hiresweet</a> for that purpose.</p>
+
+<p>I set up my profile without much expectations - given that I was a half-baked engineer - and 
+thought I’d go back and improve it later (spoiler: I never did).</p>
+
+<p>A couple of weeks later, I was contacted by a recruiter from a company. I had 
+already received my fair share of annoying Linkedin recruiters telling me I was perfect for some
+position that clearly proved they hadn’t read a thing of my resume - but this offer stood out.
+We got in touch, and as I moved along the interview process, it became clear that I could
+<em>actually</em> receive an offer from the company.</p>
+
+<p>So I did the only rational thing possible: I dropped everything and job searched like a maniac.
+I didn’t want to receive an offer and not be able to actually know whether I liked this company
+more than others, or if the salary offer was any good. I had grown accustomed to hearing the 
+insane salaries that the <a rel="noopener" target="_blank" href="https://launchschool.com/results">Launch School Capstone students</a> earn 
+in the US, so I needed to tune my own expectations to the realities of the French engineering
+market.</p>
+
+<p>I approached the job search exercise quite boldly. I had previously hired and interviewed dozens
+of candidates, and I think this experience taught me quite a few things on how to craft a good
+application. Therefore, I didn’t waste my time sending dozens of applications to positions I didn’t
+even know. Instead, I researched the companies that I liked and tried to envision myself working
+there. Once I could, I tried to get in touch with their recruiters on Linkedin (recruiters are
+craving for connections with engineers so it usually is pretty easy), in order to directly send them
+my carefully crafted application. I also contacted my network in order to know whether any 
+fitting position was opened. This led to interesting leads that never went through though.</p>
+
+<p>In the end, I applied to 5 companies, and received 2 offers - a third was perhaps
+on the way, but I got hired before finishing the process. The two offers promised different things,
+but in the end I chose the company that contacted me in the first place.</p>
+
+<h2 id="interviews">Interviews</h2>
+
+<p>Most companies I applied to were engineering-centric and had pretty similar processes:</p>
+<ol>
+  <li>a screening call (done by a recruiter) that mostly focuses on whether you’ve actually read the 
+job opening and know the basics of the company</li>
+  <li>an on-site interview with a lead developer (with or without some live-coding)</li>
+  <li>a take-home project that takes between 2 and 4 hours</li>
+  <li>an on-site live-coding interview with another lead developer</li>
+  <li>a team lunch / dinner / drink to meet other people of the team and assess the cultural fit</li>
+</ol>
+
+<p>Some companies switched steps 2 and 3, but the overall structure remained the same.</p>
+
+<p>As for the coding exercises in particular, I was surprised on how much emphasis there was on
+actually building a small working application during the take-home projects. Most were about 
+writing from scratch a small application with limited features, without forgetting a test suite.
+I could usually choose the framework (and opted for Sinatra, of course!). I also made the mistake 
+of discovering how APIs and JSON conversion worked during one of them!</p>
+
+<p>Live-coding exercises are always pretty stressful but I felt that probably was where I shined 
+the most. I guess that endless study sessions with Launch School students definitely prepared me
+on managing my stress level and on being able to think while I speak (a surprisinly difficult feat). 
+It also didn’t hurt that I extensively prepared through Leetcode exercises and became familiar
+with some algorithmic patterns.</p>
+
+<p>Here are some examples of live-coding exercises I was given:</p>
+<ul>
+  <li>writing a new feature to my take-home project (that seems to be pretty common)</li>
+  <li>solving the <a rel="noopener" target="_blank" href="https://www.geeksforgeeks.org/understanding-the-coin-change-problem-with-dynamic-programming/">coin change problem</a>
+</li>
+  <li>implementing from scratch the <code class="highlighter-rouge">reduce</code> function</li>
+</ul>
+
+<h2 id="my-company-and-position">My company and position</h2>
+
+<p>I’m a proud full-stack software engineer at <a rel="noopener" target="_blank" href="https://shipup.co">Shipup</a>, a SaaS company that
+helps online retailers create a better post-purchase experience for their customers (eg. better 
+delivery tracking emails, integration with customer support in case there’s an issue with the
+delivery, etc.)</p>
+
+<p>Basically, the company is extremely API-oriented: it’s integrated with dozens of different carriers
+and provides multiple ways for online retailers to send them order data. The technical stack is a 
+mix of Ruby on Rails and React.</p>
+
+<p>I’m still pretty new to the React world so my work has been mostly focused on Rails so far - but
+I’m trying to do some 
+<a rel="noopener" target="_blank" href="https://medium.com/launch-school/just-in-time-learning-f6a10886ddfe">“just-in-time” learning</a> in 
+order to soon become proficient in React.</p>
+
+<p>Shipup is a small French startup, with only 25 employees so far (including 6 engineers). They’re
+pretty ambitious and I can see these numbers rapidly growing in the upcoming months - I feel like it’s an
+exciting time to join a company!</p>
+
+<h2 id="bridging-the-gap-between-studying-and-working">Bridging the gap between studying and working</h2>
+
+<p>I started working 3 weeks ago, and since then, I’ve had to learn an insane amount of tools 
+and technologies. Here they are, with a personal assessment on how well I need to know them.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tool</th>
+      <th>Importance?</th>
+      <th>Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a rel="noopener" target="_blank" href="https://rubyonrails.org/">Rails</a></td>
+      <td>Extremely</td>
+      <td>I was already pretty familiar with the framework</td>
+    </tr>
+    <tr>
+      <td><a rel="noopener" target="_blank" href="https://rspec.info/">RSpec</a></td>
+      <td>Extremely</td>
+      <td>I use it every day</td>
+    </tr>
+    <tr>
+      <td><a rel="noopener" target="_blank" href="https://github.com/bblimke/webmock">WebMock</a></td>
+      <td>Very important</td>
+      <td>Essential for API testing</td>
+    </tr>
+    <tr>
+      <td><a rel="noopener" target="_blank" href="https://lostisland.github.io/faraday/">Faraday</a></td>
+      <td>Important</td>
+      <td>Very useful for opening a persistent connection with an API</td>
+    </tr>
+    <tr>
+      <td><a rel="noopener" target="_blank" href="https://www.docker.com/">Docker</a></td>
+      <td>Limited</td>
+      <td>I only use some specific commands and so far, I haven’t had to master anything Docker-related</td>
+    </tr>
+    <tr>
+      <td><a rel="noopener" target="_blank" href="https://kubernetes.io/">Kubernetes</a></td>
+      <td>Limited</td>
+      <td>Same as Docker</td>
+    </tr>
+    <tr>
+      <td><a rel="noopener" target="_blank" href="https://reactjs.org/">React</a></td>
+      <td>Extremely</td>
+      <td>Unfortunately I’m still very new to the framework so I feel a lot of pressure on quickly becoming up to speed</td>
+    </tr>
+    <tr>
+      <td><a rel="noopener" target="_blank" href="https://redux.js.org/">Redux</a></td>
+      <td>Very important</td>
+      <td>Same as React</td>
+    </tr>
+    <tr>
+      <td><a rel="noopener" target="_blank" href="https://jestjs.io/">Jest</a></td>
+      <td>Very important</td>
+      <td>Fortunately, I already knew some basics</td>
+    </tr>
+    <tr>
+      <td><a rel="noopener" target="_blank" href="https://storybook.js.org/">Storybook</a></td>
+      <td>Very important</td>
+      <td>I’m still unfamiliar with this technology</td>
+    </tr>
+    <tr>
+      <td><a rel="noopener" target="_blank" href="https://www.gatsbyjs.org/">Gatsby</a></td>
+      <td>Important</td>
+      <td>Used for the corporate website</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>On top of that, I also have to acclimatize to this gigantic codebase, to the various APIs I have
+to work with, and to using a specific git workflow.</p>
+
+<p>I guess it becomes easier with time, but the first few weeks have been packed with discoveries and
+frustration at my own ignorance.</p>
+
+<p>The hardest and central part of my job seems to be “making every tool work together”, surprisingly.
+I usually do not tackle difficult puzzle or code challenge - most of my Ruby knowledge is more 
+than enough to solve the problems I’m faced with. However, identifying the problem(s) and 
+unveiling the various problematic layers take a lot of patience and pugnacity. Finding what to do
+is where most of my job resides - actually coding it is the easy part.</p>
+
+<p>So far, I’ve had to build 2 features, that demanded an in-depth understanding of the core business 
+and the existing codebase. Before writing a single line of code, I’ve had to dive deep in various
+files in order to actually understand what the hell was going on there. It doesn’t help that my
+first weeks were done remotely (covid, again) and that I’m not very good at asking for help when
+I need it - I’m working on that though.</p>
+
+<h2 id="useful-resources">Useful resources</h2>
+
+<p>Launch School’s core curriculum provides strong programming foundations, and is not meant to be
+exhaustive. Here are some resources that helped me build on these foundations:</p>
+
+<ul>
+  <li>Preparing for interviews:
+    <ul>
+      <li>
+<a rel="noopener" target="_blank" href="https://pragprog.com/titles/jwdsal2/">A Common Sense Guide to Data Structures and Algorithms</a>
+by Jay Wengrow</li>
+      <li>
+<a rel="noopener" target="_blank" href="http://www.crackingthecodinginterview.com/">Cracking the Coding Interview</a> by 
+<a rel="noopener" target="_blank" href="http://www.gayle.com/">Gayle Laakmann McDowell</a>
+</li>
+    </ul>
+  </li>
+  <li>Ruby on Rails:
+    <ul>
+      <li>
+<a rel="noopener" target="_blank" href="https://www.railstutorial.org/">Rails Tutorial</a> by 
+<a rel="noopener" target="_blank" href="https://www.michaelhartl.com/">Michael Hartl</a>
+</li>
+      <li>
+<a rel="noopener" target="_blank" href="https://launchschool.com/books/demystifying_rails">Demystifying Rails</a> by 
+<a rel="noopener" target="_blank" href="https://launchschool.com">Launch School</a> (free)</li>
+    </ul>
+  </li>
+  <li>React:
+    <ul>
+      <li>
+<a rel="noopener" target="_blank" href="https://www.newline.co/fullstack-react/">Fullstack React</a> by <a rel="noopener" target="_blank" href="https://www.newline.co/">Newline</a>
+</li>
+    </ul>
+  </li>
+  <li>APIs:
+    <ul>
+      <li>
+<a rel="noopener" target="_blank" href="https://launchschool.com/books/working_with_apis/">Working with Web APIs</a> by 
+<a rel="noopener" target="_blank" href="https://launchschool.com">Launch School</a> (free)</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="final-notes">Final Notes</h2>
+
+<p>I’ve been asked a couple of questions by other Launch School students - I’ll try to answer them 
+here.</p>
+
+<p><strong>In my job search, which industry did I target?</strong></p>
+
+<p>I didn’t target any specific industry. However, I did target one <em>type</em> of company: SaaS companies
+(as in <a rel="noopener" target="_blank" href="https://www.techradar.com/news/what-is-saas">Software as a Service</a>).</p>
+
+<p>My goal was to join a company where the technical team was a <em>profit-center</em> rather than a 
+<em>cost-center</em>, ie. where the product shipped by the engineers was the main money-maker of 
+the company. I felt that SaaS startups fit that description pretty well.</p>
+
+<p><strong>Any surprises during the job interviews?</strong></p>
+
+<p>The highs and lows of job searching are exhausting. Between applications, screening calls, 
+interviews, take-home projects and preparing for the future interviews, job searching is a full 
+time job. In my experience, it’s not compatible with other things like still working for your 
+previous job, advancing through the curriculum or caring for anything else.</p>
+
+<p>As for the interviews themselves, I was surprised by how awkward some companies were regarding 
+promoting diversity. I felt extremely uncomfortable when a recruiter candidly told me that they
+would get an additional bonus for recruiting a female software engineer - ugh, okay.</p>
+
+<p><strong>Is there anything I wished was covered by the LS curriculum?</strong></p>
+
+<p>First, I’ll start by saying how grateful I am that the Networking course is that much in-depth. 
+I use this knowledge on an everyday basis.</p>
+
+<p>As stated in the prevous section, I have used numerous resources to complement my Launch School
+knowledge. Most of these resources are not based on ‘fundamental knowledge’ - I need them because
+I use these technologies at my workplace, not because of their intrinsic value.</p>
+
+<p>However, there are two topics that I think should be covered more in LS (or at least seem
+pretty fundamental to me):</p>
+<ul>
+  <li>Data Structure and Algorithms</li>
+  <li>Web APIs</li>
+</ul>
+
+<p>That being said, it’s pretty easy to pick up a book about these topics once you’ve worked 
+through the Core curriculum.</p>
+
+<p><strong>How is using git ‘in real life’?</strong></p>
+
+<p>Short answer: not that difficult and awesome!</p>
+
+<p>Most companies have their own version of a git workflow. We use 
+<a rel="noopener" target="_blank" href="https://www.endoflineblog.com/oneflow-a-git-branching-model-and-workflow">oneflow</a>, which is 
+a simplified version of 
+<a rel="noopener" target="_blank" href="https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow">git flow</a> 
+(which seems to be pretty widespread).</p>
+
+<p>Using git <em>in real life</em> is mostly, to me:</p>
+<ul>
+  <li>Always working on a separate branch</li>
+  <li>Being extremely careful with how I name my commits</li>
+  <li>…and with <em>what</em> I commit (<code class="highlighter-rouge">git add --patch</code> is my new best friend)</li>
+  <li>Constantly rewriting my local git history (<code class="highlighter-rouge">git rebase -i origin/master</code>) so that my commits
+are self-explanatory and grouped logically</li>
+  <li>Always making a Pull Request once I’m done with my feature (to allow my colleagues to review
+my work)</li>
+  <li>Merging with incredible care into <code class="highlighter-rouge">master</code>
+</li>
+  <li>And going through the CI/CD pipeline before deploying to production</li>
+</ul>
+
+<p><strong>What’s unique about France’s tech industry compared to the US?</strong></p>
+
+<p>I’ve never worked in the US and can only guess.</p>
+
+<p>I think the main difference is the type of companies you can work with here. You won’t find any 
+tech giant like in the Bay Area or New York. The biggest engineering companies probably have a 
+maximum of a 100 engineers. Therefore, your options are limited to:</p>
+<ul>
+  <li>tech startups (my choice)</li>
+  <li>IT services companies (tech consultancy)</li>
+  <li>companies with a ‘cost-center’ IT department (and you’d rather avoid these)</li>
+</ul>
+
+<p>Paris is a great place for tech startups, and I guess that most major cities (Lyon, Lille, 
+Bordeaux…) have some bubbling startup activity but I wouldn’t expect it to be true elsewhere. 
+In short, there are only a handful of cities where some interesting engineering work can be found.</p>
+
+<p>Also, English truly is the main language for software engineering - even in France. Most of my 
+meetings, all of the code and all the documentation is in English. That caught me a bit off-guard
+in a country that fought so long against the invasion of the English language. (In all seriousness, 
+the <a rel="noopener" target="_blank" href="http://www.academie-francaise.fr/dire-ne-pas-dire/neologismes-anglicismes">French academy</a> has
+a list of English phrases that <em>should</em> be replaced by French sentences.)</p>
+
+<p>Finally, I should mention that the tech industry salaries definitely are above average in France, 
+but are <em>not</em> exponentially inflated like they are in some US cities. Realistic figures are between
+€35-40,000 (graduate) and €100,000 (experienced manager) - and 
+<a rel="noopener" target="_blank" href="https://www.numbeo.com/cost-of-living/in/Paris">Paris</a> has a pretty high cost of life as well.</p>
+
+<p>In short, while most software engineers have a better wage than most here, it’s not exactly
+as insanely profitable as it is in the US.</p>
+
+<hr>
+
+<p>Alright! This has been a wildly long article, and I hope you found it useful.
+Don’t hesitate to get in touch with me if you have some further questions, and I wish you all
+the best on your programming journey!</p>
+
+
+    
+
+
+
+<div class="post-tags">
+  
+    
+    <a href="/tags#programming">
+    
+      <span class="icon">
+        <svg fill="#000000" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"></path>
+    <path d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z"></path>
+</svg>
+      </span> <span class="tag-name">Programming</span>
+    </a>
+  
+    
+    <a href="/tags#blogging">
+    
+      <span class="icon">
+        <svg fill="#000000" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"></path>
+    <path d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z"></path>
+</svg>
+      </span> <span class="tag-name">Blogging</span>
+    </a>
+  
+    
+    <a href="/tags#learning">
+    
+      <span class="icon">
+        <svg fill="#000000" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"></path>
+    <path d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z"></path>
+</svg>
+      </span> <span class="tag-name">Learning</span>
+    </a>
+  
+    
+    <a href="/tags#first-days-in-a-company">
+    
+      <span class="icon">
+        <svg fill="#000000" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"></path>
+    <path d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z"></path>
+</svg>
+      </span> <span class="tag-name">First days in a company</span>
+    </a>
+  
+    
+    <a href="/tags#software-engineer">
+    
+      <span class="icon">
+        <svg fill="#000000" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"></path>
+    <path d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z"></path>
+</svg>
+      </span> <span class="tag-name">Software engineer</span>
+    </a>
+  
+    
+    <a href="/tags#job-searching">
+    
+      <span class="icon">
+        <svg fill="#000000" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"></path>
+    <path d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z"></path>
+</svg>
+      </span> <span class="tag-name">Job searching</span>
+    </a>
+  
+    
+    <a href="/tags#interviews">
+    
+      <span class="icon">
+        <svg fill="#000000" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"></path>
+    <path d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z"></path>
+</svg>
+      </span> <span class="tag-name">Interviews</span>
+    </a>
+  
+    
+    <a href="/tags#launch-school">
+    
+      <span class="icon">
+        <svg fill="#000000" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"></path>
+    <path d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16z"></path>
+</svg>
+      </span> <span class="tag-name">Launch School</span>
+    </a>
+  
+</div>
+    <div class="post-dates">
+  <!--<span class="post-date">Created: 20 Jun 2020</span>-->
+  <!--  &bull;-->
+  
+  <span class="post-date">Last Modified: 21 Jun 2020</span>
+ 
+ <!-- <span class="post-categories">-->
+ <!--   -->
+ <!--     &bull;-->
+ <!--     -->
+ <!--     -->
+ <!--       -->
+ <!--     -->
+ <!--       -->
+ <!--     -->
+ <!--       -->
+ <!--     -->
+ <!--       -->
+ <!--     -->
+ <!--       -->
+ <!--     -->
+ <!--       -->
+ <!--     -->
+ <!--       -->
+ <!--     -->
+ <!--       -->
+ <!--     -->
+ <!--       -->
+ <!--     -->
+ <!--       -->
+ <!--     -->
+ <!--       -->
+ <!--     -->
+ <!--       -->
+ <!--     -->
+ <!--       -->
+ <!--     -->
+
+ <!--     -->
+ <!--       Blogging-->
+ <!--     -->
+ <!---->
+ <!--</span>-->
+</div>
+  </div>
+  
+  <hr>
+<script src="https://utteranc.es/client.js" repo="jsiny/jsiny.github.io" issue-term="pathname" label=":speech_balloon: Comments" theme="github-light" crossorigin="anonymous" async>
+</script>
+
+  <div class="relatedPosts">
+<hr>
+<h4>You May Also Enjoy</h4>
+
+
+
+
+
+  
+
+    
+    
+
+    
+
+    
+
+  
+
+    
+    
+
+    
+
+    
+
+  
+
+    
+    
+
+    
+
+    
+      <div>
+      <h5><a href="/deep-sea-adventure">Introducing Deep Sea Adventure's Scoring App</a></h5>
+      </div>
+      
+      
+    
+
+  
+
+    
+    
+
+    
+
+    
+      <div>
+      <h5><a href="/how-internet-works">How does the Internet work?</a></h5>
+      </div>
+      
+      
+    
+
+  
+
+    
+    
+
+    
+
+    
+      <div>
+      <h5><a href="/ampersand-ruby-closures">What's up with the &amp; (ampersand) in Ruby closures?</a></h5>
+      </div>
+      
+      
+    
+
+  
+
+    
+    
+
+    
+
+    
+      <div>
+      <h5><a href="/preparing-launch-school-109-oral-assessment">How I Prepared for Launch School's 109 Oral Assessment</a></h5>
+      </div>
+      
+      
+        
+
+</div>
+</div>
+
+    </main>
+
+    <!-- Optional footer content -->
+
+  </body>
+</html>
